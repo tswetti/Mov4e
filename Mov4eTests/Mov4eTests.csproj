@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.16.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.16.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{968DD8E6-3FA0-4019-83F6-257223872EAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mov4eTests</RootNamespace>
+    <AssemblyName>Mov4eTests</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=5.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.5.1.1\lib\net461\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extras.Moq, Version=5.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Extras.Moq.5.0.1\lib\net461\Autofac.Extras.Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.14.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.14.1\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.0.1\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.1.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.TypeConverter.4.1.0\lib\net462\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PresenterTests\LogInPresenterTests\LogInServiceMockedDummy.cs" />
+    <Compile Include="PresenterTests\LogInPresenterTests\TestsLogInPresenter.cs" />
+    <Compile Include="PresenterTests\ProfileScreenPresenterSettingsTests\MockedDummyProfileScreenSettingsService.cs" />
+    <Compile Include="PresenterTests\ProfileScreenPresenterSettingsTests\MockedDummyProfileScreenView.cs" />
+    <Compile Include="PresenterTests\ProfileScreenPresenterSettingsTests\ProfileScreenSettingsPresenterTests.cs" />
+    <Compile Include="PresenterTests\ProfileScreenPresenterTests\MockedDummyProfileScreenService.cs" />
+    <Compile Include="PresenterTests\ProfileScreenPresenterTests\ProfileScreenPresenterTests.cs" />
+    <Compile Include="PresenterTests\ProfileScreenPresenterTests\ProfileScreenViewDummy.cs" />
+    <Compile Include="PresenterTests\RegisterPresenterTests\MockedDummyRegisterService.cs" />
+    <Compile Include="PresenterTests\RegisterPresenterTests\TestsRegisterPresenter.cs" />
+    <Compile Include="PresenterTests\SpecificMoviePresenterTests\TestsSpecificMoviePresenter.cs" />
+    <Compile Include="PresenterTests\SpecificMoviePresenterTests\MockedDummySpecificMovieView.cs" />
+    <Compile Include="PresenterTests\SpecificMoviePresenterTests\MockedDummySpecificMovieService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTests\LoginServiceTests\DummyMockedLoginRepository.cs" />
+    <Compile Include="ServiceTests\LoginServiceTests\TestsLoginService.cs" />
+    <Compile Include="ServiceTests\ProfileScreenServiceTests\MockedDummyProfileScreenRepository.cs" />
+    <Compile Include="ServiceTests\ProfileScreenServiceTests\TestsProfileScreenService.cs" />
+    <Compile Include="ServiceTests\ProfileSettingsTests\TestsProfileScreenSettings.cs" />
+    <Compile Include="ServiceTests\ProfileSettingsTests\MockedDummyProfileScreenSettingsRepo.cs" />
+    <Compile Include="ServiceTests\RegisterServiceTests\MockedDummyRegisterRepository.cs" />
+    <Compile Include="ServiceTests\RegisterServiceTests\TestsRegisterService.cs" />
+    <Compile Include="ServiceTests\SpecificMovieServiceTests\MockedDummySpecificMovieRepository.cs" />
+    <Compile Include="ServiceTests\SpecificMovieServiceTests\TestsSpecificMovie.cs" />
+    <Compile Include="ValidationTests\ProfileScreenValidationTests.cs" />
+    <Compile Include="ValidationTests\RegisterValidationTests.cs" />
+    <Compile Include="ValidationTests\ValidateLoginTests.cs" />
+    <Compile Include="ValidationTests\ValidatioSpecificMovieTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mov4e\Mov4e.csproj">
+      <Project>{922a8adc-b1c9-4bc7-86a2-6b82c377928d}</Project>
+      <Name>Mov4e</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.16.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.16.1\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+</Project>

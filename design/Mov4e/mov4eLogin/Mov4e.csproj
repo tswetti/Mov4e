@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08510E9A-7460-4B9C-A355-A67F7AA9A456}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mov4e</RootNamespace>
+    <AssemblyName>Mov4e</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\movie_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="mov4eAddMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eAddMovie.Designer.cs">
+      <DependentUpon>mov4eAddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eAllMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eAllMovies.Designer.cs">
+      <DependentUpon>mov4eAllMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eLogin.Designer.cs">
+      <DependentUpon>mov4eLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eMovie.Designer.cs">
+      <DependentUpon>mov4eMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eProfile.Designer.cs">
+      <DependentUpon>mov4eProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eProfileSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eProfileSettings.Designer.cs">
+      <DependentUpon>mov4eProfileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mov4eRegistration.Designer.cs">
+      <DependentUpon>mov4eRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="mov4eAddMovie.resx">
+      <DependentUpon>mov4eAddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mov4eAllMovies.resx">
+      <DependentUpon>mov4eAllMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mov4eLogin.resx">
+      <DependentUpon>mov4eLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mov4eMovie.resx">
+      <DependentUpon>mov4eMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mov4eProfile.resx">
+      <DependentUpon>mov4eProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mov4eProfileSettings.resx">
+      <DependentUpon>mov4eProfileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mov4eRegistration.resx">
+      <DependentUpon>mov4eRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+    <None Include="Resources\search_white.png" />
+    <None Include="Resources\filter_white.png" />
+    <None Include="Resources\movie_icon.ico" />
+    <None Include="Resources\default_profile_picture.png" />
+    <None Include="Resources\sort_white.png" />
+    <None Include="Resources\filter_blue.png" />
+    <None Include="Resources\star-white.png" />
+    <None Include="Resources\star-yellow.png" />
+    <None Include="Resources\female_symbol.png" />
+    <None Include="Resources\male_symbol.png" />
+    <None Include="Resources\male_symbol_blue.png" />
+    <None Include="Resources\female_symbol_blue.png" />
+    <None Include="Resources\sort_blue.png" />
+    <None Include="Resources\search_blue.png" />
+    <None Include="Resources\go_back_blue.png" />
+    <None Include="Resources\go_back_white.png" />
+    <None Include="Resources\settings_cog.png" />
+    <None Include="Resources\settings_cog_blue.png" />
+    <None Include="Resources\password_icon.png" />
+    <None Include="Resources\username_icon.png" />
+    <Content Include="username_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

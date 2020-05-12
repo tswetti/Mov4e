@@ -1,0 +1,627 @@
+﻿namespace Mov4e
+{
+    partial class mov4eAddMovie
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mov4eAddMovie));
+            this.topButtonsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.closeLabel = new System.Windows.Forms.Label();
+            this.minimizeLabel = new System.Windows.Forms.Label();
+            this.maximizeLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelMN = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelMoviePicName = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxMoviePic = new System.Windows.Forms.PictureBox();
+            this.labelMovieName = new System.Windows.Forms.Label();
+            this.tableLayoutPanelMovie = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelMovieDetails = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxSummary = new System.Windows.Forms.TextBox();
+            this.textBoxAvgRating = new System.Windows.Forms.TextBox();
+            this.textBoxPrDate = new System.Windows.Forms.TextBox();
+            this.textBoxPG = new System.Windows.Forms.TextBox();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.labelPG = new System.Windows.Forms.Label();
+            this.labelPDate = new System.Windows.Forms.Label();
+            this.labelAvgRating = new System.Windows.Forms.Label();
+            this.labelSummary = new System.Windows.Forms.Label();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
+            this.labelDuration = new System.Windows.Forms.Label();
+            this.textBoxDuration = new System.Windows.Forms.TextBox();
+            this.buttonChangePic = new System.Windows.Forms.Button();
+            this.buttonSaveMovie = new System.Windows.Forms.Button();
+            this.labelBack = new System.Windows.Forms.Label();
+            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.topButtonsLayoutPanel.SuspendLayout();
+            this.tableLayoutPanelMain.SuspendLayout();
+            this.tableLayoutPanelMN.SuspendLayout();
+            this.tableLayoutPanelMoviePicName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoviePic)).BeginInit();
+            this.tableLayoutPanelMovie.SuspendLayout();
+            this.tableLayoutPanelMovieDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // topButtonsLayoutPanel
+            // 
+            this.topButtonsLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.topButtonsLayoutPanel.AutoSize = true;
+            this.topButtonsLayoutPanel.ColumnCount = 3;
+            this.topButtonsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topButtonsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.topButtonsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.topButtonsLayoutPanel.Controls.Add(this.closeLabel, 2, 0);
+            this.topButtonsLayoutPanel.Controls.Add(this.minimizeLabel, 0, 0);
+            this.topButtonsLayoutPanel.Controls.Add(this.maximizeLabel, 1, 0);
+            this.topButtonsLayoutPanel.Location = new System.Drawing.Point(1160, 0);
+            this.topButtonsLayoutPanel.Name = "topButtonsLayoutPanel";
+            this.topButtonsLayoutPanel.RowCount = 1;
+            this.topButtonsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.topButtonsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.topButtonsLayoutPanel.Size = new System.Drawing.Size(120, 39);
+            this.topButtonsLayoutPanel.TabIndex = 4;
+            // 
+            // closeLabel
+            // 
+            this.closeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.closeLabel.AutoSize = true;
+            this.closeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeLabel.ForeColor = System.Drawing.Color.White;
+            this.closeLabel.Location = new System.Drawing.Point(88, 7);
+            this.closeLabel.Name = "closeLabel";
+            this.closeLabel.Size = new System.Drawing.Size(23, 25);
+            this.closeLabel.TabIndex = 1;
+            this.closeLabel.Text = "x";
+            this.closeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.closeLabel.Click += new System.EventHandler(this.closeLabel_Click);
+            this.closeLabel.MouseLeave += new System.EventHandler(this.closeLabel_MouseLeave);
+            this.closeLabel.MouseHover += new System.EventHandler(this.closeLabel_MouseHover);
+            // 
+            // minimizeLabel
+            // 
+            this.minimizeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.minimizeLabel.AutoSize = true;
+            this.minimizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minimizeLabel.ForeColor = System.Drawing.Color.White;
+            this.minimizeLabel.Location = new System.Drawing.Point(10, 7);
+            this.minimizeLabel.Name = "minimizeLabel";
+            this.minimizeLabel.Size = new System.Drawing.Size(19, 25);
+            this.minimizeLabel.TabIndex = 1;
+            this.minimizeLabel.Text = "-";
+            this.minimizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.minimizeLabel.Click += new System.EventHandler(this.minimizeLabel_Click);
+            this.minimizeLabel.MouseLeave += new System.EventHandler(this.minimizeLabel_MouseLeave);
+            this.minimizeLabel.MouseHover += new System.EventHandler(this.minimizeLabel_MouseHover);
+            // 
+            // maximizeLabel
+            // 
+            this.maximizeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.maximizeLabel.AutoSize = true;
+            this.maximizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maximizeLabel.ForeColor = System.Drawing.Color.White;
+            this.maximizeLabel.Location = new System.Drawing.Point(45, 7);
+            this.maximizeLabel.Name = "maximizeLabel";
+            this.maximizeLabel.Size = new System.Drawing.Size(27, 25);
+            this.maximizeLabel.TabIndex = 2;
+            this.maximizeLabel.Text = "⬜";
+            this.maximizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.maximizeLabel.Click += new System.EventHandler(this.maximizeLabel_Click);
+            this.maximizeLabel.MouseLeave += new System.EventHandler(this.maximizeLabel_MouseLeave);
+            this.maximizeLabel.MouseHover += new System.EventHandler(this.maximizeLabel_MouseHover);
+            // 
+            // tableLayoutPanelMain
+            // 
+            this.tableLayoutPanelMain.ColumnCount = 2;
+            this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelMN, 0, 0);
+            this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelMovie, 1, 0);
+            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 50);
+            this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
+            this.tableLayoutPanelMain.RowCount = 1;
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMain.Size = new System.Drawing.Size(1280, 700);
+            this.tableLayoutPanelMain.TabIndex = 5;
+            // 
+            // tableLayoutPanelMN
+            // 
+            this.tableLayoutPanelMN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelMN.ColumnCount = 1;
+            this.tableLayoutPanelMN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMN.Controls.Add(this.tableLayoutPanelMoviePicName, 0, 0);
+            this.tableLayoutPanelMN.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanelMN.Name = "tableLayoutPanelMN";
+            this.tableLayoutPanelMN.RowCount = 2;
+            this.tableLayoutPanelMN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanelMN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelMN.Size = new System.Drawing.Size(420, 694);
+            this.tableLayoutPanelMN.TabIndex = 9;
+            // 
+            // tableLayoutPanelMoviePicName
+            // 
+            this.tableLayoutPanelMoviePicName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelMoviePicName.ColumnCount = 1;
+            this.tableLayoutPanelMoviePicName.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMoviePicName.Controls.Add(this.pictureBoxMoviePic, 0, 0);
+            this.tableLayoutPanelMoviePicName.Controls.Add(this.labelMovieName, 0, 1);
+            this.tableLayoutPanelMoviePicName.Location = new System.Drawing.Point(10, 3);
+            this.tableLayoutPanelMoviePicName.Name = "tableLayoutPanelMoviePicName";
+            this.tableLayoutPanelMoviePicName.RowCount = 2;
+            this.tableLayoutPanelMoviePicName.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMoviePicName.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelMoviePicName.Size = new System.Drawing.Size(400, 549);
+            this.tableLayoutPanelMoviePicName.TabIndex = 7;
+            // 
+            // pictureBoxMoviePic
+            // 
+            this.pictureBoxMoviePic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxMoviePic.Location = new System.Drawing.Point(3, 23);
+            this.pictureBoxMoviePic.Name = "pictureBoxMoviePic";
+            this.pictureBoxMoviePic.Size = new System.Drawing.Size(394, 470);
+            this.pictureBoxMoviePic.TabIndex = 7;
+            this.pictureBoxMoviePic.TabStop = false;
+            // 
+            // labelMovieName
+            // 
+            this.labelMovieName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelMovieName.AutoSize = true;
+            this.labelMovieName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMovieName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.labelMovieName.Location = new System.Drawing.Point(95, 516);
+            this.labelMovieName.Name = "labelMovieName";
+            this.labelMovieName.Size = new System.Drawing.Size(210, 33);
+            this.labelMovieName.TabIndex = 8;
+            this.labelMovieName.Text = "Име на филм";
+            // 
+            // tableLayoutPanelMovie
+            // 
+            this.tableLayoutPanelMovie.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelMovie.ColumnCount = 1;
+            this.tableLayoutPanelMovie.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMovie.Controls.Add(this.tableLayoutPanelMovieDetails, 0, 0);
+            this.tableLayoutPanelMovie.Location = new System.Drawing.Point(429, 3);
+            this.tableLayoutPanelMovie.Name = "tableLayoutPanelMovie";
+            this.tableLayoutPanelMovie.RowCount = 2;
+            this.tableLayoutPanelMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 99F));
+            this.tableLayoutPanelMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
+            this.tableLayoutPanelMovie.Size = new System.Drawing.Size(848, 694);
+            this.tableLayoutPanelMovie.TabIndex = 8;
+            // 
+            // tableLayoutPanelMovieDetails
+            // 
+            this.tableLayoutPanelMovieDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelMovieDetails.ColumnCount = 2;
+            this.tableLayoutPanelMovieDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelMovieDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.textBoxSummary, 1, 5);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.textBoxAvgRating, 1, 4);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.textBoxPrDate, 1, 3);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.textBoxPG, 1, 1);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.labelGenre, 0, 0);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.labelPG, 0, 1);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.labelPDate, 0, 3);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.labelAvgRating, 0, 4);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.labelSummary, 0, 5);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.textBoxGenre, 1, 0);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.labelDuration, 0, 2);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.textBoxDuration, 1, 2);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.buttonChangePic, 0, 6);
+            this.tableLayoutPanelMovieDetails.Controls.Add(this.buttonSaveMovie, 1, 7);
+            this.tableLayoutPanelMovieDetails.Location = new System.Drawing.Point(24, 173);
+            this.tableLayoutPanelMovieDetails.Name = "tableLayoutPanelMovieDetails";
+            this.tableLayoutPanelMovieDetails.RowCount = 8;
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889F));
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889F));
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889F));
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889F));
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889F));
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889F));
+            this.tableLayoutPanelMovieDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelMovieDetails.Size = new System.Drawing.Size(800, 341);
+            this.tableLayoutPanelMovieDetails.TabIndex = 0;
+            // 
+            // textBoxSummary
+            // 
+            this.textBoxSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSummary.ForeColor = System.Drawing.Color.White;
+            this.textBoxSummary.Location = new System.Drawing.Point(139, 218);
+            this.textBoxSummary.Multiline = true;
+            this.textBoxSummary.Name = "textBoxSummary";
+            this.textBoxSummary.ReadOnly = true;
+            this.textBoxSummary.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSummary.TabIndex = 26;
+            this.textBoxSummary.Text = "summary";
+            // 
+            // textBoxAvgRating
+            // 
+            this.textBoxAvgRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxAvgRating.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAvgRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAvgRating.ForeColor = System.Drawing.Color.White;
+            this.textBoxAvgRating.Location = new System.Drawing.Point(139, 175);
+            this.textBoxAvgRating.Multiline = true;
+            this.textBoxAvgRating.Name = "textBoxAvgRating";
+            this.textBoxAvgRating.ReadOnly = true;
+            this.textBoxAvgRating.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAvgRating.TabIndex = 25;
+            this.textBoxAvgRating.Text = "rating";
+            // 
+            // textBoxPrDate
+            // 
+            this.textBoxPrDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxPrDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPrDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPrDate.ForeColor = System.Drawing.Color.White;
+            this.textBoxPrDate.Location = new System.Drawing.Point(139, 132);
+            this.textBoxPrDate.Multiline = true;
+            this.textBoxPrDate.Name = "textBoxPrDate";
+            this.textBoxPrDate.ReadOnly = true;
+            this.textBoxPrDate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrDate.TabIndex = 24;
+            this.textBoxPrDate.Text = "premiere date";
+            // 
+            // textBoxPG
+            // 
+            this.textBoxPG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxPG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPG.ForeColor = System.Drawing.Color.White;
+            this.textBoxPG.Location = new System.Drawing.Point(139, 46);
+            this.textBoxPG.Multiline = true;
+            this.textBoxPG.Name = "textBoxPG";
+            this.textBoxPG.ReadOnly = true;
+            this.textBoxPG.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPG.TabIndex = 23;
+            this.textBoxPG.Text = "pg";
+            // 
+            // labelGenre
+            // 
+            this.labelGenre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGenre.ForeColor = System.Drawing.Color.White;
+            this.labelGenre.Location = new System.Drawing.Point(75, 0);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(58, 20);
+            this.labelGenre.TabIndex = 9;
+            this.labelGenre.Text = "Genre:";
+            // 
+            // labelPG
+            // 
+            this.labelPG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPG.AutoSize = true;
+            this.labelPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPG.ForeColor = System.Drawing.Color.White;
+            this.labelPG.Location = new System.Drawing.Point(97, 43);
+            this.labelPG.Name = "labelPG";
+            this.labelPG.Size = new System.Drawing.Size(36, 20);
+            this.labelPG.TabIndex = 11;
+            this.labelPG.Text = "PG:";
+            // 
+            // labelPDate
+            // 
+            this.labelPDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPDate.AutoSize = true;
+            this.labelPDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPDate.ForeColor = System.Drawing.Color.White;
+            this.labelPDate.Location = new System.Drawing.Point(18, 129);
+            this.labelPDate.Name = "labelPDate";
+            this.labelPDate.Size = new System.Drawing.Size(115, 20);
+            this.labelPDate.TabIndex = 12;
+            this.labelPDate.Text = "Premiere Date:";
+            // 
+            // labelAvgRating
+            // 
+            this.labelAvgRating.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAvgRating.AutoSize = true;
+            this.labelAvgRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAvgRating.ForeColor = System.Drawing.Color.White;
+            this.labelAvgRating.Location = new System.Drawing.Point(10, 172);
+            this.labelAvgRating.Name = "labelAvgRating";
+            this.labelAvgRating.Size = new System.Drawing.Size(123, 20);
+            this.labelAvgRating.TabIndex = 14;
+            this.labelAvgRating.Text = "Average Rating:";
+            // 
+            // labelSummary
+            // 
+            this.labelSummary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSummary.AutoSize = true;
+            this.labelSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSummary.ForeColor = System.Drawing.Color.White;
+            this.labelSummary.Location = new System.Drawing.Point(53, 215);
+            this.labelSummary.Name = "labelSummary";
+            this.labelSummary.Size = new System.Drawing.Size(80, 20);
+            this.labelSummary.TabIndex = 13;
+            this.labelSummary.Text = "Summary:";
+            // 
+            // textBoxGenre
+            // 
+            this.textBoxGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxGenre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxGenre.ForeColor = System.Drawing.Color.White;
+            this.textBoxGenre.Location = new System.Drawing.Point(139, 3);
+            this.textBoxGenre.Multiline = true;
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.ReadOnly = true;
+            this.textBoxGenre.Size = new System.Drawing.Size(100, 20);
+            this.textBoxGenre.TabIndex = 5;
+            this.textBoxGenre.Text = "genre";
+            // 
+            // labelDuration
+            // 
+            this.labelDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDuration.AutoSize = true;
+            this.labelDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDuration.ForeColor = System.Drawing.Color.White;
+            this.labelDuration.Location = new System.Drawing.Point(63, 86);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(70, 20);
+            this.labelDuration.TabIndex = 27;
+            this.labelDuration.Text = "Duration";
+            // 
+            // textBoxDuration
+            // 
+            this.textBoxDuration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxDuration.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDuration.ForeColor = System.Drawing.Color.White;
+            this.textBoxDuration.Location = new System.Drawing.Point(139, 89);
+            this.textBoxDuration.Multiline = true;
+            this.textBoxDuration.Name = "textBoxDuration";
+            this.textBoxDuration.ReadOnly = true;
+            this.textBoxDuration.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDuration.TabIndex = 28;
+            this.textBoxDuration.Text = "duration";
+            // 
+            // buttonChangePic
+            // 
+            this.buttonChangePic.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonChangePic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangePic.Location = new System.Drawing.Point(3, 244);
+            this.buttonChangePic.Name = "buttonChangePic";
+            this.buttonChangePic.Size = new System.Drawing.Size(130, 37);
+            this.buttonChangePic.TabIndex = 29;
+            this.buttonChangePic.Text = "Change picture";
+            this.buttonChangePic.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveMovie
+            // 
+            this.buttonSaveMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonSaveMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.buttonSaveMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveMovie.Location = new System.Drawing.Point(403, 287);
+            this.buttonSaveMovie.Name = "buttonSaveMovie";
+            this.buttonSaveMovie.Size = new System.Drawing.Size(130, 37);
+            this.buttonSaveMovie.TabIndex = 30;
+            this.buttonSaveMovie.Text = "Save changes";
+            this.buttonSaveMovie.UseVisualStyleBackColor = false;
+            // 
+            // labelBack
+            // 
+            this.labelBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelBack.AutoSize = true;
+            this.labelBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBack.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelBack.Location = new System.Drawing.Point(42, 12);
+            this.labelBack.Name = "labelBack";
+            this.labelBack.Size = new System.Drawing.Size(38, 16);
+            this.labelBack.TabIndex = 13;
+            this.labelBack.Text = "back";
+            // 
+            // pictureBoxBack
+            // 
+            this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxBack.Image = global::Mov4e.Properties.Resources.go_back_white;
+            this.pictureBoxBack.Location = new System.Drawing.Point(4, 7);
+            this.pictureBoxBack.Name = "pictureBoxBack";
+            this.pictureBoxBack.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxBack.TabIndex = 12;
+            this.pictureBoxBack.TabStop = false;
+            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
+            this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
+            this.pictureBoxBack.MouseHover += new System.EventHandler(this.pictureBoxBack_MouseHover);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(595, 380);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(90, 40);
+            this.tableLayoutPanel1.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::Mov4e.Properties.Resources.go_back_white;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(42, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "back";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(603, 388);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(90, 40);
+            this.tableLayoutPanel2.TabIndex = 15;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::Mov4e.Properties.Resources.go_back_white;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(42, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "back";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel3.Controls.Add(this.pictureBoxBack, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelBack, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(90, 40);
+            this.tableLayoutPanel3.TabIndex = 16;
+            // 
+            // mov4eAddMovie
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanelMain);
+            this.Controls.Add(this.topButtonsLayoutPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "mov4eAddMovie";
+            this.Text = "mov4eAddMovie";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.topButtonsLayoutPanel.ResumeLayout(false);
+            this.topButtonsLayoutPanel.PerformLayout();
+            this.tableLayoutPanelMain.ResumeLayout(false);
+            this.tableLayoutPanelMN.ResumeLayout(false);
+            this.tableLayoutPanelMoviePicName.ResumeLayout(false);
+            this.tableLayoutPanelMoviePicName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoviePic)).EndInit();
+            this.tableLayoutPanelMovie.ResumeLayout(false);
+            this.tableLayoutPanelMovieDetails.ResumeLayout(false);
+            this.tableLayoutPanelMovieDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TableLayoutPanel topButtonsLayoutPanel;
+        private System.Windows.Forms.Label closeLabel;
+        private System.Windows.Forms.Label minimizeLabel;
+        private System.Windows.Forms.Label maximizeLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMN;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMoviePicName;
+        private System.Windows.Forms.PictureBox pictureBoxMoviePic;
+        private System.Windows.Forms.Label labelMovieName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMovie;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMovieDetails;
+        private System.Windows.Forms.TextBox textBoxSummary;
+        private System.Windows.Forms.TextBox textBoxAvgRating;
+        private System.Windows.Forms.TextBox textBoxPrDate;
+        private System.Windows.Forms.TextBox textBoxPG;
+        private System.Windows.Forms.TextBox textBoxGenre;
+        private System.Windows.Forms.Label labelGenre;
+        private System.Windows.Forms.Label labelPG;
+        private System.Windows.Forms.Label labelPDate;
+        private System.Windows.Forms.Label labelAvgRating;
+        private System.Windows.Forms.Label labelSummary;
+        private System.Windows.Forms.Label labelDuration;
+        private System.Windows.Forms.TextBox textBoxDuration;
+        private System.Windows.Forms.Label labelBack;
+        private System.Windows.Forms.PictureBox pictureBoxBack;
+        private System.Windows.Forms.Button buttonChangePic;
+        private System.Windows.Forms.Button buttonSaveMovie;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+    }
+}

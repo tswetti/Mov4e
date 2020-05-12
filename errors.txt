@@ -1,0 +1,23 @@
+7.5.2020 г. 18:49:26
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Mov4eTests.PresenterTests.RegisterPresenterTests.MockedDummyregisterRepository.<.ctor>b__3_1(String one, String two) in C:\Users\lucho\OneDrive\Desktop\Mov4e\Mov4eTests\PresenterTests\RegisterPresenterTests\MockedDummyregisterRepository.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at Moq.Extensions.InvokePreserveStack(Delegate del, Object[] args)
+   at Moq.MethodCall.<>c__DisplayClass17_0.<SetCallbackResponse>b__1(Object[] args)
+   at Moq.MethodCall.CallbackResponse.RespondTo(Invocation invocation)
+   at Moq.MethodCall.ExecuteCore(Invocation invocation)
+   at Moq.Setup.Execute(Invocation invocation)
+   at Moq.FindAndExecuteMatchingSetup.Handle(Invocation invocation, Mock mock)
+   at Moq.Mock.Moq.IInterceptor.Intercept(Invocation invocation)
+   at Moq.CastleProxyFactory.Interceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IRegisterServiceProxy.SaveUser(String UserName, String Password)
+   at Mov4e.Presenter.RegisterPresenter.RegisterUser() in C:\Users\lucho\OneDrive\Desktop\Mov4e\Mov4e\Presenter\RegisterPresenter.cs:line 36
+7.5.2020 г. 18:51:14
+Moq.MockException: IRegisterService.SaveDataInDB() invocation failed with mock behavior Strict.
+All invocations on the mock must have a corresponding setup.
+   at Moq.Mock.Moq.IInterceptor.Intercept(Invocation invocation)
+   at Moq.CastleProxyFactory.Interceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IRegisterServiceProxy.SaveDataInDB()
+   at Mov4e.Presenter.RegisterPresenter.RegisterUser() in C:\Users\lucho\OneDrive\Desktop\Mov4e\Mov4e\Presenter\RegisterPresenter.cs:line 38

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mov4e", "Mov4e\Mov4e.csproj", "{922A8ADC-B1C9-4BC7-86A2-6B82C377928D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mov4eTests", "Mov4eTests\Mov4eTests.csproj", "{968DD8E6-3FA0-4019-83F6-257223872EAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{922A8ADC-B1C9-4BC7-86A2-6B82C377928D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922A8ADC-B1C9-4BC7-86A2-6B82C377928D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922A8ADC-B1C9-4BC7-86A2-6B82C377928D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922A8ADC-B1C9-4BC7-86A2-6B82C377928D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968DD8E6-3FA0-4019-83F6-257223872EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968DD8E6-3FA0-4019-83F6-257223872EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968DD8E6-3FA0-4019-83F6-257223872EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968DD8E6-3FA0-4019-83F6-257223872EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {595BA1E8-AF0C-4F3B-82A1-812203AB1C49}
+	EndGlobalSection
+EndGlobal

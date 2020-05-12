@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{922A8ADC-B1C9-4BC7-86A2-6B82C377928D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mov4e</RootNamespace>
+    <AssemblyName>Mov4e</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.EntityFramework.8.0.19\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comment.cs">
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\ImpossibleDataBaseRecordCreateException.cs" />
+    <Compile Include="Exceptions\ImpossibleDataBaseRecordUpdateException.cs" />
+    <Compile Include="Exceptions\IncorrectUserDataException.cs" />
+    <Compile Include="Exceptions\InvalidFieldInputException.cs" />
+    <Compile Include="Exceptions\InvalidFilteringParamsException.cs" />
+    <Compile Include="Exceptions\InvalidItemsNumberException.cs" />
+    <Compile Include="Exceptions\InvalidItemsSelectionException.cs" />
+    <Compile Include="Exceptions\LogInException.cs" />
+    <Compile Include="Exceptions\NoDataBaseTableRecordsException.cs" />
+    <Compile Include="Exceptions\NoSuchUserPositionException.cs" />
+    <Compile Include="Exceptions\NotFoundSuchItemException.cs" />
+    <Compile Include="Exceptions\SpecificMovieException.cs" />
+    <Compile Include="Genre.cs">
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hash.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="mov4eDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mov4eDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mov4eDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mov4eDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Movie.cs">
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\AllMoviesPresenter\AllMoviesPresenter.cs" />
+    <Compile Include="Presenter\AllMoviesPresenter\IAllMoviesPresenter.cs" />
+    <Compile Include="Presenter\LogInPresenter\ILogInPresenter.cs" />
+    <Compile Include="Presenter\LogInPresenter\LogInPresenter.cs" />
+    <Compile Include="Presenter\NewMoviePresenter\INewMoviePresenter.cs" />
+    <Compile Include="Presenter\NewMoviePresenter\NewMoviePresenter.cs" />
+    <Compile Include="Presenter\ProfileScreenPresenter\IProfileScreenPresenter.cs" />
+    <Compile Include="Presenter\ProfileScreenPresenter\ISettingsPresenter.cs" />
+    <Compile Include="Presenter\ProfileScreenPresenter\ProfileScreenPresenter.cs" />
+    <Compile Include="Presenter\ProfileScreenPresenter\SettingsPresenter.cs" />
+    <Compile Include="Presenter\RegisterPresenter\IRegisterPresenter.cs" />
+    <Compile Include="Presenter\RegisterPresenter\RegisterPresenter.cs" />
+    <Compile Include="Presenter\SpecificMovieInfoPresenter\ISpecificMovieInfoPresenter.cs" />
+    <Compile Include="Presenter\SpecificMovieInfoPresenter\SpecificMovieInfoPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rating.cs">
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\AllMoviesRepository\AllMoviesRepository.cs" />
+    <Compile Include="Repository\AllMoviesRepository\IAllMoviesRepository.cs" />
+    <Compile Include="Repository\LogInRepository\ILogInRepository.cs" />
+    <Compile Include="Repository\NewMovieRepository\INewMovieRepository.cs" />
+    <Compile Include="Repository\NewMovieRepository\NewMovieRepository.cs" />
+    <Compile Include="Repository\ProfileScreenRepository\IProfileScreenRepository.cs" />
+    <Compile Include="Repository\ProfileScreenRepository\IProfileSettingsRepository.cs" />
+    <Compile Include="Repository\ProfileScreenRepository\ProfileSettingsRepository.cs" />
+    <Compile Include="Repository\RegisterRepository\IRegisterRepository.cs" />
+    <Compile Include="Repository\LogInRepository\LogInRepository.cs" />
+    <Compile Include="Repository\ProfileScreenRepository\ProfileScreenRepository.cs" />
+    <Compile Include="Repository\RegisterRepository\RegisterRepository.cs" />
+    <Compile Include="Repository\SpecificMovieInfoRepository\ISpecificMovieInfoRepository.cs" />
+    <Compile Include="Repository\SpecificMovieInfoRepository\SpecificMovieInfoRepository.cs" />
+    <Compile Include="Service\AllMoviesService\AllMoviesService.cs" />
+    <Compile Include="Service\AllMoviesService\IAllMoviesService.cs" />
+    <Compile Include="Service\LogInService\ILogInService.cs" />
+    <Compile Include="Service\NewMovieService\INewMovieService.cs" />
+    <Compile Include="Service\NewMovieService\NewMovieService.cs" />
+    <Compile Include="Service\ProfileScreenService\IProfileScreenService.cs" />
+    <Compile Include="Service\ProfileScreenService\IProfileScreenSettingsService.cs" />
+    <Compile Include="Service\ProfileScreenService\ProfileScreenSettingsService.cs" />
+    <Compile Include="Service\RegisterService\IRegisterService.cs" />
+    <Compile Include="Service\LogInService\LogInService.cs" />
+    <Compile Include="Service\ProfileScreenService\ProfileScreenService.cs" />
+    <Compile Include="Service\RegisterService\RegisterService.cs" />
+    <Compile Include="Service\SpecificMovieService\ISpecificMovieInfoService.cs" />
+    <Compile Include="Service\SpecificMovieService\SpecificMovieInfoService.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs">
+      <DependentUpon>mov4eDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\FilteringValidation.cs" />
+    <Compile Include="Validation\MovieValidation.cs" />
+    <Compile Include="Validation\ValidateLogIn.cs" />
+    <Compile Include="Validation\ValidateProfile.cs" />
+    <Compile Include="Validation\ValidateRegister.cs" />
+    <Compile Include="Validation\ValidateSpecificMovie.cs" />
+    <Compile Include="View\AllMoviesView\IAllMovies.cs" />
+    <Compile Include="View\AllMoviesView\mov4eAllMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AllMoviesView\mov4eAllMovies.Designer.cs">
+      <DependentUpon>mov4eAllMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogInView\ILogIn.cs" />
+    <Compile Include="View\LogInView\mov4eLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LogInView\mov4eLogin.Designer.cs">
+      <DependentUpon>mov4eLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewMovieView\INewMovie.cs" />
+    <Compile Include="View\NewMovieView\mov4eAddMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewMovieView\mov4eAddMovie.Designer.cs">
+      <DependentUpon>mov4eAddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProfileScreenView\Imov4eProfileSettings.cs" />
+    <Compile Include="View\ProfileScreenView\IProfileScreen.cs" />
+    <Compile Include="View\ProfileScreenView\mov4eProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProfileScreenView\mov4eProfile.Designer.cs">
+      <DependentUpon>mov4eProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProfileScreenView\mov4eProfileSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProfileScreenView\mov4eProfileSettings.Designer.cs">
+      <DependentUpon>mov4eProfileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegisterView\IRegister.cs" />
+    <Compile Include="View\IScreenView.cs" />
+    <Compile Include="View\RegisterView\mov4eRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegisterView\mov4eRegistration.Designer.cs">
+      <DependentUpon>mov4eRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpecificMovieInfoView\CommentBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\SpecificMovieInfoView\CommentBox.Designer.cs">
+      <DependentUpon>CommentBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpecificMovieInfoView\ISpecificMovieView.cs" />
+    <Compile Include="View\SpecificMovieInfoView\mov4eMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SpecificMovieInfoView\mov4eMovie.Designer.cs">
+      <DependentUpon>mov4eMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpecificMovieInfoView\SpecificMovieEventArgs.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\AllMoviesView\mov4eAllMovies.resx">
+      <DependentUpon>mov4eAllMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LogInView\mov4eLogin.resx">
+      <DependentUpon>mov4eLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewMovieView\mov4eAddMovie.resx">
+      <DependentUpon>mov4eAddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProfileScreenView\mov4eProfile.resx">
+      <DependentUpon>mov4eProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProfileScreenView\mov4eProfileSettings.resx">
+      <DependentUpon>mov4eProfileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RegisterView\mov4eRegistration.resx">
+      <DependentUpon>mov4eRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SpecificMovieInfoView\mov4eMovie.resx">
+      <DependentUpon>mov4eMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="mov4eDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>mov4eDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="mov4eDB.edmx.diagram">
+      <DependentUpon>mov4eDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_profile_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mov4eDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mov4eDB.edmx</DependentUpon>
+      <LastGenOutput>mov4eDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="mov4eDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mov4eDB.edmx</DependentUpon>
+      <LastGenOutput>mov4eDB.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\female_symbol_blue.png" />
+    <None Include="Resources\female_symbol.png" />
+    <None Include="Resources\go_back_white.png" />
+    <None Include="Resources\go_back_blue.png" />
+    <None Include="Resources\filter_white.png" />
+    <None Include="Resources\filter_blue.png" />
+    <None Include="Resources\movie_icon.ico" />
+    <None Include="Resources\username_icon.png" />
+    <None Include="Resources\star-yellow.png" />
+    <None Include="Resources\star-white.png" />
+    <None Include="Resources\sort_white.png" />
+    <None Include="Resources\sort_blue.png" />
+    <None Include="Resources\settings_cog_blue.png" />
+    <None Include="Resources\settings_cog.png" />
+    <None Include="Resources\search_white.png" />
+    <None Include="Resources\search_blue.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\password_icon.png" />
+    <None Include="Resources\male_symbol_blue.png" />
+    <None Include="Resources\male_symbol.png" />
+    <None Include="Resources\default_profile_picture.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
