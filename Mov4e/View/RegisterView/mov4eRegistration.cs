@@ -271,14 +271,18 @@ namespace Mov4e.View.RegisterView
 
         private void checkIfEverithingIsFilledToActivateButton()
         {
-            if (!this.Controls.OfType<TextBox>().Any(t => string.IsNullOrEmpty(t.Text) && string.IsNullOrWhiteSpace(t.Text))
-                && !string.IsNullOrEmpty(comboBoxAge.Text) && !string.IsNullOrWhiteSpace(comboBoxAge.Text)
-                && this.Controls.OfType<RadioButton>().Any(t => t.Checked == true))
+            if (!string.IsNullOrEmpty(textBoxUsername.Text) && !string.IsNullOrWhiteSpace(textBoxUsername.Text)
+                && (!string.IsNullOrEmpty(textBoxFirstName.Text) && !string.IsNullOrWhiteSpace(textBoxFirstName.Text))
+                && (!string.IsNullOrEmpty(textBoxLastName.Text) && !string.IsNullOrWhiteSpace(textBoxLastName.Text))
+                && (!string.IsNullOrEmpty(textBoxEmail.Text) && !string.IsNullOrWhiteSpace(textBoxEmail.Text))
+                && (!string.IsNullOrEmpty(textBoxPassword.Text) && !string.IsNullOrWhiteSpace(textBoxPassword.Text))
+                && tableLayoutPanelGenderAndYear.Controls.OfType<RadioButton>().Any(t => t.Checked == true)
+                && !(string.IsNullOrEmpty(this.comboBoxAge.Text) && string.IsNullOrWhiteSpace(this.comboBoxAge.Text)))
             {
-                buttonLogin.Enabled = true;
+                buttonRegister.Enabled = true;
             }
             else
-                buttonLogin.Enabled = false;
+                buttonRegister.Enabled = false;
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
