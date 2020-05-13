@@ -7,6 +7,7 @@ using Mov4e.Repository.ProfileScreenRepository;
 using static Mov4e.Hash;
 using static Mov4e.Validation.ValidateProfile;
 using Mov4e.Exceptions;
+using Mov4e.Model;
 
 
 namespace Mov4e.Service.ProfileScreenService

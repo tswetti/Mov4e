@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Mov4e.Repository.SpecificMovieInfoRepository;
 using Mov4e.Validation;
 using Mov4e.Exceptions;
+using Mov4e.Model;
 
 namespace Mov4e.Service.SpecificMovieService
 {

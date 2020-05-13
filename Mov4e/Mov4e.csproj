@@ -83,7 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comment.cs">
+    <Compile Include="Model\Comment.cs">
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Exceptions\ImpossibleDataBaseRecordCreateException.cs" />
@@ -98,27 +98,27 @@
     <Compile Include="Exceptions\NoSuchUserPositionException.cs" />
     <Compile Include="Exceptions\NotFoundSuchItemException.cs" />
     <Compile Include="Exceptions\SpecificMovieException.cs" />
-    <Compile Include="Genre.cs">
+    <Compile Include="Model\Genre.cs">
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Hash.cs" />
     <Compile Include="Logger\Logger.cs" />
-    <Compile Include="mov4eDB.Context.cs">
+    <Compile Include="Model\mov4eDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mov4eDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="mov4eDB.cs">
+    <Compile Include="Model\mov4eDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="mov4eDB.Designer.cs">
+    <Compile Include="Model\mov4eDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mov4eDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Movie.cs">
+    <Compile Include="Model\Movie.cs">
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Presenter\AllMoviesPresenter\AllMoviesPresenter.cs" />
@@ -137,7 +137,7 @@
     <Compile Include="Presenter\SpecificMovieInfoPresenter\SpecificMovieInfoPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rating.cs">
+    <Compile Include="Model\Rating.cs">
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Repository\AllMoviesRepository\AllMoviesRepository.cs" />
@@ -169,10 +169,10 @@
     <Compile Include="Service\SpecificMovieService\ISpecificMovieInfoService.cs" />
     <Compile Include="Service\SpecificMovieService\SpecificMovieInfoService.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="User.cs">
+    <Compile Include="Model\User.cs">
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserInfo.cs">
+    <Compile Include="Model\UserInfo.cs">
       <DependentUpon>mov4eDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Validation\FilteringValidation.cs" />
@@ -269,11 +269,11 @@
     <EmbeddedResource Include="View\SpecificMovieInfoView\mov4eMovie.resx">
       <DependentUpon>mov4eMovie.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="mov4eDB.edmx">
+    <EntityDeploy Include="Model\mov4eDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>mov4eDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="mov4eDB.edmx.diagram">
+    <None Include="Model\mov4eDB.edmx.diagram">
       <DependentUpon>mov4eDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -299,12 +299,12 @@
     <None Include="Resources\Default_profile_pic.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="mov4eDB.Context.tt">
+    <Content Include="Model\mov4eDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>mov4eDB.edmx</DependentUpon>
       <LastGenOutput>mov4eDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="mov4eDB.tt">
+    <Content Include="Model\mov4eDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>mov4eDB.edmx</DependentUpon>
       <LastGenOutput>mov4eDB.cs</LastGenOutput>

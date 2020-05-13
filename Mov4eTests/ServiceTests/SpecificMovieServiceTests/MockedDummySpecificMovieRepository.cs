@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Moq;
 using Autofac.Extras.Moq;
+using Mov4e.Model;
 using Mov4e.Repository.SpecificMovieInfoRepository;
 
 namespace Mov4eTests.ServiceTests.SpecificMovieServiceTests
@@ -28,12 +29,15 @@ namespace Mov4eTests.ServiceTests.SpecificMovieServiceTests
 
         public Movie currentMovie = new Movie()
         {
-            title="Transformers",
-            id=1,
-            pg=1,
-            genre=1,
-            duration=130,
-            AVGRating=5       
+            title = "Transformers",
+            id = 1,
+            pg = 1,
+            picture = new byte[10],
+            duration = 130,
+            AVGRating = 5,
+            year =DateTime.Now,
+            summary="dasdas"
+
         };
 
         (int commentId, string userName, byte[] profilePic) commentIdAndUser = (1, "asddds", new byte[4]);

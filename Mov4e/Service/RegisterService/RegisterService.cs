@@ -9,6 +9,7 @@ using static Mov4e.Validation.ValidateRegister;
 using Mov4e.Exceptions;
 using System.Net.Mail;
 using System.Net;
+using Mov4e.Model;
 
 namespace Mov4e.Service.RegisterService
 {

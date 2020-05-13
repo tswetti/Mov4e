@@ -1,4 +1,5 @@
 ﻿using System;
+using Mov4e.Model;
 
 namespace Mov4e.Repository.NewMovieRepository
 {

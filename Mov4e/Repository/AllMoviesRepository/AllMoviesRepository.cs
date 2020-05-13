@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Mov4e.Exceptions;
+using Mov4e.Model;
 
 namespace Mov4e.Repository.AllMoviesRepository
 {

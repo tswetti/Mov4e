@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\lucho\OneDrive\Desktop\Fulldemo\Mov4e\mov4eDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\lucho\Source\Repos\tswetti\Mov4e\Mov4e\Model\mov4eDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

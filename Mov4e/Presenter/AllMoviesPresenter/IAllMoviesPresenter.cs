@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Mov4e.Model;
 
 namespace Mov4e.Presenter.AllMoviesPresenter
 {

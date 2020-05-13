@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Moq;
 using Autofac.Extras.Moq;
 using Mov4e.Service.SpecificMovieService;
-using Mov4e;
+using Mov4e.Model;
 
 
 namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
@@ -15,6 +15,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
     {
         public ISpecificMovieInfoService _specificMovieService;
 
+       
         public Movie _movie = new Movie()
         {
           title = "Transformers",
@@ -26,7 +27,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
           AVGRating = 6,
           genre = 3
         };
-
+        
         public bool error = false;
 
         public List<int> rates = new List<int>() { 1, 2, 3 };

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mov4e
+namespace Mov4e.Model
 {
     using System;
     using System.Data.Entity;
