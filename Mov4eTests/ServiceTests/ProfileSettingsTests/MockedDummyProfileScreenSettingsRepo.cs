@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Moq;
 using Autofac.Extras.Moq;
+using Mov4e.Model;
 using Mov4e.Repository.ProfileScreenRepository;
 
 

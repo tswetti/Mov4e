@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Moq;
 using Autofac.Extras.Moq;
 using Mov4e.Repository.ProfileScreenRepository;
-
+using Mov4e.Model;
 
 namespace Mov4eTests.ServiceTests.ProfileScreenServiceTests
 {

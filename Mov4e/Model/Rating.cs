@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class Comment
+namespace Mov4e.Model
 {
-    public int user_Id { get; set; }
-    public int movie_Id { get; set; }
-    public string comment1 { get; set; }
-    public System.DateTime dateOfTheComment { get; set; }
-    public int id { get; set; }
-
-    public virtual Movie movie { get; set; }
-    public virtual User user { get; set; }
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class Rating
+    {
+        public int user_Id { get; set; }
+        public int movie_Id { get; set; }
+        public int userRating { get; set; }
+    
+        public virtual Movie movie { get; set; }
+        public virtual User user { get; set; }
+    }
 }

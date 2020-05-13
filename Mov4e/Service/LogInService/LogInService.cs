@@ -7,6 +7,7 @@ using Mov4e.Repository.LogInRepository;
 using static Mov4e.Hash;
 using Mov4e.Exceptions;
 using static Mov4e.Validation.ValidateLogIn;
+using Mov4e.Model;
 
 namespace Mov4e.Service.LogInService
 {

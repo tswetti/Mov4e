@@ -11,6 +11,7 @@ using Mov4e.View.AllMoviesView;
 using Mov4e.Presenter.AllMoviesPresenter;
 using Mov4e.Presenter.NewMoviePresenter;
 using Mov4e.Validation;
+using Mov4e.Model;
 
 
 namespace Mov4e.View.NewMovieView

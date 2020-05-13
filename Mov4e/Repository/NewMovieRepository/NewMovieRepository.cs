@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Mov4e.Exceptions;
 using System.Linq;
+using Mov4e.Model;
 
 namespace Mov4e.Repository.NewMovieRepository
 {

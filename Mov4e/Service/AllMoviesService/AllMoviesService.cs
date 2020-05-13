@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Mov4e.Exceptions;
+using Mov4e.Model;
 
 namespace Mov4e.Service.AllMoviesService
 {
