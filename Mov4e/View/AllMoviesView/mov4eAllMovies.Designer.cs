@@ -81,10 +81,10 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBoxSort = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelActionsWMovie = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonViewInfo = new System.Windows.Forms.Button();
-            this.buttonAddMovie = new System.Windows.Forms.Button();
             this.buttonDeleteMovie = new System.Windows.Forms.Button();
             this.buttonEditMovie = new System.Windows.Forms.Button();
+            this.buttonAddMovie = new System.Windows.Forms.Button();
+            this.buttonViewInfo = new System.Windows.Forms.Button();
             this.imageListMovies = new System.Windows.Forms.ImageList(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMovies.SuspendLayout();
@@ -641,6 +641,7 @@
             this.buttonSortOld.TabIndex = 12;
             this.buttonSortOld.Text = "Oldest first";
             this.buttonSortOld.UseVisualStyleBackColor = true;
+            this.buttonSortOld.Click += new System.EventHandler(this.buttonSortOld_Click);
             // 
             // buttonSortNew
             // 
@@ -662,6 +663,7 @@
             this.buttonSortZA.TabIndex = 10;
             this.buttonSortZA.Text = "Z-A";
             this.buttonSortZA.UseVisualStyleBackColor = true;
+            this.buttonSortZA.Click += new System.EventHandler(this.buttonSortZA_Click);
             // 
             // labelSortTitle
             // 
@@ -803,37 +805,9 @@
             this.tableLayoutPanelActionsWMovie.Name = "tableLayoutPanelActionsWMovie";
             this.tableLayoutPanelActionsWMovie.RowCount = 1;
             this.tableLayoutPanelActionsWMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelActionsWMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelActionsWMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelActionsWMovie.Size = new System.Drawing.Size(552, 50);
             this.tableLayoutPanelActionsWMovie.TabIndex = 5;
-            // 
-            // buttonViewInfo
-            // 
-            this.buttonViewInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonViewInfo.AutoSize = true;
-            this.buttonViewInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.buttonViewInfo.Enabled = false;
-            this.buttonViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonViewInfo.Location = new System.Drawing.Point(3, 3);
-            this.buttonViewInfo.Name = "buttonViewInfo";
-            this.buttonViewInfo.Size = new System.Drawing.Size(153, 31);
-            this.buttonViewInfo.TabIndex = 2;
-            this.buttonViewInfo.Text = "View Information";
-            this.buttonViewInfo.UseVisualStyleBackColor = false;
-            this.buttonViewInfo.Click += new System.EventHandler(this.buttonViewInfo_Click);
-            // 
-            // buttonAddMovie
-            // 
-            this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonAddMovie.AutoSize = true;
-            this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddMovie.Location = new System.Drawing.Point(162, 3);
-            this.buttonAddMovie.Name = "buttonAddMovie";
-            this.buttonAddMovie.Size = new System.Drawing.Size(145, 31);
-            this.buttonAddMovie.TabIndex = 0;
-            this.buttonAddMovie.Text = "Add new movie";
-            this.buttonAddMovie.UseVisualStyleBackColor = true;
-            this.buttonAddMovie.Click += new System.EventHandler(this.buttonAddMovie_Click);
             // 
             // buttonDeleteMovie
             // 
@@ -860,6 +834,34 @@
             this.buttonEditMovie.Text = "Edit movie";
             this.buttonEditMovie.UseVisualStyleBackColor = true;
             this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
+            // 
+            // buttonAddMovie
+            // 
+            this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonAddMovie.AutoSize = true;
+            this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddMovie.Location = new System.Drawing.Point(162, 3);
+            this.buttonAddMovie.Name = "buttonAddMovie";
+            this.buttonAddMovie.Size = new System.Drawing.Size(145, 31);
+            this.buttonAddMovie.TabIndex = 0;
+            this.buttonAddMovie.Text = "Add new movie";
+            this.buttonAddMovie.UseVisualStyleBackColor = true;
+            this.buttonAddMovie.Click += new System.EventHandler(this.buttonAddMovie_Click);
+            // 
+            // buttonViewInfo
+            // 
+            this.buttonViewInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonViewInfo.AutoSize = true;
+            this.buttonViewInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.buttonViewInfo.Enabled = false;
+            this.buttonViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonViewInfo.Location = new System.Drawing.Point(3, 3);
+            this.buttonViewInfo.Name = "buttonViewInfo";
+            this.buttonViewInfo.Size = new System.Drawing.Size(153, 31);
+            this.buttonViewInfo.TabIndex = 2;
+            this.buttonViewInfo.Text = "View Information";
+            this.buttonViewInfo.UseVisualStyleBackColor = false;
+            this.buttonViewInfo.Click += new System.EventHandler(this.buttonViewInfo_Click);
             // 
             // imageListMovies
             // 

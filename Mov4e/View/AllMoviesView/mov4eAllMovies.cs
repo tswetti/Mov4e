@@ -1079,6 +1079,32 @@ namespace Mov4e.View.AllMoviesView
         {
 
         }
+
+        private void buttonSortZA_Click(object sender, EventArgs e)
+        {
+            Dictionary<int, byte[]> movies = rp.SortMoviesByTitle();
+            Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
+            var reverse = movies.Reverse();
+            foreach (var item in reverse)
+            {
+                reversedMovies.Add(item.Key, item.Value);
+            }
+            listViewMovies.Items.Clear();
+            InitializeMoviesList(reversedMovies);
+        }
+
+        private void buttonSortOld_Click(object sender, EventArgs e)
+        {
+            Dictionary<int, byte[]> movies = rp.SortByDate();
+            Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
+            var reverse = movies.Reverse();
+            foreach (var item in reverse)
+            {
+                reversedMovies.Add(item.Key, item.Value);
+            }
+            listViewMovies.Items.Clear();
+            InitializeMoviesList(reversedMovies);
+        }
     }
 
 }
