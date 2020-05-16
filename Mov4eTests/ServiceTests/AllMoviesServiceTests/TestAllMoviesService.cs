@@ -15,7 +15,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
     class TestAllMoviesService
     {
         [Test]
-        public void CorrectGetMovieReturnsATuple()
+        public void CorrectGetMovieReturnsTheMovieAsATupleFromItsIdAndGenre()
         {
             DummyMockedAllMoviesRepository _dummyMockedAllMoviesRepo = new DummyMockedAllMoviesRepository();
             IAllMoviesService _iallMoviesService = new AllMoviesService(_dummyMockedAllMoviesRepo._allMoviesRepo);
@@ -40,7 +40,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         }
 
         [Test]
-        public void CorrectEditMovieEditsACertainMovie()
+        public void CorrectEditMovieEditsACertainMovieInTheDB()
         {
             DummyMockedAllMoviesRepository _dummyMockedAllMoviesRepo = new DummyMockedAllMoviesRepository();
             IAllMoviesService _iallMoviesService = new AllMoviesService(_dummyMockedAllMoviesRepo._allMoviesRepo);
@@ -62,7 +62,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         }
 
         [Test]
-        public void CorrectDeleteMovie()
+        public void CorrectDeleteMovieDeletesAMovieFromDB()
         {
             DummyMockedAllMoviesRepository _dummyMockedAllMoviesRepo = new DummyMockedAllMoviesRepository();
             IAllMoviesService _iallMoviesService = new AllMoviesService(_dummyMockedAllMoviesRepo._allMoviesRepo);
@@ -81,5 +81,44 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             }
         }
 
+        [Test]
+        public void CorrectSortMovieByAToZSortsMoviesAlphabeticallyAndReturnsTheirIdsAndWrapperAsADictionary()
+        {
+            DummyMockedAllMoviesRepository _dummyMockedAllMoviesRepo = new DummyMockedAllMoviesRepository();
+            IAllMoviesService _iallMoviesService = new AllMoviesService(_dummyMockedAllMoviesRepo._allMoviesRepo);
+            Dictionary<int, byte[]> expected = new Dictionary<int, byte[]>();
+            expected.Add(3, new byte[80]);
+            expected.Add(2, new byte[120]);
+            expected.Add(1, new byte[100]);
+
+            try
+            {
+                Assert.AreNotEqual(_iallMoviesService.SortMoviesByTitle(), null);
+                Assert.AreEqual(_iallMoviesService.SortMoviesByTitle(), expected);
+            }
+            catch (NoDataBaseTableRecordsException ex)
+            {
+                Logger.WriteToLogFile(ex.ToString());
+                Assert.IsTrue(false);
+            }
+            finally
+            {
+                Assert.IsTrue(true);
+            }
+        }
+
+        [Test]
+        public void CorrectSortMoviesByOldestMoviesSortsTheMoviesAndReturnsThemAsADictionary()
+        {
+            DummyMockedAllMoviesRepository _dummyMockedAllMoviesRepo = new DummyMockedAllMoviesRepository();
+            IAllMoviesService _iallMoviesService = new AllMoviesService(_dummyMockedAllMoviesRepo._allMoviesRepo);
+            Dictionary<int, byte[]> expected = new Dictionary<int, byte[]>();
+            expected.Add(3, new byte[80]);
+            expected.Add(2, new byte[120]);
+            expected.Add(1, new byte[100]);
+
+            Assert.AreNotEqual(_iallMoviesService.SortByDate(), null);
+            Assert.AreEqual(_iallMoviesService.SortByDate(), expected);
+        }
     }
 }
