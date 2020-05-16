@@ -7,7 +7,7 @@ namespace Mov4e.Exceptions
     /// </summary>
     /// <inheritdoc cref="System.Exception"/>
     [Serializable]
-    internal class NotFoundSuchItemException:Exception
+    public class NotFoundSuchItemException:Exception
     {
         /// <summary>
         /// A simple constructor with an appropriate exception's message.

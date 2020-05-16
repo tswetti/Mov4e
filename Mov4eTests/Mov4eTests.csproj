@@ -105,6 +105,8 @@
     <Compile Include="PresenterTests\SpecificMoviePresenterTests\MockedDummySpecificMovieView.cs" />
     <Compile Include="PresenterTests\SpecificMoviePresenterTests\MockedDummySpecificMovieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTests\AllMoviesServiceTests\DummyMockedAllMoviesRepository.cs" />
+    <Compile Include="ServiceTests\AllMoviesServiceTests\TestAllMoviesService.cs" />
     <Compile Include="ServiceTests\LoginServiceTests\DummyMockedLoginRepository.cs" />
     <Compile Include="ServiceTests\LoginServiceTests\TestsLoginService.cs" />
     <Compile Include="ServiceTests\ProfileScreenServiceTests\MockedDummyProfileScreenRepository.cs" />

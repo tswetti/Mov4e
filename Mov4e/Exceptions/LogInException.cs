@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mov4e.Exceptions
 {
+    [Serializable]
     public class LogInException :Exception
     {
         public LogInException()

@@ -23,6 +23,11 @@ namespace Mov4e.Service.AllMoviesService
 
         }
         
+        public AllMoviesService(IAllMoviesRepository repo)
+        {
+            this.mr = repo;
+        }
+
         /// <summary>
         /// The <c>GetMovie()</c> method receives a certain movie's id as a parameter from the presenter and executes the 
         /// repository's method which is responsible of getting a certain movie from the database by its id.

@@ -671,9 +671,15 @@ namespace Mov4e.View.AllMoviesView
         /// </summary>
         public void SortByDate()
         {
-            Dictionary<int, byte[]> mov = rp.SortByDate();
+            Dictionary<int, byte[]> movies = rp.SortByDate();
+            Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
+            var reverse = movies.Reverse();
+            foreach (var item in reverse)
+            {
+                reversedMovies.Add(item.Key, item.Value);
+            }
             listViewMovies.Items.Clear();
-            InitializeMoviesList(mov);
+            InitializeMoviesList(reversedMovies);
         }
 
         /// <summary>
@@ -1095,15 +1101,9 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonSortOld_Click(object sender, EventArgs e)
         {
-            Dictionary<int, byte[]> movies = rp.SortByDate();
-            Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
-            var reverse = movies.Reverse();
-            foreach (var item in reverse)
-            {
-                reversedMovies.Add(item.Key, item.Value);
-            }
+            Dictionary<int, byte[]> mov = rp.SortByDate();
             listViewMovies.Items.Clear();
-            InitializeMoviesList(reversedMovies);
+            InitializeMoviesList(mov);
         }
     }
 

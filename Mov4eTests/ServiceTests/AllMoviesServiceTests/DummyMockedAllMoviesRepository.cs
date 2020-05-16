@@ -1,5 +1,7 @@
 ﻿using Autofac.Extras.Moq;
 using Moq;
+using Mov4e.Exceptions;
+using Mov4e.Logger;
 using Mov4e.Model;
 using Mov4e.Repository.AllMoviesRepository;
 using System;
@@ -12,12 +14,14 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
 {
     class DummyMockedAllMoviesRepository
     {
-        List<Movie> movies = new List<Movie>
+        private List<Movie> movies = new List<Movie>
         {
-            new Movie{id=1,title="Titanic",genre=10,pg=0,duration=210,summary="This is the description of the Titanic movie.",year=new DateTime(11,1,1997),picture=new byte[100]},
-            new Movie{id=2,title="Terminator",genre=6,pg=12,duration=120,summary="This is the description of the Terminator movie.",year=new DateTime(10,26,1984),picture=new byte[120]},
-            new Movie{id=3,title="Star Wars 5",genre=7,pg=0,duration=150,summary="This is the description of the Star Wars 5 movie.",year=new DateTime(4,23,1984),picture=new byte[80]}
+            new Movie{id=1,title="Titanic",genre=1,pg=0,duration=210,summary="This is the description of the Titanic movie.",year=new DateTime(1997,11,1),picture=new byte[100]},
+            new Movie{id=2,title="Terminator",genre=6,pg=12,duration=120,summary="This is the description of the Terminator movie.",year=new DateTime(1984,10,26),picture=new byte[120]},
+            new Movie{id=3,title="Star Wars 5",genre=7,pg=0,duration=150,summary="This is the description of the Star Wars 5 movie.",year=new DateTime(1984,4,23),picture=new byte[80]}
         };
+
+        private Movie movie = new Movie{id=2, title = "The Hunger Games: Catching Fire", genre = 7, pg = 14, duration = 180, summary = "This is the description of The Hunger Games: Catching Fire movie.", year = new DateTime(2013, 11, 22), picture = new byte[110] };
 
         public IAllMoviesRepository _allMoviesRepo;
 
@@ -25,11 +29,42 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         {
             using (var mock = AutoMock.GetStrict())
             {
-                /*mock.Mock<IAllMoviesRepository>().Setup(iall_m_repo=>iall_m_repo.GetMovie(It.IsAny<int>()))
-                    .Returns((int mov_id)=>movies.Where(m=>m.id==mov_id).Select(mov=>new Tuple<int, byte[]>(m.id, m.picture)));*/
+                mock.Mock<IAllMoviesRepository>().Setup(iall_m_repo => iall_m_repo.GetMovie(It.IsAny<int>()))
+                    .Returns((int id) => new Tuple<Movie, string>(movies.Where(m => m.id == id).Single(), "Drama"));
 
-                /*mock.Mock<IAllMoviesRepository>().Setup(iall_m_repo.EditMovie(It.IsAny<int, sting, int, int, Nullable<DateTime>, string, byte[], int>()))
-                    .Returns();*/
+                mock.Mock<IAllMoviesRepository>().Setup(iall_m_repo => iall_m_repo.EditMovie(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<Nullable<DateTime>>(),
+                     It.IsAny<string>(), It.IsAny<byte[]>(), It.IsAny<int>())).Callback((int id, string title, int genre, int pg, Nullable<DateTime> date, string summary, byte[] picture, int dur)
+                     => {
+                         try
+                         {
+                             movies[1].title = title; movies[1].genre = genre; movies[1].pg = pg; movies[1].year = date; movies[1].summary = summary;
+                             movies[1].picture = picture; movies[1].duration = dur;
+                         }
+                         catch (ImpossibleDataBaseRecordUpdateException ex)
+                         {
+                             Logger.WriteToLogFile(ex.ToString());
+                         }
+                         catch (NotFoundSuchItemException ex)
+                         {
+                             Logger.WriteToLogFile(ex.ToString());
+                         }
+                         catch (Exception ex)
+                         {
+                             Logger.WriteToLogFile(ex.ToString());
+                         }
+                     });
+
+                mock.Mock<IAllMoviesRepository>().Setup(_allMoviesRepo => _allMoviesRepo.DeleteMovie(It.IsAny<int>())).Callback((int id) =>
+                {
+                    try
+                    {
+                        movies.Remove(movies.Where(m => m.id == id).Single());
+                    }
+                    catch (NotFoundSuchItemException ex)
+                    {
+                        Logger.WriteToLogFile(ex.ToString());
+                    }
+                });
 
                 _allMoviesRepo = mock.Create<IAllMoviesRepository>();
             }

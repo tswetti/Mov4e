@@ -8,7 +8,7 @@ namespace Mov4e.Exceptions
     /// </summary>
     /// <inheritdoc cref="System.Exception"/>
     [Serializable]
-    internal class InvalidItemsSelectionException:Exception
+    public class InvalidItemsSelectionException:Exception
     {
         /// <summary>
         /// A simple constructor with an appropriate exception's message.

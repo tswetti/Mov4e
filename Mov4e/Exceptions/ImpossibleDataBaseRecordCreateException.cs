@@ -8,7 +8,7 @@ namespace Mov4e.Exceptions
     /// </summary>
     /// <inheritdoc cref="System.Exception"/>
     [Serializable]
-    internal class ImpossibleDataBaseRecordCreateException : Exception
+    public class ImpossibleDataBaseRecordCreateException : Exception
     {
         /// <summary>
         /// A simple constructor with an appropriate exception's message.
