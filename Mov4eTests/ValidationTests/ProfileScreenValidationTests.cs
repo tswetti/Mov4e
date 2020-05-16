@@ -18,7 +18,6 @@ namespace Mov4eTests.ValidationTests
         public void isUserNameTakenThrowsException()
         {
             Assert.Throws<IncorrectUserDataException>(() => ValidateProfile.isUserNameTaken(usernames, "Pesho"));
-
         }
 
         [Test]
