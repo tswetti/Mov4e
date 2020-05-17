@@ -64,5 +64,11 @@ namespace Mov4e.Presenter.LogInPresenter
                 _login.ErrorMassage(e.Message);
             }
         }
+
+        public void ResetPass(string username, string email)
+        {
+            _logInService.CreateNewPass(username, email);
+
+        }
     }
 }

@@ -36,5 +36,26 @@ namespace Mov4e.Repository.LogInRepository
         /// <param name="userName"></param>
         /// <returns></returns>
         string GetCurrentUserPosition(string userName);
+
+        /// <summary>
+        /// This method gets the e-mail of user by it's username.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        string GetEmailForUser(string userName);
+
+        /// <summary>
+        /// This method updates password of the user if it's forgotten.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="newPass"></param>
+        void UpdatePass(string userName,string newPass);
+
+        /// <summary>
+        /// This method returns full name for user by it's username;
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        string GetUserFullName(string username);
     }
 }

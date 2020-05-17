@@ -151,7 +151,7 @@ namespace Mov4e.Service.ProfileScreenService
             MailAddress to = new MailAddress(CurrentUserInfo.email, CurrentUserInfo.firstName + " " + CurrentUserInfo.lastName);
             MailMessage message = new MailMessage(from, to);
 
-            message.Subject = "Registered";
+            message.Subject = "Changed Information";
             string mess = messg;
             message.Body = mess;
 

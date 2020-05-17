@@ -250,7 +250,7 @@ namespace Mov4e.View.ProfileScreenView
                 _imov4EProfileSettingsPresenter.ChangeEmail(textBoxEmailChanged.Text);
                 if (_profileScreen.Email.Equals(textBoxEmailChanged.Text))
                 {
-                    textBoxEmailChanged.Text = " ";
+                    textBoxEmailChanged.Text = null;
                     MessageBox.Show("You have successfully changed your E-mail!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -269,7 +269,7 @@ namespace Mov4e.View.ProfileScreenView
                 _imov4EProfileSettingsPresenter.ChangeAge(int.Parse(comboBoxBYearChanged.Text));
                 if (_profileScreen.Age.Equals(int.Parse(comboBoxBYearChanged.Text)))
                 {
-                    comboBoxBYearChanged.Text = " ";
+                    comboBoxBYearChanged.Text = null;
                     MessageBox.Show("You have successfully changed your birth-year", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }              
             }
@@ -289,7 +289,7 @@ namespace Mov4e.View.ProfileScreenView
                     _imov4EProfileSettingsPresenter.ChangeGender("M");
                     if (_profileScreen.Gender.Equals(comboBoxGenderChanged.Text.First().ToString()))
                     {
-                        comboBoxGenderChanged.Text = " ";
+                        comboBoxGenderChanged.Text =null;
                         MessageBox.Show("You have successfully changed your gender!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     
@@ -301,7 +301,7 @@ namespace Mov4e.View.ProfileScreenView
                     _imov4EProfileSettingsPresenter.ChangeGender("F");
                     if (_profileScreen.Gender.Equals(comboBoxGenderChanged.Text.First().ToString()))
                     {
-                        comboBoxGenderChanged.Text = " ";
+                        comboBoxGenderChanged.Text = null;
                         MessageBox.Show("You have successfully changed your gender!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                  }
@@ -322,9 +322,9 @@ namespace Mov4e.View.ProfileScreenView
                 ValidateProfile.areNewPassAndRepeatedSame(textBoxNewPassword.Text, textBoxNewPasswordRepeat.Text);
                 ValidateProfile.isPasswordCorrect(textBoxNewPassword.Text);
                 _imov4EProfileSettingsPresenter.ChangePassword(textBoxOldPassword.Text, textBoxNewPassword.Text, textBoxNewPasswordRepeat.Text);
-                textBoxNewPasswordRepeat.Text = " ";
-                textBoxNewPassword.Text = " ";
-                textBoxOldPassword.Text = " ";
+                textBoxNewPasswordRepeat.Text=null;
+                textBoxNewPassword.Text = null;
+                textBoxOldPassword.Text = null;
                 MessageBox.Show("You have successfully changed your password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -342,7 +342,7 @@ namespace Mov4e.View.ProfileScreenView
                 _imov4EProfileSettingsPresenter.ChangeUserName(textBoxUsernameChanged.Text);
                 if (_profileScreen.UserName.Equals(textBoxUsernameChanged.Text))
                 {
-                    textBoxUsernameChanged.Text = " ";
+                    textBoxUsernameChanged.Text = null;
                     MessageBox.Show("You have successfully changed your username", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
               
@@ -361,7 +361,7 @@ namespace Mov4e.View.ProfileScreenView
                 _imov4EProfileSettingsPresenter.ChangeFirstName(textBoxFNameChanged.Text);
                 if (_profileScreen.FirstName.Equals(textBoxFNameChanged.Text))
                 {
-                    textBoxFNameChanged.Text = " ";
+                    textBoxFNameChanged.Text =null;
                     MessageBox.Show("You have successfully changed your firstname!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                
@@ -380,7 +380,7 @@ namespace Mov4e.View.ProfileScreenView
                 _imov4EProfileSettingsPresenter.ChangeLastName(textBoxLNameChanged.Text);
                 if (_profileScreen.LastName.Equals(textBoxLNameChanged.Text))
                 {
-                    textBoxLNameChanged.Text = " ";
+                    textBoxLNameChanged.Text = null;
                     MessageBox.Show("You have successfully changed your lastname!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 

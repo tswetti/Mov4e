@@ -196,6 +196,18 @@ namespace Mov4e.View.LogInView
                 buttonLogin.Enabled = false;
         }
 
+        private void checkIfEverithingIsFilledInResetToActivateButton()
+        {
+            if (!string.IsNullOrWhiteSpace(textBoxForgottenPassUsername.Text) && !string.IsNullOrEmpty(textBoxForgottenPassUsername.Text) &&
+                !string.IsNullOrWhiteSpace(textBoxForgottenPassEmail.Text) && !string.IsNullOrEmpty(textBoxForgottenPassEmail.Text))
+            {
+                buttonSendEmail.Enabled = true;
+            }
+            else
+                buttonSendEmail.Enabled = false;
+        }
+
+
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
         {
             this.checkIfEverithingIsFilledToActivateButton();
@@ -214,6 +226,38 @@ namespace Mov4e.View.LogInView
         private void buttonBackToLogin_Click(object sender, EventArgs e)
         {
             ShowLoginOnly();
+        }
+
+        private void buttonSendEmail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(textBoxForgottenPassUsername.Text) && !string.IsNullOrWhiteSpace(textBoxForgottenPassEmail.Text))
+                {
+                    _logInPresenter.ResetPass(textBoxForgottenPassUsername.Text, textBoxForgottenPassEmail.Text);
+                    textBoxForgottenPassUsername.Text = null;
+                    textBoxForgottenPassEmail.Text = null;
+                    MessageBox.Show("You have successfully reset your password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("You must type something in the boxes first!!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMassage(ex.Message);
+            }
+        }
+
+        private void textBoxForgottenPassUsername_TextChanged(object sender, EventArgs e)
+        {
+            this.checkIfEverithingIsFilledInResetToActivateButton();
+        }
+
+        private void textBoxForgottenPassEmail_TextChanged(object sender, EventArgs e)
+        {
+            this.checkIfEverithingIsFilledInResetToActivateButton();
         }
     }
 }

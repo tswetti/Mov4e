@@ -11,9 +11,9 @@ namespace Mov4e.Repository.LogInRepository
     {
         public string GetPasswordForUser(string username)
         {
-            using (var r = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                string password = r.Users.Where(c => c.userName == username).FirstOrDefault().password;
+                string password = context.Users.Where(c => c.userName == username).FirstOrDefault().password;
 
                 return password;                                            
             }
@@ -21,28 +21,58 @@ namespace Mov4e.Repository.LogInRepository
 
         public bool checkIfUserIsInDB(string username)
         {
-            using (var r = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                return r.Users.Any(u => u.userName == username);
+                return context.Users.Any(u => u.userName == username);
             }
         }
 
         public int GetCurrentUserID(string username)
         {
-            using (var r = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                int ID = r.Users.Where(c => c.userName == username).FirstOrDefault().id;
+                int ID = context.Users.Where(c => c.userName == username).FirstOrDefault().id;
 
                 return ID;
             }
         }
         public string GetCurrentUserPosition(string username)
         {
-            using (var r = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                string position = r.Users.Where(c => c.userName == username).FirstOrDefault().user_info.position;
+                string position = context.Users.Where(c => c.userName == username).FirstOrDefault().user_info.position;
 
                 return position;
+            }
+        }
+
+        public string GetEmailForUser(string userName)
+        {
+            using (mov4eEntities context = new mov4eEntities())
+            {
+                string email = context.Users.Where(c => c.userName == userName).Single().user_info.email.ToString();
+
+                return email;
+            }
+        }
+
+        public void UpdatePass(string userName,string newPass)
+        {
+            using (mov4eEntities context = new mov4eEntities())
+            {
+                context.Users.Where(u => u.userName == userName).Single().password = newPass;
+                context.SaveChanges();
+            }
+        }
+
+        public string GetUserFullName(string username)
+        {
+            using (mov4eEntities context = new mov4eEntities())
+            {
+                string name = context.Users.Where(u => u.userName == username).Single().user_info.firstName.ToString() + " " +
+                              context.Users.Where(u => u.userName == username).Single().user_info.lastName.ToString();
+
+                return name;
             }
         }
     }

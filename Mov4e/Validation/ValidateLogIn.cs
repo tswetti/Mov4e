@@ -34,5 +34,13 @@ namespace Mov4e.Validation
                 throw new LogInException("No such User!");
             }
         }
+
+        public static void compareEmails(string emailFromDb, string insertedEmail)
+        {
+            if (emailFromDb!=insertedEmail)
+            {
+                throw new LogInException("This is not the e-mail of this user!");
+            }
+        }
     }
 }

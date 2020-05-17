@@ -32,5 +32,12 @@ namespace Mov4e.Service.LogInService
         /// </summary>
         /// <returns></returns>
         string GetPosition();
+
+        /// <summary>
+        /// This method creates new password. It uses username to find user and email to verify if this is the user.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="email"></param>
+        void CreateNewPass(string username, string email);
     }
 }

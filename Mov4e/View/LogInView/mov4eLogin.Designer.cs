@@ -235,6 +235,7 @@
             // buttonSendEmail
             // 
             this.buttonSendEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonSendEmail.Enabled = false;
             this.buttonSendEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSendEmail.Location = new System.Drawing.Point(31, 3);
             this.buttonSendEmail.Name = "buttonSendEmail";
@@ -242,6 +243,7 @@
             this.buttonSendEmail.TabIndex = 0;
             this.buttonSendEmail.Text = "Send e-mail";
             this.buttonSendEmail.UseVisualStyleBackColor = true;
+            this.buttonSendEmail.Click += new System.EventHandler(this.buttonSendEmail_Click);
             // 
             // buttonBackToLogin
             // 
@@ -284,6 +286,7 @@
             this.textBoxForgottenPassEmail.Name = "textBoxForgottenPassEmail";
             this.textBoxForgottenPassEmail.Size = new System.Drawing.Size(170, 20);
             this.textBoxForgottenPassEmail.TabIndex = 9;
+            this.textBoxForgottenPassEmail.TextChanged += new System.EventHandler(this.textBoxForgottenPassEmail_TextChanged);
             // 
             // labelForgottenPassEmail
             // 
@@ -342,6 +345,7 @@
             this.textBoxForgottenPassUsername.Name = "textBoxForgottenPassUsername";
             this.textBoxForgottenPassUsername.Size = new System.Drawing.Size(170, 20);
             this.textBoxForgottenPassUsername.TabIndex = 8;
+            this.textBoxForgottenPassUsername.TextChanged += new System.EventHandler(this.textBoxForgottenPassUsername_TextChanged);
             // 
             // labelLogin
             // 
