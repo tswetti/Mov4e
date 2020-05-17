@@ -25,6 +25,28 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
 
         public IAllMoviesRepository _allMoviesRepo;
 
+        private Dictionary<int, byte[]> getSortedByAToZMovies()
+        {
+            Dictionary<int, byte[]> sortedMovies = new Dictionary<int, byte[]>();
+            var sortQuery = from m in movies orderby m.title select m;
+            foreach(var item in sortQuery)
+            {
+                sortedMovies.Add(item.id, item.picture);
+            }
+            return sortedMovies;
+        }
+
+        private Dictionary<int, byte[]> getSortedByOldestMovies()
+        {
+            Dictionary<int, byte[]> sortedMovies = new Dictionary<int, byte[]>();
+            var sortQuery = from m in movies orderby m.year select m;
+            foreach (var item in sortQuery)
+            {
+                sortedMovies.Add(item.id, item.picture);
+            }
+            return sortedMovies;
+        }
+
         public DummyMockedAllMoviesRepository()
         {
             using (var mock = AutoMock.GetStrict())
@@ -65,6 +87,10 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
                         Logger.WriteToLogFile(ex.ToString());
                     }
                 });
+
+                mock.Mock<IAllMoviesRepository>().Setup(_allMoviesRepo=>_allMoviesRepo.SortMoviesByTitle()).Returns(getSortedByAToZMovies());
+                
+                mock.Mock<IAllMoviesRepository>().Setup(_allMoviesRepo => _allMoviesRepo.SortByDate()).Returns(getSortedByOldestMovies());
 
                 _allMoviesRepo = mock.Create<IAllMoviesRepository>();
             }
