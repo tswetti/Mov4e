@@ -36,6 +36,18 @@
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxLogin = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanelLoginContent = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelLoggedOrChangePass = new System.Windows.Forms.TableLayoutPanel();
+            this.labelForgottenPassInstructions = new System.Windows.Forms.Label();
+            this.tableLayoutPanelForgPassBtns = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSendEmail = new System.Windows.Forms.Button();
+            this.buttonBackToLogin = new System.Windows.Forms.Button();
+            this.tableLayoutPanelChangePassInfo = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxForgottenPassEmail = new System.Windows.Forms.TextBox();
+            this.labelForgottenPassEmail = new System.Windows.Forms.Label();
+            this.labelForgottenPassUsername = new System.Windows.Forms.Label();
+            this.labelForgottenPass = new System.Windows.Forms.Label();
+            this.checkBoxSave = new System.Windows.Forms.CheckBox();
+            this.textBoxForgottenPassUsername = new System.Windows.Forms.TextBox();
             this.labelLogin = new System.Windows.Forms.Label();
             this.tableLayoutPanelUsername = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
@@ -43,7 +55,6 @@
             this.tableLayoutPanelPassword = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
-            this.checkBoxSave = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanelLoginButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonRegister = new System.Windows.Forms.Button();
@@ -51,6 +62,9 @@
             this.tableLayoutPanelMain.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
             this.tableLayoutPanelLoginContent.SuspendLayout();
+            this.tableLayoutPanelLoggedOrChangePass.SuspendLayout();
+            this.tableLayoutPanelForgPassBtns.SuspendLayout();
+            this.tableLayoutPanelChangePassInfo.SuspendLayout();
             this.tableLayoutPanelUsername.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             this.tableLayoutPanelPassword.SuspendLayout();
@@ -156,25 +170,178 @@
             // 
             this.tableLayoutPanelLoginContent.ColumnCount = 1;
             this.tableLayoutPanelLoginContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLoginContent.Controls.Add(this.tableLayoutPanelLoggedOrChangePass, 0, 6);
             this.tableLayoutPanelLoginContent.Controls.Add(this.labelLogin, 0, 1);
             this.tableLayoutPanelLoginContent.Controls.Add(this.tableLayoutPanelUsername, 0, 3);
             this.tableLayoutPanelLoginContent.Controls.Add(this.tableLayoutPanelPassword, 0, 5);
-            this.tableLayoutPanelLoginContent.Controls.Add(this.checkBoxSave, 0, 6);
             this.tableLayoutPanelLoginContent.Controls.Add(this.tableLayoutPanelLoginButtons, 0, 7);
             this.tableLayoutPanelLoginContent.Location = new System.Drawing.Point(39, 12);
             this.tableLayoutPanelLoginContent.Name = "tableLayoutPanelLoginContent";
             this.tableLayoutPanelLoginContent.RowCount = 9;
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.836889F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.49409F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.522459F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.224591F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.522459F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.224591F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.88885F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.44918F));
+            this.tableLayoutPanelLoginContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.836889F));
             this.tableLayoutPanelLoginContent.Size = new System.Drawing.Size(320, 450);
             this.tableLayoutPanelLoginContent.TabIndex = 2;
+            // 
+            // tableLayoutPanelLoggedOrChangePass
+            // 
+            this.tableLayoutPanelLoggedOrChangePass.ColumnCount = 1;
+            this.tableLayoutPanelLoggedOrChangePass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLoggedOrChangePass.Controls.Add(this.labelForgottenPassInstructions, 0, 1);
+            this.tableLayoutPanelLoggedOrChangePass.Controls.Add(this.tableLayoutPanelForgPassBtns, 0, 2);
+            this.tableLayoutPanelLoggedOrChangePass.Controls.Add(this.tableLayoutPanelChangePassInfo, 0, 0);
+            this.tableLayoutPanelLoggedOrChangePass.Location = new System.Drawing.Point(3, 139);
+            this.tableLayoutPanelLoggedOrChangePass.Name = "tableLayoutPanelLoggedOrChangePass";
+            this.tableLayoutPanelLoggedOrChangePass.RowCount = 3;
+            this.tableLayoutPanelLoggedOrChangePass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanelLoggedOrChangePass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelLoggedOrChangePass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelLoggedOrChangePass.Size = new System.Drawing.Size(314, 200);
+            this.tableLayoutPanelLoggedOrChangePass.TabIndex = 5;
+            // 
+            // labelForgottenPassInstructions
+            // 
+            this.labelForgottenPassInstructions.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelForgottenPassInstructions.AutoSize = true;
+            this.labelForgottenPassInstructions.ForeColor = System.Drawing.Color.White;
+            this.labelForgottenPassInstructions.Location = new System.Drawing.Point(22, 120);
+            this.labelForgottenPassInstructions.Name = "labelForgottenPassInstructions";
+            this.labelForgottenPassInstructions.Size = new System.Drawing.Size(269, 39);
+            this.labelForgottenPassInstructions.TabIndex = 8;
+            this.labelForgottenPassInstructions.Text = "You will receive an e-mail with your new password. It is reccommended that you ch" +
+    "ange it afterwards for safety purposes.";
+            // 
+            // tableLayoutPanelForgPassBtns
+            // 
+            this.tableLayoutPanelForgPassBtns.ColumnCount = 2;
+            this.tableLayoutPanelForgPassBtns.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelForgPassBtns.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelForgPassBtns.Controls.Add(this.buttonSendEmail, 0, 0);
+            this.tableLayoutPanelForgPassBtns.Controls.Add(this.buttonBackToLogin, 1, 0);
+            this.tableLayoutPanelForgPassBtns.Location = new System.Drawing.Point(3, 163);
+            this.tableLayoutPanelForgPassBtns.Name = "tableLayoutPanelForgPassBtns";
+            this.tableLayoutPanelForgPassBtns.RowCount = 1;
+            this.tableLayoutPanelForgPassBtns.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelForgPassBtns.Size = new System.Drawing.Size(308, 34);
+            this.tableLayoutPanelForgPassBtns.TabIndex = 9;
+            // 
+            // buttonSendEmail
+            // 
+            this.buttonSendEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonSendEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSendEmail.Location = new System.Drawing.Point(31, 3);
+            this.buttonSendEmail.Name = "buttonSendEmail";
+            this.buttonSendEmail.Size = new System.Drawing.Size(120, 28);
+            this.buttonSendEmail.TabIndex = 0;
+            this.buttonSendEmail.Text = "Send e-mail";
+            this.buttonSendEmail.UseVisualStyleBackColor = true;
+            // 
+            // buttonBackToLogin
+            // 
+            this.buttonBackToLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonBackToLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBackToLogin.Location = new System.Drawing.Point(157, 3);
+            this.buttonBackToLogin.Name = "buttonBackToLogin";
+            this.buttonBackToLogin.Size = new System.Drawing.Size(120, 28);
+            this.buttonBackToLogin.TabIndex = 1;
+            this.buttonBackToLogin.Text = "Back to login";
+            this.buttonBackToLogin.UseVisualStyleBackColor = true;
+            this.buttonBackToLogin.Click += new System.EventHandler(this.buttonBackToLogin_Click);
+            // 
+            // tableLayoutPanelChangePassInfo
+            // 
+            this.tableLayoutPanelChangePassInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanelChangePassInfo.ColumnCount = 2;
+            this.tableLayoutPanelChangePassInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelChangePassInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelChangePassInfo.Controls.Add(this.textBoxForgottenPassEmail, 1, 2);
+            this.tableLayoutPanelChangePassInfo.Controls.Add(this.labelForgottenPassEmail, 0, 2);
+            this.tableLayoutPanelChangePassInfo.Controls.Add(this.labelForgottenPassUsername, 0, 1);
+            this.tableLayoutPanelChangePassInfo.Controls.Add(this.labelForgottenPass, 1, 0);
+            this.tableLayoutPanelChangePassInfo.Controls.Add(this.checkBoxSave, 0, 0);
+            this.tableLayoutPanelChangePassInfo.Controls.Add(this.textBoxForgottenPassUsername, 1, 1);
+            this.tableLayoutPanelChangePassInfo.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanelChangePassInfo.Name = "tableLayoutPanelChangePassInfo";
+            this.tableLayoutPanelChangePassInfo.RowCount = 3;
+            this.tableLayoutPanelChangePassInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.25253F));
+            this.tableLayoutPanelChangePassInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.37374F));
+            this.tableLayoutPanelChangePassInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.37374F));
+            this.tableLayoutPanelChangePassInfo.Size = new System.Drawing.Size(308, 100);
+            this.tableLayoutPanelChangePassInfo.TabIndex = 6;
+            // 
+            // textBoxForgottenPassEmail
+            // 
+            this.textBoxForgottenPassEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxForgottenPassEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxForgottenPassEmail.Location = new System.Drawing.Point(123, 71);
+            this.textBoxForgottenPassEmail.Name = "textBoxForgottenPassEmail";
+            this.textBoxForgottenPassEmail.Size = new System.Drawing.Size(170, 20);
+            this.textBoxForgottenPassEmail.TabIndex = 9;
+            // 
+            // labelForgottenPassEmail
+            // 
+            this.labelForgottenPassEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelForgottenPassEmail.AutoSize = true;
+            this.labelForgottenPassEmail.ForeColor = System.Drawing.Color.White;
+            this.labelForgottenPassEmail.Location = new System.Drawing.Point(80, 74);
+            this.labelForgottenPassEmail.Name = "labelForgottenPassEmail";
+            this.labelForgottenPassEmail.Size = new System.Drawing.Size(37, 13);
+            this.labelForgottenPassEmail.TabIndex = 7;
+            this.labelForgottenPassEmail.Text = "e-mail:";
+            // 
+            // labelForgottenPassUsername
+            // 
+            this.labelForgottenPassUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelForgottenPassUsername.AutoSize = true;
+            this.labelForgottenPassUsername.ForeColor = System.Drawing.Color.White;
+            this.labelForgottenPassUsername.Location = new System.Drawing.Point(61, 37);
+            this.labelForgottenPassUsername.Name = "labelForgottenPassUsername";
+            this.labelForgottenPassUsername.Size = new System.Drawing.Size(56, 13);
+            this.labelForgottenPassUsername.TabIndex = 6;
+            this.labelForgottenPassUsername.Text = "username:";
+            // 
+            // labelForgottenPass
+            // 
+            this.labelForgottenPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelForgottenPass.AutoSize = true;
+            this.labelForgottenPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelForgottenPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelForgottenPass.ForeColor = System.Drawing.Color.White;
+            this.labelForgottenPass.Location = new System.Drawing.Point(199, 6);
+            this.labelForgottenPass.Name = "labelForgottenPass";
+            this.labelForgottenPass.Size = new System.Drawing.Size(106, 13);
+            this.labelForgottenPass.TabIndex = 5;
+            this.labelForgottenPass.Text = "Forgotten password?";
+            this.labelForgottenPass.Click += new System.EventHandler(this.labelForgottenPass_Click);
+            // 
+            // checkBoxSave
+            // 
+            this.checkBoxSave.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkBoxSave.AutoSize = true;
+            this.checkBoxSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBoxSave.Location = new System.Drawing.Point(3, 4);
+            this.checkBoxSave.Name = "checkBoxSave";
+            this.checkBoxSave.Size = new System.Drawing.Size(114, 17);
+            this.checkBoxSave.TabIndex = 4;
+            this.checkBoxSave.Text = "Keep me logged in";
+            this.checkBoxSave.UseVisualStyleBackColor = true;
+            // 
+            // textBoxForgottenPassUsername
+            // 
+            this.textBoxForgottenPassUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxForgottenPassUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxForgottenPassUsername.Location = new System.Drawing.Point(123, 33);
+            this.textBoxForgottenPassUsername.Name = "textBoxForgottenPassUsername";
+            this.textBoxForgottenPassUsername.Size = new System.Drawing.Size(170, 20);
+            this.textBoxForgottenPassUsername.TabIndex = 8;
             // 
             // labelLogin
             // 
@@ -182,9 +349,9 @@
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.labelLogin.Location = new System.Drawing.Point(35, 80);
+            this.labelLogin.Location = new System.Drawing.Point(35, 35);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(249, 72);
+            this.labelLogin.Size = new System.Drawing.Size(249, 51);
             this.labelLogin.TabIndex = 0;
             this.labelLogin.Text = "LOGIN";
             // 
@@ -196,22 +363,21 @@
             this.tableLayoutPanelUsername.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.83839F));
             this.tableLayoutPanelUsername.Controls.Add(this.pictureBoxUsername, 0, 0);
             this.tableLayoutPanelUsername.Controls.Add(this.textBoxUsername, 1, 0);
-            this.tableLayoutPanelUsername.Location = new System.Drawing.Point(10, 173);
+            this.tableLayoutPanelUsername.Location = new System.Drawing.Point(10, 91);
             this.tableLayoutPanelUsername.Name = "tableLayoutPanelUsername";
             this.tableLayoutPanelUsername.RowCount = 1;
             this.tableLayoutPanelUsername.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelUsername.Size = new System.Drawing.Size(300, 38);
+            this.tableLayoutPanelUsername.Size = new System.Drawing.Size(300, 17);
             this.tableLayoutPanelUsername.TabIndex = 1;
             // 
             // pictureBoxUsername
             // 
             this.pictureBoxUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxUsername.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxUsername.Image = global::Mov4e.Properties.Resources.username_icon;
-            this.pictureBoxUsername.Location = new System.Drawing.Point(9, 4);
+            this.pictureBoxUsername.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxUsername.Name = "pictureBoxUsername";
-            this.pictureBoxUsername.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxUsername.TabIndex = 6;
+            this.pictureBoxUsername.Size = new System.Drawing.Size(42, 11);
+            this.pictureBoxUsername.TabIndex = 0;
             this.pictureBoxUsername.TabStop = false;
             // 
             // textBoxUsername
@@ -220,7 +386,7 @@
             this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
-            this.textBoxUsername.Location = new System.Drawing.Point(59, 6);
+            this.textBoxUsername.Location = new System.Drawing.Point(59, 3);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(230, 26);
             this.textBoxUsername.TabIndex = 1;
@@ -234,11 +400,11 @@
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
             this.tableLayoutPanelPassword.Controls.Add(this.textBoxPassword, 1, 0);
             this.tableLayoutPanelPassword.Controls.Add(this.pictureBoxPassword, 0, 0);
-            this.tableLayoutPanelPassword.Location = new System.Drawing.Point(10, 222);
+            this.tableLayoutPanelPassword.Location = new System.Drawing.Point(10, 116);
             this.tableLayoutPanelPassword.Name = "tableLayoutPanelPassword";
             this.tableLayoutPanelPassword.RowCount = 1;
             this.tableLayoutPanelPassword.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 38);
+            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 17);
             this.tableLayoutPanelPassword.TabIndex = 2;
             // 
             // textBoxPassword
@@ -247,7 +413,7 @@
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
-            this.textBoxPassword.Location = new System.Drawing.Point(60, 6);
+            this.textBoxPassword.Location = new System.Drawing.Point(60, 3);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(230, 26);
             this.textBoxPassword.TabIndex = 2;
@@ -255,27 +421,12 @@
             // 
             // pictureBoxPassword
             // 
-            this.pictureBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxPassword.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxPassword.Image = global::Mov4e.Properties.Resources.password_icon;
-            this.pictureBoxPassword.Location = new System.Drawing.Point(10, 4);
+            this.pictureBoxPassword.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
-            this.pictureBoxPassword.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxPassword.TabIndex = 7;
+            this.pictureBoxPassword.Size = new System.Drawing.Size(44, 11);
+            this.pictureBoxPassword.TabIndex = 3;
             this.pictureBoxPassword.TabStop = false;
-            // 
-            // checkBoxSave
-            // 
-            this.checkBoxSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkBoxSave.AutoSize = true;
-            this.checkBoxSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBoxSave.Location = new System.Drawing.Point(103, 269);
-            this.checkBoxSave.Name = "checkBoxSave";
-            this.checkBoxSave.Size = new System.Drawing.Size(114, 17);
-            this.checkBoxSave.TabIndex = 4;
-            this.checkBoxSave.Text = "Keep me logged in";
-            this.checkBoxSave.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanelLoginButtons
             // 
@@ -285,11 +436,11 @@
             this.tableLayoutPanelLoginButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelLoginButtons.Controls.Add(this.buttonLogin, 0, 0);
             this.tableLayoutPanelLoginButtons.Controls.Add(this.buttonRegister, 1, 0);
-            this.tableLayoutPanelLoginButtons.Location = new System.Drawing.Point(3, 304);
+            this.tableLayoutPanelLoginButtons.Location = new System.Drawing.Point(3, 367);
             this.tableLayoutPanelLoginButtons.Name = "tableLayoutPanelLoginButtons";
             this.tableLayoutPanelLoginButtons.RowCount = 1;
             this.tableLayoutPanelLoginButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelLoginButtons.Size = new System.Drawing.Size(314, 63);
+            this.tableLayoutPanelLoginButtons.Size = new System.Drawing.Size(314, 41);
             this.tableLayoutPanelLoginButtons.TabIndex = 5;
             // 
             // buttonLogin
@@ -299,9 +450,9 @@
             this.buttonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonLogin.Enabled = false;
             this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogin.Location = new System.Drawing.Point(8, 11);
+            this.buttonLogin.Location = new System.Drawing.Point(8, 3);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(140, 40);
+            this.buttonLogin.Size = new System.Drawing.Size(140, 35);
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -311,9 +462,9 @@
             // 
             this.buttonRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRegister.Location = new System.Drawing.Point(165, 11);
+            this.buttonRegister.Location = new System.Drawing.Point(165, 3);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(140, 40);
+            this.buttonRegister.Size = new System.Drawing.Size(140, 35);
             this.buttonRegister.TabIndex = 5;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = true;
@@ -338,6 +489,11 @@
             this.groupBoxLogin.ResumeLayout(false);
             this.tableLayoutPanelLoginContent.ResumeLayout(false);
             this.tableLayoutPanelLoginContent.PerformLayout();
+            this.tableLayoutPanelLoggedOrChangePass.ResumeLayout(false);
+            this.tableLayoutPanelLoggedOrChangePass.PerformLayout();
+            this.tableLayoutPanelForgPassBtns.ResumeLayout(false);
+            this.tableLayoutPanelChangePassInfo.ResumeLayout(false);
+            this.tableLayoutPanelChangePassInfo.PerformLayout();
             this.tableLayoutPanelUsername.ResumeLayout(false);
             this.tableLayoutPanelUsername.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
@@ -369,5 +525,16 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLoginButtons;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLoggedOrChangePass;
+        private System.Windows.Forms.Label labelForgottenPassInstructions;
+        private System.Windows.Forms.Label labelForgottenPass;
+        private System.Windows.Forms.Label labelForgottenPassUsername;
+        private System.Windows.Forms.Label labelForgottenPassEmail;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelChangePassInfo;
+        private System.Windows.Forms.TextBox textBoxForgottenPassEmail;
+        private System.Windows.Forms.TextBox textBoxForgottenPassUsername;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelForgPassBtns;
+        private System.Windows.Forms.Button buttonSendEmail;
+        private System.Windows.Forms.Button buttonBackToLogin;
     }
 }

@@ -43,6 +43,49 @@ namespace Mov4e.View.LogInView
             label.ForeColor = Color.White;
         }
 
+        private void ShowLoginOnly()
+        {
+            tableLayoutPanelLoggedOrChangePass.RowStyles[0].Height = 100;
+            tableLayoutPanelLoggedOrChangePass.RowStyles[1].Height = 0;
+            tableLayoutPanelLoggedOrChangePass.RowStyles[2].Height = 0;
+            tableLayoutPanelChangePassInfo.Height = 100;
+            tableLayoutPanelChangePassInfo.RowStyles[0].Height = 100;
+            tableLayoutPanelChangePassInfo.RowStyles[1].Height = 0;
+            tableLayoutPanelChangePassInfo.RowStyles[2].Height = 0;
+            checkBoxSave.Height = 40;
+            labelForgottenPass.Height = 40;
+
+            tableLayoutPanelLoginContent.RowStyles[0].Height = 20;
+            tableLayoutPanelLoginContent.RowStyles[1].Height = 20;
+            tableLayoutPanelLoginContent.RowStyles[3].Height = 15;
+            tableLayoutPanelLoginContent.RowStyles[5].Height = 15;
+            tableLayoutPanelLoginContent.RowStyles[6].Height = 10;
+            tableLayoutPanelLoginContent.RowStyles[7].Height = 10;
+            tableLayoutPanelLoginContent.RowStyles[8].Height = 20;
+            tableLayoutPanelUsername.Height = 40;
+            tableLayoutPanelPassword.Height = 40;
+            pictureBoxUsername.Height = 40;
+            pictureBoxPassword.Height = 40;
+            tableLayoutPanelLoginButtons.Height = 41;
+            checkBoxSave.Visible = true;
+        }
+
+        private void ShowForgottenPasswordField()
+        {
+            tableLayoutPanelLoginContent.RowStyles[3].Height = 0;
+            tableLayoutPanelLoginContent.RowStyles[5].Height = 0;
+            tableLayoutPanelLoginContent.RowStyles[7].Height = 0;
+            tableLayoutPanelLoginContent.RowStyles[6].Height = 50;
+            tableLayoutPanelLoggedOrChangePass.RowStyles[0].Height = 60;
+            tableLayoutPanelLoggedOrChangePass.RowStyles[1].Height = 20;
+            tableLayoutPanelLoggedOrChangePass.RowStyles[2].Height = 20;
+            tableLayoutPanelChangePassInfo.RowStyles[0].Height = 25;
+            tableLayoutPanelChangePassInfo.RowStyles[1].Height = 37;
+            tableLayoutPanelChangePassInfo.RowStyles[2].Height = 37;
+            tableLayoutPanelForgPassBtns.Height = 35;
+            checkBoxSave.Visible = false;
+        }
+
         public mov4eLogin()
         {
             InitializeComponent();
@@ -50,6 +93,7 @@ namespace Mov4e.View.LogInView
             UserName = null;
             Password = null;
             _logInPresenter = new LogInPresenter(this);
+            ShowLoginOnly();
         }
 
         private void minimizeLabel_Click(object sender, EventArgs e)
@@ -71,7 +115,7 @@ namespace Mov4e.View.LogInView
 
         private void closeLabel_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Are You sure Want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult d = MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (d == DialogResult.OK)
             {
                 this.Controls.Clear();
@@ -137,7 +181,7 @@ namespace Mov4e.View.LogInView
 
             else
             {
-                MessageBox.Show("You must write something in the boxes first!!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You must type something in the boxes first!!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -160,6 +204,16 @@ namespace Mov4e.View.LogInView
         private void textBoxPassword_TextChanged(object sender, EventArgs e)
         {
             this.checkIfEverithingIsFilledToActivateButton();
+        }
+
+        private void labelForgottenPass_Click(object sender, EventArgs e)
+        {
+            ShowForgottenPasswordField();
+        }
+
+        private void buttonBackToLogin_Click(object sender, EventArgs e)
+        {
+            ShowLoginOnly();
         }
     }
 }
