@@ -149,7 +149,7 @@ namespace Mov4e.Service.RegisterService
             MailMessage message = new MailMessage(from, to);
             
             message.Subject = "Registered";
-            string mess = "Hello " + newUser.userName + " you have successfully registered in our app!" + Environment.NewLine + "If you have any questions please do not hesitate to contact us!" + Environment.NewLine + Environment.NewLine + " From: Mov4e Team";
+            string mess = "Hello " + newUser.userName +"!"+ Environment.NewLine + Environment.NewLine+ "You have successfully registered in our app!" + Environment.NewLine + "If you have any questions please do not hesitate to contact us!" + Environment.NewLine + Environment.NewLine + " From: Mov4e Team";
             message.Body = mess;
 
             SmtpClient client = new SmtpClient();

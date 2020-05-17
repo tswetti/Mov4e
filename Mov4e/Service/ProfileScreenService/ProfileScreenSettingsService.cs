@@ -152,7 +152,7 @@ namespace Mov4e.Service.ProfileScreenService
             MailMessage message = new MailMessage(from, to);
 
             message.Subject = "Changed Information";
-            string mess = messg;
+            string mess = messg+Environment.NewLine+Environment.NewLine+"From: Mov4e Team";
             message.Body = mess;
 
             SmtpClient client = new SmtpClient();

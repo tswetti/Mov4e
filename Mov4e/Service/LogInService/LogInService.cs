@@ -125,7 +125,7 @@ namespace Mov4e.Service.LogInService
             MailMessage message = new MailMessage(from, to);
 
             message.Subject = "Reset Password";
-            string mess = "Hello " + username + "! You have successfully reset your password!" + 
+            string mess = "Hello " + username + "!" + Environment.NewLine+ Environment.NewLine + "You have successfully reset your password!" + 
                            Environment.NewLine +"Your new password is: "+pass+
                            Environment.NewLine+ "For your safety we recommend changing it after logging in!" +
                            Environment.NewLine + Environment.NewLine + " From: Mov4e Team";
