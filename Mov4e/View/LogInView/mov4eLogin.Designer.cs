@@ -282,6 +282,7 @@
             // 
             this.textBoxForgottenPassEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxForgottenPassEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxForgottenPassEmail.ForeColor = System.Drawing.SystemColors.Info;
             this.textBoxForgottenPassEmail.Location = new System.Drawing.Point(123, 71);
             this.textBoxForgottenPassEmail.Name = "textBoxForgottenPassEmail";
             this.textBoxForgottenPassEmail.Size = new System.Drawing.Size(170, 20);
@@ -341,6 +342,7 @@
             // 
             this.textBoxForgottenPassUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxForgottenPassUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxForgottenPassUsername.ForeColor = System.Drawing.SystemColors.Info;
             this.textBoxForgottenPassUsername.Location = new System.Drawing.Point(123, 33);
             this.textBoxForgottenPassUsername.Name = "textBoxForgottenPassUsername";
             this.textBoxForgottenPassUsername.Size = new System.Drawing.Size(170, 20);

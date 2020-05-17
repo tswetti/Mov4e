@@ -25,10 +25,11 @@ namespace Mov4e.View.SpecificMovieInfoView
         public string movieSummary { get; set; }
         public string userPosition { get; set; }
         public int duration { get; set; }
+        public int userRate { get; set; }
         public List<(int commentId, string name, byte[] picture, string comment)> comments { get; set; }
 
         private HashSet<int> commentIds = new HashSet<int>();
-        private ISpecificMovieInfoPresenter specificMoviePresenter;
+        private ISpecificMovieInfoPresenter _specificMoviePresenter;
         IScreenView _screnToGoback;
 
 
@@ -111,10 +112,10 @@ namespace Mov4e.View.SpecificMovieInfoView
             _screnToGoback = screen;
             this.userId = userId;
             this.movieId = movieId;
-            specificMoviePresenter = new SpecificMovieInfoPresenter(this);
-            specificMoviePresenter.GetUserPosition();
-            specificMoviePresenter.GetInfoForMovie(movieId);
-            specificMoviePresenter.SetCommentsForTheMovie();
+            _specificMoviePresenter = new SpecificMovieInfoPresenter(this);
+            _specificMoviePresenter.GetUserPosition();
+            _specificMoviePresenter.GetInfoForMovie(movieId);
+            _specificMoviePresenter.SetCommentsForTheMovie();
             spEventArgs = new SpecificMovieEventArgs() { movieId = this.movieId };
             this.InitializeMovieInfo();
         }
@@ -253,8 +254,8 @@ namespace Mov4e.View.SpecificMovieInfoView
             {
                 ValidateSpecificMovie.isCommentOK(textBoxAddComment.Text);
                 comments.Reverse();
-                specificMoviePresenter.AddCommentInDB(textBoxAddComment.Text);
-                comments.Add(specificMoviePresenter.GetLastComment());
+                _specificMoviePresenter.AddCommentInDB(textBoxAddComment.Text);
+                comments.Add(_specificMoviePresenter.GetLastComment());
 
                 if (!commentIds.Contains(comments.Last().commentId))
                 {
@@ -295,7 +296,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 buttonRemoveFWatchlist.Height = 30;
 
                 Validation.ValidateSpecificMovie.isThereAnUser(this.userId);
-                specificMoviePresenter.AddMovieINWatchList(this.userId);
+                _specificMoviePresenter.AddMovieINWatchList(this.userId);
                 OnMovieAddedToWatchList(spEventArgs);
             }
             catch (Exception ex)
@@ -318,7 +319,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 OnMovieDeletedFromWatchList(spEventArgs);
                 buttonAddToWatchlist.Height = 30;
                 Validation.ValidateSpecificMovie.isThereAnUser(this.userId);
-                specificMoviePresenter.DeleteMovieFromWatchList(this.userId);
+                _specificMoviePresenter.DeleteMovieFromWatchList(this.userId);
             }
             catch (Exception ex)
             {
@@ -345,8 +346,10 @@ namespace Mov4e.View.SpecificMovieInfoView
             try
             {
                 Validation.ValidateSpecificMovie.isRateOk(int.Parse(rate.Tag.ToString()));
-                specificMoviePresenter.RateMovie(int.Parse(rate.Tag.ToString()));
+                _specificMoviePresenter.RateMovie(int.Parse(rate.Tag.ToString()));
                 tableLayoutPanelStars.Visible = false;
+                userRate = int.Parse(rate.Tag.ToString());
+                labelAlreadyRated.Text += " " + userRate + "!";
                 labelMovieAverageRating.Text = movieAVGRate.ToString();
                 this.tableLayoutPanelRating.RowStyles[0].Height = 20;
                 this.tableLayoutPanelRating.RowStyles[1].Height = 0;
@@ -370,15 +373,17 @@ namespace Mov4e.View.SpecificMovieInfoView
             labelMovieSummary.Text = movieSummary;
             labelMovieAverageRating.Text = movieAVGRate.ToString();
 
-            if (specificMoviePresenter.UserAlreadyRated())
+            if (_specificMoviePresenter.UserAlreadyRated())
             {
+                _specificMoviePresenter.SetUserRate(this.userId);
                 tableLayoutPanelStars.Visible = false;
+                labelAlreadyRated.Text += " " + userRate + "!";
                 this.tableLayoutPanelRating.RowStyles[0].Height = 20;
                 this.tableLayoutPanelRating.RowStyles[1].Height = 0;
                 this.tableLayoutPanelRating.RowStyles[2].Height = 80;
                 labelAlreadyRated.Visible = true;
             }
-            if (specificMoviePresenter.UserHasMovieInWatchList())
+            if (_specificMoviePresenter.UserHasMovieInWatchList())
             {
                 tableLayoutPanelWatchlistActions.RowStyles[0].Height = 0;
                 tableLayoutPanelWatchlistActions.RowStyles[1].Height = 100;
@@ -401,7 +406,7 @@ namespace Mov4e.View.SpecificMovieInfoView
         private void initalizeMyComments()
         {
             commentBoxMyComments.enableCheckBoxes = true;
-            commentBoxMyComments.currentUserName = specificMoviePresenter.GetUserName();
+            commentBoxMyComments.currentUserName = _specificMoviePresenter.GetUserName();
             if (comments.Count > 0)
             {
                 commentBoxMyComments.commentList = comments.Where(c => c.name == commentBoxMyComments.currentUserName).ToList();
@@ -418,7 +423,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 buttonDelSelectFromAllComments.Enabled = true;
                 buttonDelSelectFromAllComments.Visible = true;
             }
-            commentBoxAllComments.currentUserName = specificMoviePresenter.GetUserName();
+            commentBoxAllComments.currentUserName = _specificMoviePresenter.GetUserName();
             if (comments.Count > 0)
             {
 
@@ -451,7 +456,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 (int commentId, string name, byte[] picture, string comment) p = comments.Where(c => c.commentId == el).Single();
                 this.comments.Remove(p);
             }
-            specificMoviePresenter.DeleteComments(comms);
+            _specificMoviePresenter.DeleteComments(comms);
         }
 
         public void deleteCommentsFromCommentBoxes(CommentBox one, CommentBox two)

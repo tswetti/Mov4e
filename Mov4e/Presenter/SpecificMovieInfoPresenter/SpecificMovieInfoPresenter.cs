@@ -41,7 +41,7 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
                 _specificMovieView.moviePrimeDate = _specificMovieService.SetMovieInfo().date;
                 _specificMovieView.movieSummary = _specificMovieService.SetMovieInfo().summary;
                 _specificMovieView.movieAVGRate = _specificMovieService.SetMovieInfo().avgRating;
-                _specificMovieView.duration = _specificMovieService.SetMovieInfo().duration;
+                _specificMovieView.duration = _specificMovieService.SetMovieInfo().duration;                
             }
             catch (Exception e)
             {
@@ -274,6 +274,23 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
             }
         }
 
+        /// <summary>
+        /// This method gets the rate of current user.
+        /// </summary>
+        /// <param name="id"></param>
+        public void SetUserRate(int id)
+        {
+            try
+            {
+                _specificMovieView.userRate = _specificMovieService.GetUserRate(id);
+            }
+            catch (Exception e)
+            {
+                Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
+                         + "\n" + e.ToString());
+                _specificMovieView.ErrorMassage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
+            }
+        }
 
  
     }

@@ -195,5 +195,15 @@ namespace Mov4e.Repository.SpecificMovieInfoRepository
                 return (query.id, query.user.userName, query.user.user_info.picture, query.comment1);
             }
         }
+
+        public int GetUserRateFromDB(int id, int movieId)
+        {
+            using (mov4eEntities context = new mov4eEntities())
+            {
+                int rate = context.Ratings.Where(r => r.user_Id == id &&r.movie_Id==movieId).FirstOrDefault().userRating;
+
+                return rate;
+            }
+        }
     }
 }

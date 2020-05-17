@@ -216,5 +216,18 @@ namespace Mov4e.Service.SpecificMovieService
             }
            
         }
+
+        public int GetUserRate(int id)
+        {
+            try
+            {
+                ValidateSpecificMovie.isThereAnUser(id);
+                return _specificMovieRepo.GetUserRateFromDB(id,this.currentMovie.id);
+            }
+            catch (SpecificMovieException)
+            {
+                throw;
+            }
+        }
     }
 }

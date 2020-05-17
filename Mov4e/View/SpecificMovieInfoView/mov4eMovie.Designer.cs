@@ -325,11 +325,11 @@
             this.labelAlreadyRated.AutoSize = true;
             this.labelAlreadyRated.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAlreadyRated.ForeColor = System.Drawing.Color.White;
-            this.labelAlreadyRated.Location = new System.Drawing.Point(70, 112);
+            this.labelAlreadyRated.Location = new System.Drawing.Point(32, 112);
             this.labelAlreadyRated.Name = "labelAlreadyRated";
-            this.labelAlreadyRated.Size = new System.Drawing.Size(273, 20);
+            this.labelAlreadyRated.Size = new System.Drawing.Size(349, 20);
             this.labelAlreadyRated.TabIndex = 11;
-            this.labelAlreadyRated.Text = "You have already rated for this movie!";
+            this.labelAlreadyRated.Text = "You have already rated for this movie! With rate: ";
             // 
             // tableLayoutPanelMovie
             // 

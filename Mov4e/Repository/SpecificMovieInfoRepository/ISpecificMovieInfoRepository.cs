@@ -123,5 +123,13 @@ namespace Mov4e.Repository.SpecificMovieInfoRepository
         /// <param name=""></param>
         /// <returns></returns>
         (int commentId, string name, byte[] picture, string comment) GetLastCommentForTheUser(int movieId, int userId);
+
+        /// <summary>
+        /// This method returns the rate of current user.
+        /// </summary>
+        /// <param name="id"></param>
+        /// /// <param name="movieId"></param>
+        /// <returns></returns>
+        int GetUserRateFromDB(int userId,int movieId);
     }
 }

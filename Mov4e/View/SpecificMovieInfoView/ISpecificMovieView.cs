@@ -28,6 +28,8 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         int duration { get; set; }
 
+        int userRate { get; set; }
+
         void Visible(bool isVisible);
 
         string userPosition { get; set; }

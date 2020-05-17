@@ -97,5 +97,12 @@ namespace Mov4e.Service.SpecificMovieService
         /// </summary>
         /// <returns></returns>
         (int commentId, string name, byte[] picture, string comment) GetLastComment(int userId);
+
+        /// <summary>
+        /// This method gets the rate of current user.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        int GetUserRate(int id);
     }
 }
