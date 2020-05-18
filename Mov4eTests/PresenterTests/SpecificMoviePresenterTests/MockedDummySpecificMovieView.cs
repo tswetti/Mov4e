@@ -19,6 +19,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
         public string movieSummary { get; set; }
         public double? movieAVGRate { get; set; }
         public string userPosition { get; set; }
+        public int userRate { get; set; }
         public int duration { get; set; }
         public List<(int commentId, string name, byte[] picture, string comment)> comments { get; set; }
 
