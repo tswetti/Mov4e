@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mov4e.View.SpecificMovieInfoView
 {
-    public interface ISpecificMovieView
+    public interface ISpecificMovieView:IScreenView
     {
         int userId { get; set; }
 
@@ -30,8 +30,6 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         int userRate { get; set; }
 
-        void Visible(bool isVisible);
-
         string userPosition { get; set; }
 
         event EventHandler<SpecificMovieEventArgs> MovieDeletedFromWatchList;
@@ -39,8 +37,6 @@ namespace Mov4e.View.SpecificMovieInfoView
         event EventHandler<SpecificMovieEventArgs> MovieAddedToWatchList;
 
         List<(int commentId, string name, byte[] picture, string comment)> comments { get; set; }
-
-        void ErrorMassage(string msg);
 
 
 

@@ -31,6 +31,11 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             //ok
         }
 
+        public void ShowForm()
+        {
+            
+        }
+
         public void Visible(bool isVisible)
         {
            //ok

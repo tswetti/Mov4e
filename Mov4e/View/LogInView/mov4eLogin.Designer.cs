@@ -489,6 +489,7 @@
             this.Name = "mov4eLogin";
             this.Text = "mov4eLogin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.mov4eLogin_Load);
             this.topButtonsLayoutPanel.ResumeLayout(false);
             this.topButtonsLayoutPanel.PerformLayout();
             this.tableLayoutPanelMain.ResumeLayout(false);

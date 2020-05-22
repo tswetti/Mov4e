@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mov4e.View.RegisterView
 {
-    public interface IRegister
+    public interface IRegister:IScreenView
     {
         string UserName { get; set; }
 
@@ -22,10 +22,6 @@ namespace Mov4e.View.RegisterView
 
         int Age { get; set; }
 
-        /// <summary>
-        /// This method displays MessageBox with the error
-        /// </summary>
-        /// <param name="msg"></param>
-        void ErrorMassage(string msg);
+
     }
 }

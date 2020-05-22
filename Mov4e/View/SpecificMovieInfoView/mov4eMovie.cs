@@ -234,7 +234,7 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            _screnToGoback.Visible(true);
+            _screnToGoback.ShowForm();
             this.Close();
         }
 
@@ -279,7 +279,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                                 "You should open the window again",
                                 "Spam", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                _screnToGoback.Visible(true);
+                _screnToGoback.ShowForm();
             }
         }
 
@@ -444,10 +444,6 @@ namespace Mov4e.View.SpecificMovieInfoView
             this.initializeAllComments();
 
         }
-        void ISpecificMovieView.Visible(bool isVisible)
-        {
-            this.Visible = isVisible;
-        }
 
         public void deleteCommentsFromDB(List<int> comms)
         {
@@ -530,6 +526,11 @@ namespace Mov4e.View.SpecificMovieInfoView
         private void buttonDelSelectComments_Click(object sender, EventArgs e)
         {
             this.deleteCommentsFromCommentBoxes(commentBoxAllComments, commentBoxMyComments);
+        }
+
+        public void ShowForm()
+        {
+            this.Show();
         }
     }
 }

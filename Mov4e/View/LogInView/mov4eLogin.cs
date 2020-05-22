@@ -156,7 +156,7 @@ namespace Mov4e.View.LogInView
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             RegisterView.mov4eRegistration r = new RegisterView.mov4eRegistration(this);
-            this.Visible = false;
+            this.Hide();
             r.ShowDialog();
         }
 
@@ -258,6 +258,16 @@ namespace Mov4e.View.LogInView
         private void textBoxForgottenPassEmail_TextChanged(object sender, EventArgs e)
         {
             this.checkIfEverithingIsFilledInResetToActivateButton();
+        }
+
+        private void mov4eLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ShowForm()
+        {
+            this.Show();
         }
     }
 }

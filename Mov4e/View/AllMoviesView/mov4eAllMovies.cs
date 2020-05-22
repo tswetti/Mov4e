@@ -289,8 +289,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonViewInfo_Click(object sender, EventArgs e)
         {
-            GetMovie();
-
+            GetMovie();          
         }     
 
         private void mov4eAllMovies_Load(object sender, EventArgs e)
@@ -518,7 +517,8 @@ namespace Mov4e.View.AllMoviesView
                                 p = item.Key;
                             }
                             mov4eMovie mi = new mov4eMovie(p, this.user_id, this);
-                            mi.ShowDialog();
+                            this.Hide();
+                            mi.ShowDialog();                           
                             break;
                         }
                     }
@@ -859,9 +859,9 @@ namespace Mov4e.View.AllMoviesView
             }
         }
 
-        void IScreenView.Visible(bool isVisible)
+        void IScreenView.ShowForm()
         {
-            this.Visible = isVisible;
+            this.Show();
         }
 
         private void AllMoviesForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -1109,6 +1109,11 @@ namespace Mov4e.View.AllMoviesView
             Dictionary<int, byte[]> mov = rp.SortByDate();
             listViewMovies.Items.Clear();
             InitializeMoviesList(mov);
+        }
+
+        public void ErrorMassage(string msg)
+        {
+            MessageBox.Show(msg,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

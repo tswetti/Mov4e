@@ -17,7 +17,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
             _profileScreenPresenter.SetUserInformation(1);
 
             Assert.AreEqual("MasterPesho", _profileScreen.UserName);
@@ -34,7 +34,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
             _profileScreenPresenter.UpdateWatchListWhenMovieAdded(1);
 
             Assert.AreEqual(_mockedDummy.watchlist, _profileScreen.watchList);
@@ -46,7 +46,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
             _profileScreenPresenter.ChangeProfilePicture(new byte[50]);
 
             Assert.AreEqual(_mockedDummy._userInfo.picture.Count(), _profileScreen.Picture.Count());
@@ -57,7 +57,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
             _profileScreenPresenter.SetUserInformation(1);
             _profileScreenPresenter.SetUserInformation(1);
             _mockedDummy.error = true;
@@ -70,7 +70,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
             _profileScreenPresenter.SetUserInformation(1);
             _profileScreenPresenter.SetUserInformation(1);
             _profileScreenPresenter.DeleteMovieFromwatchList(1);
@@ -83,7 +83,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
             _mockedDummy.error = true;
             _profileScreenPresenter.SetUserInformation(1);
             _profileScreenPresenter.DeleteMovieFromwatchList(1);
@@ -95,7 +95,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
         {
             MockedDummyProfileScreenService _mockedDummy = new MockedDummyProfileScreenService();
             IProfileScreen _profileScreen = new ProfileScreenViewDummy();
-            ProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
+            IProfileScreenPresenter _profileScreenPresenter = new ProfileScreenPresenter(_profileScreen, _mockedDummy._profileScreenService);
 
             Assert.AreEqual("Terminator", _profileScreenPresenter.SetMovieTitelInView(1));
         }

@@ -23,7 +23,7 @@ namespace Mov4e.View.RegisterView
         public string Gender { get; set; }
         public int Age { get; set; }
 
-        private LogInView.mov4eLogin mainForm;
+        private LogInView.ILogIn mainForm;
         private IRegisterPresenter rp;
 
         public void ErrorMassage(string msg)
@@ -66,7 +66,7 @@ namespace Mov4e.View.RegisterView
             }
         }
 
-        public mov4eRegistration(mov4eLogin mainform)
+        public mov4eRegistration(ILogIn mainform)
         {
             InitializeComponent();
             textBoxPassword.PasswordChar = '*';
@@ -149,7 +149,7 @@ namespace Mov4e.View.RegisterView
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm.Show();
+            mainForm.ShowForm();
             this.Close();
         }
 
@@ -187,7 +187,7 @@ namespace Mov4e.View.RegisterView
                 if (rp.RegisterUser())
                 {
                     this.Hide();
-                    mainForm.Show();
+                    mainForm.ShowForm();
                     this.Close();
                 }
             }
@@ -303,6 +303,11 @@ namespace Mov4e.View.RegisterView
         private void comboBoxAge_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.checkIfEverithingIsFilledToActivateButton();
+        }
+
+        public void ShowForm()
+        {
+            this.Show();
         }
     }
 }

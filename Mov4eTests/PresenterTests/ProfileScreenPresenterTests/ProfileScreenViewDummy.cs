@@ -24,6 +24,11 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterTests
             //works
         }
 
+        public void ShowForm()
+        {
+           
+        }
+
         public void UpdateBirthYear()
         {
            

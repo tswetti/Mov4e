@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mov4e.View.LogInView
 {
-    public interface ILogIn
+    public interface ILogIn:IScreenView
     {
         string UserName { get; set; }
 
@@ -16,6 +16,5 @@ namespace Mov4e.View.LogInView
 
         void HideScreen();
 
-        void ErrorMassage(string msg);
     }
 }

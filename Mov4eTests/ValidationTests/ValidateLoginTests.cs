@@ -23,5 +23,11 @@ namespace Mov4eTests.ValidationTests
         {
             Assert.Throws<LogInException>(() => ValidateLogIn.userExists(false));
         }
+
+        [Test]
+        public void compareEmailsThrowsException()
+        {
+            Assert.Throws<LogInException>(() => ValidateLogIn.compareEmails("1234","123"));
+        }
     }
 }

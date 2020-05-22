@@ -39,6 +39,19 @@ namespace Mov4eTests.ServiceTests.LoginServiceTests
                 mock.Mock<ILogInRepository>().Setup(im=>im.GetCurrentUserPosition(It.IsAny<string>()))
                                           .Returns("Admin");
 
+                mock.Mock<ILogInRepository>().Setup(im => im.UpdatePass(It.IsAny<string>(), It.IsAny<string>()))
+                                         .Callback((string username, string pass) =>
+                                                    {
+                                                        users.Where(u => u.userName == username).First().password = pass;
+                                                    });
+
+                mock.Mock<ILogInRepository>().Setup(im => im.GetUserFullName(It.IsAny<string>()))
+                                         .Returns("Pesho Petrow");
+
+                mock.Mock<ILogInRepository>().Setup(im => im.GetEmailForUser(It.IsAny<string>()))
+                                        .Returns("lucho22@abv.bg");
+
+
                 _logInRepository = mock.Create<ILogInRepository>();
             }
         }
