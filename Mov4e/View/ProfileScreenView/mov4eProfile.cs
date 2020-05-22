@@ -26,16 +26,16 @@ namespace Mov4e.View.ProfileScreenView
         public Dictionary<int, byte[]> watchList { get; set; }
 
         //interface
-        AllMoviesView.mov4eAllMovies mainForm;
+        AllMoviesView.IAllMovies mainForm;
 
         public void ErrorMassage(string msg)
         {
             MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        void IScreenView.Visible(bool isVisible)
+        void IScreenView.ShowForm()
         {
-            this.Visible = isVisible;
+            this.Show();
             listViewWatchlist.SelectedItems.Clear();
         }
 
@@ -76,7 +76,7 @@ namespace Mov4e.View.ProfileScreenView
             label.ForeColor = Color.White;
         }
 
-        public mov4eProfile(int id, AllMoviesView.mov4eAllMovies mainMov)
+        public mov4eProfile(int id, AllMoviesView.IAllMovies mainMov)
         {
             InitializeComponent();
             _profileScreenPresenter = new ProfileScreenPresenter(this);
@@ -189,7 +189,7 @@ namespace Mov4e.View.ProfileScreenView
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm.Visible = true;
+            mainForm.ShowForm();
             this.Close();
         }
 
@@ -265,7 +265,7 @@ namespace Mov4e.View.ProfileScreenView
                 //nowo
                 _specificMovieInfo.MovieDeletedFromWatchList += DeleteMovieHandler;
                 _specificMovieInfo.MovieAddedToWatchList += AddMovieToWatchList;
-                _specificMovieInfo.Visible(true);
+                _specificMovieInfo.ShowForm();
             }
             else
             {

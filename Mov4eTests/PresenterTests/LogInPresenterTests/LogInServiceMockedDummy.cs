@@ -14,7 +14,8 @@ namespace Mov4eTests.PresenterTests.LogInPresenterTests
     {
         public ILogInService _ilogService;
 
-        public bool correct;
+        public string pass=null;
+        public bool correct=true;
         public LogInServiceMockedDummy()
         {
             using (var mock = AutoMock.GetStrict())
@@ -41,6 +42,20 @@ namespace Mov4eTests.PresenterTests.LogInPresenterTests
                                               else
                                                   throw new Exception();
                                           });
+
+                mock.Mock<ILogInService>().Setup(m => m.CreateNewPass(It.IsAny<string>(), It.IsAny<string>()))
+                                          .Callback(() => 
+                                          {
+
+                                              if (correct)
+                                              {
+                                                  this.pass = "1234";
+                                              }
+                                              else
+                                                  throw new Exception();
+                                          });
+
+
 
                 _ilogService = mock.Create<ILogInService>();
             }

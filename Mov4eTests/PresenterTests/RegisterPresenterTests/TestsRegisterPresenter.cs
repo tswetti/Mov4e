@@ -27,7 +27,7 @@ namespace Mov4eTests.PresenterTests.RegisterPresenterTests
                 Email = "sd@ds.com",
                 Gender = "M"               
             };
-            RegisterPresenter _registerPresenter = new RegisterPresenter(_regView,_mockedDummy._registerService);
+            IRegisterPresenter _registerPresenter = new RegisterPresenter(_regView,_mockedDummy._registerService);
             _registerPresenter.RegisterUser();
 
             Assert.AreEqual(10, _mockedDummy._userinfo.age);
@@ -53,7 +53,7 @@ namespace Mov4eTests.PresenterTests.RegisterPresenterTests
                 Email = "sd@ds.com",
                 Gender = "M"
             };
-            RegisterPresenter _registerPresenter = new RegisterPresenter(_regView, _mockedDummy._registerService);
+            IRegisterPresenter _registerPresenter = new RegisterPresenter(_regView, _mockedDummy._registerService);
             Assert.AreEqual(false, _registerPresenter.RegisterUser());
         }
     }

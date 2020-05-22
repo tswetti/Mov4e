@@ -19,7 +19,7 @@ namespace Mov4eTests.PresenterTests.LogInPresenterTests
         {
             LogInServiceMockedDummy logServiceDummy = new LogInServiceMockedDummy();
             logServiceDummy.correct = true;
-            LogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService,true);
+            ILogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService,true);
             _logInresenter.LogUser();
             Assert.AreEqual(Mov4e.Properties.Settings.Default.id, 1);
             Assert.AreEqual(Mov4e.Properties.Settings.Default.userPosition,"Admin");
@@ -36,7 +36,7 @@ namespace Mov4eTests.PresenterTests.LogInPresenterTests
         {
             LogInServiceMockedDummy logServiceDummy = new LogInServiceMockedDummy();
             logServiceDummy.correct = true;
-            LogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService,false);
+            ILogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService,false);
             _logInresenter.LogUser();
             Assert.AreEqual(Mov4e.Properties.Settings.Default.id, 1);
             Assert.AreEqual(Mov4e.Properties.Settings.Default.userPosition, "Admin");
@@ -54,7 +54,7 @@ namespace Mov4eTests.PresenterTests.LogInPresenterTests
             
             LogInServiceMockedDummy logServiceDummy = new LogInServiceMockedDummy();
             logServiceDummy.correct = false;
-            LogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService, true);
+            ILogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService, true);
             _logInresenter.LogUser();
             Assert.AreEqual(string.Empty, Mov4e.Properties.Settings.Default.userPosition);
 
@@ -64,5 +64,30 @@ namespace Mov4eTests.PresenterTests.LogInPresenterTests
             Mov4e.Properties.Settings.Default.LoggedForOneTime = false;
             Mov4e.Properties.Settings.Default.Save();
         }
+
+
+        [Test]
+        public void ResetPassResets()
+        {
+
+            LogInServiceMockedDummy logServiceDummy = new LogInServiceMockedDummy();
+            ILogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService, true);
+
+            _logInresenter.ResetPass("Wolf", "asd");
+
+            Assert.AreEqual("1234", logServiceDummy.pass);
+        }
+
+        [Test]
+        public void ResetPassThrowsException()
+        {
+
+            LogInServiceMockedDummy logServiceDummy = new LogInServiceMockedDummy();
+            ILogInPresenter _logInresenter = new LogInPresenter(logServiceDummy._ilogService, true);
+            logServiceDummy.correct = false;
+
+            Assert.Throws<Exception>(() => _logInresenter.ResetPass("Wolf", "asd"));
+        }
+
     }
 }

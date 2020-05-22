@@ -8,6 +8,6 @@ namespace Mov4e.View
 {
     public  interface IScreenView
     {
-        void Visible(bool isVisible);
+        void ShowForm();
     }
 }

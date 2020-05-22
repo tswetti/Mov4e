@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mov4e.View.SpecificMovieInfoView
 {
-    public interface ISpecificMovieView
+    public interface ISpecificMovieView:IScreenView
     {
         int userId { get; set; }
 
@@ -29,8 +29,6 @@ namespace Mov4e.View.SpecificMovieInfoView
         int duration { get; set; }
 
         int userRate { get; set; }
-
-        void Visible(bool isVisible);
 
         string userPosition { get; set; }
 

@@ -7,7 +7,7 @@ namespace Mov4e.View.AllMoviesView
     /// <summary>
     /// The <c>IAllMovies</c> class is a public interface.
     /// </summary>
-    public interface IAllMovies
+    public interface IAllMovies: IScreenView
     {
         string Search { get; set; }
         void GetMovie();

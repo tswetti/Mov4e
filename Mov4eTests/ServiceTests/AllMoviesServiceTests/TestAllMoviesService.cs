@@ -290,7 +290,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             dict.Add(expectedMovie3.id, expectedMovie3.picture);
 
             Assert.AreNotEqual(_iallMoviesService.SetMoviesList(), null);
-            foreach(var item in dict)
+            foreach (var item in dict)
             {
                 foreach(var el in _iallMoviesService.SetMoviesList())
                 {

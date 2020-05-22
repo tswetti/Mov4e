@@ -23,7 +23,7 @@ namespace Mov4e.View.AllMoviesView
     /// </summary>
     /// <inheritdoc cref="Form"/>
     /// <inheritdoc cref="IAllMovies"/>
-    public partial class mov4eAllMovies : Form, IScreenView
+    public partial class mov4eAllMovies : Form,IAllMovies
     {
         // A private variable that keeps a reference to AllMoviesPresenter via an interface variable.
         private IAllMoviesPresenter rp = new AllMoviesPresenter();
@@ -284,8 +284,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonViewInfo_Click(object sender, EventArgs e)
         {
-            GetMovie();
-
+            GetMovie();          
         }     
 
         private void mov4eAllMovies_Load(object sender, EventArgs e)
@@ -513,7 +512,8 @@ namespace Mov4e.View.AllMoviesView
                                 p = item.Key;
                             }
                             mov4eMovie mi = new mov4eMovie(p, this.user_id, this);
-                            mi.ShowDialog();
+                            this.Hide();
+                            mi.ShowDialog();                           
                             break;
                         }
                     }
@@ -854,9 +854,9 @@ namespace Mov4e.View.AllMoviesView
             }
         }
 
-        void IScreenView.Visible(bool isVisible)
+        void IScreenView.ShowForm()
         {
-            this.Visible = isVisible;
+            this.Show();
         }
 
         private void AllMoviesForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -33,7 +33,7 @@ namespace Mov4e.View.NewMovieView
         private IAllMoviesPresenter amp;
 
         // A private variable that keeps a reference to the AllMoviesForm.
-        private mov4eAllMovies allM;
+        private IAllMovies allM;
 
         // A private variable that conserve a certain movie's id.
         private int id = 0;
@@ -62,11 +62,10 @@ namespace Mov4e.View.NewMovieView
         /// A one arguments constructor for the <c>NewMovieForm</c> class.
         /// </summary>
         /// <param name="allMovies">This is the AllMoviesForm argument.</param>
-        public mov4eAddMovie(mov4eAllMovies allMovies)
+        public mov4eAddMovie(IAllMovies allMovies)
         {
             this.allM = allMovies;
             InitializeComponent();
-            this.allM.Visible = false;
             InitializeForm();
         }
 
@@ -75,10 +74,9 @@ namespace Mov4e.View.NewMovieView
         /// </summary>
         /// <param name="movie_id">The id of the movie.</param>
         /// <param name="allMovies">The AllMoviesForm argument.</param>
-        public mov4eAddMovie(int movie_id, mov4eAllMovies allMovies)
+        public mov4eAddMovie(int movie_id, IAllMovies allMovies)
         {
             this.allM = allMovies;
-            this.allM.Visible = false;
             InitializeComponent();
             InitializeForm();
             amp = new AllMoviesPresenter();
@@ -165,7 +163,7 @@ namespace Mov4e.View.NewMovieView
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            allM.Visible = true;
+            allM.ShowForm();
         }
 
         private void pictureBoxBack_MouseHover(object sender, EventArgs e)

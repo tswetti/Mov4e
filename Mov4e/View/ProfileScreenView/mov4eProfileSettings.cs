@@ -152,7 +152,7 @@ namespace Mov4e.View.ProfileScreenView
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            _profileScreen.Visible(true);
+            _profileScreen.ShowForm();
             this.Close();
         }
 
