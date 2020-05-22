@@ -231,6 +231,19 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
                                                         }
                                                     });
 
+                mock.Mock<ISpecificMovieInfoService>().Setup(Ispec => Ispec.GetUserRate(It.IsAny<int>()))
+                                                    .Returns(() =>
+                                                    {
+                                                        if (error == false)
+                                                        {
+                                                            return 3;
+                                                        }
+                                                        else
+                                                        {
+                                                            throw new Exception();
+                                                        }
+                                                    });
+
                 _specificMovieService = mock.Create<ISpecificMovieInfoService>();
             }
         }

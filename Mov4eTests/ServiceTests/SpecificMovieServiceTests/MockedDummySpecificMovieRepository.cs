@@ -123,6 +123,10 @@ namespace Mov4eTests.ServiceTests.SpecificMovieServiceTests
                 mock.Mock<ISpecificMovieInfoRepository>().Setup(im => im.GetInfoForUserAndCommentIdFromDB(It.IsAny<int>()))
                                                                          .Returns(commentIdAndUser);
 
+                mock.Mock<ISpecificMovieInfoRepository>().Setup(im => im.GetUserRateFromDB(It.IsAny<int>(), It.IsAny<int>()))
+                                                                        .Returns(5);
+                                                                                  
+
                 _specificMovieInfoRepository = mock.Create<ISpecificMovieInfoRepository>();
             }
         }
