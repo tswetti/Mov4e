@@ -16,7 +16,5 @@ namespace Mov4e.View.LogInView
 
         void HideScreen();
 
-        void ErrorMassage(string msg);
-
     }
 }

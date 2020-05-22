@@ -38,8 +38,6 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         List<(int commentId, string name, byte[] picture, string comment)> comments { get; set; }
 
-        void ErrorMassage(string msg);
-
 
 
     }    

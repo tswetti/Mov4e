@@ -304,5 +304,10 @@ namespace Mov4e.View.RegisterView
         {
             this.checkIfEverithingIsFilledToActivateButton();
         }
+
+        public void ShowForm()
+        {
+            this.Show();
+        }
     }
 }

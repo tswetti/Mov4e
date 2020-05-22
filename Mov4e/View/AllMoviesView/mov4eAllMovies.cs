@@ -1105,6 +1105,11 @@ namespace Mov4e.View.AllMoviesView
             listViewMovies.Items.Clear();
             InitializeMoviesList(mov);
         }
+
+        public void ErrorMassage(string msg)
+        {
+            MessageBox.Show(msg,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
 }

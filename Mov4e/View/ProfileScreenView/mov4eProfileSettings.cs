@@ -467,5 +467,10 @@ namespace Mov4e.View.ProfileScreenView
             else
                 buttonChangePassword.Enabled = false;
         }
+
+        public void ShowForm()
+        {
+            this.Show();
+        }
     }
 }

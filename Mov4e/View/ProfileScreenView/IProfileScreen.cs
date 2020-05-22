@@ -26,8 +26,6 @@ namespace Mov4e.View.ProfileScreenView
 
         Dictionary<int, byte[]> watchList { get; set; }
 
-        void ErrorMassage(string msg);
-
         void UpdateEmail();
 
         void UpdateBirthYear();

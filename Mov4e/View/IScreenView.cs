@@ -9,5 +9,11 @@ namespace Mov4e.View
     public  interface IScreenView
     {
         void ShowForm();
+
+        /// <summary>
+        /// This method displays MessageBox with the error
+        /// </summary>
+        /// <param name="msg"></param>
+        void ErrorMassage(string msg);
     }
 }

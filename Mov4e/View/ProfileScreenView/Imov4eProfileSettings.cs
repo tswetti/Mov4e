@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Mov4e.View.ProfileScreenView
 {
-    interface Imov4eProfileSettings
+    interface Imov4eProfileSettings:IScreenView
     {
-        void ErrorMassage(string msg);
+        
     }
 }
