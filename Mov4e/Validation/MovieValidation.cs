@@ -13,7 +13,7 @@ namespace Mov4e.Validation
     public static class MovieValidation
     {
         // This method validates the title of a movie with a certain id.
-        private static bool ValidateTitle(string title)
+        public static bool ValidateTitle(string title)
         {
             if (title != null && title != "" && title.Length > 0)
                 return true;
@@ -22,7 +22,7 @@ namespace Mov4e.Validation
         }
 
         // This method validates the genre of a movie with a certain id.
-        private static bool ValidateGenre(int genre)
+        public static bool ValidateGenre(int genre)
         {
             if (genre != 0)
                 return true;
@@ -31,7 +31,7 @@ namespace Mov4e.Validation
         }
 
         // This method validates the parental guidness of a movie with a certain id.
-        private static bool ValidatePG(Nullable<int> pg)
+        public static bool ValidatePG(Nullable<int> pg)
         {
             if (pg >= 0)
                 return true;
@@ -40,7 +40,7 @@ namespace Mov4e.Validation
         }
 
         // This method validates the prime date of a movie with a certain id.
-        private static bool ValidateDate(Nullable<DateTime> date)
+        public static bool ValidateDate(Nullable<DateTime> date)
         {
             if (date != null)
                 return true;
@@ -49,7 +49,7 @@ namespace Mov4e.Validation
         }
 
         // This method validates the summary of a movie with a certain id.
-        private static bool ValidateSummary(string summary)
+        public static bool ValidateSummary(string summary)
         {
             if (summary != null && summary != "" && summary.Length > 0)
                 return true;
@@ -58,7 +58,7 @@ namespace Mov4e.Validation
         }
 
         // This method validates the wrapper of a movie with a certain id.
-        private static bool ValidateWrapper(byte[] wrapper)
+        public static bool ValidateWrapper(byte[] wrapper)
         {
             if (wrapper != null && wrapper.Length > 0)
                 return true;
@@ -66,7 +66,7 @@ namespace Mov4e.Validation
                 return false;
         }
 
-        private static bool ValidateDuration(int dur)
+        public static bool ValidateDuration(int dur)
         {
             if (dur != 0)
                 return true;
@@ -89,7 +89,7 @@ namespace Mov4e.Validation
         /// <exception cref="Mov4e.Exceptions.InvalidFieldInputException">Throw when
         /// any of the fields are incorectly filled.</exception>
         /// <remarks>When the exception is thrown this methods writes the error in the error.txt file.</remarks>
-        public static void ValidateNewMovie(string title, int genre, Nullable<int> pg, 
+        public static void ValidateMovieUpdate(string title, int genre, Nullable<int> pg, 
             Nullable<DateTime> date, string summary, byte[] wrapper, int dur)
         {
             try

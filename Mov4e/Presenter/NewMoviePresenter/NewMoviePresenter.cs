@@ -23,6 +23,11 @@ namespace Mov4e.Presenter.NewMoviePresenter
         {
             
         }
+
+        public NewMoviePresenter(INewMovieService _inewMovieService)
+        {
+            this.ms = _inewMovieService;
+        }
         
         /// <summary>
         /// This is a constructor for <c>NewMoviePresenter</c> class with a parameter.

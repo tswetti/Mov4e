@@ -20,6 +20,11 @@ namespace Mov4e.Service.NewMovieService
 
         }
 
+        public NewMovieService(INewMovieRepository m_repo)
+        {
+            this.mr = m_repo;
+        }
+
         /// <summary>
         /// The <c>CreateMovie()</c> method receives from the presenter as parameters - a certain movie's 
         /// title, parental guidness, genre, prime date, summary and wrapper and executes the repository's

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
 {
-    class DummyMockedAllMoviesRepository
+    public class DummyMockedAllMoviesRepository
     {
         private List<Movie> movies = new List<Movie>
         {
@@ -65,10 +65,41 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         private Dictionary<int, byte[]> GetFilteredByGenreDurationAndPGMovies(int g, int d, int pg)
         {
             Dictionary<int, byte[]> filteredMovies = new Dictionary<int, byte[]>();
-            var filterQuery = from m in movies where m.genre == g && m.duration == d && m.pg == pg select new { m.id, m.picture };
-            foreach (var item in filterQuery)
+            if (d == 1)
             {
-                filteredMovies.Add(item.id, item.picture);
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 0 && m.duration < 60 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d==2)
+            {
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 60 && m.duration < 120 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d==3)
+            {
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 120 && m.duration < 180 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if(d==4)
+            {
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 180 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else
+            {
+
             }
             return filteredMovies;
         }
@@ -76,11 +107,44 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         private Dictionary<int, byte[]> GetFilteredByGenreAndDurationMovies(int g, int d)
         {
             Dictionary<int, byte[]> filteredMovies = new Dictionary<int, byte[]>();
-            var filterQuery = from m in movies where m.genre == g && m.duration == d select new { m.id, m.picture };
-            foreach (var item in filterQuery)
+
+            if (d == 1)
             {
-                filteredMovies.Add(item.id, item.picture);
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 0 && m.duration < 60 && m.genre == g select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
             }
+            else if (d == 2)
+            {
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 60 && m.duration < 120 && m.genre == g select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d == 3)
+            {
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 120 && m.duration < 180 && m.genre == g select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d == 4)
+            {
+                var filterQuery = from m in movies where m.genre == g && m.duration >= 180 && m.genre == g select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else
+            {
+
+            }
+
             return filteredMovies;
         }
 
@@ -98,11 +162,44 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         private Dictionary<int, byte[]> GetFilteredByDurationAndPGMovies(int d, int pg)
         {
             Dictionary<int, byte[]> filteredMovies = new Dictionary<int, byte[]>();
-            var filterQuery = from m in movies where m.duration == d && m.pg == pg select new { m.id, m.picture };
-            foreach (var item in filterQuery)
+
+            if (d == 1)
             {
-                filteredMovies.Add(item.id, item.picture);
+                var filterQuery = from m in movies where m.duration >= 0 && m.duration < 60 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
             }
+            else if (d == 2)
+            {
+                var filterQuery = from m in movies where m.duration >= 60 && m.duration < 120 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d == 3)
+            {
+                var filterQuery = from m in movies where m.duration >= 120 && m.duration < 180 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d == 4)
+            {
+                var filterQuery = from m in movies where m.duration >= 180 && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else
+            {
+
+            }
+
             return filteredMovies;
         }
 
@@ -120,11 +217,44 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
         private Dictionary<int, byte[]> GetFilteredByDurationMovies(int d)
         {
             Dictionary<int, byte[]> filteredMovies = new Dictionary<int, byte[]>();
-            var filterQuery = from m in movies where m.duration == d select new { m.id, m.picture };
-            foreach (var item in filterQuery)
+
+            if (d == 1)
             {
-                filteredMovies.Add(item.id, item.picture);
+                var filterQuery = from m in movies where m.duration >= 0 && m.duration < 60 select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
             }
+            else if (d == 2)
+            {
+                var filterQuery = from m in movies where m.duration >= 60 && m.duration < 120 select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d == 3)
+            {
+                var filterQuery = from m in movies where m.duration >= 120 && m.duration < 180 select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else if (d == 4)
+            {
+                var filterQuery = from m in movies where m.duration >= 180 select new { m.id, m.picture };
+                foreach (var item in filterQuery)
+                {
+                    filteredMovies.Add(item.id, item.picture);
+                }
+            }
+            else
+            {
+
+            }
+
             return filteredMovies;
         }
 

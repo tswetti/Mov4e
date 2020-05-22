@@ -58,6 +58,11 @@ namespace Mov4e.View.NewMovieView
             InitializeForm();
         }
 
+        public mov4eAddMovie(INewMoviePresenter _inewmPresenter)
+        {
+            this.mp = _inewmPresenter;
+        }
+
         /// <summary>
         /// A one arguments constructor for the <c>NewMovieForm</c> class.
         /// </summary>
@@ -310,7 +315,7 @@ namespace Mov4e.View.NewMovieView
         /// </summary>
         public void addNewMovie()
         {
-            MovieValidation.ValidateNewMovie(title, genre, pg, date, summary, picture, duration);
+            MovieValidation.ValidateMovieUpdate(title, genre, pg, date, summary, picture, duration);
             allM.UpdateMovies(mp.LastMovieId(), (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
         }
 

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
 {
     [TestFixture]
-    class TestAllMoviesService
+    public class TestAllMoviesService
     {
         [Test]
         public void CorrectGetMovieReturnsTheMovieAsATupleFromItsIdAndGenre()
@@ -118,6 +118,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             expected.Add(1, new byte[100]);
 
             Assert.AreNotEqual(_iallMoviesService.SortByDate(), null);
+            Assert.AreEqual(expected.Count, _iallMoviesService.SortByDate().Count);
             Assert.AreEqual(_iallMoviesService.SortByDate(), expected);
         }
 
@@ -168,6 +169,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             Dictionary<int, byte[]> actual = _iallMoviesService.FilterMoviesByGenresAndPG(6, 12);
 
             Assert.AreNotEqual(_iallMoviesService.FilterMoviesByGenresAndPG(6, 12), null);
+            Assert.AreEqual(expected.Count, actual.Count);
             foreach (var item in actual)
             {
                 Assert.AreEqual(item.Key, expectedMovie.id);
@@ -204,6 +206,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             Dictionary<int, byte[]> actual = _iallMoviesService.FilterMoviesByGenres(6);
 
             Assert.AreNotEqual(_iallMoviesService.FilterMoviesByGenres(6), null);
+            Assert.AreEqual(expected.Count, actual.Count);
             foreach (var item in actual)
             {
                 Assert.AreEqual(item.Key, expectedMovie.id);
@@ -258,6 +261,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             Dictionary<int, byte[]> actual = _iallMoviesService.GetMoviesByTitles(new List<string> { expectedMovie.title });
 
             Assert.AreNotEqual(_iallMoviesService.GetMoviesByTitles(new List<string> { expectedMovie.title }), null);
+            Assert.AreEqual(expected.Count, actual.Count);
             foreach (var item in expected)
             {
                 Assert.AreEqual(item.Key, 1);
@@ -273,7 +277,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             Movie expectedMovie = new Movie { id = 1, title = "Titanic", genre = 1, pg = 0, duration = 210, summary = "This is the description of the Titanic movie.", year = new DateTime(1997, 11, 1), picture = new byte[100] };
 
             Assert.AreNotEqual(_iallMoviesService.SetMovieTitle(1), null);
-            Assert.AreEqual(_iallMoviesService.SetMovieTitle(1), "Titanic");
+            Assert.AreEqual(_iallMoviesService.SetMovieTitle(1), expectedMovie.title);
         }
 
         [Test]
@@ -290,14 +294,8 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             dict.Add(expectedMovie3.id, expectedMovie3.picture);
 
             Assert.AreNotEqual(_iallMoviesService.SetMoviesList(), null);
-            foreach(var item in dict)
-            {
-                foreach(var el in _iallMoviesService.SetMoviesList())
-                {
-                    Assert.AreEqual(item.Key, el.Key);
-                    Assert.AreEqual(item.Value, el.Value);
-                }
-            } 
+            Assert.AreEqual(_iallMoviesService.SetMoviesList(), dict);
+            Assert.AreEqual(dict.Count, _iallMoviesService.SetMoviesList().Count);
         }
 
         [Test]
@@ -308,6 +306,7 @@ namespace Mov4eTests.ServiceTests.AllMoviesServiceTests
             List<string> expected = new List<string> {"Titanic", "Terminator", "Star Wars 5"};
 
             Assert.AreNotEqual(_iallMoviesService.GetMovieTitles(), null);
+            Assert.AreEqual(_iallMoviesService.GetMovieTitles().Count, expected.Count);
             for (int i=0; i<expected.Count; i++)
             {
                 Assert.AreEqual(_iallMoviesService.GetMovieTitles()[i], expected[i]);

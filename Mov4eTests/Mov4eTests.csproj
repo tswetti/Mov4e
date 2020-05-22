@@ -91,8 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PresenterTests\AllMoviesPresenterTests\AllMoviesPresenterTests.cs" />
+    <Compile Include="PresenterTests\AllMoviesPresenterTests\DummyMockedAllMoviesService.cs" />
     <Compile Include="PresenterTests\LogInPresenterTests\LogInServiceMockedDummy.cs" />
     <Compile Include="PresenterTests\LogInPresenterTests\TestsLogInPresenter.cs" />
+    <Compile Include="PresenterTests\NewMoviePresenterTests\DummyMockedNewMovieService.cs" />
+    <Compile Include="PresenterTests\NewMoviePresenterTests\NewMoviePresenterTests.cs" />
     <Compile Include="PresenterTests\ProfileScreenPresenterSettingsTests\MockedDummyProfileScreenSettingsService.cs" />
     <Compile Include="PresenterTests\ProfileScreenPresenterSettingsTests\MockedDummyProfileScreenView.cs" />
     <Compile Include="PresenterTests\ProfileScreenPresenterSettingsTests\ProfileScreenSettingsPresenterTests.cs" />
@@ -109,6 +113,8 @@
     <Compile Include="ServiceTests\AllMoviesServiceTests\TestAllMoviesService.cs" />
     <Compile Include="ServiceTests\LoginServiceTests\DummyMockedLoginRepository.cs" />
     <Compile Include="ServiceTests\LoginServiceTests\TestsLoginService.cs" />
+    <Compile Include="ServiceTests\NewMovieServiceTests\DummyMockedNewMovieRepository.cs" />
+    <Compile Include="ServiceTests\NewMovieServiceTests\TestsNewMovieService.cs" />
     <Compile Include="ServiceTests\ProfileScreenServiceTests\MockedDummyProfileScreenRepository.cs" />
     <Compile Include="ServiceTests\ProfileScreenServiceTests\TestsProfileScreenService.cs" />
     <Compile Include="ServiceTests\ProfileSettingsTests\TestsProfileScreenSettings.cs" />
@@ -117,10 +123,15 @@
     <Compile Include="ServiceTests\RegisterServiceTests\TestsRegisterService.cs" />
     <Compile Include="ServiceTests\SpecificMovieServiceTests\MockedDummySpecificMovieRepository.cs" />
     <Compile Include="ServiceTests\SpecificMovieServiceTests\TestsSpecificMovie.cs" />
+    <Compile Include="ValidationTests\MovieValidationTests.cs" />
     <Compile Include="ValidationTests\ProfileScreenValidationTests.cs" />
     <Compile Include="ValidationTests\RegisterValidationTests.cs" />
     <Compile Include="ValidationTests\ValidateLoginTests.cs" />
     <Compile Include="ValidationTests\ValidatioSpecificMovieTests.cs" />
+    <Compile Include="ViewTests\AllMoviesFormTests\AllMoviesFormTests.cs" />
+    <Compile Include="ViewTests\AllMoviesFormTests\DummyMockedAllMoviesPresenter.cs" />
+    <Compile Include="ViewTests\NewMovieFormTests\DummyMockedNewMoviePresenter.cs" />
+    <Compile Include="ViewTests\NewMovieFormTests\NewMovieFormTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mov4e\Mov4e.csproj">

@@ -23,7 +23,7 @@ namespace Mov4e.View.AllMoviesView
     /// </summary>
     /// <inheritdoc cref="Form"/>
     /// <inheritdoc cref="IAllMovies"/>
-    public partial class mov4eAllMovies : Form, IScreenView
+    public partial class mov4eAllMovies : Form, IScreenView, IAllMovies
     {
         // A private variable that keeps a reference to AllMoviesPresenter via an interface variable.
         private IAllMoviesPresenter rp = new AllMoviesPresenter();
@@ -113,6 +113,11 @@ namespace Mov4e.View.AllMoviesView
                     + " There is no person on this kind of position" + "\n"
                     + ex.ToString());
             }
+        }
+
+        public mov4eAllMovies(IAllMoviesPresenter mp)
+        {
+            this.rp = mp;
         }
 
         private void minimizeLabel_Click(object sender, EventArgs e)

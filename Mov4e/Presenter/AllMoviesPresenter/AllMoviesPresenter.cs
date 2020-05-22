@@ -20,6 +20,11 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         public AllMoviesPresenter()
         {
 
+        } 
+
+        public AllMoviesPresenter(IAllMoviesService _iallMoviesService)
+        {
+            this.ms = _iallMoviesService;
         }
 
         /// <summary>
