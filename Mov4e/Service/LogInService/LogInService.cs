@@ -96,7 +96,7 @@ namespace Mov4e.Service.LogInService
             string lowers = "abcdefghijklmnopqrstuvwxyz";
             string uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string number = "0123456789";
-            string symbols = "!@#%^&*/,!?~=)(=+-|_";
+            string symbols = "#?!@$%^&*-";
             string pass = null;
 
             RNGCryptoServiceProvider rngCryptoServiceProvider = new RNGCryptoServiceProvider();
@@ -118,15 +118,14 @@ namespace Mov4e.Service.LogInService
         }
 
         private void SendMessage(string email, string username, string name, string pass)
-        {
-            //wrushta mail i na men holp plz???
+        {         
             MailAddress from = new MailAddress("testprojectss31@gmail.com", "Mov4e Team");
             MailAddress to = new MailAddress(email,name);
             MailMessage message = new MailMessage(from, to);
 
             message.Subject = "Reset Password";
             string mess = "Hello " + username + "!" + Environment.NewLine+ Environment.NewLine + "You have successfully reset your password!" + 
-                           Environment.NewLine +"Your new password is: "+pass+
+                           Environment.NewLine +"Your new password is:"+pass+
                            Environment.NewLine+ "For your safety we recommend changing it after logging in!" +
                            Environment.NewLine + Environment.NewLine + " From: Mov4e Team";
             message.Body = mess;

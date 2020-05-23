@@ -234,10 +234,18 @@ namespace Mov4e.View.LogInView
             {
                 if (!string.IsNullOrWhiteSpace(textBoxForgottenPassUsername.Text) && !string.IsNullOrWhiteSpace(textBoxForgottenPassEmail.Text))
                 {
-                    _logInPresenter.ResetPass(textBoxForgottenPassUsername.Text, textBoxForgottenPassEmail.Text);
-                    textBoxForgottenPassUsername.Text = null;
-                    textBoxForgottenPassEmail.Text = null;
-                    MessageBox.Show("You have successfully reset your password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult d = MessageBox.Show("Your password will be changed automaticaly!\n" +
+                                                     "Be sure you know your credentials for the email,\n" +
+                                                     "because the new password will be sent there!\n\n"+
+                                                     "Are you sure you want to continue?",
+                                                      "Reset Password", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                    if (d == DialogResult.Yes)
+                    {
+                        _logInPresenter.ResetPass(textBoxForgottenPassUsername.Text, textBoxForgottenPassEmail.Text);
+                        textBoxForgottenPassUsername.Text = null;
+                        textBoxForgottenPassEmail.Text = null;
+                        MessageBox.Show("You have successfully reset your password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
