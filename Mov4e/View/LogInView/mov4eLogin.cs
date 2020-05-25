@@ -118,6 +118,13 @@ namespace Mov4e.View.LogInView
             DialogResult d = MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (d == DialogResult.OK)
             {
+                if (Properties.Settings.Default.Logged!=true)
+                {
+                    Properties.Settings.Default.LoggedForOneTime = false;
+                    Properties.Settings.Default.userPosition = null;
+                    Properties.Settings.Default.id = 0;
+                    Properties.Settings.Default.Save();
+                }
                 this.Controls.Clear();
                 Environment.Exit(1);
             }
