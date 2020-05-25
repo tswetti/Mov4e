@@ -45,6 +45,7 @@ namespace Mov4e.Presenter.LogInPresenter
                         Properties.Settings.Default.id = _logInService.GetIDLoggedUser();
                         Properties.Settings.Default.userPosition = _logInService.GetPosition();
                         Properties.Settings.Default.Logged = true;
+                        Properties.Settings.Default.LoggedForOneTime = false;
                         Properties.Settings.Default.Save();
                     }
                     else
