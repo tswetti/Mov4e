@@ -23,7 +23,7 @@ namespace Mov4e
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new mov4eAllMovies(Properties.Settings.Default.id, Properties.Settings.Default.userPosition));
             }
-            else if(Properties.Settings.Default.LoggedForOneTime==true)
+            if(Properties.Settings.Default.LoggedForOneTime==true)
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
