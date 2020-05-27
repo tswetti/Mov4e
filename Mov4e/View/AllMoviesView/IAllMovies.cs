@@ -25,5 +25,6 @@ namespace Mov4e.View.AllMoviesView
         void InitializeMoviesList(Dictionary<int, byte[]> movs);
         void SearchMovie();
         void UpdateMovies(int movieId, byte[] moviePic);
+        void UpdateMovie(int movieId,string movieName, byte[] moviePic);
     }
 }

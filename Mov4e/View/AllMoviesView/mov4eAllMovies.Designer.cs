@@ -821,6 +821,7 @@
             this.buttonDeleteMovie.TabIndex = 1;
             this.buttonDeleteMovie.Text = "Delete movie";
             this.buttonDeleteMovie.UseVisualStyleBackColor = true;
+            this.buttonDeleteMovie.Visible = false;
             this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
             // 
             // buttonEditMovie
@@ -833,12 +834,14 @@
             this.buttonEditMovie.TabIndex = 8;
             this.buttonEditMovie.Text = "Edit movie";
             this.buttonEditMovie.UseVisualStyleBackColor = true;
+            this.buttonEditMovie.Visible = false;
             this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
             // 
             // buttonAddMovie
             // 
             this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonAddMovie.AutoSize = true;
+            this.buttonAddMovie.Enabled = false;
             this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddMovie.Location = new System.Drawing.Point(162, 3);
             this.buttonAddMovie.Name = "buttonAddMovie";
@@ -846,6 +849,7 @@
             this.buttonAddMovie.TabIndex = 0;
             this.buttonAddMovie.Text = "Add new movie";
             this.buttonAddMovie.UseVisualStyleBackColor = true;
+            this.buttonAddMovie.Visible = false;
             this.buttonAddMovie.Click += new System.EventHandler(this.buttonAddMovie_Click);
             // 
             // buttonViewInfo
@@ -865,7 +869,7 @@
             // 
             // imageListMovies
             // 
-            this.imageListMovies.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListMovies.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
             this.imageListMovies.ImageSize = new System.Drawing.Size(180, 230);
             this.imageListMovies.TransparentColor = System.Drawing.Color.Transparent;
             // 

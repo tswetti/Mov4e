@@ -28,7 +28,6 @@
     /// </summary>
     private void InitializeComponent()
     {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mov4eMovie));
             this.topButtonsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.minimizeLabel = new System.Windows.Forms.Label();
@@ -76,7 +75,6 @@
             this.tableLayoutPanelWatchlistActions = new System.Windows.Forms.TableLayoutPanel();
             this.buttonRemoveFWatchlist = new System.Windows.Forms.Button();
             this.buttonAddToWatchlist = new System.Windows.Forms.Button();
-            this.contextMenuStripComments = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.labelBack = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -728,11 +726,6 @@
             this.buttonAddToWatchlist.UseVisualStyleBackColor = true;
             this.buttonAddToWatchlist.Click += new System.EventHandler(this.buttonAddToWatchlist_Click);
             // 
-            // contextMenuStripComments
-            // 
-            this.contextMenuStripComments.Name = "contextMenuStrip1";
-            this.contextMenuStripComments.Size = new System.Drawing.Size(61, 4);
-            // 
             // labelBack
             // 
             this.labelBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -850,7 +843,6 @@
     private System.Windows.Forms.Label labelSummary;
     private System.Windows.Forms.Button buttonAddToWatchlist;
     private System.Windows.Forms.Button buttonAddComment;
-    private System.Windows.Forms.ContextMenuStrip contextMenuStripComments;
     private System.Windows.Forms.Label labelBack;
     private System.Windows.Forms.PictureBox pictureBoxBack;
     private System.Windows.Forms.Label labelMovieSummary;
