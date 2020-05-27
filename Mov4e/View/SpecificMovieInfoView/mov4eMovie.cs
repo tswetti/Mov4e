@@ -397,6 +397,7 @@ namespace Mov4e.View.SpecificMovieInfoView
             {
                 tableLayoutPanelWatchlistActions.RowStyles[0].Height = 0;
                 tableLayoutPanelWatchlistActions.RowStyles[1].Height = 100;
+                buttonAddToWatchlist.Visible = false;
                 buttonRemoveFWatchlist.Visible = true;
             }
             else
@@ -404,6 +405,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 tableLayoutPanelWatchlistActions.RowStyles[0].Height = 100;
                 tableLayoutPanelWatchlistActions.RowStyles[1].Height = 0;
                 buttonAddToWatchlist.Visible = true;
+                buttonRemoveFWatchlist.Visible = false;
             }
 
             this.IntializeComments();
