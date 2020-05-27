@@ -303,7 +303,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 buttonRemoveFWatchlist.Height = 30;
 
                 Validation.ValidateSpecificMovie.isThereAnUser(this.userId);
-                _specificMoviePresenter.AddMovieINWatchList(this.userId);
+                _specificMoviePresenter.AddMovieINWatchList();
                 OnMovieAddedToWatchList(spEventArgs);
             }
             catch (Exception ex)
@@ -326,7 +326,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 OnMovieDeletedFromWatchList(spEventArgs);
                 buttonAddToWatchlist.Height = 30;
                 Validation.ValidateSpecificMovie.isThereAnUser(this.userId);
-                _specificMoviePresenter.DeleteMovieFromWatchList(this.userId);
+                _specificMoviePresenter.DeleteMovieFromWatchList();
             }
             catch (Exception ex)
             {
@@ -362,7 +362,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 this.tableLayoutPanelRating.RowStyles[1].Height = 0;
                 this.tableLayoutPanelRating.RowStyles[2].Height = 80;
                 labelAlreadyRated.Visible = true;
-                MessageBox.Show("Thanks for rating this movie!");
+                MessageBox.Show("Thanks for rating this movie!","Rated",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -382,7 +382,7 @@ namespace Mov4e.View.SpecificMovieInfoView
 
             if (_specificMoviePresenter.UserAlreadyRated())
             {
-                _specificMoviePresenter.SetUserRate(this.userId);
+                _specificMoviePresenter.SetUserRate();
                 tableLayoutPanelStars.Visible = false;
                 labelAlreadyRated.Text += " " + userRate + "!";
                 this.tableLayoutPanelRating.RowStyles[0].Height = 20;

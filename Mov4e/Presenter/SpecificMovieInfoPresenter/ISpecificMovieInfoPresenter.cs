@@ -5,9 +5,9 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
     public interface ISpecificMovieInfoPresenter
     {
         void AddCommentInDB(string comment);
-        void AddMovieINWatchList(int userId);
+        void AddMovieINWatchList();
         void DeleteComments(List<int> commentsIds);
-        void DeleteMovieFromWatchList(int userId);
+        void DeleteMovieFromWatchList();
         void GetInfoForMovie(int movieId);
         (int commentId, string name, byte[] picture, string comment) GetLastComment();
         string GetUserName();
@@ -16,6 +16,6 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
         void SetCommentsForTheMovie();
         bool UserAlreadyRated();
         bool UserHasMovieInWatchList();
-        void SetUserRate(int id);
+        void SetUserRate();
     }
 }
