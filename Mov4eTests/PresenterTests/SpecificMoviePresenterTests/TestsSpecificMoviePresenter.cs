@@ -105,7 +105,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieService _mockedDummyService = new MockedDummySpecificMovieService();
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
-            _presenter.DeleteMovieFromWatchList(1);
+            _presenter.DeleteMovieFromWatchList();
             Assert.AreEqual(2, _mockedDummyService.watchlist.Count);
         }
 
@@ -116,7 +116,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
             _mockedDummyService.error = true;
-            _presenter.DeleteMovieFromWatchList(1);
+            _presenter.DeleteMovieFromWatchList();
             Assert.AreEqual(3, _mockedDummyService.watchlist.Count);
         }
 
@@ -126,7 +126,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieService _mockedDummyService = new MockedDummySpecificMovieService();
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
-            _presenter.DeleteMovieFromWatchList(1);
+            _presenter.DeleteMovieFromWatchList();
             Assert.AreEqual(2, _mockedDummyService.watchlist.Count);
         }
 
@@ -137,7 +137,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
             _mockedDummyService.error = true;
-            _presenter.AddMovieINWatchList(1);
+            _presenter.AddMovieINWatchList();
             Assert.AreNotEqual(4, _mockedDummyService.watchlist.Count);
         }
 
@@ -269,7 +269,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieService _mockedDummyService = new MockedDummySpecificMovieService();
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
-            _presenter.SetUserRate(1);
+            _presenter.SetUserRate();
             Assert.AreEqual(3, _mockedDummyView.userRate);
         }
 
@@ -280,8 +280,30 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
             _mockedDummyService.error = true;
-            _presenter.SetUserRate(1);
+            _presenter.SetUserRate();
             Assert.AreNotEqual(3, _mockedDummyView.userRate);
+        }
+
+
+        [Test]
+        public void DeleteRateDeletes()
+        {
+            MockedDummySpecificMovieService _mockedDummyService = new MockedDummySpecificMovieService();
+            MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
+            ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
+            _presenter.DeleteRate();
+            Assert.AreEqual(_mockedDummyService._movie.AVGRating, _mockedDummyView.movieAVGRate);
+        }
+
+        [Test]
+        public void DeleteRateThrowsException()
+        {
+            MockedDummySpecificMovieService _mockedDummyService = new MockedDummySpecificMovieService();
+            MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
+            ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
+            _mockedDummyService.error = true;
+            _presenter.DeleteRate();
+            Assert.AreNotEqual(_mockedDummyService._movie.AVGRating, _mockedDummyView.movieAVGRate);
         }
     }
 }

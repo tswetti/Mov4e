@@ -125,7 +125,10 @@ namespace Mov4eTests.ServiceTests.SpecificMovieServiceTests
 
                 mock.Mock<ISpecificMovieInfoRepository>().Setup(im => im.GetUserRateFromDB(It.IsAny<int>(), It.IsAny<int>()))
                                                                         .Returns(5);
-                                                                                  
+
+                mock.Mock<ISpecificMovieInfoRepository>().Setup(im => im.RemoveUserRateFromDB(It.IsAny<int>(), It.IsAny<int>()))
+                                                         .Callback((int userId, int movieId) => this.currentMovie.AVGRating = 4.5);
+
 
                 _specificMovieInfoRepository = mock.Create<ISpecificMovieInfoRepository>();
             }

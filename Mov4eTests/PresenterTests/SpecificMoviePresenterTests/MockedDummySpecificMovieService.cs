@@ -244,6 +244,19 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
                                                         }
                                                     });
 
+                mock.Mock<ISpecificMovieInfoService>().Setup(Ispec => Ispec.DeleteUserRate(It.IsAny<int>()))
+                                                   .Callback(() =>
+                                                   {
+                                                       if (error == false)
+                                                       {
+                                                           _movie.AVGRating = 4.5;
+                                                       }
+                                                       else
+                                                       {
+                                                           throw new Exception();
+                                                       }
+                                                   });
+
                 _specificMovieService = mock.Create<ISpecificMovieInfoService>();
             }
         }

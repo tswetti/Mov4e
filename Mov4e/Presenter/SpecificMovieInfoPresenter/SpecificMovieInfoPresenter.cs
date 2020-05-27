@@ -292,6 +292,22 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
             }
         }
 
- 
+        /// <summary>
+        /// This method removes rate of current user.
+        /// </summary>
+        public void DeleteRate()
+        {
+            try
+            {
+                _specificMovieService.DeleteUserRate(_specificMovieView.userId);
+                this.UpdateRate();
+            }
+            catch (Exception e)
+            {
+                Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
+                         + "\n" + e.ToString());
+                _specificMovieView.ErrorMassage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
+            }
+        }
     }
 }

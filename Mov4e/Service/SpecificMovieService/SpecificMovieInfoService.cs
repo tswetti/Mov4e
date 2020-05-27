@@ -229,5 +229,19 @@ namespace Mov4e.Service.SpecificMovieService
                 throw;
             }
         }
+
+        public void DeleteUserRate(int userId)
+        {
+            try
+            {
+                ValidateSpecificMovie.isThereAnUser(userId);
+                ValidateSpecificMovie.isThereMovie(currentMovie.id);
+                _specificMovieRepo.RemoveUserRateFromDB(userId, currentMovie.id);
+            }
+            catch (SpecificMovieException)
+            {
+                throw;
+            }
+        }
     }
 }

@@ -17,5 +17,6 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
         bool UserAlreadyRated();
         bool UserHasMovieInWatchList();
         void SetUserRate();
+        void DeleteRate();
     }
 }
