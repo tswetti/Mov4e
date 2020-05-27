@@ -95,10 +95,11 @@ namespace Mov4e.View.ProfileScreenView
                 ListViewItem item = new ListViewItem(_profileScreenPresenter.SetMovieTitelInView(pair.Key));
                 item.ImageKey = pair.Key.ToString();
                 item.Name = pair.Key.ToString();
+                listViewWatchlist.LargeImageList = imageListWatchlist;
                 listViewWatchlist.Items.Add(item);
             }
 
-            listViewWatchlist.LargeImageList = imageListWatchlist;
+            
         }
 
 

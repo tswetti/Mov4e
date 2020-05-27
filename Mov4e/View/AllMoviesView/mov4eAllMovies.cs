@@ -627,11 +627,11 @@ namespace Mov4e.View.AllMoviesView
                     imageListMovies.Images.Add(pair.Key.ToString(), ((Bitmap)((new ImageConverter()).ConvertFrom(pair.Value))));
                     ListViewItem item = new ListViewItem(rp.SetMovieTitle(pair.Key));
                     item.ImageKey = pair.Key.ToString();
+                    listViewMovies.LargeImageList = imageListMovies;
                     listViewMovies.Items.Add(item);
                     listViewMovies.Tag = pair.Key;
                     id.Add(pair.Key);
                 }
-                listViewMovies.LargeImageList = imageListMovies;
             }
             else
             {
@@ -889,10 +889,13 @@ namespace Mov4e.View.AllMoviesView
                 imageListMovies.Images.Add(mov.Last().Key.ToString(), ((Bitmap)((new ImageConverter()).ConvertFrom(mov.Last().Value))));
                 ListViewItem item = new ListViewItem(rp.SetMovieTitle(mov.Last().Key));
                 item.ImageKey = mov.Last().Key.ToString();
+                listViewMovies.LargeImageList = imageListMovies;
                 listViewMovies.Items.Add(item);
                 listViewMovies.Tag = mov.Last().Key;
                 id.Add(mov.Last().Key);
             }
+            
+
         }
 
         /// <summary>
@@ -1124,6 +1127,15 @@ namespace Mov4e.View.AllMoviesView
         public void ErrorMassage(string msg)
         {
             MessageBox.Show(msg,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        //This method is not Ok it will be chnanged in future!
+        public void UpdateMovie(int movieId, string movieName, byte[] moviePic)
+        {
+            mov[movieId] = moviePic;
+            this.listViewMovies.Clear();
+            imageListMovies.Images.Clear();
+            this.InitializeMoviesList(mov);
         }
     }
 
