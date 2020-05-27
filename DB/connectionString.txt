@@ -1,0 +1,6 @@
+<add name="mov4eEntities" connectionString="metadata=res://*/Model.mov4eDB.csdl|res://*/Model.mov4eDB.ssdl|res://*/Model.mov4eDB.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot; ------------------------------------- database=mov4e&quot;" providerName="System.Data.EntityClient" />
+
+
+Credentials example
+
+server=localhost;user id=root;password=*********;port=4321; and so on.
