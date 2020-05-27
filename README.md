@@ -9,7 +9,7 @@
   - MySql Connector Net 8.0.19 (IT WONT'T WORK WITH DIFFEREN VERSION)
   - MySql For Visual Studio 1.2.9
 
-2. The application works with localhost DB.
+2. The application works with local DB.
   - Open MySqlWorkbench and if you don't have connections create one! When local server opened, in the left panel you will see
     tab control - Administration/Schemas. Click Administration. From menu Management choose Data import/Restore. After that choose
     import from Self-Contained File. In the folder DB you will find Mov4eDB dump file. Load that file and import it. If you have 
