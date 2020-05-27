@@ -94,8 +94,9 @@ namespace Mov4e.View.SpecificMovieInfoView
             InitializeComponent();
 
             this.WindowState = FormWindowState.Maximized;
-            tableLayoutPanelRating.RowStyles[2].Height = 0;
             tableLayoutPanelRating.RowStyles[1].Height = 66;
+            tableLayoutPanelRating.RowStyles[2].Height = 0;
+            this.tableLayoutPanelRating.RowStyles[3].Height = 0;
             labelAlreadyRated.Visible = false;
 
             tableLayoutPanelWatchlistActions.RowStyles[0].Height = 100;
@@ -358,9 +359,11 @@ namespace Mov4e.View.SpecificMovieInfoView
                 userRate = int.Parse(rate.Tag.ToString());
                 labelAlreadyRated.Text += " " + userRate + "!";
                 labelMovieAverageRating.Text = movieAVGRate.ToString();
-                this.tableLayoutPanelRating.RowStyles[0].Height = 20;
+                this.tableLayoutPanelRating.RowStyles[0].Height = 15;
                 this.tableLayoutPanelRating.RowStyles[1].Height = 0;
-                this.tableLayoutPanelRating.RowStyles[2].Height = 80;
+                this.tableLayoutPanelRating.RowStyles[2].Height = 60;
+                this.tableLayoutPanelRating.RowStyles[3].Height = 25;
+                buttonChangeRating.Height = 35;
                 labelAlreadyRated.Visible = true;
                 MessageBox.Show("Thanks for rating this movie!","Rated",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
@@ -538,6 +541,15 @@ namespace Mov4e.View.SpecificMovieInfoView
         public void ShowForm()
         {
             this.Show();
+        }
+
+        private void buttonChangeRating_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanelRating.RowStyles[1].Height = 66;
+            tableLayoutPanelRating.RowStyles[2].Height = 0;
+            this.tableLayoutPanelRating.RowStyles[3].Height = 0;
+            tableLayoutPanelStars.Visible = true;
+            labelAlreadyRated.Visible = false;
         }
     }
 }
