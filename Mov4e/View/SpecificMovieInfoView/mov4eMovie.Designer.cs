@@ -52,10 +52,8 @@
             this.tableLayoutPanelComments = new System.Windows.Forms.TableLayoutPanel();
             this.tabControlComments = new System.Windows.Forms.TabControl();
             this.tabPageAllComments = new System.Windows.Forms.TabPage();
-            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectFromAllComments = new System.Windows.Forms.Button();
             this.tabPageYourComments = new System.Windows.Forms.TabPage();
-            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectComments = new System.Windows.Forms.Button();
             this.buttonDelAllMyComments = new System.Windows.Forms.Button();
             this.textBoxAddComment = new System.Windows.Forms.TextBox();
@@ -80,6 +78,9 @@
             this.labelBack = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonChangeRating = new System.Windows.Forms.Button();
+            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
+            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -207,12 +208,14 @@
             this.tableLayoutPanelRating.Controls.Add(this.tableLayoutPanelStars, 0, 1);
             this.tableLayoutPanelRating.Controls.Add(this.labelRating, 0, 0);
             this.tableLayoutPanelRating.Controls.Add(this.labelAlreadyRated, 0, 2);
+            this.tableLayoutPanelRating.Controls.Add(this.buttonChangeRating, 0, 3);
             this.tableLayoutPanelRating.Location = new System.Drawing.Point(3, 558);
             this.tableLayoutPanelRating.Name = "tableLayoutPanelRating";
-            this.tableLayoutPanelRating.RowCount = 3;
-            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.84698F));
-            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.46811F));
-            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.68491F));
+            this.tableLayoutPanelRating.RowCount = 4;
+            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.17084F));
+            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.92484F));
+            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.81889F));
+            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.08542F));
             this.tableLayoutPanelRating.Size = new System.Drawing.Size(414, 133);
             this.tableLayoutPanelRating.TabIndex = 8;
             // 
@@ -230,7 +233,7 @@
             this.tableLayoutPanelStars.Controls.Add(this.pictureBoxStar3, 0, 0);
             this.tableLayoutPanelStars.Controls.Add(this.pictureBoxStar1, 0, 0);
             this.tableLayoutPanelStars.Controls.Add(this.pictureBoxStar2, 0, 0);
-            this.tableLayoutPanelStars.Location = new System.Drawing.Point(32, 44);
+            this.tableLayoutPanelStars.Location = new System.Drawing.Point(32, 29);
             this.tableLayoutPanelStars.Name = "tableLayoutPanelStars";
             this.tableLayoutPanelStars.RowCount = 1;
             this.tableLayoutPanelStars.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -313,7 +316,7 @@
             this.labelRating.AutoSize = true;
             this.labelRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRating.ForeColor = System.Drawing.Color.White;
-            this.labelRating.Location = new System.Drawing.Point(136, 8);
+            this.labelRating.Location = new System.Drawing.Point(136, 1);
             this.labelRating.Name = "labelRating";
             this.labelRating.Size = new System.Drawing.Size(142, 24);
             this.labelRating.TabIndex = 9;
@@ -325,11 +328,11 @@
             this.labelAlreadyRated.AutoSize = true;
             this.labelAlreadyRated.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAlreadyRated.ForeColor = System.Drawing.Color.White;
-            this.labelAlreadyRated.Location = new System.Drawing.Point(32, 112);
+            this.labelAlreadyRated.Location = new System.Drawing.Point(25, 97);
             this.labelAlreadyRated.Name = "labelAlreadyRated";
-            this.labelAlreadyRated.Size = new System.Drawing.Size(349, 20);
+            this.labelAlreadyRated.Size = new System.Drawing.Size(363, 20);
             this.labelAlreadyRated.TabIndex = 11;
-            this.labelAlreadyRated.Text = "You have already rated for this movie! With rate: ";
+            this.labelAlreadyRated.Text = "You have already rated for this movie! Your rating: ";
             // 
             // tableLayoutPanelMovie
             // 
@@ -424,15 +427,6 @@
             this.tabPageAllComments.Text = "All comments";
             this.tabPageAllComments.UseVisualStyleBackColor = true;
             // 
-            // commentBoxAllComments
-            // 
-            this.commentBoxAllComments.AutoScroll = true;
-            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxAllComments.Name = "commentBoxAllComments";
-            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 141);
-            this.commentBoxAllComments.TabIndex = 2;
-            // 
             // buttonDelSelectFromAllComments
             // 
             this.buttonDelSelectFromAllComments.Enabled = false;
@@ -457,14 +451,6 @@
             this.tabPageYourComments.TabIndex = 1;
             this.tabPageYourComments.Text = "My comments";
             this.tabPageYourComments.UseVisualStyleBackColor = true;
-            // 
-            // commentBoxMyComments
-            // 
-            this.commentBoxMyComments.AutoScroll = true;
-            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxMyComments.Name = "commentBoxMyComments";
-            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
-            this.commentBoxMyComments.TabIndex = 4;
             // 
             // buttonDelSelectComments
             // 
@@ -523,14 +509,13 @@
             this.tableLayoutPanelDescription.Location = new System.Drawing.Point(10, 3);
             this.tableLayoutPanelDescription.Name = "tableLayoutPanelDescription";
             this.tableLayoutPanelDescription.RowCount = 7;
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
+            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
+            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
+            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
+            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
             this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.76315F));
             this.tableLayoutPanelDescription.Size = new System.Drawing.Size(827, 341);
             this.tableLayoutPanelDescription.TabIndex = 0;
             // 
@@ -539,9 +524,9 @@
             this.labelMovieSummary.AutoSize = true;
             this.labelMovieSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMovieSummary.ForeColor = System.Drawing.Color.White;
-            this.labelMovieSummary.Location = new System.Drawing.Point(159, 165);
+            this.labelMovieSummary.Location = new System.Drawing.Point(179, 165);
             this.labelMovieSummary.Name = "labelMovieSummary";
-            this.labelMovieSummary.Size = new System.Drawing.Size(665, 140);
+            this.labelMovieSummary.Size = new System.Drawing.Size(645, 140);
             this.labelMovieSummary.TabIndex = 31;
             this.labelMovieSummary.Text = resources.GetString("labelMovieSummary.Text");
             // 
@@ -550,7 +535,7 @@
             this.labelMovieAverageRating.AutoSize = true;
             this.labelMovieAverageRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMovieAverageRating.ForeColor = System.Drawing.Color.White;
-            this.labelMovieAverageRating.Location = new System.Drawing.Point(159, 132);
+            this.labelMovieAverageRating.Location = new System.Drawing.Point(179, 132);
             this.labelMovieAverageRating.Name = "labelMovieAverageRating";
             this.labelMovieAverageRating.Size = new System.Drawing.Size(71, 20);
             this.labelMovieAverageRating.TabIndex = 30;
@@ -561,7 +546,7 @@
             this.labelMoviePremiereDate.AutoSize = true;
             this.labelMoviePremiereDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMoviePremiereDate.ForeColor = System.Drawing.Color.White;
-            this.labelMoviePremiereDate.Location = new System.Drawing.Point(159, 99);
+            this.labelMoviePremiereDate.Location = new System.Drawing.Point(179, 99);
             this.labelMoviePremiereDate.Name = "labelMoviePremiereDate";
             this.labelMoviePremiereDate.Size = new System.Drawing.Size(73, 20);
             this.labelMoviePremiereDate.TabIndex = 29;
@@ -572,7 +557,7 @@
             this.labelMoviePG.AutoSize = true;
             this.labelMoviePG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMoviePG.ForeColor = System.Drawing.Color.White;
-            this.labelMoviePG.Location = new System.Drawing.Point(159, 33);
+            this.labelMoviePG.Location = new System.Drawing.Point(179, 33);
             this.labelMoviePG.Name = "labelMoviePG";
             this.labelMoviePG.Size = new System.Drawing.Size(73, 20);
             this.labelMoviePG.TabIndex = 28;
@@ -584,7 +569,7 @@
             this.labelGenre.AutoSize = true;
             this.labelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGenre.ForeColor = System.Drawing.Color.White;
-            this.labelGenre.Location = new System.Drawing.Point(95, 0);
+            this.labelGenre.Location = new System.Drawing.Point(115, 0);
             this.labelGenre.Name = "labelGenre";
             this.labelGenre.Size = new System.Drawing.Size(58, 20);
             this.labelGenre.TabIndex = 9;
@@ -596,7 +581,7 @@
             this.labelPG.AutoSize = true;
             this.labelPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPG.ForeColor = System.Drawing.Color.White;
-            this.labelPG.Location = new System.Drawing.Point(117, 33);
+            this.labelPG.Location = new System.Drawing.Point(137, 33);
             this.labelPG.Name = "labelPG";
             this.labelPG.Size = new System.Drawing.Size(36, 20);
             this.labelPG.TabIndex = 11;
@@ -608,7 +593,7 @@
             this.labelPremiereDate.AutoSize = true;
             this.labelPremiereDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPremiereDate.ForeColor = System.Drawing.Color.White;
-            this.labelPremiereDate.Location = new System.Drawing.Point(38, 99);
+            this.labelPremiereDate.Location = new System.Drawing.Point(58, 99);
             this.labelPremiereDate.Name = "labelPremiereDate";
             this.labelPremiereDate.Size = new System.Drawing.Size(115, 20);
             this.labelPremiereDate.TabIndex = 12;
@@ -620,7 +605,7 @@
             this.labelAverageRating.AutoSize = true;
             this.labelAverageRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAverageRating.ForeColor = System.Drawing.Color.White;
-            this.labelAverageRating.Location = new System.Drawing.Point(30, 132);
+            this.labelAverageRating.Location = new System.Drawing.Point(50, 132);
             this.labelAverageRating.Name = "labelAverageRating";
             this.labelAverageRating.Size = new System.Drawing.Size(123, 20);
             this.labelAverageRating.TabIndex = 14;
@@ -632,7 +617,7 @@
             this.labelSummary.AutoSize = true;
             this.labelSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSummary.ForeColor = System.Drawing.Color.White;
-            this.labelSummary.Location = new System.Drawing.Point(73, 165);
+            this.labelSummary.Location = new System.Drawing.Point(93, 165);
             this.labelSummary.Name = "labelSummary";
             this.labelSummary.Size = new System.Drawing.Size(80, 20);
             this.labelSummary.TabIndex = 13;
@@ -641,10 +626,9 @@
             // buttonAddComment
             // 
             this.buttonAddComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAddComment.AutoSize = true;
             this.buttonAddComment.Enabled = false;
             this.buttonAddComment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddComment.Location = new System.Drawing.Point(159, 311);
+            this.buttonAddComment.Location = new System.Drawing.Point(179, 314);
             this.buttonAddComment.Name = "buttonAddComment";
             this.buttonAddComment.Size = new System.Drawing.Size(113, 27);
             this.buttonAddComment.TabIndex = 16;
@@ -657,7 +641,7 @@
             this.labelMovieGenre.AutoSize = true;
             this.labelMovieGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMovieGenre.ForeColor = System.Drawing.Color.White;
-            this.labelMovieGenre.Location = new System.Drawing.Point(159, 0);
+            this.labelMovieGenre.Location = new System.Drawing.Point(179, 0);
             this.labelMovieGenre.Name = "labelMovieGenre";
             this.labelMovieGenre.Size = new System.Drawing.Size(73, 20);
             this.labelMovieGenre.TabIndex = 27;
@@ -669,7 +653,7 @@
             this.labelDuration.AutoSize = true;
             this.labelDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDuration.ForeColor = System.Drawing.Color.White;
-            this.labelDuration.Location = new System.Drawing.Point(79, 66);
+            this.labelDuration.Location = new System.Drawing.Point(99, 66);
             this.labelDuration.Name = "labelDuration";
             this.labelDuration.Size = new System.Drawing.Size(74, 20);
             this.labelDuration.TabIndex = 32;
@@ -680,7 +664,7 @@
             this.labelMovieDuration.AutoSize = true;
             this.labelMovieDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMovieDuration.ForeColor = System.Drawing.Color.White;
-            this.labelMovieDuration.Location = new System.Drawing.Point(159, 66);
+            this.labelMovieDuration.Location = new System.Drawing.Point(179, 66);
             this.labelMovieDuration.Name = "labelMovieDuration";
             this.labelMovieDuration.Size = new System.Drawing.Size(73, 20);
             this.labelMovieDuration.TabIndex = 33;
@@ -694,22 +678,22 @@
             this.tableLayoutPanelWatchlistActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelWatchlistActions.Controls.Add(this.buttonRemoveFWatchlist, 0, 1);
             this.tableLayoutPanelWatchlistActions.Controls.Add(this.buttonAddToWatchlist, 0, 0);
-            this.tableLayoutPanelWatchlistActions.Location = new System.Drawing.Point(3, 308);
+            this.tableLayoutPanelWatchlistActions.Location = new System.Drawing.Point(3, 306);
             this.tableLayoutPanelWatchlistActions.Name = "tableLayoutPanelWatchlistActions";
             this.tableLayoutPanelWatchlistActions.RowCount = 2;
             this.tableLayoutPanelWatchlistActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
             this.tableLayoutPanelWatchlistActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
-            this.tableLayoutPanelWatchlistActions.Size = new System.Drawing.Size(150, 30);
+            this.tableLayoutPanelWatchlistActions.Size = new System.Drawing.Size(170, 35);
             this.tableLayoutPanelWatchlistActions.TabIndex = 34;
             // 
             // buttonRemoveFWatchlist
             // 
-            this.buttonRemoveFWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonRemoveFWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemoveFWatchlist.AutoSize = true;
             this.buttonRemoveFWatchlist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemoveFWatchlist.Location = new System.Drawing.Point(3, 17);
+            this.buttonRemoveFWatchlist.Location = new System.Drawing.Point(4, 19);
             this.buttonRemoveFWatchlist.Name = "buttonRemoveFWatchlist";
-            this.buttonRemoveFWatchlist.Size = new System.Drawing.Size(144, 10);
+            this.buttonRemoveFWatchlist.Size = new System.Drawing.Size(163, 13);
             this.buttonRemoveFWatchlist.TabIndex = 16;
             this.buttonRemoveFWatchlist.Text = "Remove from wachlist";
             this.buttonRemoveFWatchlist.UseVisualStyleBackColor = true;
@@ -717,12 +701,12 @@
             // 
             // buttonAddToWatchlist
             // 
-            this.buttonAddToWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAddToWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddToWatchlist.AutoSize = true;
             this.buttonAddToWatchlist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddToWatchlist.Location = new System.Drawing.Point(3, 3);
+            this.buttonAddToWatchlist.Location = new System.Drawing.Point(47, 3);
             this.buttonAddToWatchlist.Name = "buttonAddToWatchlist";
-            this.buttonAddToWatchlist.Size = new System.Drawing.Size(120, 8);
+            this.buttonAddToWatchlist.Size = new System.Drawing.Size(120, 10);
             this.buttonAddToWatchlist.TabIndex = 15;
             this.buttonAddToWatchlist.Text = "Add to wachlist";
             this.buttonAddToWatchlist.UseVisualStyleBackColor = true;
@@ -771,6 +755,35 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(90, 40);
             this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // buttonChangeRating
+            // 
+            this.buttonChangeRating.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonChangeRating.BackColor = System.Drawing.Color.Transparent;
+            this.buttonChangeRating.Location = new System.Drawing.Point(157, 121);
+            this.buttonChangeRating.Name = "buttonChangeRating";
+            this.buttonChangeRating.Size = new System.Drawing.Size(100, 9);
+            this.buttonChangeRating.TabIndex = 12;
+            this.buttonChangeRating.Text = "Change rating";
+            this.buttonChangeRating.UseVisualStyleBackColor = false;
+            this.buttonChangeRating.Click += new System.EventHandler(this.buttonChangeRating_Click);
+            // 
+            // commentBoxAllComments
+            // 
+            this.commentBoxAllComments.AutoScroll = true;
+            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxAllComments.Name = "commentBoxAllComments";
+            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 141);
+            this.commentBoxAllComments.TabIndex = 2;
+            // 
+            // commentBoxMyComments
+            // 
+            this.commentBoxMyComments.AutoScroll = true;
+            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxMyComments.Name = "commentBoxMyComments";
+            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
+            this.commentBoxMyComments.TabIndex = 4;
             // 
             // mov4eMovie
             // 
@@ -871,5 +884,6 @@
     private System.Windows.Forms.Button buttonDelAllMyComments;
         private CommentBox commentBoxMyComments;
         private CommentBox commentBoxAllComments;
+        private System.Windows.Forms.Button buttonChangeRating;
     }
 }

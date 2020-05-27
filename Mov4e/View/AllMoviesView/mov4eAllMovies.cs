@@ -226,8 +226,7 @@ namespace Mov4e.View.AllMoviesView
             {
                 if (sortOpened)
                 {
-
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 35;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 15;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 85;
@@ -236,8 +235,7 @@ namespace Mov4e.View.AllMoviesView
                 }
                 else
                 {
-
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 35;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 0;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 100;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 55;
@@ -256,7 +254,7 @@ namespace Mov4e.View.AllMoviesView
                 if (filterOpened)
                 {
 
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 32;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 0;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 100;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 55;
@@ -281,7 +279,7 @@ namespace Mov4e.View.AllMoviesView
                 }
                 else
                 {
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 35;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 15;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 85;
@@ -357,6 +355,14 @@ namespace Mov4e.View.AllMoviesView
                     buttonAddMovie.Enabled = false;
                     buttonDeleteMovie.Enabled = false;
                     buttonEditMovie.Enabled = false;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[0].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[1].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[2].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[3].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[0].Width = 100;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[1].Width = 0;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[2].Width = 0;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[3].Width = 0;
                 }
                 else
                 {
@@ -391,93 +397,93 @@ namespace Mov4e.View.AllMoviesView
             int pg = 0;
             int g = 0;
 
-            if (checkBoxFantasy.Checked)
+            if (radioButtonFantasy.Checked)
             {
                 g = 1;
             }
-            else if (checkBoxThriller.Checked)
+            else if (radioButtonThriller.Checked)
             {
                 g = 2;
             }
-            else if (checkBoxAction.Checked)
+            else if (radioButtonAction.Checked)
             {
                 g = 3;
             }
-            else if (checkBoxRomance.Checked)
+            else if (radioButtonRomance.Checked)
             {
                 g = 4;
             }
-            else if (checkBoxDrama.Checked)
+            else if (radioButtonDrama.Checked)
             {
                 g = 5;
             }
-            else if (checkBoxHorror.Checked)
+            else if (radioButtonHorror.Checked)
             {
                 g = 6;
             }
-            else if (checkBoxSciFi.Checked)
+            else if (radioButtonScifi.Checked)
             {
                 g = 7;
             }
-            else if (checkBoxHistorical.Checked)
+            else if (radioButtonHistorical.Checked)
             {
                 g = 8;
             }
-            else if (checkBoxAdventure.Checked)
+            else if (radioButtonAdventure.Checked)
             {
                 g = 9;
             }
-            else if (checkBoxComedy.Checked)
+            else if (radioButtonComedy.Checked)
             {
                 g = 10;
             }
-            else if (checkBoxSoapOpera.Checked)
+            else if (radioButtonSoapOpera.Checked)
             {
                 g = 11;
             }
-            else if (checkBoxBiographical.Checked)
+            else if (radioButtonBiographical.Checked)
             {
                 g = 12;
             }
-            else if (checkBoxSeries.Checked)
+            else if (radioButtonSeries.Checked)
             {
                 g = 13;
             }
 
-            if (checkBoxLessT1.Checked)
+            if (radioButtonLessT1Hour.Checked)
             {
                 d = 1;
             }
-            else if (checkBoxBetween12.Checked)
+            else if (radioButtonBetween1A2.Checked)
             {
                 d = 2;
             }
-            else if (checkBoxBetween23.Checked)
+            else if (radioButtonBetween2A3.Checked)
             {
                 d = 3;
             }
-            else if (checkBoxMoreT3.Checked)
+            else if (radioButtonMoreT3.Checked)
             {
                 d = 4;
             }
 
-            if (checkBoxNoPG.Checked)
+            if (radioButtonNoPG.Checked)
             {
                 pg = 0;
             }
-            else if (checkBox12Y.Checked)
+            else if (radioButtonPG12.Checked)
             {
                 pg = 12;
             }
-            else if (checkBox14Y.Checked)
+            else if (radioButtonPG14.Checked)
             {
                 pg = 14;
             }
-            else if (checkBox16Y.Checked)
+            else if (radioButtonPG16.Checked)
             {
                 pg = 16;
             }
-            else if (checkBox18Y.Checked)
+            else if (radioButtonPG18.Checked)
             {
                 pg = 18;
             }
@@ -963,64 +969,64 @@ namespace Mov4e.View.AllMoviesView
             int d = filters[1];
             int pg = filters[2];
 
-            if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked
-                || checkBoxSciFi.Checked || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked
-                || checkBoxSeries.Checked) && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) &&
-                (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked || checkBox16Y.Checked || checkBox18Y.Checked))
+            if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked
+                || radioButtonScifi.Checked || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked
+                || radioButtonSeries.Checked) && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) &&
+                (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked || radioButtonPG16.Checked || radioButtonPG18.Checked))
             {
                 // Filters the movies by genre, duration and parental guidance.
                 FilterMovies(g, d, pg);
             }
-            else if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked || checkBoxSciFi.Checked
-                 || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked || checkBoxSeries.Checked)
-                 && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) && (checkBoxNoPG.Checked == false && checkBox12Y.Checked
-                 == false && checkBox14Y.Checked == false && checkBox16Y.Checked == false && checkBox18Y.Checked == false))
+            else if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked || radioButtonScifi.Checked
+                 || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked || radioButtonSeries.Checked)
+                 && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) && (radioButtonNoPG.Checked == false && radioButtonPG12.Checked
+                 == false && radioButtonPG14.Checked == false && radioButtonPG16.Checked == false && radioButtonPG18.Checked == false))
             {
                 // Filters the movies by genre and duration.
                 FilterMoviesByGenresAndDuration(g, d);
             }
-            else if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked
-                 || checkBoxSciFi.Checked || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked
-                 || checkBoxSeries.Checked) && (checkBoxLessT1.Checked == false && checkBoxBetween12.Checked == false && checkBoxBetween23.Checked == false
-                 && checkBoxMoreT3.Checked == false) && (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked ||
-                 checkBox16Y.Checked || checkBox18Y.Checked))
+            else if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked
+                 || radioButtonScifi.Checked || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked
+                 || radioButtonSeries.Checked) && (radioButtonLessT1Hour.Checked == false && radioButtonBetween1A2.Checked == false && radioButtonBetween2A3.Checked == false
+                 && radioButtonMoreT3.Checked == false) && (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked ||
+                 radioButtonPG16.Checked || radioButtonPG18.Checked))
             {
                 // Filters the movies by genre and parental guidance.
                 FilterMoviesByGenresAndPG(g, pg);
             }
-            else if ((checkBoxFantasy.Checked == false && checkBoxThriller.Checked == false && checkBoxAction.Checked == false && checkBoxRomance.Checked == false
-                 && checkBoxDrama.Checked == false && checkBoxHorror.Checked == false && checkBoxSciFi.Checked == false && checkBoxHistorical.Checked == false
-                 && checkBoxAdventure.Checked == false && checkBoxComedy.Checked == false && checkBoxSoapOpera.Checked == false && checkBoxBiographical.Checked == false
-                 && checkBoxSeries.Checked == false) && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) &&
-                 (checkBoxNoPG.Checked == false && checkBox12Y.Checked == false && checkBox14Y.Checked == false
-                 && checkBox16Y.Checked == false && checkBox18Y.Checked == false))
+            else if ((radioButtonFantasy.Checked == false && radioButtonThriller.Checked == false && radioButtonAction.Checked == false && radioButtonRomance.Checked == false
+                 && radioButtonDrama.Checked == false && radioButtonHorror.Checked == false && radioButtonScifi.Checked == false && radioButtonHistorical.Checked == false
+                 && radioButtonAdventure.Checked == false && radioButtonComedy.Checked == false && radioButtonSoapOpera.Checked == false && radioButtonBiographical.Checked == false
+                 && radioButtonSeries.Checked == false) && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) &&
+                 (radioButtonNoPG.Checked == false && radioButtonPG12.Checked == false && radioButtonPG14.Checked == false
+                 && radioButtonPG16.Checked == false && radioButtonPG18.Checked == false))
             {
                 // Filters the movies by duration.
                 FilterMoviesByDuration(d);
             }
-            else if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked
-                || checkBoxSciFi.Checked || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked
-                || checkBoxSeries.Checked) && (checkBoxLessT1.Checked == false && checkBoxBetween12.Checked == false && checkBoxBetween23.Checked == false
-                && checkBoxMoreT3.Checked == false) && (checkBoxNoPG.Checked == false && checkBox12Y.Checked == false
-                && checkBox14Y.Checked == false && checkBox16Y.Checked == false && checkBox18Y.Checked == false))
+            else if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked
+                || radioButtonScifi.Checked || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked
+                || radioButtonSeries.Checked) && (radioButtonLessT1Hour.Checked == false && radioButtonBetween1A2.Checked == false && radioButtonBetween2A3.Checked == false
+                && radioButtonMoreT3.Checked == false) && (radioButtonNoPG.Checked == false && radioButtonPG12.Checked == false
+                && radioButtonPG14.Checked == false && radioButtonPG16.Checked == false && radioButtonPG18.Checked == false))
             {
                 // Filters the movies by genre.
                 FilterMoviesByGenres(g);
             }
-            else if ((checkBoxFantasy.Checked == false && checkBoxThriller.Checked == false && checkBoxAction.Checked == false && checkBoxRomance.Checked == false
-                && checkBoxDrama.Checked == false && checkBoxHorror.Checked == false && checkBoxSciFi.Checked == false && checkBoxHistorical.Checked == false
-                && checkBoxAdventure.Checked == false && checkBoxComedy.Checked == false && checkBoxSoapOpera.Checked == false && checkBoxBiographical.Checked == false
-                && checkBoxSeries.Checked == false) && (checkBoxLessT1.Checked == false && checkBoxBetween12.Checked == false && checkBoxBetween23.Checked == false
-                && checkBoxMoreT3.Checked == false) && (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked || checkBox16Y.Checked || checkBox18Y.Checked))
+            else if ((radioButtonFantasy.Checked == false && radioButtonThriller.Checked == false && radioButtonAction.Checked == false && radioButtonRomance.Checked == false
+                && radioButtonDrama.Checked == false && radioButtonHorror.Checked == false && radioButtonScifi.Checked == false && radioButtonHistorical.Checked == false
+                && radioButtonAdventure.Checked == false && radioButtonComedy.Checked == false && radioButtonSoapOpera.Checked == false && radioButtonBiographical.Checked == false
+                && radioButtonSeries.Checked == false) && (radioButtonLessT1Hour.Checked == false && radioButtonBetween1A2.Checked == false && radioButtonBetween2A3.Checked == false
+                && radioButtonMoreT3.Checked == false) && (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked || radioButtonPG16.Checked || radioButtonPG18.Checked))
             {
                 // Filters the movies by parental guidance.
                 FilterMoviesByPG(pg);
             }
-            else if ((checkBoxFantasy.Checked == false && checkBoxThriller.Checked == false && checkBoxAction.Checked == false && checkBoxRomance.Checked == false
-                && checkBoxDrama.Checked == false && checkBoxHorror.Checked == false && checkBoxSciFi.Checked == false && checkBoxHistorical.Checked == false
-                && checkBoxAdventure.Checked == false && checkBoxComedy.Checked == false && checkBoxSoapOpera.Checked == false && checkBoxBiographical.Checked == false
-                && checkBoxSeries.Checked == false) && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) &&
-                (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked || checkBox16Y.Checked || checkBox18Y.Checked))
+            else if ((radioButtonFantasy.Checked == false && radioButtonThriller.Checked == false && radioButtonAction.Checked == false && radioButtonRomance.Checked == false
+                && radioButtonDrama.Checked == false && radioButtonHorror.Checked == false && radioButtonScifi.Checked == false && radioButtonHistorical.Checked == false
+                && radioButtonAdventure.Checked == false && radioButtonComedy.Checked == false && radioButtonSoapOpera.Checked == false && radioButtonBiographical.Checked == false
+                && radioButtonSeries.Checked == false) && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) &&
+                (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked || radioButtonPG16.Checked || radioButtonPG18.Checked))
             {
                 // Filters the movies by duration and parental guidance.
                 FilterMoviesByDurationAndPG(d, pg);
@@ -1033,30 +1039,30 @@ namespace Mov4e.View.AllMoviesView
             Dictionary<int, byte[]> moviesList = rp.SetMovieInformation();
             InitializeMoviesList(moviesList);
 
-            checkBoxFantasy.Checked = false;
-            checkBoxThriller.Checked = false;
-            checkBoxAction.Checked = false;
-            checkBoxRomance.Checked = false;
-            checkBoxDrama.Checked = false;
-            checkBoxHorror.Checked = false;
-            checkBoxSciFi.Checked = false;
-            checkBoxHistorical.Checked = false;
-            checkBoxAdventure.Checked = false;
-            checkBoxComedy.Checked = false;
-            checkBoxSoapOpera.Checked = false;
-            checkBoxBiographical.Checked = false;
-            checkBoxSeries.Checked = false;
+            radioButtonFantasy.Checked = false;
+            radioButtonThriller.Checked = false;
+            radioButtonAction.Checked = false;
+            radioButtonRomance.Checked = false;
+            radioButtonDrama.Checked = false;
+            radioButtonHorror.Checked = false;
+            radioButtonScifi.Checked = false;
+            radioButtonHistorical.Checked = false;
+            radioButtonAdventure.Checked = false;
+            radioButtonComedy.Checked = false;
+            radioButtonSoapOpera.Checked = false;
+            radioButtonBiographical.Checked = false;
+            radioButtonSeries.Checked = false;
 
-            checkBoxLessT1.Checked = false;
-            checkBoxBetween12.Checked = false;
-            checkBoxBetween12.Checked = false;
-            checkBoxMoreT3.Checked = false;
+            radioButtonLessT1Hour.Checked = false;
+            radioButtonBetween1A2.Checked = false;
+            radioButtonBetween2A3.Checked = false;
+            radioButtonMoreT3.Checked = false;
 
-            checkBoxNoPG.Checked = false;
-            checkBox12Y.Checked = false;
-            checkBox14Y.Checked = false;
-            checkBox16Y.Checked = false;
-            checkBox18Y.Checked = false;
+            radioButtonNoPG.Checked = false;
+            radioButtonPG12.Checked = false;
+            radioButtonPG14.Checked = false;
+            radioButtonPG16.Checked = false;
+            radioButtonPG18.Checked = false;
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
