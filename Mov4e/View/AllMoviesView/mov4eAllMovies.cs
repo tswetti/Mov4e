@@ -54,190 +54,6 @@ namespace Mov4e.View.AllMoviesView
             label.ForeColor = Color.White;
         }
 
-        private void buttonEditMovie_Click(object sender, EventArgs e)
-        {
-            EditMovie();
-        }
-
-        private void buttonDeleteMovie_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonStartSearch_Click(object sender, EventArgs e)
-        {
-            SearchMovie();
-        }
-
-        private void buttonSortNew_Click(object sender, EventArgs e)
-        {
-            SortByDate();
-        }
-
-        private void buttonSortAZ_Click(object sender, EventArgs e)
-        {
-            SortByTitle();
-        }
-
-        private void buttonFilter_Click(object sender, EventArgs e)
-        {
-            List<int> filters = CheckSelectdFilters();
-            int g = filters[0];
-            int d = filters[1];
-            int pg = filters[2];
-
-            if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked
-                || checkBoxSciFi.Checked || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked
-                || checkBoxSeries.Checked) && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) &&
-                (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked || checkBox16Y.Checked || checkBox18Y.Checked))
-            {
-                // Filters the movies by genre, duration and parental guidance.
-                FilterMovies(g, d, pg);
-            }
-            else if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked || checkBoxSciFi.Checked
-                 || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked || checkBoxSeries.Checked)
-                 && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) && (checkBoxNoPG.Checked == false && checkBox12Y.Checked
-                 == false && checkBox14Y.Checked == false && checkBox16Y.Checked == false && checkBox18Y.Checked == false))
-            {
-                // Filters the movies by genre and duration.
-                FilterMoviesByGenresAndDuration(g, d);
-            }
-            else if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked
-                 || checkBoxSciFi.Checked || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked
-                 || checkBoxSeries.Checked) && (checkBoxLessT1.Checked == false && checkBoxBetween12.Checked == false && checkBoxBetween23.Checked == false
-                 && checkBoxMoreT3.Checked == false) && (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked ||
-                 checkBox16Y.Checked || checkBox18Y.Checked))
-            {
-                // Filters the movies by genre and parental guidance.
-                FilterMoviesByGenresAndPG(g, pg);
-            }
-            else if ((checkBoxFantasy.Checked == false && checkBoxThriller.Checked == false && checkBoxAction.Checked == false && checkBoxRomance.Checked == false
-                 && checkBoxDrama.Checked == false && checkBoxHorror.Checked == false && checkBoxSciFi.Checked == false && checkBoxHistorical.Checked == false
-                 && checkBoxAdventure.Checked == false && checkBoxComedy.Checked == false && checkBoxSoapOpera.Checked == false && checkBoxBiographical.Checked == false
-                 && checkBoxSeries.Checked == false) && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) &&
-                 (checkBoxNoPG.Checked == false && checkBox12Y.Checked == false && checkBox14Y.Checked == false
-                 && checkBox16Y.Checked == false && checkBox18Y.Checked == false))
-            {
-                // Filters the movies by duration.
-                FilterMoviesByDuration(d);
-            }
-            else if ((checkBoxFantasy.Checked || checkBoxThriller.Checked || checkBoxAction.Checked || checkBoxRomance.Checked || checkBoxDrama.Checked || checkBoxHorror.Checked
-                || checkBoxSciFi.Checked || checkBoxHistorical.Checked || checkBoxAdventure.Checked || checkBoxComedy.Checked || checkBoxSoapOpera.Checked || checkBoxBiographical.Checked
-                || checkBoxSeries.Checked) && (checkBoxLessT1.Checked == false && checkBoxBetween12.Checked == false && checkBoxBetween23.Checked == false
-                && checkBoxMoreT3.Checked == false) && (checkBoxNoPG.Checked == false && checkBox12Y.Checked == false
-                && checkBox14Y.Checked == false && checkBox16Y.Checked == false && checkBox18Y.Checked == false))
-            {
-                // Filters the movies by genre.
-                FilterMoviesByGenres(g);
-            }
-            else if ((checkBoxFantasy.Checked == false && checkBoxThriller.Checked == false && checkBoxAction.Checked == false && checkBoxRomance.Checked == false
-                && checkBoxDrama.Checked == false && checkBoxHorror.Checked == false && checkBoxSciFi.Checked == false && checkBoxHistorical.Checked == false
-                && checkBoxAdventure.Checked == false && checkBoxComedy.Checked == false && checkBoxSoapOpera.Checked == false && checkBoxBiographical.Checked == false
-                && checkBoxSeries.Checked == false) && (checkBoxLessT1.Checked == false && checkBoxBetween12.Checked == false && checkBoxBetween23.Checked == false
-                && checkBoxMoreT3.Checked == false) && (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked || checkBox16Y.Checked || checkBox18Y.Checked))
-            {
-                // Filters the movies by parental guidance.
-                FilterMoviesByPG(pg);
-            }
-            else if ((checkBoxFantasy.Checked == false && checkBoxThriller.Checked == false && checkBoxAction.Checked == false && checkBoxRomance.Checked == false
-                && checkBoxDrama.Checked == false && checkBoxHorror.Checked == false && checkBoxSciFi.Checked == false && checkBoxHistorical.Checked == false
-                && checkBoxAdventure.Checked == false && checkBoxComedy.Checked == false && checkBoxSoapOpera.Checked == false && checkBoxBiographical.Checked == false
-                && checkBoxSeries.Checked == false) && (checkBoxLessT1.Checked || checkBoxBetween12.Checked || checkBoxBetween23.Checked || checkBoxMoreT3.Checked) &&
-                (checkBoxNoPG.Checked || checkBox12Y.Checked || checkBox14Y.Checked || checkBox16Y.Checked || checkBox18Y.Checked))
-            {
-                // Filters the movies by duration and parental guidance.
-                FilterMoviesByDurationAndPG(d, pg);
-            }
-        }
-
-        private void buttonClearFilters_Click(object sender, EventArgs e)
-        {
-            listViewMovies.Items.Clear();
-            Dictionary<int, byte[]> moviesList = all_movies_presenter.SetMovieInformation();
-            InitializeMoviesList(moviesList);
-
-            checkBoxFantasy.Checked = false;
-            checkBoxThriller.Checked = false;
-            checkBoxAction.Checked = false;
-            checkBoxRomance.Checked = false;
-            checkBoxDrama.Checked = false;
-            checkBoxHorror.Checked = false;
-            checkBoxSciFi.Checked = false;
-            checkBoxHistorical.Checked = false;
-            checkBoxAdventure.Checked = false;
-            checkBoxComedy.Checked = false;
-            checkBoxSoapOpera.Checked = false;
-            checkBoxBiographical.Checked = false;
-            checkBoxSeries.Checked = false;
-
-            checkBoxLessT1.Checked = false;
-            checkBoxBetween12.Checked = false;
-            checkBoxBetween12.Checked = false;
-            checkBoxMoreT3.Checked = false;
-
-            checkBoxNoPG.Checked = false;
-            checkBox12Y.Checked = false;
-            checkBox14Y.Checked = false;
-            checkBox16Y.Checked = false;
-            checkBox18Y.Checked = false;
-        }
-
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxSearch.Focused == true && !string.IsNullOrEmpty(textBoxSearch.Text) && !string.IsNullOrWhiteSpace(textBoxSearch.Text))
-            {
-                pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_blue;
-            }
-            else
-                pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
-        }
-
-        private void listViewMovies_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listViewMovies.SelectedItems.Count == 0)
-            {
-                buttonViewInfo.Enabled = false;
-                buttonDeleteMovie.Enabled = false;
-                buttonEditMovie.Enabled = false;
-            }
-            else
-            {
-                buttonViewInfo.Enabled = true;
-                buttonDeleteMovie.Enabled = true;
-                buttonEditMovie.Enabled = true;
-            }
-        }
-
-        private void buttonDeleteMovie_Click(object sender, EventArgs e)
-        {
-            DeleteMovie();
-        }
-
-        private void tableLayoutPanelMovies_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonSortZA_Click(object sender, EventArgs e)
-        {
-            Dictionary<int, byte[]> movies = all_movies_presenter.SortMoviesByTitle();
-            Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
-            var reverse = movies.Reverse();
-            foreach (var item in reverse)
-            {
-                reversedMovies.Add(item.Key, item.Value);
-            }
-            listViewMovies.Items.Clear();
-            InitializeMoviesList(reversedMovies);
-        }
-
-        private void buttonSortOld_Click(object sender, EventArgs e)
-        {
-            Dictionary<int, byte[]> mov = all_movies_presenter.SortByDate();
-            listViewMovies.Items.Clear();
-            InitializeMoviesList(mov);
-        }
-
         bool sortOpened;
         bool filterOpened;
 
@@ -1218,7 +1034,7 @@ namespace Mov4e.View.AllMoviesView
         private void buttonClearFilters_Click(object sender, EventArgs e)
         {
             listViewMovies.Items.Clear();
-            Dictionary<int, byte[]> moviesList = rp.SetMovieInformation();
+            Dictionary<int, byte[]> moviesList = all_movies_presenter.SetMovieInformation();
             InitializeMoviesList(moviesList);
 
             radioButtonFantasy.Checked = false;
@@ -1285,7 +1101,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonSortZA_Click(object sender, EventArgs e)
         {
-            Dictionary<int, byte[]> movies = rp.SortMoviesByTitle();
+            Dictionary<int, byte[]> movies = all_movies_presenter.SortMoviesByTitle();
             Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
             var reverse = movies.Reverse();
             foreach (var item in reverse)
@@ -1298,7 +1114,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonSortOld_Click(object sender, EventArgs e)
         {
-            Dictionary<int, byte[]> mov = rp.SortByDate();
+            Dictionary<int, byte[]> mov = all_movies_presenter.SortByDate();
             listViewMovies.Items.Clear();
             InitializeMoviesList(mov);
         }
@@ -1320,6 +1136,11 @@ namespace Mov4e.View.AllMoviesView
             this.listViewMovies.Clear();
             imageListMovies.Images.Clear();
             this.InitializeMoviesList(mov);
+        }
+
+        private void mov4eAllMovies_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
