@@ -28,6 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mov4eAllMovies));
+            this.topButtonsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.closeLabel = new System.Windows.Forms.Label();
+            this.minimizeLabel = new System.Windows.Forms.Label();
+            this.maximizeLabel = new System.Windows.Forms.Label();
+            this.listViewMovies = new System.Windows.Forms.ListView();
+            this.tableLayoutPanelMovies = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelSortFilter = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelFilter = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButtonPG18 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPG16 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPG14 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPG12 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoPG = new System.Windows.Forms.RadioButton();
+            this.labelFilterPG = new System.Windows.Forms.Label();
+            this.labelFilterDuration = new System.Windows.Forms.Label();
+            this.groupBoxGenreFilter = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanelFGenre = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButtonComedy = new System.Windows.Forms.RadioButton();
+            this.radioButtonDrama = new System.Windows.Forms.RadioButton();
+            this.radioButtonAdventure = new System.Windows.Forms.RadioButton();
+            this.radioButtonRomance = new System.Windows.Forms.RadioButton();
+            this.radioButtonSeries = new System.Windows.Forms.RadioButton();
+            this.radioButtonHistorical = new System.Windows.Forms.RadioButton();
+            this.radioButtonAction = new System.Windows.Forms.RadioButton();
+            this.radioButtonBiographical = new System.Windows.Forms.RadioButton();
+            this.radioButtonScifi = new System.Windows.Forms.RadioButton();
+            this.radioButtonThriller = new System.Windows.Forms.RadioButton();
+            this.radioButtonSoapOpera = new System.Windows.Forms.RadioButton();
+            this.radioButtonHorror = new System.Windows.Forms.RadioButton();
+            this.radioButtonFantasy = new System.Windows.Forms.RadioButton();
+            this.labelFilterGenre = new System.Windows.Forms.Label();
+            this.buttonFilter = new System.Windows.Forms.Button();
+            this.buttonClearFilters = new System.Windows.Forms.Button();
+            this.groupBoxDurationFilter = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButtonMoreT3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBetween2A3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBetween1A2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonLessT1Hour = new System.Windows.Forms.RadioButton();
+            this.tableLayoutPanelSort = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSortOld = new System.Windows.Forms.Button();
+            this.buttonSortNew = new System.Windows.Forms.Button();
+            this.buttonSortZA = new System.Windows.Forms.Button();
+            this.labelSortTitle = new System.Windows.Forms.Label();
+            this.labelSortDate = new System.Windows.Forms.Label();
+            this.buttonSortAZ = new System.Windows.Forms.Button();
+            this.tableLayoutPanelMoviesMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxFilter = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.buttonStartSearch = new System.Windows.Forms.Button();
+            this.pictureBoxSearchIcon = new System.Windows.Forms.PictureBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.pictureBoxSort = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanelActionsWMovie = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonDeleteMovie = new System.Windows.Forms.Button();
+            this.buttonEditMovie = new System.Windows.Forms.Button();
+            this.buttonAddMovie = new System.Windows.Forms.Button();
+            this.buttonViewInfo = new System.Windows.Forms.Button();
+            this.imageListMovies = new System.Windows.Forms.ImageList(this.components);
+            this.topButtonsLayoutPanel.SuspendLayout();
+            this.tableLayoutPanelMovies.SuspendLayout();
+            this.tableLayoutPanelSortFilter.SuspendLayout();
+            this.tableLayoutPanelFilter.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.groupBoxGenreFilter.SuspendLayout();
+            this.tableLayoutPanelFGenre.SuspendLayout();
+            this.groupBoxDurationFilter.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelSort.SuspendLayout();
+            this.tableLayoutPanelMoviesMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSort)).BeginInit();
+            this.tableLayoutPanelActionsWMovie.SuspendLayout();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -110,6 +190,7 @@
             this.listViewMovies.Size = new System.Drawing.Size(1200, 235);
             this.listViewMovies.TabIndex = 3;
             this.listViewMovies.UseCompatibleStateImageBehavior = false;
+            this.listViewMovies.SelectedIndexChanged += new System.EventHandler(this.listViewMovies_SelectedIndexChanged);
             // 
             // tableLayoutPanelMovies
             // 
@@ -131,6 +212,7 @@
             this.tableLayoutPanelMovies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelMovies.Size = new System.Drawing.Size(1280, 730);
             this.tableLayoutPanelMovies.TabIndex = 4;
+            this.tableLayoutPanelMovies.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelMovies_Paint);
             // 
             // tableLayoutPanelSortFilter
             // 
@@ -510,6 +592,7 @@
             this.buttonFilter.TabIndex = 39;
             this.buttonFilter.Text = "Filter";
             this.buttonFilter.UseVisualStyleBackColor = false;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // buttonClearFilters
             // 
@@ -522,6 +605,7 @@
             this.buttonClearFilters.TabIndex = 40;
             this.buttonClearFilters.Text = "Clear All";
             this.buttonClearFilters.UseVisualStyleBackColor = true;
+            this.buttonClearFilters.Click += new System.EventHandler(this.buttonClearFilters_Click);
             // 
             // groupBoxDurationFilter
             // 
@@ -565,7 +649,6 @@
             this.radioButtonMoreT3.TabIndex = 9;
             this.radioButtonMoreT3.Text = "More than 3 hours";
             this.radioButtonMoreT3.UseVisualStyleBackColor = true;
-            this.radioButtonMoreT3.CheckedChanged += new System.EventHandler(this.radioButtonMoreT3_CheckedChanged);
             // 
             // radioButtonBetween2A3
             // 
@@ -590,7 +673,6 @@
             this.radioButtonBetween1A2.TabIndex = 3;
             this.radioButtonBetween1A2.Text = "Between 1 and 2 hours";
             this.radioButtonBetween1A2.UseVisualStyleBackColor = true;
-            this.radioButtonBetween1A2.CheckedChanged += new System.EventHandler(this.radioButtonBetween1A2_CheckedChanged);
             // 
             // radioButtonLessT1Hour
             // 
@@ -603,7 +685,6 @@
             this.radioButtonLessT1Hour.TabIndex = 0;
             this.radioButtonLessT1Hour.Text = "Less than 1 hour";
             this.radioButtonLessT1Hour.UseVisualStyleBackColor = true;
-            this.radioButtonLessT1Hour.CheckedChanged += new System.EventHandler(this.radioButtonLessT1Hour_CheckedChanged);
             // 
             // tableLayoutPanelSort
             // 
@@ -638,6 +719,7 @@
             this.buttonSortOld.TabIndex = 12;
             this.buttonSortOld.Text = "Oldest first";
             this.buttonSortOld.UseVisualStyleBackColor = true;
+            this.buttonSortOld.Click += new System.EventHandler(this.buttonSortOld_Click);
             // 
             // buttonSortNew
             // 
@@ -649,6 +731,7 @@
             this.buttonSortNew.TabIndex = 11;
             this.buttonSortNew.Text = "Newest first";
             this.buttonSortNew.UseVisualStyleBackColor = true;
+            this.buttonSortNew.Click += new System.EventHandler(this.buttonSortNew_Click);
             // 
             // buttonSortZA
             // 
@@ -660,6 +743,7 @@
             this.buttonSortZA.TabIndex = 10;
             this.buttonSortZA.Text = "Z-A";
             this.buttonSortZA.UseVisualStyleBackColor = true;
+            this.buttonSortZA.Click += new System.EventHandler(this.buttonSortZA_Click);
             // 
             // labelSortTitle
             // 
@@ -695,6 +779,7 @@
             this.buttonSortAZ.TabIndex = 9;
             this.buttonSortAZ.Text = "A-Z";
             this.buttonSortAZ.UseVisualStyleBackColor = true;
+            this.buttonSortAZ.Click += new System.EventHandler(this.buttonSortAZ_Click);
             // 
             // tableLayoutPanelMoviesMenu
             // 
@@ -751,6 +836,7 @@
             this.buttonStartSearch.TabIndex = 3;
             this.buttonStartSearch.Text = "Search";
             this.buttonStartSearch.UseVisualStyleBackColor = true;
+            this.buttonStartSearch.Click += new System.EventHandler(this.buttonStartSearch_Click);
             // 
             // pictureBoxSearchIcon
             // 
@@ -771,6 +857,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(420, 20);
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // pictureBoxSort
             // 
@@ -816,6 +903,7 @@
             this.buttonDeleteMovie.Text = "Delete movie";
             this.buttonDeleteMovie.UseVisualStyleBackColor = true;
             this.buttonDeleteMovie.Visible = false;
+            this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
             // 
             // buttonEditMovie
             // 
@@ -828,6 +916,7 @@
             this.buttonEditMovie.Text = "Edit movie";
             this.buttonEditMovie.UseVisualStyleBackColor = true;
             this.buttonEditMovie.Visible = false;
+            this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
             // 
             // buttonAddMovie
             // 
@@ -867,10 +956,46 @@
             // 
             // mov4eAllMovies
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(1280, 788);
+            this.Controls.Add(this.topButtonsLayoutPanel);
+            this.Controls.Add(this.tableLayoutPanelMovies);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mov4eAllMovies";
-            this.Load += new System.EventHandler(this.mov4eAllMovies_Load_1);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "mov4eAllMovies";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.mov4eAllMovies_Load);
+            this.topButtonsLayoutPanel.ResumeLayout(false);
+            this.topButtonsLayoutPanel.PerformLayout();
+            this.tableLayoutPanelMovies.ResumeLayout(false);
+            this.tableLayoutPanelSortFilter.ResumeLayout(false);
+            this.tableLayoutPanelFilter.ResumeLayout(false);
+            this.tableLayoutPanelFilter.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.groupBoxGenreFilter.ResumeLayout(false);
+            this.tableLayoutPanelFGenre.ResumeLayout(false);
+            this.tableLayoutPanelFGenre.PerformLayout();
+            this.groupBoxDurationFilter.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelSort.ResumeLayout(false);
+            this.tableLayoutPanelSort.PerformLayout();
+            this.tableLayoutPanelMoviesMenu.ResumeLayout(false);
+            this.tableLayoutPanelMoviesMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSort)).EndInit();
+            this.tableLayoutPanelActionsWMovie.ResumeLayout(false);
+            this.tableLayoutPanelActionsWMovie.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
