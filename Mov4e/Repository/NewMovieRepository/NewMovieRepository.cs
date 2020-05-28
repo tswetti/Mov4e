@@ -13,7 +13,7 @@ namespace Mov4e.Repository.NewMovieRepository
     public class NewMovieRepository: INewMovieRepository
     {
         // A private variable that keeps reference to a movie object.
-        private Movie m = new Movie();
+        private Movie movie = new Movie();
         
         /// <summary>
         /// A no arguments constructor for the <c>NewMovieRepository</c> class.
@@ -42,13 +42,13 @@ namespace Mov4e.Repository.NewMovieRepository
             {
                 if (tit != null && pG != null && gen != 0 && y != null && sum != null && pict != null)
                 {
-                    m.title = tit;
-                    m.pg = pG;
-                    m.genre = gen;
-                    m.year = y;
-                    m.summary = sum;
-                    m.picture = pict;
-                    m.duration = dur;
+                    movie.title = tit;
+                    movie.pg = pG;
+                    movie.genre = gen;
+                    movie.year = y;
+                    movie.summary = sum;
+                    movie.picture = pict;
+                    movie.duration = dur;
                     SaveMovie();
                 }
                 else
@@ -72,8 +72,8 @@ namespace Mov4e.Repository.NewMovieRepository
             List<Movie> movies = new List<Movie>();
             using (mov4eEntities context = new mov4eEntities())
             {
-                movies.Add(m);
-                context.Movies.Add(m);
+                movies.Add(movie);
+                context.Movies.Add(movie);
                 context.SaveChanges();
             }
         }

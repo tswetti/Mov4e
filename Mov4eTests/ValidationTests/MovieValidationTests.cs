@@ -53,5 +53,95 @@ namespace Mov4eTests.ValidationTests
         {
             Assert.IsTrue(MovieValidation.ValidateDuration(240));
         }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException1()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie(null, 3, 14, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException2()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie("Movie", -10, 14, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException3()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie("Movie", 3, -1, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException4()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie("Movie", 3, 14, null, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException5()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie("Movie", 3, 14, DateTime.Today, "", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException6()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie("Movie", 3, 14, DateTime.Today, "summary", null, 135));
+        }
+
+        [Test]
+        public void CorrectValidateNewMovieThrowsAnException7()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateNewMovie("Movie", 3, 14, DateTime.Today, "summary", new byte[100], -15));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException1()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(-3, "Movie", 3, 14, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException2()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, null, 3, 14, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException3()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, "Movie", 0, 14, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException4()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, "Movie", 3, -14, DateTime.Today, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException5()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, "Movie", 3, 14, null, "summary", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException6()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, "Movie", 3, 14, DateTime.Today, "", new byte[100], 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException7()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, "Movie", 3, 14, DateTime.Today, "summary", null, 135));
+        }
+
+        [Test]
+        public void CorrectValidateMovieUpdateThrowsAnException8()
+        {
+            Assert.Throws<InvalidFieldInputException>(() => MovieValidation.ValidateMovieUpdate(1, "Movie", 3, 14, DateTime.Today, "summary", new byte[100], -15));
+        }
     }
 }

@@ -86,8 +86,19 @@ namespace Mov4e.Repository.AllMoviesRepository
             }
         }
 
+        // This is a private method that edits the duration of a certain Movie.
+        private void EditDuration(int id, int dur)
+        {
+            using (mov4eEntities m = new mov4eEntities())
+            {
+                var updateQuery = (Movie)m.Movies.Find(id);
+                updateQuery.duration = dur;
+                m.SaveChanges();
+            }
+        }
+
         // This is a private method that gets a list of all movies from the datebase.
-        private static List<Movie> GetMoviesList()
+        private List<Movie> GetMoviesList()
         {
             List<Movie> list = new List<Movie>();
             using (mov4eEntities mov = new mov4eEntities())
@@ -101,6 +112,107 @@ namespace Mov4e.Repository.AllMoviesRepository
             return list;
         }
 
+        // This method filter the movies (with duration less than a hour) by a certain genre and pg.
+        private Dictionary<int, byte[]> FilterLessThanHour(int g, int pg)
+        {
+            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
+            using (mov4eEntities mov = new mov4eEntities())
+            {
+
+
+                var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration >= 0 && m.duration <= 60 select new { m.id, m.picture };
+                foreach (var item in filt)
+                {
+                    movs.Add(item.id, item.picture);
+                }
+
+                return movs;
+            }
+        }
+
+        // This method filter the movies (with duration between one and two hours) by a certain genre and pg.
+        private Dictionary<int, byte[]> FilterBetweenOneAndTwoHours(int g, int pg)
+        {
+            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
+            using (mov4eEntities mov = new mov4eEntities())
+            {
+
+                var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration > 60 && m.duration <= 120 select new { m.id, m.picture };
+                foreach (var item in filt)
+                {
+                    movs.Add(item.id, item.picture);
+                }
+
+                return movs;
+            }
+        }
+
+        // This method filter the movies (with duration between two and three hours) by a certain genre and pg.
+        private Dictionary<int, byte[]> FilterBetweenTwoAndThreeHours(int g, int pg)
+        {
+            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
+            using (mov4eEntities mov = new mov4eEntities())
+            {
+
+                var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration > 120 && m.duration <= 180 select new { m.id, m.picture };
+                foreach (var item in filt)
+                {
+                    movs.Add(item.id, item.picture);
+                }
+
+                return movs;
+            }
+        }
+
+        // This method filter the movies (with duration more than three hours) by a certain genre and pg.
+        private Dictionary<int, byte[]> FilterMoreThanThreeHours(int g, int pg)
+        {
+            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
+            using (mov4eEntities mov = new mov4eEntities())
+            {
+
+                var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration > 180 select new { m.id, m.picture };
+                foreach (var item in filt)
+                {
+                    movs.Add(item.id, item.picture);
+                }
+
+                return movs;
+            }
+        }
+
+        // This method gets the movies which are in a certain duration interval and with a certain genre.
+        private Dictionary<int, byte[]> GetMoviesInACertainDurationGenreInterval(int g, int min, int max)
+        {
+            Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
+            using (mov4eEntities mov = new mov4eEntities())
+            {
+                var movies = from m in mov.Movies where m.duration >= min && m.duration < max && m.genre == g select new { m.id, m.picture };
+                foreach (var item in movies)
+                {
+                    moviesList.Add(item.id, item.picture);
+                }
+
+                return moviesList;
+            }
+        }
+
+        // This method gets the movies which are in a certain duration interval and with a certain parental guidance.
+        private Dictionary<int, byte[]> GetMoviesInACertainDurationPGInterval(int pg, int min, int max)
+        {
+            Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
+            using (mov4eEntities context = new mov4eEntities())
+            {
+                var movies = from m in context.Movies where m.duration >= min && m.duration < max && m.pg == pg select new { m.id, m.picture };
+                foreach (var item in movies)
+                {
+                    moviesList.Add(item.id, item.picture);
+                }
+
+                return moviesList;
+            }
+        }
+
         /// <summary>
         /// The <c>GetMovie()</c> method gets a Movie and its genre from the database by its id.
         /// </summary>
@@ -111,10 +223,10 @@ namespace Mov4e.Repository.AllMoviesRepository
         {
             Movie returnMovie = new Movie();
             string returnGenre = "";
-            using (mov4eEntities m = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var Movie = m.Movies.Find(id);
-                var genre = from g in m.Genres where Movie.genre == g.id select g.name;
+                var Movie = context.Movies.Find(id);
+                var genre = from g in context.Genres where Movie.genre == g.id select g.name;
                 returnMovie = Movie;
                 returnGenre = genre.ToList<string>()[0];
             }
@@ -166,7 +278,7 @@ namespace Mov4e.Repository.AllMoviesRepository
         {
             if (id > 0)
             {
-                if (title != null && genre != 0 && pg != null && picture != null && date != null && summary != null)
+                if (title != null && genre != 0 && pg != null && picture != null && date != null && summary != null && dur>=0)
                 {
                     EditTitle(id, title);
                     EditPicture(id, picture);
@@ -174,6 +286,7 @@ namespace Mov4e.Repository.AllMoviesRepository
                     EditPg(id, pg);
                     EditYear(id, date);
                     EditSummary(id, summary);
+                    EditDuration(id, dur);
                 }
                 else
                 {
@@ -200,13 +313,13 @@ namespace Mov4e.Repository.AllMoviesRepository
         /// <remarks>When the exception is thrown the method writes it in a log file called errors.txt</remarks>
         public void DeleteMovie(int id)
         {
-            using (mov4eEntities m = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var deleteQuery = m.Movies.Find(id);
+                var deleteQuery = context.Movies.Find(id);
                 if (deleteQuery != null)
                 {
-                    m.Movies.Remove(deleteQuery);
-                    m.SaveChanges();
+                    context.Movies.Remove(deleteQuery);
+                    context.SaveChanges();
                 }
                 else
                 {
@@ -229,9 +342,9 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> SortMoviesByTitle()
         {
             Dictionary<int, byte[]> movies = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var sortedMovies = from m in mov.Movies orderby m.title select m;
+                var sortedMovies = from m in context.Movies orderby m.title select m;
                 foreach (var item in sortedMovies)
                 {
                     movies.Add(item.id, item.picture);
@@ -248,9 +361,9 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> SortByDate()
         {
             Dictionary<int, byte[]> movies = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var sortedMovies = from m in mov.Movies orderby m.year select m;
+                var sortedMovies = from m in context.Movies orderby m.year select m;
                 foreach (var item in sortedMovies)
                 {
                     movies.Add(item.id, item.picture);
@@ -335,9 +448,9 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> FilterMoviesByGenresAndPG(int g, int pg)
         {
             Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                    var movies = from m in mov.Movies where m.genre == g && m.pg == pg select new { m.id, m.picture };
+                    var movies = from m in context.Movies where m.genre == g && m.pg == pg select new { m.id, m.picture };
                     foreach (var item in movies)
                     {
                         moviesList.Add(item.id, item.picture);
@@ -389,11 +502,11 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> FilterMoviesByGenres(int g)
         {
             Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
                     int genre = g; 
 
-                    var movies = from m in mov.Movies where m.genre == genre select new { m.id, m.picture };
+                    var movies = from m in context.Movies where m.genre == genre select new { m.id, m.picture };
                     foreach (var item in movies)
                     {
                         moviesList.Add(item.id, item.picture);
@@ -413,11 +526,11 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> FilterMoviesByDuration(int d)
         {
             Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
                 if (d == 1)
                 {
-                    var movies = from m in mov.Movies where m.duration >= 0 && m.duration < 60 select new { m.id, m.picture };
+                    var movies = from m in context.Movies where m.duration >= 0 && m.duration < 60 select new { m.id, m.picture };
                     foreach (var item in movies)
                     {
                         moviesList.Add(item.id, item.picture);
@@ -425,7 +538,7 @@ namespace Mov4e.Repository.AllMoviesRepository
                 }
                 else if (d == 2)
                 {
-                    var movies = from m in mov.Movies where m.duration >= 60 && m.duration < 120 select new { m.id, m.picture };
+                    var movies = from m in context.Movies where m.duration >= 60 && m.duration < 120 select new { m.id, m.picture };
                     foreach (var item in movies)
                     {
                         moviesList.Add(item.id, item.picture);
@@ -433,7 +546,7 @@ namespace Mov4e.Repository.AllMoviesRepository
                 }
                 else if (d == 3)
                 {
-                    var movies = from m in mov.Movies where m.duration >= 120 && m.duration < 180 select new { m.id, m.picture };
+                    var movies = from m in context.Movies where m.duration >= 120 && m.duration < 180 select new { m.id, m.picture };
                     foreach (var item in movies)
                     {
                         moviesList.Add(item.id, item.picture);
@@ -441,7 +554,7 @@ namespace Mov4e.Repository.AllMoviesRepository
                 }
                 else if (d == 4)
                 {
-                    var movies = from m in mov.Movies where m.duration >= 180 select new { m.id, m.picture };
+                    var movies = from m in context.Movies where m.duration >= 180 select new { m.id, m.picture };
                     foreach (var item in movies)
                     {
                         moviesList.Add(item.id, item.picture);
@@ -461,9 +574,9 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> FilterMoviesByPG(int pg)
         {
             Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var movies = from m in mov.Movies where m.pg == pg select new { m.id, m.picture };
+                var movies = from m in context.Movies where m.pg == pg select new { m.id, m.picture };
                 foreach (var item in movies)
                 {
                     moviesList.Add(item.id, item.picture);
@@ -481,12 +594,12 @@ namespace Mov4e.Repository.AllMoviesRepository
         public Dictionary<int, byte[]> GetMoviesByTitles(List<string> titles)
         {
             Dictionary<int, byte[]> moviesWithPics = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
                 for (int i = 0; i < titles.Count; i++)
                 {
                     string title = titles[i];
-                    var titlesQuery = from m in mov.Movies where m.title == title select m;
+                    var titlesQuery = from m in context.Movies where m.title == title select m;
                     foreach (var m in titlesQuery)
                     {
                         moviesWithPics.Add(m.id, m.picture);
@@ -520,9 +633,9 @@ namespace Mov4e.Repository.AllMoviesRepository
         /// <returns>The method returns the all movies' titles.</returns>
         public List<string> GetMoviesTitles()
         {
-            using (mov4eEntities mov = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var titlesQuery = from m in mov.Movies select m.title;
+                var titlesQuery = from m in context.Movies select m.title;
                 return titlesQuery.ToList<string>();
             }
         }
@@ -535,18 +648,18 @@ namespace Mov4e.Repository.AllMoviesRepository
         /// <returns>The method returns both the user's id and the user's position by their credentials.</returns>
         public Tuple<int, string> GetUserInfo(string unm, string pass)
         {
-            using (mov4eEntities usr = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
                 int id = 0;
                 string pos = "";
 
-                var userId = from u in usr.Users where u.userName == unm && u.password == pass select u.id;
+                var userId = from u in context.Users where u.userName == unm && u.password == pass select u.id;
                 foreach (var item in userId)
                 {
                     id = item;
                 }
 
-                var userPos = from u in usr.UserInfoes where u.id == id select u.position;
+                var userPos = from u in context.UserInfoes where u.id == id select u.position;
                 foreach (var item in userPos)
                 {
                     pos = item;
@@ -563,111 +676,10 @@ namespace Mov4e.Repository.AllMoviesRepository
         /// <returns>This method returns the id of a certain genre.</returns>
         public int GetMovieGenre(string gen)
         {
-            using (mov4eEntities m = new mov4eEntities())
+            using (mov4eEntities context = new mov4eEntities())
             {
-                var genre = (from genr in m.Genres where genr.name == gen select genr.id).First();
+                var genre = (from genr in context.Genres where genr.name == gen select genr.id).First();
                 return genre;
-            }
-        }
-
-        // This method filter the movies (with duration less than a hour) by a certain genre and pg.
-        private Dictionary<int, byte[]> FilterLessThanHour(int g, int pg)
-        {
-            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
-            {
-               
-
-                    var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration >= 0 && m.duration <= 60 select new { m.id, m.picture };
-                    foreach (var item in filt)
-                    {
-                        movs.Add(item.id, item.picture);
-                    }
-                
-                return movs;
-            }
-        }
-
-        // This method filter the movies (with duration between one and two hours) by a certain genre and pg.
-        private Dictionary<int, byte[]> FilterBetweenOneAndTwoHours(int g, int pg)
-        {
-            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
-            {
-
-                    var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration > 60 && m.duration <= 120 select new { m.id, m.picture };
-                    foreach (var item in filt)
-                    {
-                        movs.Add(item.id, item.picture);
-                    }
-                
-                return movs;
-            }
-        }
-
-        // This method filter the movies (with duration between two and three hours) by a certain genre and pg.
-        private Dictionary<int, byte[]> FilterBetweenTwoAndThreeHours(int g, int pg)
-        {
-            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
-            {
-
-                    var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration > 120 && m.duration <= 180 select new { m.id, m.picture };
-                    foreach (var item in filt)
-                    {
-                        movs.Add(item.id, item.picture);
-                    }
-                
-                return movs;
-            }
-        }
-
-        // This method filter the movies (with duration more than three hours) by a certain genre and pg.
-        private Dictionary<int, byte[]> FilterMoreThanThreeHours(int g, int pg)
-        {
-            Dictionary<int, byte[]> movs = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
-            {
-
-                    var filt = from m in mov.Movies where m.genre == g && m.pg == pg && m.duration > 180 select new { m.id, m.picture };
-                    foreach (var item in filt)
-                    {
-                        movs.Add(item.id, item.picture);
-                    }
-                
-                return movs;
-            }
-        }
-
-        // This method gets the movies which are in a certain duration interval and with a certain genre.
-        private Dictionary<int, byte[]> GetMoviesInACertainDurationGenreInterval(int g, int min, int max)
-        {
-            Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
-            {
-                    var movies = from m in mov.Movies where m.duration >= min && m.duration < max && m.genre == g select new { m.id, m.picture };
-                    foreach (var item in movies)
-                    {
-                        moviesList.Add(item.id, item.picture);
-                    }
-                
-                return moviesList;
-            }
-        }
-
-        // This method gets the movies which are in a certain duration interval and with a certain parental guidance.
-        private Dictionary<int, byte[]> GetMoviesInACertainDurationPGInterval(int pg, int min, int max)
-        {
-            Dictionary<int, byte[]> moviesList = new Dictionary<int, byte[]>();
-            using (mov4eEntities mov = new mov4eEntities())
-            {
-                var movies = from m in mov.Movies where m.duration >= min && m.duration < max && m.pg == pg select new { m.id, m.picture };
-                foreach (var item in movies)
-                {
-                    moviesList.Add(item.id, item.picture);
-                }
-
-                return moviesList;
             }
         }
     }

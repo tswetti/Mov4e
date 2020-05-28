@@ -12,14 +12,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
     public class AllMoviesFormTests
     {
         [Test]
-        public void Method1()
+        public void CorrectDeleteMovieMethodDeletsACertainMovieFromTheDataBase()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.DeleteMovie();
+                movie_view.DeleteMovie();
             }
             catch (Exception)
             {
@@ -32,15 +32,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method2()
+        public void CorrectEditMoviesMethodsSuccessfullyUpdatesACertainMovieInTheDataBase()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.EditMovie();
+                movie_view.EditMovie();
             }
             catch(Exception)
             {
@@ -53,15 +52,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method3()
+        public void CorrectFilterMovieReturnsFilteredByGenreDuratinAndPGMoviesFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMovies(6, 2, 12);
+                movie_view.FilterMovies(6, 2, 12);
             }
             catch (Exception)
             {
@@ -74,15 +72,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method4()
+        public void CorrectFilterByDurationMethodReturnsFilteredMoviesByDurationFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMoviesByDuration(2);
+                movie_view.FilterMoviesByDuration(2);
             }
             catch (Exception)
             {
@@ -95,15 +92,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method5()
+        public void CorrectFilterByDurationAndPGMethodReturnsFilterdByDurationAndPGMoviesFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMoviesByDurationAndPG(2, 12);
+                movie_view.FilterMoviesByDurationAndPG(2, 12);
             }
             catch (Exception)
             {
@@ -116,15 +112,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method6()
+        public void CorrectFilterByGenreMethodsReturnsFiteredByGenreMoviesFromTTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMoviesByGenres(6);
+                movie_view.FilterMoviesByGenres(6);
             }
             catch (Exception)
             {
@@ -137,15 +132,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method7()
+        public void CorrectFilterByGenreAndDurationMethodReturnsTheFilteredByGenreAndDurationMoviesFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMoviesByGenresAndDuration(6, 2);
+                movie_view.FilterMoviesByGenresAndDuration(6, 2);
             }
             catch (Exception)
             {
@@ -158,15 +152,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method8()
+        public void CorrectFilterByGenresAndPGMethodReturnsTheFilteredByGenreAndPGMoviesFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMoviesByGenresAndPG(6, 12);
+                movie_view.FilterMoviesByGenresAndPG(6, 12);
             }
             catch (Exception)
             {
@@ -179,15 +172,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method9()
+        public void CorrectFilterByPGMethodReturnsTheFilteredByPGMoviesFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.FilterMoviesByPG(12);
+                movie_view.FilterMoviesByPG(12);
             }
             catch (Exception)
             {
@@ -200,15 +192,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method10()
+        public void CorrectGetMovieMethodReturnsATupleOfThisMovieAndItsGenreNameAsAString()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.GetMovie();
+                movie_view.GetMovie();
             }
             catch (Exception)
             {
@@ -221,15 +212,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method12()
+        public void CorrectSearchMovieMethodReturnsADictionaryOfMovies()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.SearchMovie();
+                movie_view.SearchMovie();
             }
             catch (Exception)
             {
@@ -242,36 +232,15 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method13()
+        public void CorrectInitializeMoviesListMethodsReturnsAllMoviesFromTheDataBaseAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
-
-            try
-            {
-                mp.SearchMovie();
-            }
-            catch (Exception)
-            {
-                Assert.Pass();
-            }
-            finally
-            {
-                Assert.IsTrue(true);
-            }
-        }
-
-        [Test]
-        public void Method15()
-        {
-            DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
             Dictionary<int, byte[]> testDictOfMovies = new Dictionary<int, byte[]>();
 
             try
             {
-                mp.InitializeMoviesList(testDictOfMovies);
+                movie_view.InitializeMoviesList(testDictOfMovies);
             }
             catch (Exception)
             {
@@ -284,15 +253,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method17()
+        public void CorrectSortByDateMethodsSortsTheMoviesInThaDataBaseFromTheOldestToNewestAndReturnsThemAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.SortByDate();
+                movie_view.SortByDate();
             }
             catch (Exception)
             {
@@ -305,15 +273,14 @@ namespace Mov4eTests.ViewTests.AllMoviesFormTests
         }
 
         [Test]
-        public void Method18()
+        public void CorrectSortByDateMethodsSortsTheMoviesInThaDataBaseFromAToZAndReturnsThemAsADictionary()
         {
             DummyMockedAllMoviesPresenter dummy = new DummyMockedAllMoviesPresenter();
-            IAllMovies mp = new mov4eAllMovies(dummy._iallMoviesPresenter);
-
+            IAllMovies movie_view = new mov4eAllMovies(dummy._iallMoviesPresenter);
 
             try
             {
-                mp.SortByTitle();
+                movie_view.SortByTitle();
             }
             catch (Exception)
             {

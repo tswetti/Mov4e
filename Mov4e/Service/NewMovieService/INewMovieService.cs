@@ -8,6 +8,7 @@ namespace Mov4e.Service.NewMovieService
     public interface INewMovieService
     {
         void CreateMovie(string t, Nullable<int> pg, int g, Nullable<System.DateTime> p, string s, byte[] pic, int dur);
+
         int IdOfTheLastMovie();
     }
 }

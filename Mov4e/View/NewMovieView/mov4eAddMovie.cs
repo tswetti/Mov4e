@@ -27,13 +27,13 @@ namespace Mov4e.View.NewMovieView
         private string fileName = null;
 
         // A private variable that keeps a refernce to the NewMoviePresenter via an interface variable.
-        private INewMoviePresenter mp;
+        private INewMoviePresenter movie_presenter;
 
         // A private variable that keeps a reference to the AllMoviesPresenter via an interface variable.
-        private IAllMoviesPresenter amp;
+        private IAllMoviesPresenter all_movies_presenter;
 
         // A private variable that keeps a reference to the AllMoviesForm.
-        private IAllMovies allM;
+        private IAllMovies all_movies;
 
         // A private variable that conserve a certain movie's id.
         private int id = 0;
@@ -50,51 +50,6 @@ namespace Mov4e.View.NewMovieView
             System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default;
             label.BackColor = Color.FromArgb(0, 15, 40);
             label.ForeColor = Color.White;
-        }
-
-        public mov4eAddMovie()
-        {
-            InitializeComponent();
-            InitializeForm();
-        }
-
-        public mov4eAddMovie(INewMoviePresenter _inewmPresenter)
-        {
-            this.mp = _inewmPresenter;
-        }
-
-        /// <summary>
-        /// A one arguments constructor for the <c>NewMovieForm</c> class.
-        /// </summary>
-        /// <param name="allMovies">This is the AllMoviesForm argument.</param>
-        public mov4eAddMovie(IAllMovies allMovies)
-        {
-            this.allM = allMovies;
-            InitializeComponent();
-            InitializeForm();
-        }
-
-        /// <summary>
-        /// A two arguments constructor for the <c>NewMovieForm</c> class.
-        /// </summary>
-        /// <param name="movie_id">The id of the movie.</param>
-        /// <param name="allMovies">The AllMoviesForm argument.</param>
-        public mov4eAddMovie(int movie_id, IAllMovies allMovies)
-        {
-            this.allM = allMovies;
-            InitializeComponent();
-            InitializeForm();
-            amp = new AllMoviesPresenter();
-            Tuple<Movie, string> movie = amp.GetMovie(movie_id);
-            textBoxName.Text = movie.Item1.title;
-            labelMovieName.Text = movie.Item1.title;
-            genreComboBox.SelectedValue = movie.Item1.genre;
-            pgComboBox.SelectedValue = (int)movie.Item1.pg;
-            datePickerPrDate.Text = movie.Item1.year.ToString();
-            textBoxSummary.Text = movie.Item1.summary;
-            pictureBoxMoviePic.Image = (Bitmap)((new ImageConverter()).ConvertFrom((byte[])movie.Item1.picture));
-            textBoxDuration.Text = movie.Item1.duration.ToString();
-            id = movie_id;
         }
 
         // This method converts image to byte[].
@@ -172,7 +127,7 @@ namespace Mov4e.View.NewMovieView
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            allM.ShowForm();
+            all_movies.ShowForm();
         }
 
         private void pictureBoxBack_MouseHover(object sender, EventArgs e)
@@ -204,7 +159,7 @@ namespace Mov4e.View.NewMovieView
 
         private void buttonSaveMovie_Click(object sender, EventArgs e)
         {
-            mp = new NewMoviePresenter(this);
+            movie_presenter = new NewMoviePresenter(this);
             if (id == 0)
             {
                 addNewMovie();
@@ -245,6 +200,51 @@ namespace Mov4e.View.NewMovieView
             pgComboBox.DataSource = new BindingSource(comboSource1, null);
             pgComboBox.DisplayMember = "Value";
             pgComboBox.ValueMember = "Key";
+        }
+
+        public mov4eAddMovie()
+        {
+            InitializeComponent();
+            InitializeForm();
+        }
+
+        public mov4eAddMovie(INewMoviePresenter _inewmPresenter)
+        {
+            this.movie_presenter = _inewmPresenter;
+        }
+
+        /// <summary>
+        /// A one arguments constructor for the <c>NewMovieForm</c> class.
+        /// </summary>
+        /// <param name="allMovies">This is the AllMoviesForm argument.</param>
+        public mov4eAddMovie(IAllMovies allMovies)
+        {
+            this.all_movies = allMovies;
+            InitializeComponent();
+            InitializeForm();
+        }
+
+        /// <summary>
+        /// A two arguments constructor for the <c>NewMovieForm</c> class.
+        /// </summary>
+        /// <param name="movie_id">The id of the movie.</param>
+        /// <param name="allMovies">The AllMoviesForm argument.</param>
+        public mov4eAddMovie(int movie_id, IAllMovies allMovies)
+        {
+            this.all_movies = allMovies;
+            InitializeComponent();
+            InitializeForm();
+            all_movies_presenter = new AllMoviesPresenter();
+            Tuple<Movie, string> movie = all_movies_presenter.GetMovie(movie_id);
+            textBoxName.Text = movie.Item1.title;
+            labelMovieName.Text = movie.Item1.title;
+            genreComboBox.SelectedValue = movie.Item1.genre;
+            pgComboBox.SelectedValue = (int)movie.Item1.pg;
+            datePickerPrDate.Text = movie.Item1.year.ToString();
+            textBoxSummary.Text = movie.Item1.summary;
+            pictureBoxMoviePic.Image = (Bitmap)((new ImageConverter()).ConvertFrom((byte[])movie.Item1.picture));
+            textBoxDuration.Text = movie.Item1.duration.ToString();
+            id = movie_id;
         }
 
         /// <summary>
@@ -317,8 +317,8 @@ namespace Mov4e.View.NewMovieView
         /// </summary>
         public void addNewMovie()
         {
-            MovieValidation.ValidateMovieUpdate(title, genre, pg, date, summary, picture, duration);
-            allM.UpdateMovies(mp.LastMovieId(), (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
+            MovieValidation.ValidateNewMovie(title, genre, pg, date, summary, picture, duration);
+            all_movies.UpdateMovies(movie_presenter.LastMovieId(), (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
         }
 
         /// <summary>

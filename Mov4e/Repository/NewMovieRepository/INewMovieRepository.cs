@@ -9,8 +9,10 @@ namespace Mov4e.Repository.NewMovieRepository
     public interface INewMovieRepository
     {
         void SaveMovie();
+
         void CreateMovie(string tit, Nullable<int> pG, int gen, 
         Nullable<System.DateTime> y, string sum, byte[] pict, int dur);
+
         int LastMovieId();
     }
 }

@@ -5,14 +5,14 @@ using System.Collections.Generic;
 namespace Mov4e.Validation
 {
     /// <summary>
-    /// 
+    /// The <c>FilteringValidation</c> class is a public static (validatior) class for the different kinds of movie filters.
     /// </summary>
     public static class FilteringValidation
     {
         /// <summary>
         /// The <c>FilteringValidation</c> is a public static validation class.
         /// </summary>
-        public static IAllMoviesPresenter rp = new AllMoviesPresenter();
+        public static IAllMoviesPresenter movie_presenter = new AllMoviesPresenter();
 
         /// <summary>
         /// The <c>ValidateFilterMovies()</c> method validates the movies from the database by genre, duration 
@@ -28,9 +28,9 @@ namespace Mov4e.Validation
         /// filtered movies' ids(int) and filtered movies' wrappers(byt[]).</returns>
         public static Dictionary<int, byte[]> ValidateFilterMovies(int g, int d, int pg)
         {
-            if (g > 0 && d > 0 && pg > -1)
+            if (g > 0 && d >= 0 && (pg == 0 || pg == 12 || pg == 14 || pg == 16 || pg == 18))
             {
-                return rp.FilterMovies(g, d, pg);
+                return movie_presenter.FilterMovies(g, d, pg);
             }
             else
             {
@@ -51,9 +51,9 @@ namespace Mov4e.Validation
         /// filtered movies' ids(int) and filtered movies' wrappers(byt[]).</returns>
         public static Dictionary<int, byte[]> ValidateFilterMoviesByGenreAndDuration(int g, int d)
         {
-            if (g > 0 && d > 0)
+            if (g > 0 && d >= 0)
             {
-                return rp.FilterMoviesByGenresAndDuration(g, d);
+                return movie_presenter.FilterMoviesByGenresAndDuration(g, d);
             }
             else
             {
@@ -74,9 +74,9 @@ namespace Mov4e.Validation
         /// filtered movies' ids(int) and filtered movies' wrappers(byt[]).</returns>
         public static Dictionary<int, byte[]> ValidateFilterMoviesByGenreAndPG(int g, int pg)
         {
-            if (g > 0 && pg > -1)
+            if (g > 0 && (pg == 0 || pg == 12 || pg == 14 || pg == 16 || pg == 18))
             {
-                return rp.FilterMoviesByGenresAndPG(g, pg);
+                return movie_presenter.FilterMoviesByGenresAndPG(g, pg);
             }
             else
             {
@@ -97,9 +97,9 @@ namespace Mov4e.Validation
         /// filtered movies' ids(int) and filtered movies' wrappers(byt[]).</returns>
         public static Dictionary<int, byte[]> ValidateFilterMoviesByDurationAndPG(int d, int pg)
         {
-            if (d > 0 && pg > -1)
+            if (d > 0 && (pg == 0 || pg == 12 || pg == 14 || pg == 16 || pg == 18))
             {
-                return rp.FilterMoviesByDurationAndPG(d, pg);
+                return movie_presenter.FilterMoviesByDurationAndPG(d, pg);
             }
             else
             {
@@ -121,7 +121,7 @@ namespace Mov4e.Validation
         {
             if (g > 0)
             {
-                return rp.FilterMoviesByGenres(g);
+                return movie_presenter.FilterMoviesByGenres(g);
             }
             else
             {
@@ -141,9 +141,9 @@ namespace Mov4e.Validation
         /// filtered movies' ids(int) and filtered movies' wrappers(byt[]).</returns>
         public static Dictionary<int, byte[]> ValidateFilterMoviesByDuration(int d)
         {
-            if (d > 0)
+            if (d >= 0)
             {
-                return rp.FilterMoviesByDuration(d);
+                return movie_presenter.FilterMoviesByDuration(d);
             }
             else
             {
@@ -163,9 +163,9 @@ namespace Mov4e.Validation
         /// filtered movies' ids(int) and filtered movies' wrappers(byt[]).</returns>
         public static Dictionary<int, byte[]> ValidateFilterMoviesByPG(int pg)
         {
-            if (pg > -1)
+            if (pg == 0 || pg == 12 || pg == 14 || pg == 16 || pg == 18)
             {
-                return rp.FilterMoviesByPG(pg);
+                return movie_presenter.FilterMoviesByPG(pg);
             }
             else
             {

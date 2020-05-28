@@ -12,14 +12,14 @@ namespace Mov4eTests.ViewTests.NewMovieFormTests
     public class NewMovieFormTests
     {
         [Test]
-        public void Method1()
+        public void CorrectAddMovieMethodAddsAMovieInTheDataBase()
         {
             DummyMockedNewMoviePresenter dummy = new DummyMockedNewMoviePresenter();
-            INewMovie mp = new mov4eAddMovie(dummy._inewMoviePresenter);
+            INewMovie movie_view = new mov4eAddMovie(dummy._inewMoviePresenter);
 
             try
             {
-                mp.addNewMovie();
+                movie_view.addNewMovie();
             }
             catch (Exception)
             {
@@ -32,14 +32,14 @@ namespace Mov4eTests.ViewTests.NewMovieFormTests
         }
 
         [Test]
-        public void Method2()
+        public void CorrectUpdateMovieMethodsUpdatesACertainMovieInTheDataBase()
         {
             DummyMockedNewMoviePresenter dummy = new DummyMockedNewMoviePresenter();
-            INewMovie mp = new mov4eAddMovie(dummy._inewMoviePresenter);
+            INewMovie movie_view = new mov4eAddMovie(dummy._inewMoviePresenter);
 
             try
             {
-                mp.updateMovie();
+                movie_view.updateMovie();
             }
             catch (Exception)
             {

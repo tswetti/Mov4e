@@ -9,6 +9,7 @@ namespace Mov4e.Presenter.NewMoviePresenter
     {
         void AddMovie(string title, int genre, Nullable<int> pg, 
         Nullable<System.DateTime> date, string summary, byte[] pic, int dur);
+
         int LastMovieId();
     }
 }

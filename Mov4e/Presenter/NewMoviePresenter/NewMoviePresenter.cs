@@ -11,10 +11,10 @@ namespace Mov4e.Presenter.NewMoviePresenter
     public class NewMoviePresenter: INewMoviePresenter
     {
         // A private varaible that keeps a referenece to NewMovieForm via an interface variable.
-        private INewMovie mv=new mov4eAddMovie();
+        private INewMovie movie_view = new mov4eAddMovie();
 
         // A private variable that keeps a reference to NewMovieService via an interface varaible.
-        private INewMovieService ms = new NewMovieService();    
+        private INewMovieService movie_service = new NewMovieService();    
 
         /// <summary>
         /// This is a no arguments constructor for <c>NewMoviePresenter</c> class.
@@ -24,9 +24,13 @@ namespace Mov4e.Presenter.NewMoviePresenter
             
         }
 
+        /// <summary>
+        /// A one argument contructor for the <c>NewMoviePresenter</c> class, used for the unit testing.
+        /// </summary>
+        /// <param name="_inewMovieService">This is the interface variable for the <c>INewMovieService</c> interface class.</param>
         public NewMoviePresenter(INewMovieService _inewMovieService)
         {
-            this.ms = _inewMovieService;
+            this.movie_service = _inewMovieService;
         }
         
         /// <summary>
@@ -35,7 +39,7 @@ namespace Mov4e.Presenter.NewMoviePresenter
         /// <param name="m">This is a NewMovieForm as an interface variable.</param>
         public NewMoviePresenter(INewMovie m)
         {
-            this.mv = m;
+            this.movie_view = m;
         }
 
         /// <summary>
@@ -52,12 +56,12 @@ namespace Mov4e.Presenter.NewMoviePresenter
         public void AddMovie(string title, int genre, Nullable<int> pg, 
         Nullable<System.DateTime> date, string summary, byte[] pic, int dur)
         {
-            ms.CreateMovie(title, pg, genre, date, summary, pic, dur);
+            movie_service.CreateMovie(title, pg, genre, date, summary, pic, dur);
         }
 
         public int LastMovieId()
         {
-            return ms.IdOfTheLastMovie();
+            return movie_service.IdOfTheLastMovie();
         }
     }
 }

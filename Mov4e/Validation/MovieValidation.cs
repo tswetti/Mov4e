@@ -8,10 +8,18 @@ using System.Windows.Forms;
 namespace Mov4e.Validation
 {
     /// <summary>
-    /// The <c>MovieValidation</c> class is a public static validation class.
+    /// The <c>MovieValidation</c> class is a public static (validator) class for the movie's fields.
     /// </summary>
     public static class MovieValidation
     {
+        public static bool ValidateId(int id)
+        {
+            if (id > 0)
+                return true;
+            else
+                return false;
+            
+        }
         // This method validates the title of a movie with a certain id.
         public static bool ValidateTitle(string title)
         {
@@ -24,7 +32,7 @@ namespace Mov4e.Validation
         // This method validates the genre of a movie with a certain id.
         public static bool ValidateGenre(int genre)
         {
-            if (genre != 0)
+            if (genre > 0)
                 return true;
             else
                 return false;
@@ -68,7 +76,7 @@ namespace Mov4e.Validation
 
         public static bool ValidateDuration(int dur)
         {
-            if (dur != 0)
+            if (dur >= 0)
                 return true;
             else
                 return false;
@@ -89,16 +97,14 @@ namespace Mov4e.Validation
         /// <exception cref="Mov4e.Exceptions.InvalidFieldInputException">Throw when
         /// any of the fields are incorectly filled.</exception>
         /// <remarks>When the exception is thrown this methods writes the error in the error.txt file.</remarks>
-        public static void ValidateMovieUpdate(string title, int genre, Nullable<int> pg, 
+        public static void ValidateNewMovie(string title, int genre, Nullable<int> pg, 
             Nullable<DateTime> date, string summary, byte[] wrapper, int dur)
         {
-            try
-            {
-                INewMoviePresenter mp = new NewMoviePresenter();
+                INewMoviePresenter movie_presenter = new NewMoviePresenter();
                 if (ValidateTitle(title) && ValidateGenre(genre) && ValidatePG(pg) &&
                     ValidateDate(date) && ValidateSummary(summary) && ValidateWrapper(wrapper) && ValidateDuration(dur))
                 {
-                    mp.AddMovie(title, genre, pg, date, summary, wrapper, dur);
+                    movie_presenter.AddMovie(title, genre, pg, date, summary, wrapper, dur);
                     MessageBox.Show("You successfully added a new movie!", "Information",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -106,16 +112,12 @@ namespace Mov4e.Validation
                 {
                     MessageBox.Show("All fields are required! For more information about that " +
                         "check the errors.txt file, please!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    
+
+                    Logger.Logger.WriteToLogFile(DateTime.Now.ToString() + " You tried to add new movie but you didn't fill "
+                        + "\n" + "all fields, so the application cannot create a movie with this data! "
+                        + new InvalidFieldInputException().ToString() + "\n");
                     throw new InvalidFieldInputException();
                 }
-            }
-            catch (InvalidFieldInputException ex)
-            {
-                Logger.Logger.WriteToLogFile(DateTime.Now.ToString() + " You tried to add new movie but you didn't fill "
-                    + "\n" + "all fields, so the application cannot create a movie with this data! "
-                    + ex.ToString() + "\n");
-            }
         }
 
         /// <summary>
@@ -136,13 +138,11 @@ namespace Mov4e.Validation
         public static void ValidateMovieUpdate(int id, string title, int genre, Nullable<int> pg,
             Nullable<DateTime> date, string summary, byte[] wrapper, int dur)
         {
-            try
-            {
-                if (ValidateTitle(title) && ValidateGenre(genre) && ValidatePG(pg) &&
+                if (ValidateId(id) && ValidateTitle(title) && ValidateGenre(genre) && ValidatePG(pg) &&
                     ValidateDate(date) && ValidateSummary(summary) && ValidateWrapper(wrapper) && ValidateDuration(dur))
                 {
-                    IAllMoviesPresenter amp = new AllMoviesPresenter();
-                    amp.EditMovie(id, title, genre, (int)pg, date, summary, wrapper, dur);
+                    IAllMoviesPresenter all_movies_presenter = new AllMoviesPresenter();
+                    all_movies_presenter.EditMovie(id, title, genre, (int)pg, date, summary, wrapper, dur);
                     MessageBox.Show("You successfully updated this movie!", "Movie's Information",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -151,15 +151,12 @@ namespace Mov4e.Validation
                     MessageBox.Show("All fields are required! For more information about that " +
                         "check the errors.txt file, please!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+                    Logger.Logger.WriteToLogFile(DateTime.Now.ToString() + " You tried to update a movie but you didn't fill "
+                        + "\n" + "all fields, so the application cannot create a movie with this data! "
+                        + new InvalidFieldInputException().ToString() + "\n");
+
                     throw new InvalidFieldInputException();
                 }
-            }
-            catch (InvalidFieldInputException ex)
-            {
-                Logger.Logger.WriteToLogFile(DateTime.Now.ToString() + " You tried to update a movie but you didn't fill "
-                    + "\n" + "all fields, so the application cannot create a movie with this data! "
-                    + ex.ToString() + "\n");
-            }
         }
     }
 }
