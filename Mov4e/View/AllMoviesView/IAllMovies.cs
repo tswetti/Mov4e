@@ -40,6 +40,6 @@ namespace Mov4e.View.AllMoviesView
         void SearchMovie();
 
         void UpdateMovies(int movieId, byte[] moviePic);
-        void UpdateMovie(int movieId,string movieName, byte[] moviePic);
+        void UpdateMovie(int movieId, byte[] moviePic);
     }
 }

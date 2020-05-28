@@ -43,8 +43,13 @@ namespace Mov4e
             Array.Copy(hashbytes, 20, saltExtracted, 0, 16);
 
             string insertedPassword = InsertedPass;
-            var loginHasher = new Rfc2898DeriveBytes(insertedPassword, saltExtracted, 1000);
-            byte[] hashExtracted = loginHasher.GetBytes(20);
+
+            byte[] hashExtracted;
+            using(var loginHasher = new Rfc2898DeriveBytes(insertedPassword, saltExtracted, 1000))
+            {
+               hashExtracted = loginHasher.GetBytes(20);
+            }
+
             bool flag = false;
 
             for (int i = 0; i < 20; i++)

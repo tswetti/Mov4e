@@ -32,7 +32,7 @@ namespace Mov4e.Validation
         /// <param name="UserName"></param>
         public static void isUserNameValid(string UserName)
         {
-            string UsernameRegex = "^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$";
+            string UsernameRegex = "^[A-Za-z0-9]+(?:[_-][A-Za-z0-9]+)*$";
 
             if (!Regex.IsMatch(UserName, UsernameRegex) || UserName.Length < 4)
             {
