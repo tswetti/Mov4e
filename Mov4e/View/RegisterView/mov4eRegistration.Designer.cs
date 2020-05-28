@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mov4eRegistration));
             this.topButtonsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.closeLabel = new System.Windows.Forms.Label();
@@ -57,6 +58,8 @@
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.tableLayoutPanelPassword = new System.Windows.Forms.TableLayoutPanel();
+            this.panelPassword = new System.Windows.Forms.Panel();
+            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.tableLayoutPanelGenderAndYear = new System.Windows.Forms.TableLayoutPanel();
@@ -68,8 +71,7 @@
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.panelHr1 = new System.Windows.Forms.Panel();
-            this.panelPassword = new System.Windows.Forms.Panel();
-            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
+            this.toolTipValidReg = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
@@ -80,11 +82,11 @@
             this.tableLayoutPanelRegistrationButtons.SuspendLayout();
             this.tableLayoutPanelEmail.SuspendLayout();
             this.tableLayoutPanelPassword.SuspendLayout();
+            this.panelPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
             this.tableLayoutPanelGenderAndYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMale)).BeginInit();
-            this.panelPassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -223,7 +225,7 @@
             // 
             this.panelHr5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHr5.BackColor = System.Drawing.Color.White;
-            this.panelHr5.Location = new System.Drawing.Point(20, 286);
+            this.panelHr5.Location = new System.Drawing.Point(20, 308);
             this.panelHr5.Name = "panelHr5";
             this.panelHr5.Size = new System.Drawing.Size(280, 1);
             this.panelHr5.TabIndex = 4;
@@ -232,7 +234,7 @@
             // 
             this.panelHr4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHr4.BackColor = System.Drawing.Color.White;
-            this.panelHr4.Location = new System.Drawing.Point(20, 251);
+            this.panelHr4.Location = new System.Drawing.Point(20, 260);
             this.panelHr4.Name = "panelHr4";
             this.panelHr4.Size = new System.Drawing.Size(280, 1);
             this.panelHr4.TabIndex = 4;
@@ -241,7 +243,7 @@
             // 
             this.panelHr3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHr3.BackColor = System.Drawing.Color.White;
-            this.panelHr3.Location = new System.Drawing.Point(20, 216);
+            this.panelHr3.Location = new System.Drawing.Point(20, 217);
             this.panelHr3.Name = "panelHr3";
             this.panelHr3.Size = new System.Drawing.Size(280, 1);
             this.panelHr3.TabIndex = 4;
@@ -250,7 +252,7 @@
             // 
             this.panelHr2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHr2.BackColor = System.Drawing.Color.White;
-            this.panelHr2.Location = new System.Drawing.Point(20, 181);
+            this.panelHr2.Location = new System.Drawing.Point(20, 174);
             this.panelHr2.Name = "panelHr2";
             this.panelHr2.Size = new System.Drawing.Size(280, 1);
             this.panelHr2.TabIndex = 4;
@@ -261,7 +263,7 @@
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Broadway", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.labelLogin.Location = new System.Drawing.Point(11, 58);
+            this.labelLogin.Location = new System.Drawing.Point(11, 35);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(298, 40);
             this.labelLogin.TabIndex = 0;
@@ -275,12 +277,13 @@
             this.tableLayoutPanelUsername.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelUsername.Controls.Add(this.textBoxUsername, 1, 0);
             this.tableLayoutPanelUsername.Controls.Add(this.labelUsername, 0, 0);
-            this.tableLayoutPanelUsername.Location = new System.Drawing.Point(10, 115);
+            this.tableLayoutPanelUsername.Location = new System.Drawing.Point(3, 96);
             this.tableLayoutPanelUsername.Name = "tableLayoutPanelUsername";
             this.tableLayoutPanelUsername.RowCount = 1;
             this.tableLayoutPanelUsername.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelUsername.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelUsername.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelUsername.TabIndex = 1;
+            this.tableLayoutPanelUsername.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelUsername_Paint);
             // 
             // textBoxUsername
             // 
@@ -289,11 +292,14 @@
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
-            this.textBoxUsername.Location = new System.Drawing.Point(91, 3);
+            this.textBoxUsername.Location = new System.Drawing.Point(96, 3);
+            this.textBoxUsername.MaxLength = 20;
             this.textBoxUsername.Multiline = true;
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(200, 19);
+            this.textBoxUsername.Size = new System.Drawing.Size(215, 19);
             this.textBoxUsername.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxUsername, "less than 20 characters; can begin and end only with letters or numbers; other al" +
+        "lowed characters: -_ ");
             this.textBoxUsername.Click += new System.EventHandler(this.textBoxUsername_Click);
             this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
@@ -317,11 +323,11 @@
             this.tableLayoutPanelFName.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelFName.Controls.Add(this.textBoxFirstName, 1, 0);
             this.tableLayoutPanelFName.Controls.Add(this.labelFirstName, 0, 0);
-            this.tableLayoutPanelFName.Location = new System.Drawing.Point(10, 151);
+            this.tableLayoutPanelFName.Location = new System.Drawing.Point(3, 139);
             this.tableLayoutPanelFName.Name = "tableLayoutPanelFName";
             this.tableLayoutPanelFName.RowCount = 1;
             this.tableLayoutPanelFName.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFName.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelFName.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelFName.TabIndex = 6;
             // 
             // textBoxFirstName
@@ -331,11 +337,13 @@
             this.textBoxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.ForeColor = System.Drawing.Color.White;
-            this.textBoxFirstName.Location = new System.Drawing.Point(91, 3);
+            this.textBoxFirstName.Location = new System.Drawing.Point(96, 3);
+            this.textBoxFirstName.MaxLength = 25;
             this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(200, 19);
+            this.textBoxFirstName.Size = new System.Drawing.Size(215, 19);
             this.textBoxFirstName.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxFirstName, "only letters; less than 25 characters");
             this.textBoxFirstName.Click += new System.EventHandler(this.textBoxFirstName_Click);
             this.textBoxFirstName.TextChanged += new System.EventHandler(this.textBoxFirstName_TextChanged);
             // 
@@ -359,11 +367,11 @@
             this.tableLayoutPanelLName.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelLName.Controls.Add(this.textBoxLastName, 1, 0);
             this.tableLayoutPanelLName.Controls.Add(this.labelLastName, 0, 0);
-            this.tableLayoutPanelLName.Location = new System.Drawing.Point(10, 185);
+            this.tableLayoutPanelLName.Location = new System.Drawing.Point(3, 182);
             this.tableLayoutPanelLName.Name = "tableLayoutPanelLName";
             this.tableLayoutPanelLName.RowCount = 1;
             this.tableLayoutPanelLName.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelLName.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelLName.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelLName.TabIndex = 7;
             // 
             // textBoxLastName
@@ -373,11 +381,13 @@
             this.textBoxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.ForeColor = System.Drawing.Color.White;
-            this.textBoxLastName.Location = new System.Drawing.Point(91, 3);
+            this.textBoxLastName.Location = new System.Drawing.Point(96, 3);
+            this.textBoxLastName.MaxLength = 25;
             this.textBoxLastName.Multiline = true;
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(200, 19);
+            this.textBoxLastName.Size = new System.Drawing.Size(215, 19);
             this.textBoxLastName.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxLastName, "only letters; less than 25 characters");
             this.textBoxLastName.Click += new System.EventHandler(this.textBoxLastName_Click);
             this.textBoxLastName.TextChanged += new System.EventHandler(this.textBoxLastName_TextChanged);
             // 
@@ -401,7 +411,7 @@
             this.tableLayoutPanelRegistrationButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelRegistrationButtons.Controls.Add(this.buttonLogin, 1, 0);
             this.tableLayoutPanelRegistrationButtons.Controls.Add(this.buttonRegister, 0, 0);
-            this.tableLayoutPanelRegistrationButtons.Location = new System.Drawing.Point(3, 359);
+            this.tableLayoutPanelRegistrationButtons.Location = new System.Drawing.Point(3, 381);
             this.tableLayoutPanelRegistrationButtons.Name = "tableLayoutPanelRegistrationButtons";
             this.tableLayoutPanelRegistrationButtons.RowCount = 1;
             this.tableLayoutPanelRegistrationButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -444,11 +454,11 @@
             this.tableLayoutPanelEmail.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelEmail.Controls.Add(this.textBoxEmail, 1, 0);
             this.tableLayoutPanelEmail.Controls.Add(this.labelEmail, 0, 0);
-            this.tableLayoutPanelEmail.Location = new System.Drawing.Point(10, 220);
+            this.tableLayoutPanelEmail.Location = new System.Drawing.Point(3, 225);
             this.tableLayoutPanelEmail.Name = "tableLayoutPanelEmail";
             this.tableLayoutPanelEmail.RowCount = 1;
             this.tableLayoutPanelEmail.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelEmail.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelEmail.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelEmail.TabIndex = 8;
             // 
             // textBoxEmail
@@ -458,11 +468,13 @@
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.White;
-            this.textBoxEmail.Location = new System.Drawing.Point(91, 3);
+            this.textBoxEmail.Location = new System.Drawing.Point(96, 3);
+            this.textBoxEmail.MaxLength = 100;
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(200, 19);
+            this.textBoxEmail.Size = new System.Drawing.Size(215, 19);
             this.textBoxEmail.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxEmail, "a valid e-mail");
             this.textBoxEmail.Click += new System.EventHandler(this.textBoxEmail_Click);
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
@@ -486,12 +498,32 @@
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelPassword.Controls.Add(this.panelPassword, 1, 0);
             this.tableLayoutPanelPassword.Controls.Add(this.labelPassword, 0, 0);
-            this.tableLayoutPanelPassword.Location = new System.Drawing.Point(10, 255);
+            this.tableLayoutPanelPassword.Location = new System.Drawing.Point(3, 268);
             this.tableLayoutPanelPassword.Name = "tableLayoutPanelPassword";
             this.tableLayoutPanelPassword.RowCount = 1;
             this.tableLayoutPanelPassword.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 30);
+            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(314, 30);
             this.tableLayoutPanelPassword.TabIndex = 9;
+            // 
+            // panelPassword
+            // 
+            this.panelPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panelPassword.Controls.Add(this.pictureBoxShowPass);
+            this.panelPassword.Controls.Add(this.textBoxPassword);
+            this.panelPassword.Location = new System.Drawing.Point(96, 3);
+            this.panelPassword.Name = "panelPassword";
+            this.panelPassword.Size = new System.Drawing.Size(200, 24);
+            this.panelPassword.TabIndex = 4;
+            // 
+            // pictureBoxShowPass
+            // 
+            this.pictureBoxShowPass.Image = global::Mov4e.Properties.Resources.show_pass;
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(175, 2);
+            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(21, 21);
+            this.pictureBoxShowPass.TabIndex = 3;
+            this.pictureBoxShowPass.TabStop = false;
+            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
             // 
             // textBoxPassword
             // 
@@ -501,10 +533,13 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(1, 4);
+            this.textBoxPassword.MaxLength = 20;
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(200, 19);
+            this.textBoxPassword.Size = new System.Drawing.Size(215, 19);
             this.textBoxPassword.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxPassword, "between 8 and 30 symbols, a lowercase letter, capital letter, number and a specia" +
+        "l symbol: #?!@$%^&*-");
             this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
@@ -536,7 +571,7 @@
             this.tableLayoutPanelGenderAndYear.Controls.Add(this.labelAge, 3, 0);
             this.tableLayoutPanelGenderAndYear.Controls.Add(this.radioButtonMale, 1, 1);
             this.tableLayoutPanelGenderAndYear.Controls.Add(this.radioButtonFemale, 2, 1);
-            this.tableLayoutPanelGenderAndYear.Location = new System.Drawing.Point(10, 293);
+            this.tableLayoutPanelGenderAndYear.Location = new System.Drawing.Point(10, 315);
             this.tableLayoutPanelGenderAndYear.Name = "tableLayoutPanelGenderAndYear";
             this.tableLayoutPanelGenderAndYear.RowCount = 2;
             this.tableLayoutPanelGenderAndYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
@@ -553,6 +588,7 @@
             this.pictureBoxFemale.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxFemale.TabIndex = 9;
             this.pictureBoxFemale.TabStop = false;
+            this.toolTipValidReg.SetToolTip(this.pictureBoxFemale, "female");
             // 
             // labelGender
             // 
@@ -585,6 +621,7 @@
             this.pictureBoxMale.Size = new System.Drawing.Size(29, 29);
             this.pictureBoxMale.TabIndex = 6;
             this.pictureBoxMale.TabStop = false;
+            this.toolTipValidReg.SetToolTip(this.pictureBoxMale, "male");
             // 
             // labelAge
             // 
@@ -627,30 +664,10 @@
             // 
             this.panelHr1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHr1.BackColor = System.Drawing.Color.White;
-            this.panelHr1.Location = new System.Drawing.Point(20, 146);
+            this.panelHr1.Location = new System.Drawing.Point(20, 131);
             this.panelHr1.Name = "panelHr1";
             this.panelHr1.Size = new System.Drawing.Size(280, 1);
             this.panelHr1.TabIndex = 3;
-            // 
-            // panelPassword
-            // 
-            this.panelPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panelPassword.Controls.Add(this.pictureBoxShowPass);
-            this.panelPassword.Controls.Add(this.textBoxPassword);
-            this.panelPassword.Location = new System.Drawing.Point(91, 3);
-            this.panelPassword.Name = "panelPassword";
-            this.panelPassword.Size = new System.Drawing.Size(200, 24);
-            this.panelPassword.TabIndex = 4;
-            // 
-            // pictureBoxShowPass
-            // 
-            this.pictureBoxShowPass.Image = global::Mov4e.Properties.Resources.show_pass;
-            this.pictureBoxShowPass.Location = new System.Drawing.Point(169, 1);
-            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
-            this.pictureBoxShowPass.Size = new System.Drawing.Size(21, 21);
-            this.pictureBoxShowPass.TabIndex = 3;
-            this.pictureBoxShowPass.TabStop = false;
-            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
             // 
             // mov4eRegistration
             // 
@@ -683,13 +700,13 @@
             this.tableLayoutPanelEmail.PerformLayout();
             this.tableLayoutPanelPassword.ResumeLayout(false);
             this.tableLayoutPanelPassword.PerformLayout();
+            this.panelPassword.ResumeLayout(false);
+            this.panelPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
             this.tableLayoutPanelGenderAndYear.ResumeLayout(false);
             this.tableLayoutPanelGenderAndYear.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMale)).EndInit();
-            this.panelPassword.ResumeLayout(false);
-            this.panelPassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -737,5 +754,6 @@
         private System.Windows.Forms.Panel panelHr1;
         private System.Windows.Forms.Panel panelPassword;
         private System.Windows.Forms.PictureBox pictureBoxShowPass;
+        private System.Windows.Forms.ToolTip toolTipValidReg;
     }
 }

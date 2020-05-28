@@ -91,6 +91,7 @@
             this.buttonAddMovie = new System.Windows.Forms.Button();
             this.buttonViewInfo = new System.Windows.Forms.Button();
             this.imageListMovies = new System.Windows.Forms.ImageList(this.components);
+            this.toolTipMovies = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMovies.SuspendLayout();
             this.tableLayoutPanelSortFilter.SuspendLayout();
@@ -785,18 +786,18 @@
             // 
             this.tableLayoutPanelMoviesMenu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tableLayoutPanelMoviesMenu.ColumnCount = 6;
-            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.23529F));
-            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.921569F));
-            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.921569F));
-            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.803922F));
-            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.21569F));
-            this.tableLayoutPanelMoviesMenu.Controls.Add(this.pictureBoxFilter, 2, 0);
+            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.986125F));
+            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.89178F));
+            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.256881F));
+            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.988901F));
+            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.987305F));
+            this.tableLayoutPanelMoviesMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.88901F));
+            this.tableLayoutPanelMoviesMenu.Controls.Add(this.pictureBoxFilter, 4, 0);
             this.tableLayoutPanelMoviesMenu.Controls.Add(this.pictureBoxProfile, 5, 0);
-            this.tableLayoutPanelMoviesMenu.Controls.Add(this.buttonStartSearch, 4, 0);
             this.tableLayoutPanelMoviesMenu.Controls.Add(this.pictureBoxSearchIcon, 0, 0);
             this.tableLayoutPanelMoviesMenu.Controls.Add(this.textBoxSearch, 1, 0);
             this.tableLayoutPanelMoviesMenu.Controls.Add(this.pictureBoxSort, 3, 0);
+            this.tableLayoutPanelMoviesMenu.Controls.Add(this.buttonStartSearch, 2, 0);
             this.tableLayoutPanelMoviesMenu.Location = new System.Drawing.Point(65, 20);
             this.tableLayoutPanelMoviesMenu.Name = "tableLayoutPanelMoviesMenu";
             this.tableLayoutPanelMoviesMenu.RowCount = 1;
@@ -808,11 +809,12 @@
             // 
             this.pictureBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxFilter.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFilter.Image")));
-            this.pictureBoxFilter.Location = new System.Drawing.Point(500, 10);
+            this.pictureBoxFilter.Location = new System.Drawing.Point(648, 10);
             this.pictureBoxFilter.Name = "pictureBoxFilter";
             this.pictureBoxFilter.Size = new System.Drawing.Size(34, 30);
             this.pictureBoxFilter.TabIndex = 4;
             this.pictureBoxFilter.TabStop = false;
+            this.toolTipMovies.SetToolTip(this.pictureBoxFilter, "filter");
             this.pictureBoxFilter.Click += new System.EventHandler(this.pictureBoxFilter_Click);
             // 
             // pictureBoxProfile
@@ -824,13 +826,14 @@
             this.pictureBoxProfile.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxProfile.TabIndex = 1;
             this.pictureBoxProfile.TabStop = false;
+            this.toolTipMovies.SetToolTip(this.pictureBoxProfile, "profile screen & watchlist");
             this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
             // 
             // buttonStartSearch
             // 
             this.buttonStartSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonStartSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStartSearch.Location = new System.Drawing.Point(588, 10);
+            this.buttonStartSearch.Location = new System.Drawing.Point(507, 10);
             this.buttonStartSearch.Name = "buttonStartSearch";
             this.buttonStartSearch.Size = new System.Drawing.Size(80, 30);
             this.buttonStartSearch.TabIndex = 3;
@@ -842,7 +845,7 @@
             // 
             this.pictureBoxSearchIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBoxSearchIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearchIcon.Image")));
-            this.pictureBoxSearchIcon.Location = new System.Drawing.Point(23, 10);
+            this.pictureBoxSearchIcon.Location = new System.Drawing.Point(24, 10);
             this.pictureBoxSearchIcon.Name = "pictureBoxSearchIcon";
             this.pictureBoxSearchIcon.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxSearchIcon.TabIndex = 2;
@@ -853,9 +856,9 @@
             this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxSearch.Location = new System.Drawing.Point(59, 15);
+            this.textBoxSearch.Location = new System.Drawing.Point(60, 15);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(420, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(440, 20);
             this.textBoxSearch.TabIndex = 0;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -863,11 +866,12 @@
             // 
             this.pictureBoxSort.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxSort.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSort.Image")));
-            this.pictureBoxSort.Location = new System.Drawing.Point(545, 10);
+            this.pictureBoxSort.Location = new System.Drawing.Point(603, 10);
             this.pictureBoxSort.Name = "pictureBoxSort";
             this.pictureBoxSort.Size = new System.Drawing.Size(34, 30);
             this.pictureBoxSort.TabIndex = 5;
             this.pictureBoxSort.TabStop = false;
+            this.toolTipMovies.SetToolTip(this.pictureBoxSort, "sort");
             this.pictureBoxSort.Click += new System.EventHandler(this.pictureBoxSort_Click);
             // 
             // tableLayoutPanelActionsWMovie
@@ -945,6 +949,7 @@
             this.buttonViewInfo.Size = new System.Drawing.Size(153, 35);
             this.buttonViewInfo.TabIndex = 2;
             this.buttonViewInfo.Text = "View Information";
+            this.toolTipMovies.SetToolTip(this.buttonViewInfo, "Select a movie first!");
             this.buttonViewInfo.UseVisualStyleBackColor = false;
             this.buttonViewInfo.Click += new System.EventHandler(this.buttonViewInfo_Click);
             // 
@@ -1062,5 +1067,6 @@
         private System.Windows.Forms.RadioButton radioButtonPG14;
         private System.Windows.Forms.RadioButton radioButtonPG12;
         private System.Windows.Forms.RadioButton radioButtonNoPG;
+        private System.Windows.Forms.ToolTip toolTipMovies;
     }
 }

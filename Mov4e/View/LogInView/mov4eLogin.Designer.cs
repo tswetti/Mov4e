@@ -53,10 +53,10 @@
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelPassword = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.panelPassword = new System.Windows.Forms.Panel();
             this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelLoginButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonRegister = new System.Windows.Forms.Button();
@@ -70,9 +70,9 @@
             this.tableLayoutPanelUsername.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             this.tableLayoutPanelPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             this.panelPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             this.tableLayoutPanelLoginButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -417,6 +417,15 @@
             this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 17);
             this.tableLayoutPanelPassword.TabIndex = 2;
             // 
+            // pictureBoxPassword
+            // 
+            this.pictureBoxPassword.Image = global::Mov4e.Properties.Resources.password_icon;
+            this.pictureBoxPassword.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxPassword.Name = "pictureBoxPassword";
+            this.pictureBoxPassword.Size = new System.Drawing.Size(42, 11);
+            this.pictureBoxPassword.TabIndex = 3;
+            this.pictureBoxPassword.TabStop = false;
+            // 
             // panelPassword
             // 
             this.panelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -448,15 +457,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(230, 26);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
-            // 
-            // pictureBoxPassword
-            // 
-            this.pictureBoxPassword.Image = global::Mov4e.Properties.Resources.password_icon;
-            this.pictureBoxPassword.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxPassword.Name = "pictureBoxPassword";
-            this.pictureBoxPassword.Size = new System.Drawing.Size(42, 11);
-            this.pictureBoxPassword.TabIndex = 3;
-            this.pictureBoxPassword.TabStop = false;
             // 
             // tableLayoutPanelLoginButtons
             // 
@@ -529,10 +529,10 @@
             this.tableLayoutPanelUsername.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
             this.tableLayoutPanelPassword.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             this.tableLayoutPanelLoginButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
