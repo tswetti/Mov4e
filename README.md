@@ -17,5 +17,5 @@
     
 3. Individual connection string is required!
   - The application won't start without connection string also! Due to the fact every local server is unique, every connection string is 
-   unique too. Load VS solution. Open App.config file. Between <connectionStrings> and </connectionStrings> you must put your connection      string. Example of conn. string you will find in connectionString.txt in the DB folder. Copy it and paste it! Notice that in this          example there are a lot of dashes "------------------". These dashes MUST be replaced with your local server credentials! If you          don't know how to write your credentials, don't worry, there will be example of that too in connectionStringTxt.txt!
+   unique too. Load VS solution. Open App.config file. Between <connectionStrings> and </connectionStrings> you must put your connection      string. Example of conn. string you will find in connectionString.txt in the DB folder. Copy it and paste it! Notice that in this          example there are a lot of dashes "------------------". These dashes MUST be replaced with your local server credentials! If you          don't know how to write your credentials, don't worry, there will be example of that too in connectionString.txt!
   
