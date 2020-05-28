@@ -26,7 +26,7 @@ namespace Mov4e.View.AllMoviesView
     public partial class mov4eAllMovies : Form,IAllMovies
     {
         // A private variable that keeps a reference to AllMoviesPresenter via an interface variable.
-        private IAllMoviesPresenter rp = new AllMoviesPresenter();
+        private IAllMoviesPresenter movie_presenter = new AllMoviesPresenter();
 
         // A private variable that keeps a reference to a list with movies' ids.
         private List<int> id = new List<int>();
@@ -73,10 +73,10 @@ namespace Mov4e.View.AllMoviesView
 
             user_id = uid;
             user_position = upos;
-            mov = rp.SetMovieInformation();
+            mov = movie_presenter.SetMovieInformation();
             var autoComlete = new AutoCompleteStringCollection();
             List<string> strs = new List<string>();
-            strs = rp.GetMovieTitles();
+            strs = movie_presenter.GetMovieTitles();
             autoComlete.AddRange(strs.ToArray());
 
             listViewMovies.Items.Clear();
@@ -117,7 +117,7 @@ namespace Mov4e.View.AllMoviesView
 
         public mov4eAllMovies(IAllMoviesPresenter mp)
         {
-            this.rp = mp;
+            this.movie_presenter = mp;
         }
 
         private void minimizeLabel_Click(object sender, EventArgs e)
@@ -514,7 +514,7 @@ namespace Mov4e.View.AllMoviesView
                         if (listViewMovies.Items[lcount].Selected == true)
                         {
                             int var2 = lcount;
-                            Dictionary<int, byte[]> m = rp.GetMoviesByTitle(new List<string> { listViewMovies.Items[lcount].Text });
+                            Dictionary<int, byte[]> m = movie_presenter.GetMoviesByTitle(new List<string> { listViewMovies.Items[lcount].Text });
                             int p = 0;
                             foreach (var item in m)
                             {
@@ -579,13 +579,13 @@ namespace Mov4e.View.AllMoviesView
                             if (listViewMovies.Items[lcount].Selected == true)
                             {
                                 int var2 = lcount;
-                                Dictionary<int, byte[]> m = rp.GetMoviesByTitle(new List<string> { listViewMovies.Items[lcount].Text });
+                                Dictionary<int, byte[]> m = movie_presenter.GetMoviesByTitle(new List<string> { listViewMovies.Items[lcount].Text });
                                 int p = 0;
                                 foreach (var item in m)
                                 {
                                     p = item.Key;
                                 }
-                                rp.DeleteMovie(p);
+                                movie_presenter.DeleteMovie(p);
                                 MessageBox.Show("Movie: " + listViewMovies.Items[var2].Text + " was successfully deleted!");
                                 break;
                             }
@@ -593,7 +593,7 @@ namespace Mov4e.View.AllMoviesView
                     }
 
                     listViewMovies.Items.Clear();
-                    Dictionary<int, byte[]> moviesList = rp.SetMovieInformation();
+                    Dictionary<int, byte[]> moviesList = movie_presenter.SetMovieInformation();
                     InitializeMoviesList(moviesList);
 
                 }
@@ -619,7 +619,7 @@ namespace Mov4e.View.AllMoviesView
                 foreach (var pair in movs)
                 {
                     imageListMovies.Images.Add(pair.Key.ToString(), ((Bitmap)((new ImageConverter()).ConvertFrom(pair.Value))));
-                    ListViewItem item = new ListViewItem(rp.SetMovieTitle(pair.Key));
+                    ListViewItem item = new ListViewItem(movie_presenter.SetMovieTitle(pair.Key));
                     item.ImageKey = pair.Key.ToString();
                     listViewMovies.LargeImageList = imageListMovies;
                     listViewMovies.Items.Add(item);
@@ -642,7 +642,7 @@ namespace Mov4e.View.AllMoviesView
         /// </summary>
         public void SearchMovie()
         {
-            List<string> words = rp.GetMovieTitles();
+            List<string> words = movie_presenter.GetMovieTitles();
             List<string> movies = new List<string>();
             CultureInfo culture = new CultureInfo("es-ES", false);
             for (int i = 0; i < words.Count; i++)
@@ -655,7 +655,7 @@ namespace Mov4e.View.AllMoviesView
             }
 
             listViewMovies.Clear();
-            Dictionary<int, byte[]> moviesList = rp.GetMoviesByTitle(movies);
+            Dictionary<int, byte[]> moviesList = movie_presenter.GetMoviesByTitle(movies);
             InitializeMoviesList(moviesList);
 
             if (moviesList.Count == 0)
@@ -670,7 +670,7 @@ namespace Mov4e.View.AllMoviesView
         /// </summary>
         public void SortByTitle()
         {
-            Dictionary<int, byte[]> mov = rp.SortMoviesByTitle();
+            Dictionary<int, byte[]> mov = movie_presenter.SortMoviesByTitle();
             listViewMovies.Items.Clear();
             InitializeMoviesList(mov);
         }
@@ -680,7 +680,7 @@ namespace Mov4e.View.AllMoviesView
         /// </summary>
         public void SortByDate()
         {
-            Dictionary<int, byte[]> movies = rp.SortByDate();
+            Dictionary<int, byte[]> movies = movie_presenter.SortByDate();
             Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
             var reverse = movies.Reverse();
             foreach (var item in reverse)
@@ -732,7 +732,7 @@ namespace Mov4e.View.AllMoviesView
                 d = filters[1];
 
                 listViewMovies.Items.Clear();
-                Dictionary<int, byte[]> movies = rp.FilterMoviesByGenresAndDuration(g, d);
+                Dictionary<int, byte[]> movies = movie_presenter.FilterMoviesByGenresAndDuration(g, d);
                 InitializeMoviesList(movies);
             }
             catch (InvalidFilteringParamsException ex)
@@ -757,7 +757,7 @@ namespace Mov4e.View.AllMoviesView
                 pg = filters[2];
 
                 listViewMovies.Items.Clear();
-                Dictionary<int, byte[]> movies = rp.FilterMoviesByGenresAndPG(g, pg);
+                Dictionary<int, byte[]> movies = movie_presenter.FilterMoviesByGenresAndPG(g, pg);
                 InitializeMoviesList(movies);
             }
             catch (InvalidFilteringParamsException ex)
@@ -783,7 +783,7 @@ namespace Mov4e.View.AllMoviesView
                 pg = filters[2];
 
                 listViewMovies.Items.Clear();
-                Dictionary<int, byte[]> movies = rp.FilterMoviesByDurationAndPG(d, pg);
+                Dictionary<int, byte[]> movies = movie_presenter.FilterMoviesByDurationAndPG(d, pg);
                 InitializeMoviesList(movies);
             }
             catch (InvalidFilteringParamsException ex)
@@ -806,7 +806,7 @@ namespace Mov4e.View.AllMoviesView
                 g = filters[0];
 
                 listViewMovies.Items.Clear();
-                Dictionary<int, byte[]> movies = rp.FilterMoviesByGenres(g);
+                Dictionary<int, byte[]> movies = movie_presenter.FilterMoviesByGenres(g);
                 InitializeMoviesList(movies);
             }
             catch (InvalidFilteringParamsException ex)
@@ -829,7 +829,7 @@ namespace Mov4e.View.AllMoviesView
                 d = filters[1];
 
                 listViewMovies.Items.Clear();
-                Dictionary<int, byte[]> movies = rp.FilterMoviesByDuration(d);
+                Dictionary<int, byte[]> movies = movie_presenter.FilterMoviesByDuration(d);
                 InitializeMoviesList(movies);
             }
             catch (InvalidFilteringParamsException ex)
@@ -852,7 +852,7 @@ namespace Mov4e.View.AllMoviesView
                 pg = filters[2];
 
                 listViewMovies.Items.Clear();
-                Dictionary<int, byte[]> movies = rp.FilterMoviesByPG(pg);
+                Dictionary<int, byte[]> movies = movie_presenter.FilterMoviesByPG(pg);
                 InitializeMoviesList(movies);
             }
             catch (InvalidFilteringParamsException ex)
@@ -881,7 +881,7 @@ namespace Mov4e.View.AllMoviesView
             if (listViewMovies.Items.Count < mov.Count)
             {
                 imageListMovies.Images.Add(mov.Last().Key.ToString(), ((Bitmap)((new ImageConverter()).ConvertFrom(mov.Last().Value))));
-                ListViewItem item = new ListViewItem(rp.SetMovieTitle(mov.Last().Key));
+                ListViewItem item = new ListViewItem(movie_presenter.SetMovieTitle(mov.Last().Key));
                 item.ImageKey = mov.Last().Key.ToString();
                 listViewMovies.LargeImageList = imageListMovies;
                 listViewMovies.Items.Add(item);
@@ -909,13 +909,13 @@ namespace Mov4e.View.AllMoviesView
                         if (listViewMovies.Items[lcount].Selected == true)
                         {
                             int var2 = lcount;
-                            Dictionary<int, byte[]> m = rp.GetMoviesByTitle(new List<string> { listViewMovies.Items[lcount].Text });
+                            Dictionary<int, byte[]> m = movie_presenter.GetMoviesByTitle(new List<string> { listViewMovies.Items[lcount].Text });
                             int p = 0;
                             foreach (var item in m)
                             {
                                 p = item.Key;
                             }
-                            mov4eAddMovie me = new mov4eAddMovie(rp.GetMovie(p).Item1.id, this);
+                            mov4eAddMovie me = new mov4eAddMovie(movie_presenter.GetMovie(p).Item1.id, this);
                             me.ShowDialog();
                             break;
                         }
@@ -1033,7 +1033,7 @@ namespace Mov4e.View.AllMoviesView
         private void buttonClearFilters_Click(object sender, EventArgs e)
         {
             listViewMovies.Items.Clear();
-            Dictionary<int, byte[]> moviesList = rp.SetMovieInformation();
+            Dictionary<int, byte[]> moviesList = movie_presenter.SetMovieInformation();
             InitializeMoviesList(moviesList);
 
             radioButtonFantasy.Checked = false;
@@ -1100,7 +1100,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonSortZA_Click(object sender, EventArgs e)
         {
-            Dictionary<int, byte[]> movies = rp.SortMoviesByTitle();
+            Dictionary<int, byte[]> movies = movie_presenter.SortMoviesByTitle();
             Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
             var reverse = movies.Reverse();
             foreach (var item in reverse)
@@ -1113,7 +1113,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void buttonSortOld_Click(object sender, EventArgs e)
         {
-            Dictionary<int, byte[]> mov = rp.SortByDate();
+            Dictionary<int, byte[]> mov = movie_presenter.SortByDate();
             listViewMovies.Items.Clear();
             InitializeMoviesList(mov);
         }
@@ -1132,5 +1132,4 @@ namespace Mov4e.View.AllMoviesView
             this.InitializeMoviesList(mov);
         }
     }
-
 }
