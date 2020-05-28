@@ -190,7 +190,6 @@
             this.listViewMovies.Size = new System.Drawing.Size(1200, 235);
             this.listViewMovies.TabIndex = 3;
             this.listViewMovies.UseCompatibleStateImageBehavior = false;
-            this.listViewMovies.SelectedIndexChanged += new System.EventHandler(this.listViewMovies_SelectedIndexChanged);
             // 
             // tableLayoutPanelMovies
             // 
@@ -212,7 +211,6 @@
             this.tableLayoutPanelMovies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelMovies.Size = new System.Drawing.Size(1280, 730);
             this.tableLayoutPanelMovies.TabIndex = 4;
-            this.tableLayoutPanelMovies.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelMovies_Paint);
             // 
             // tableLayoutPanelSortFilter
             // 
@@ -592,7 +590,6 @@
             this.buttonFilter.TabIndex = 39;
             this.buttonFilter.Text = "Filter";
             this.buttonFilter.UseVisualStyleBackColor = false;
-            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // buttonClearFilters
             // 
@@ -605,7 +602,6 @@
             this.buttonClearFilters.TabIndex = 40;
             this.buttonClearFilters.Text = "Clear All";
             this.buttonClearFilters.UseVisualStyleBackColor = true;
-            this.buttonClearFilters.Click += new System.EventHandler(this.buttonClearFilters_Click);
             // 
             // groupBoxDurationFilter
             // 
@@ -649,6 +645,7 @@
             this.radioButtonMoreT3.TabIndex = 9;
             this.radioButtonMoreT3.Text = "More than 3 hours";
             this.radioButtonMoreT3.UseVisualStyleBackColor = true;
+            this.radioButtonMoreT3.CheckedChanged += new System.EventHandler(this.radioButtonMoreT3_CheckedChanged);
             // 
             // radioButtonBetween2A3
             // 
@@ -673,6 +670,7 @@
             this.radioButtonBetween1A2.TabIndex = 3;
             this.radioButtonBetween1A2.Text = "Between 1 and 2 hours";
             this.radioButtonBetween1A2.UseVisualStyleBackColor = true;
+            this.radioButtonBetween1A2.CheckedChanged += new System.EventHandler(this.radioButtonBetween1A2_CheckedChanged);
             // 
             // radioButtonLessT1Hour
             // 
@@ -685,6 +683,7 @@
             this.radioButtonLessT1Hour.TabIndex = 0;
             this.radioButtonLessT1Hour.Text = "Less than 1 hour";
             this.radioButtonLessT1Hour.UseVisualStyleBackColor = true;
+            this.radioButtonLessT1Hour.CheckedChanged += new System.EventHandler(this.radioButtonLessT1Hour_CheckedChanged);
             // 
             // tableLayoutPanelSort
             // 
@@ -719,7 +718,6 @@
             this.buttonSortOld.TabIndex = 12;
             this.buttonSortOld.Text = "Oldest first";
             this.buttonSortOld.UseVisualStyleBackColor = true;
-            this.buttonSortOld.Click += new System.EventHandler(this.buttonSortOld_Click);
             // 
             // buttonSortNew
             // 
@@ -731,7 +729,6 @@
             this.buttonSortNew.TabIndex = 11;
             this.buttonSortNew.Text = "Newest first";
             this.buttonSortNew.UseVisualStyleBackColor = true;
-            this.buttonSortNew.Click += new System.EventHandler(this.buttonSortNew_Click);
             // 
             // buttonSortZA
             // 
@@ -743,7 +740,6 @@
             this.buttonSortZA.TabIndex = 10;
             this.buttonSortZA.Text = "Z-A";
             this.buttonSortZA.UseVisualStyleBackColor = true;
-            this.buttonSortZA.Click += new System.EventHandler(this.buttonSortZA_Click);
             // 
             // labelSortTitle
             // 
@@ -779,7 +775,6 @@
             this.buttonSortAZ.TabIndex = 9;
             this.buttonSortAZ.Text = "A-Z";
             this.buttonSortAZ.UseVisualStyleBackColor = true;
-            this.buttonSortAZ.Click += new System.EventHandler(this.buttonSortAZ_Click);
             // 
             // tableLayoutPanelMoviesMenu
             // 
@@ -836,7 +831,6 @@
             this.buttonStartSearch.TabIndex = 3;
             this.buttonStartSearch.Text = "Search";
             this.buttonStartSearch.UseVisualStyleBackColor = true;
-            this.buttonStartSearch.Click += new System.EventHandler(this.buttonStartSearch_Click);
             // 
             // pictureBoxSearchIcon
             // 
@@ -857,7 +851,6 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(420, 20);
             this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // pictureBoxSort
             // 
@@ -903,7 +896,6 @@
             this.buttonDeleteMovie.Text = "Delete movie";
             this.buttonDeleteMovie.UseVisualStyleBackColor = true;
             this.buttonDeleteMovie.Visible = false;
-            this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
             // 
             // buttonEditMovie
             // 
@@ -916,7 +908,6 @@
             this.buttonEditMovie.Text = "Edit movie";
             this.buttonEditMovie.UseVisualStyleBackColor = true;
             this.buttonEditMovie.Visible = false;
-            this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
             // 
             // buttonAddMovie
             // 

@@ -327,7 +327,7 @@ namespace Mov4e.View.NewMovieView
         public void updateMovie()
         {
             MovieValidation.ValidateMovieUpdate(id, title, genre, pg, date, summary, picture, duration);
-            allM.UpdateMovie(id, textBoxName.Text, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
+            all_movies.UpdateMovie(id, textBoxName.Text, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
         }
     }
 }
