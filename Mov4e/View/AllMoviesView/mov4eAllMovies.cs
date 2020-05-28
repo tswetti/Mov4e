@@ -324,14 +324,18 @@ namespace Mov4e.View.AllMoviesView
 
         private void closeLabel_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Are You sure Want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+             DialogResult d = MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (d == DialogResult.OK)
             {
-                Properties.Settings.Default.LoggedForOneTime = false;
-                Properties.Settings.Default.Save();
+                if (Properties.Settings.Default.Logged!=true)
+                {
+                    Properties.Settings.Default.LoggedForOneTime = false;
+                    Properties.Settings.Default.userPosition = null;
+                    Properties.Settings.Default.id = 0;
+                    Properties.Settings.Default.Save();
+                }
                 this.Controls.Clear();
                 Environment.Exit(1);
-
             }
         }
 
@@ -407,8 +411,7 @@ namespace Mov4e.View.AllMoviesView
             {
                 if (sortOpened)
                 {
-
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 35;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 15;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 85;
@@ -417,8 +420,7 @@ namespace Mov4e.View.AllMoviesView
                 }
                 else
                 {
-
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 35;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 0;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 100;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 55;
@@ -437,7 +439,7 @@ namespace Mov4e.View.AllMoviesView
                 if (filterOpened)
                 {
 
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 32;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 0;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 100;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 55;
@@ -462,7 +464,7 @@ namespace Mov4e.View.AllMoviesView
                 }
                 else
                 {
-                    this.tableLayoutPanelMovies.RowStyles[1].Height = 35;
+                    this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 15;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 85;
@@ -532,12 +534,14 @@ namespace Mov4e.View.AllMoviesView
                 if (mov.Count > 0)
                 {
                     InitializeMoviesList(mov);
-                    buttonAddMovie.Visible = false;
-                    buttonDeleteMovie.Visible = false;
-                    buttonEditMovie.Visible = false;
-                    buttonAddMovie.Enabled = false;
-                    buttonDeleteMovie.Enabled = false;
-                    buttonEditMovie.Enabled = false;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[0].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[1].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[2].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[3].SizeType = SizeType.Percent;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[0].Width = 100;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[1].Width = 0;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[2].Width = 0;
+                    tableLayoutPanelActionsWMovie.ColumnStyles[3].Width = 0;
                 }
                 else
                 {
@@ -572,93 +576,93 @@ namespace Mov4e.View.AllMoviesView
             int pg = 0;
             int g = 0;
 
-            if (checkBoxFantasy.Checked)
+            if (radioButtonFantasy.Checked)
             {
                 g = 1;
             }
-            else if (checkBoxThriller.Checked)
+            else if (radioButtonThriller.Checked)
             {
                 g = 2;
             }
-            else if (checkBoxAction.Checked)
+            else if (radioButtonAction.Checked)
             {
                 g = 3;
             }
-            else if (checkBoxRomance.Checked)
+            else if (radioButtonRomance.Checked)
             {
                 g = 4;
             }
-            else if (checkBoxDrama.Checked)
+            else if (radioButtonDrama.Checked)
             {
                 g = 5;
             }
-            else if (checkBoxHorror.Checked)
+            else if (radioButtonHorror.Checked)
             {
                 g = 6;
             }
-            else if (checkBoxSciFi.Checked)
+            else if (radioButtonScifi.Checked)
             {
                 g = 7;
             }
-            else if (checkBoxHistorical.Checked)
+            else if (radioButtonHistorical.Checked)
             {
                 g = 8;
             }
-            else if (checkBoxAdventure.Checked)
+            else if (radioButtonAdventure.Checked)
             {
                 g = 9;
             }
-            else if (checkBoxComedy.Checked)
+            else if (radioButtonComedy.Checked)
             {
                 g = 10;
             }
-            else if (checkBoxSoapOpera.Checked)
+            else if (radioButtonSoapOpera.Checked)
             {
                 g = 11;
             }
-            else if (checkBoxBiographical.Checked)
+            else if (radioButtonBiographical.Checked)
             {
                 g = 12;
             }
-            else if (checkBoxSeries.Checked)
+            else if (radioButtonSeries.Checked)
             {
                 g = 13;
             }
 
-            if (checkBoxLessT1.Checked)
+            if (radioButtonLessT1Hour.Checked)
             {
                 d = 1;
             }
-            else if (checkBoxBetween12.Checked)
+            else if (radioButtonBetween1A2.Checked)
             {
                 d = 2;
             }
-            else if (checkBoxBetween23.Checked)
+            else if (radioButtonBetween2A3.Checked)
             {
                 d = 3;
             }
-            else if (checkBoxMoreT3.Checked)
+            else if (radioButtonMoreT3.Checked)
             {
                 d = 4;
             }
 
-            if (checkBoxNoPG.Checked)
+            if (radioButtonNoPG.Checked)
             {
                 pg = 0;
             }
-            else if (checkBox12Y.Checked)
+            else if (radioButtonPG12.Checked)
             {
                 pg = 12;
             }
-            else if (checkBox14Y.Checked)
+            else if (radioButtonPG14.Checked)
             {
                 pg = 14;
             }
-            else if (checkBox16Y.Checked)
+            else if (radioButtonPG16.Checked)
             {
                 pg = 16;
             }
-            else if (checkBox18Y.Checked)
+            else if (radioButtonPG18.Checked)
             {
                 pg = 18;
             }
@@ -802,11 +806,11 @@ namespace Mov4e.View.AllMoviesView
                     imageListMovies.Images.Add(pair.Key.ToString(), ((Bitmap)((new ImageConverter()).ConvertFrom(pair.Value))));
                     ListViewItem item = new ListViewItem(all_movies_presenter.SetMovieTitle(pair.Key));
                     item.ImageKey = pair.Key.ToString();
+                    listViewMovies.LargeImageList = imageListMovies;
                     listViewMovies.Items.Add(item);
                     listViewMovies.Tag = pair.Key;
                     id.Add(pair.Key);
                 }
-                listViewMovies.LargeImageList = imageListMovies;
             }
             else
             {
@@ -1064,10 +1068,13 @@ namespace Mov4e.View.AllMoviesView
                 imageListMovies.Images.Add(mov.Last().Key.ToString(), ((Bitmap)((new ImageConverter()).ConvertFrom(mov.Last().Value))));
                 ListViewItem item = new ListViewItem(all_movies_presenter.SetMovieTitle(mov.Last().Key));
                 item.ImageKey = mov.Last().Key.ToString();
+                listViewMovies.LargeImageList = imageListMovies;
                 listViewMovies.Items.Add(item);
                 listViewMovies.Tag = mov.Last().Key;
                 id.Add(mov.Last().Key);
             }
+            
+
         }
 
         /// <summary>
@@ -1109,6 +1116,193 @@ namespace Mov4e.View.AllMoviesView
             }
         }
 
+
+
+
+        private void buttonEditMovie_Click(object sender, EventArgs e)
+        {
+            EditMovie();
+        }
+
+        private void buttonDeleteMovie_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonStartSearch_Click(object sender, EventArgs e)
+        {
+            SearchMovie();
+        }
+
+        private void buttonSortNew_Click(object sender, EventArgs e)
+        {
+            SortByDate();
+        }
+
+        private void buttonSortAZ_Click(object sender, EventArgs e)
+        {
+            SortByTitle();
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+            List<int> filters = CheckSelectdFilters();
+            int g = filters[0];
+            int d = filters[1];
+            int pg = filters[2];
+
+            if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked
+                || radioButtonScifi.Checked || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked
+                || radioButtonSeries.Checked) && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) &&
+                (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked || radioButtonPG16.Checked || radioButtonPG18.Checked))
+            {
+                // Filters the movies by genre, duration and parental guidance.
+                FilterMovies(g, d, pg);
+            }
+            else if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked || radioButtonScifi.Checked
+                 || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked || radioButtonSeries.Checked)
+                 && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) && (radioButtonNoPG.Checked == false && radioButtonPG12.Checked
+                 == false && radioButtonPG14.Checked == false && radioButtonPG16.Checked == false && radioButtonPG18.Checked == false))
+            {
+                // Filters the movies by genre and duration.
+                FilterMoviesByGenresAndDuration(g, d);
+            }
+            else if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked
+                 || radioButtonScifi.Checked || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked
+                 || radioButtonSeries.Checked) && (radioButtonLessT1Hour.Checked == false && radioButtonBetween1A2.Checked == false && radioButtonBetween2A3.Checked == false
+                 && radioButtonMoreT3.Checked == false) && (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked ||
+                 radioButtonPG16.Checked || radioButtonPG18.Checked))
+            {
+                // Filters the movies by genre and parental guidance.
+                FilterMoviesByGenresAndPG(g, pg);
+            }
+            else if ((radioButtonFantasy.Checked == false && radioButtonThriller.Checked == false && radioButtonAction.Checked == false && radioButtonRomance.Checked == false
+                 && radioButtonDrama.Checked == false && radioButtonHorror.Checked == false && radioButtonScifi.Checked == false && radioButtonHistorical.Checked == false
+                 && radioButtonAdventure.Checked == false && radioButtonComedy.Checked == false && radioButtonSoapOpera.Checked == false && radioButtonBiographical.Checked == false
+                 && radioButtonSeries.Checked == false) && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) &&
+                 (radioButtonNoPG.Checked == false && radioButtonPG12.Checked == false && radioButtonPG14.Checked == false
+                 && radioButtonPG16.Checked == false && radioButtonPG18.Checked == false))
+            {
+                // Filters the movies by duration.
+                FilterMoviesByDuration(d);
+            }
+            else if ((radioButtonFantasy.Checked || radioButtonThriller.Checked || radioButtonAction.Checked || radioButtonRomance.Checked || radioButtonDrama.Checked || radioButtonHorror.Checked
+                || radioButtonScifi.Checked || radioButtonHistorical.Checked || radioButtonAdventure.Checked || radioButtonComedy.Checked || radioButtonSoapOpera.Checked || radioButtonBiographical.Checked
+                || radioButtonSeries.Checked) && (radioButtonLessT1Hour.Checked == false && radioButtonBetween1A2.Checked == false && radioButtonBetween2A3.Checked == false
+                && radioButtonMoreT3.Checked == false) && (radioButtonNoPG.Checked == false && radioButtonPG12.Checked == false
+                && radioButtonPG14.Checked == false && radioButtonPG16.Checked == false && radioButtonPG18.Checked == false))
+            {
+                // Filters the movies by genre.
+                FilterMoviesByGenres(g);
+            }
+            else if ((radioButtonFantasy.Checked == false && radioButtonThriller.Checked == false && radioButtonAction.Checked == false && radioButtonRomance.Checked == false
+                && radioButtonDrama.Checked == false && radioButtonHorror.Checked == false && radioButtonScifi.Checked == false && radioButtonHistorical.Checked == false
+                && radioButtonAdventure.Checked == false && radioButtonComedy.Checked == false && radioButtonSoapOpera.Checked == false && radioButtonBiographical.Checked == false
+                && radioButtonSeries.Checked == false) && (radioButtonLessT1Hour.Checked == false && radioButtonBetween1A2.Checked == false && radioButtonBetween2A3.Checked == false
+                && radioButtonMoreT3.Checked == false) && (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked || radioButtonPG16.Checked || radioButtonPG18.Checked))
+            {
+                // Filters the movies by parental guidance.
+                FilterMoviesByPG(pg);
+            }
+            else if ((radioButtonFantasy.Checked == false && radioButtonThriller.Checked == false && radioButtonAction.Checked == false && radioButtonRomance.Checked == false
+                && radioButtonDrama.Checked == false && radioButtonHorror.Checked == false && radioButtonScifi.Checked == false && radioButtonHistorical.Checked == false
+                && radioButtonAdventure.Checked == false && radioButtonComedy.Checked == false && radioButtonSoapOpera.Checked == false && radioButtonBiographical.Checked == false
+                && radioButtonSeries.Checked == false) && (radioButtonLessT1Hour.Checked || radioButtonBetween1A2.Checked || radioButtonBetween2A3.Checked || radioButtonMoreT3.Checked) &&
+                (radioButtonNoPG.Checked || radioButtonPG12.Checked || radioButtonPG14.Checked || radioButtonPG16.Checked || radioButtonPG18.Checked))
+            {
+                // Filters the movies by duration and parental guidance.
+                FilterMoviesByDurationAndPG(d, pg);
+            }
+        }
+
+        private void buttonClearFilters_Click(object sender, EventArgs e)
+        {
+            listViewMovies.Items.Clear();
+            Dictionary<int, byte[]> moviesList = rp.SetMovieInformation();
+            InitializeMoviesList(moviesList);
+
+            radioButtonFantasy.Checked = false;
+            radioButtonThriller.Checked = false;
+            radioButtonAction.Checked = false;
+            radioButtonRomance.Checked = false;
+            radioButtonDrama.Checked = false;
+            radioButtonHorror.Checked = false;
+            radioButtonScifi.Checked = false;
+            radioButtonHistorical.Checked = false;
+            radioButtonAdventure.Checked = false;
+            radioButtonComedy.Checked = false;
+            radioButtonSoapOpera.Checked = false;
+            radioButtonBiographical.Checked = false;
+            radioButtonSeries.Checked = false;
+
+            radioButtonLessT1Hour.Checked = false;
+            radioButtonBetween1A2.Checked = false;
+            radioButtonBetween2A3.Checked = false;
+            radioButtonMoreT3.Checked = false;
+
+            radioButtonNoPG.Checked = false;
+            radioButtonPG12.Checked = false;
+            radioButtonPG14.Checked = false;
+            radioButtonPG16.Checked = false;
+            radioButtonPG18.Checked = false;
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Focused == true && !string.IsNullOrEmpty(textBoxSearch.Text) && !string.IsNullOrWhiteSpace(textBoxSearch.Text))
+            {
+                pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_blue;
+            }
+            else
+                pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
+        }
+
+        private void listViewMovies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewMovies.SelectedItems.Count == 0)
+            {
+                buttonViewInfo.Enabled = false;
+                buttonDeleteMovie.Enabled = false;
+                buttonEditMovie.Enabled = false;
+            }
+            else
+            {
+                buttonViewInfo.Enabled = true;
+                buttonDeleteMovie.Enabled = true;
+                buttonEditMovie.Enabled = true;
+            }
+        }
+
+        private void buttonDeleteMovie_Click(object sender, EventArgs e)
+        {
+            DeleteMovie();
+        }
+
+        private void tableLayoutPanelMovies_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonSortZA_Click(object sender, EventArgs e)
+        {
+            Dictionary<int, byte[]> movies = rp.SortMoviesByTitle();
+            Dictionary<int, byte[]> reversedMovies = new Dictionary<int, byte[]>();
+            var reverse = movies.Reverse();
+            foreach (var item in reverse)
+            {
+                reversedMovies.Add(item.Key, item.Value);
+            }
+            listViewMovies.Items.Clear();
+            InitializeMoviesList(reversedMovies);
+        }
+
+        private void buttonSortOld_Click(object sender, EventArgs e)
+        {
+            Dictionary<int, byte[]> mov = rp.SortByDate();
+            listViewMovies.Items.Clear();
+            InitializeMoviesList(mov);
+        }
+
         /// <summary>
         /// The <c>ErrorMessage()</c> method is an overrided method from the <c>IScreenView</c> interface class, 
         /// which shows in a message box an occured error.
@@ -1117,6 +1311,15 @@ namespace Mov4e.View.AllMoviesView
         public void ErrorMassage(string msg)
         {
             MessageBox.Show(msg,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        //This method is not Ok it will be chnanged in future!
+        public void UpdateMovie(int movieId, string movieName, byte[] moviePic)
+        {
+            mov[movieId] = moviePic;
+            this.listViewMovies.Clear();
+            imageListMovies.Images.Clear();
+            this.InitializeMoviesList(mov);
         }
     }
 }

@@ -274,6 +274,25 @@ namespace Mov4eTests.ServiceTests.SpecificMovieServiceTests
 
             Assert.Throws<SpecificMovieException>(() => _specificMovieInfoService.GetUserRate(0));
         }
+
+        [Test]
+        public void DeleteUserRateDeletesRate()
+        {
+            MockedDummySpecificMovieRepository _mockedDummySpecificMovieRepository = new MockedDummySpecificMovieRepository();
+            ISpecificMovieInfoService _specificMovieInfoService = new SpecificMovieInfoService(_mockedDummySpecificMovieRepository._specificMovieInfoRepository);
+            _specificMovieInfoService.GetMovieFromDBAndSetItInModel(1);
+            _specificMovieInfoService.DeleteUserRate(1);
+            Assert.AreEqual(4.5,_mockedDummySpecificMovieRepository.currentMovie.AVGRating);
+        }
+
+        [Test]
+        public void DeleteUserRateThrowsException()
+        {
+            MockedDummySpecificMovieRepository _mockedDummySpecificMovieRepository = new MockedDummySpecificMovieRepository();
+            ISpecificMovieInfoService _specificMovieInfoService = new SpecificMovieInfoService(_mockedDummySpecificMovieRepository._specificMovieInfoRepository);
+
+            Assert.Throws<SpecificMovieException>(() => _specificMovieInfoService.DeleteUserRate(0));
+        }
     }
 }
 

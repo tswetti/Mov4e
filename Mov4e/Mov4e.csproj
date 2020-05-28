@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Mov4e.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -309,6 +312,8 @@
       <DependentUpon>mov4eDB.edmx</DependentUpon>
       <LastGenOutput>mov4eDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\show-pass-blue.png" />
+    <None Include="Resources\show-pass.png" />
     <None Include="Resources\female_symbol_blue.png" />
     <None Include="Resources\female_symbol.png" />
     <None Include="Resources\go_back_white.png" />

@@ -67,6 +67,7 @@ namespace Mov4e.View.LogInView
             pictureBoxUsername.Height = 40;
             pictureBoxPassword.Height = 40;
             tableLayoutPanelLoginButtons.Height = 41;
+            panelPassword.Height = 26;
             checkBoxSave.Visible = true;
         }
 
@@ -86,12 +87,15 @@ namespace Mov4e.View.LogInView
             checkBoxSave.Visible = false;
         }
 
+        bool hiddenPass;
+
         public mov4eLogin()
         {
             InitializeComponent();
             textBoxPassword.PasswordChar = '*';
             UserName = null;
             Password = null;
+            hiddenPass = true;
             _logInPresenter = new LogInPresenter(this);
             ShowLoginOnly();
         }
@@ -118,6 +122,13 @@ namespace Mov4e.View.LogInView
             DialogResult d = MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (d == DialogResult.OK)
             {
+                if (Properties.Settings.Default.Logged!=true)
+                {
+                    Properties.Settings.Default.LoggedForOneTime = false;
+                    Properties.Settings.Default.userPosition = null;
+                    Properties.Settings.Default.id = 0;
+                    Properties.Settings.Default.Save();
+                }
                 this.Controls.Clear();
                 Environment.Exit(1);
             }
@@ -234,10 +245,18 @@ namespace Mov4e.View.LogInView
             {
                 if (!string.IsNullOrWhiteSpace(textBoxForgottenPassUsername.Text) && !string.IsNullOrWhiteSpace(textBoxForgottenPassEmail.Text))
                 {
-                    _logInPresenter.ResetPass(textBoxForgottenPassUsername.Text, textBoxForgottenPassEmail.Text);
-                    textBoxForgottenPassUsername.Text = null;
-                    textBoxForgottenPassEmail.Text = null;
-                    MessageBox.Show("You have successfully reset your password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult d = MessageBox.Show("Your password will be changed automaticaly!\n" +
+                                                     "Be sure you know your credentials for the email,\n" +
+                                                     "because the new password will be sent there!\n\n"+
+                                                     "Are you sure you want to continue?",
+                                                      "Reset Password", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                    if (d == DialogResult.Yes)
+                    {
+                        _logInPresenter.ResetPass(textBoxForgottenPassUsername.Text, textBoxForgottenPassEmail.Text);
+                        textBoxForgottenPassUsername.Text = null;
+                        textBoxForgottenPassEmail.Text = null;
+                        MessageBox.Show("You have successfully reset your password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
@@ -268,6 +287,22 @@ namespace Mov4e.View.LogInView
         public void ShowForm()
         {
             this.Show();
+        }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            if (hiddenPass)
+            {
+                textBoxPassword.PasswordChar = '\0';
+                pictureBoxShowPass.Image= Mov4e.Properties.Resources.show_pass_blue;
+                hiddenPass = false;
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '*';
+                pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass;
+                hiddenPass = true;
+            }
         }
     }
 }

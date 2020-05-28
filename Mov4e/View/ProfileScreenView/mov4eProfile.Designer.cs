@@ -511,7 +511,7 @@
             // 
             // imageListWatchlist
             // 
-            this.imageListWatchlist.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListWatchlist.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
             this.imageListWatchlist.ImageSize = new System.Drawing.Size(160, 200);
             this.imageListWatchlist.TransparentColor = System.Drawing.Color.Transparent;
             // 

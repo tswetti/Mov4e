@@ -38,34 +38,39 @@
             this.tableLayoutPanelMovies = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelSortFilter = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelFilter = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButtonPG18 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPG16 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPG14 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPG12 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoPG = new System.Windows.Forms.RadioButton();
             this.labelFilterPG = new System.Windows.Forms.Label();
-            this.checkBoxOther = new System.Windows.Forms.CheckBox();
-            this.checkBoxSeries = new System.Windows.Forms.CheckBox();
-            this.checkBoxBiographical = new System.Windows.Forms.CheckBox();
-            this.checkBoxSoapOpera = new System.Windows.Forms.CheckBox();
-            this.checkBoxComedy = new System.Windows.Forms.CheckBox();
-            this.checkBoxRomance = new System.Windows.Forms.CheckBox();
-            this.checkBoxAction = new System.Windows.Forms.CheckBox();
-            this.checkBoxThriller = new System.Windows.Forms.CheckBox();
             this.labelFilterDuration = new System.Windows.Forms.Label();
+            this.groupBoxGenreFilter = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanelFGenre = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButtonComedy = new System.Windows.Forms.RadioButton();
+            this.radioButtonDrama = new System.Windows.Forms.RadioButton();
+            this.radioButtonAdventure = new System.Windows.Forms.RadioButton();
+            this.radioButtonRomance = new System.Windows.Forms.RadioButton();
+            this.radioButtonSeries = new System.Windows.Forms.RadioButton();
+            this.radioButtonHistorical = new System.Windows.Forms.RadioButton();
+            this.radioButtonAction = new System.Windows.Forms.RadioButton();
+            this.radioButtonBiographical = new System.Windows.Forms.RadioButton();
+            this.radioButtonScifi = new System.Windows.Forms.RadioButton();
+            this.radioButtonThriller = new System.Windows.Forms.RadioButton();
+            this.radioButtonSoapOpera = new System.Windows.Forms.RadioButton();
+            this.radioButtonHorror = new System.Windows.Forms.RadioButton();
+            this.radioButtonFantasy = new System.Windows.Forms.RadioButton();
             this.labelFilterGenre = new System.Windows.Forms.Label();
-            this.checkBoxFantasy = new System.Windows.Forms.CheckBox();
-            this.checkBoxDrama = new System.Windows.Forms.CheckBox();
-            this.checkBoxHorror = new System.Windows.Forms.CheckBox();
-            this.checkBoxSciFi = new System.Windows.Forms.CheckBox();
-            this.checkBoxHistorical = new System.Windows.Forms.CheckBox();
-            this.checkBoxAdventure = new System.Windows.Forms.CheckBox();
-            this.checkBoxLessT1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxBetween12 = new System.Windows.Forms.CheckBox();
-            this.checkBoxBetween23 = new System.Windows.Forms.CheckBox();
-            this.checkBoxMoreT3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxNoPG = new System.Windows.Forms.CheckBox();
-            this.checkBox12Y = new System.Windows.Forms.CheckBox();
-            this.checkBox14Y = new System.Windows.Forms.CheckBox();
-            this.checkBox16Y = new System.Windows.Forms.CheckBox();
-            this.checkBox18Y = new System.Windows.Forms.CheckBox();
             this.buttonFilter = new System.Windows.Forms.Button();
             this.buttonClearFilters = new System.Windows.Forms.Button();
+            this.groupBoxDurationFilter = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButtonMoreT3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBetween2A3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBetween1A2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonLessT1Hour = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanelSort = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSortOld = new System.Windows.Forms.Button();
             this.buttonSortNew = new System.Windows.Forms.Button();
@@ -90,6 +95,12 @@
             this.tableLayoutPanelMovies.SuspendLayout();
             this.tableLayoutPanelSortFilter.SuspendLayout();
             this.tableLayoutPanelFilter.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.groupBoxGenreFilter.SuspendLayout();
+            this.tableLayoutPanelFGenre.SuspendLayout();
+            this.groupBoxDurationFilter.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelSort.SuspendLayout();
             this.tableLayoutPanelMoviesMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilter)).BeginInit();
@@ -220,367 +231,354 @@
             // tableLayoutPanelFilter
             // 
             this.tableLayoutPanelFilter.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableLayoutPanelFilter.ColumnCount = 9;
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.61951F));
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.7434F));
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.7434F));
+            this.tableLayoutPanelFilter.ColumnCount = 7;
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.77199F));
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.67725F));
             this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.41285F));
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.48084F));
-            this.tableLayoutPanelFilter.Controls.Add(this.labelFilterPG, 7, 0);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxOther, 3, 4);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxSeries, 3, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxBiographical, 3, 2);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxSoapOpera, 3, 1);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxComedy, 2, 5);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxRomance, 1, 4);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxAction, 1, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxThriller, 1, 2);
-            this.tableLayoutPanelFilter.Controls.Add(this.labelFilterDuration, 5, 0);
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.52127F));
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.449849F));
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.51298F));
+            this.tableLayoutPanelFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.06667F));
+            this.tableLayoutPanelFilter.Controls.Add(this.groupBox2, 5, 1);
+            this.tableLayoutPanelFilter.Controls.Add(this.labelFilterPG, 5, 0);
+            this.tableLayoutPanelFilter.Controls.Add(this.labelFilterDuration, 3, 0);
+            this.tableLayoutPanelFilter.Controls.Add(this.groupBoxGenreFilter, 1, 1);
             this.tableLayoutPanelFilter.Controls.Add(this.labelFilterGenre, 1, 0);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxFantasy, 1, 1);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxDrama, 1, 5);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxHorror, 2, 1);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxSciFi, 2, 2);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxHistorical, 2, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxAdventure, 2, 4);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxLessT1, 5, 1);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxBetween12, 5, 2);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxBetween23, 5, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxMoreT3, 5, 4);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBoxNoPG, 7, 1);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBox12Y, 7, 2);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBox14Y, 7, 3);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBox16Y, 7, 4);
-            this.tableLayoutPanelFilter.Controls.Add(this.checkBox18Y, 7, 5);
-            this.tableLayoutPanelFilter.Controls.Add(this.buttonFilter, 4, 6);
-            this.tableLayoutPanelFilter.Controls.Add(this.buttonClearFilters, 8, 6);
+            this.tableLayoutPanelFilter.Controls.Add(this.buttonFilter, 2, 2);
+            this.tableLayoutPanelFilter.Controls.Add(this.buttonClearFilters, 6, 2);
+            this.tableLayoutPanelFilter.Controls.Add(this.groupBoxDurationFilter, 3, 1);
             this.tableLayoutPanelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanelFilter.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanelFilter.Location = new System.Drawing.Point(3, 51);
             this.tableLayoutPanelFilter.Name = "tableLayoutPanelFilter";
-            this.tableLayoutPanelFilter.RowCount = 7;
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.49632F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.99476F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.99475F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.99475F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.99475F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.99475F));
-            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.52991F));
+            this.tableLayoutPanelFilter.RowCount = 3;
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.04886F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.35669F));
+            this.tableLayoutPanelFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.59445F));
             this.tableLayoutPanelFilter.Size = new System.Drawing.Size(1268, 250);
             this.tableLayoutPanelFilter.TabIndex = 33;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox2.Location = new System.Drawing.Point(936, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(185, 177);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG18, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG16, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG14, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG12, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.radioButtonNoPG, 0, 0);
+            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(-1, -5);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(187, 193);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // radioButtonPG18
+            // 
+            this.radioButtonPG18.AutoSize = true;
+            this.radioButtonPG18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonPG18.ForeColor = System.Drawing.Color.White;
+            this.radioButtonPG18.Location = new System.Drawing.Point(3, 155);
+            this.radioButtonPG18.Name = "radioButtonPG18";
+            this.radioButtonPG18.Size = new System.Drawing.Size(87, 24);
+            this.radioButtonPG18.TabIndex = 12;
+            this.radioButtonPG18.Text = "18 years";
+            this.radioButtonPG18.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPG16
+            // 
+            this.radioButtonPG16.AutoSize = true;
+            this.radioButtonPG16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonPG16.ForeColor = System.Drawing.Color.White;
+            this.radioButtonPG16.Location = new System.Drawing.Point(3, 117);
+            this.radioButtonPG16.Name = "radioButtonPG16";
+            this.radioButtonPG16.Size = new System.Drawing.Size(87, 24);
+            this.radioButtonPG16.TabIndex = 9;
+            this.radioButtonPG16.Text = "16 years";
+            this.radioButtonPG16.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPG14
+            // 
+            this.radioButtonPG14.AutoSize = true;
+            this.radioButtonPG14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonPG14.ForeColor = System.Drawing.Color.White;
+            this.radioButtonPG14.Location = new System.Drawing.Point(3, 79);
+            this.radioButtonPG14.Name = "radioButtonPG14";
+            this.radioButtonPG14.Size = new System.Drawing.Size(87, 24);
+            this.radioButtonPG14.TabIndex = 6;
+            this.radioButtonPG14.Text = "14 years";
+            this.radioButtonPG14.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPG12
+            // 
+            this.radioButtonPG12.AutoSize = true;
+            this.radioButtonPG12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonPG12.ForeColor = System.Drawing.Color.White;
+            this.radioButtonPG12.Location = new System.Drawing.Point(3, 41);
+            this.radioButtonPG12.Name = "radioButtonPG12";
+            this.radioButtonPG12.Size = new System.Drawing.Size(87, 24);
+            this.radioButtonPG12.TabIndex = 3;
+            this.radioButtonPG12.Text = "12 years";
+            this.radioButtonPG12.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNoPG
+            // 
+            this.radioButtonNoPG.AutoSize = true;
+            this.radioButtonNoPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonNoPG.ForeColor = System.Drawing.Color.White;
+            this.radioButtonNoPG.Location = new System.Drawing.Point(3, 3);
+            this.radioButtonNoPG.Name = "radioButtonNoPG";
+            this.radioButtonNoPG.Size = new System.Drawing.Size(178, 24);
+            this.radioButtonNoPG.TabIndex = 0;
+            this.radioButtonNoPG.Text = "No parental guidance";
+            this.radioButtonNoPG.UseVisualStyleBackColor = true;
             // 
             // labelFilterPG
             // 
             this.labelFilterPG.AutoSize = true;
             this.labelFilterPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFilterPG.ForeColor = System.Drawing.Color.White;
-            this.labelFilterPG.Location = new System.Drawing.Point(955, 0);
+            this.labelFilterPG.Location = new System.Drawing.Point(936, 0);
             this.labelFilterPG.Name = "labelFilterPG";
             this.labelFilterPG.Size = new System.Drawing.Size(158, 20);
             this.labelFilterPG.TabIndex = 4;
             this.labelFilterPG.Text = "Parental Guidance";
-            // 
-            // checkBoxOther
-            // 
-            this.checkBoxOther.AutoSize = true;
-            this.checkBoxOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxOther.ForeColor = System.Drawing.Color.White;
-            this.checkBoxOther.Location = new System.Drawing.Point(462, 140);
-            this.checkBoxOther.Name = "checkBoxOther";
-            this.checkBoxOther.Size = new System.Drawing.Size(68, 24);
-            this.checkBoxOther.TabIndex = 16;
-            this.checkBoxOther.Text = "Other";
-            this.checkBoxOther.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSeries
-            // 
-            this.checkBoxSeries.AutoSize = true;
-            this.checkBoxSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxSeries.ForeColor = System.Drawing.Color.White;
-            this.checkBoxSeries.Location = new System.Drawing.Point(462, 103);
-            this.checkBoxSeries.Name = "checkBoxSeries";
-            this.checkBoxSeries.Size = new System.Drawing.Size(73, 24);
-            this.checkBoxSeries.TabIndex = 17;
-            this.checkBoxSeries.Text = "Series";
-            this.checkBoxSeries.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBiographical
-            // 
-            this.checkBoxBiographical.AutoSize = true;
-            this.checkBoxBiographical.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxBiographical.ForeColor = System.Drawing.Color.White;
-            this.checkBoxBiographical.Location = new System.Drawing.Point(462, 66);
-            this.checkBoxBiographical.Name = "checkBoxBiographical";
-            this.checkBoxBiographical.Size = new System.Drawing.Size(115, 24);
-            this.checkBoxBiographical.TabIndex = 21;
-            this.checkBoxBiographical.Text = "Biographical";
-            this.checkBoxBiographical.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSoapOpera
-            // 
-            this.checkBoxSoapOpera.AutoSize = true;
-            this.checkBoxSoapOpera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxSoapOpera.ForeColor = System.Drawing.Color.White;
-            this.checkBoxSoapOpera.Location = new System.Drawing.Point(462, 29);
-            this.checkBoxSoapOpera.Name = "checkBoxSoapOpera";
-            this.checkBoxSoapOpera.Size = new System.Drawing.Size(114, 24);
-            this.checkBoxSoapOpera.TabIndex = 20;
-            this.checkBoxSoapOpera.Text = "Soap Opera";
-            this.checkBoxSoapOpera.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxComedy
-            // 
-            this.checkBoxComedy.AutoSize = true;
-            this.checkBoxComedy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxComedy.ForeColor = System.Drawing.Color.White;
-            this.checkBoxComedy.Location = new System.Drawing.Point(300, 177);
-            this.checkBoxComedy.Name = "checkBoxComedy";
-            this.checkBoxComedy.Size = new System.Drawing.Size(86, 24);
-            this.checkBoxComedy.TabIndex = 19;
-            this.checkBoxComedy.Text = "Comedy";
-            this.checkBoxComedy.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRomance
-            // 
-            this.checkBoxRomance.AutoSize = true;
-            this.checkBoxRomance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxRomance.ForeColor = System.Drawing.Color.White;
-            this.checkBoxRomance.Location = new System.Drawing.Point(138, 140);
-            this.checkBoxRomance.Name = "checkBoxRomance";
-            this.checkBoxRomance.Size = new System.Drawing.Size(97, 24);
-            this.checkBoxRomance.TabIndex = 13;
-            this.checkBoxRomance.Text = "Romance";
-            this.checkBoxRomance.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAction
-            // 
-            this.checkBoxAction.AutoSize = true;
-            this.checkBoxAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxAction.ForeColor = System.Drawing.Color.White;
-            this.checkBoxAction.Location = new System.Drawing.Point(138, 103);
-            this.checkBoxAction.Name = "checkBoxAction";
-            this.checkBoxAction.Size = new System.Drawing.Size(73, 24);
-            this.checkBoxAction.TabIndex = 14;
-            this.checkBoxAction.Text = "Action";
-            this.checkBoxAction.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxThriller
-            // 
-            this.checkBoxThriller.AutoSize = true;
-            this.checkBoxThriller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxThriller.ForeColor = System.Drawing.Color.White;
-            this.checkBoxThriller.Location = new System.Drawing.Point(138, 66);
-            this.checkBoxThriller.Name = "checkBoxThriller";
-            this.checkBoxThriller.Size = new System.Drawing.Size(74, 24);
-            this.checkBoxThriller.TabIndex = 15;
-            this.checkBoxThriller.Text = "Thriller";
-            this.checkBoxThriller.UseVisualStyleBackColor = true;
             // 
             // labelFilterDuration
             // 
             this.labelFilterDuration.AutoSize = true;
             this.labelFilterDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFilterDuration.ForeColor = System.Drawing.Color.White;
-            this.labelFilterDuration.Location = new System.Drawing.Point(689, 0);
+            this.labelFilterDuration.Location = new System.Drawing.Point(659, 0);
             this.labelFilterDuration.Name = "labelFilterDuration";
             this.labelFilterDuration.Size = new System.Drawing.Size(78, 20);
             this.labelFilterDuration.TabIndex = 5;
             this.labelFilterDuration.Text = "Duration";
+            // 
+            // groupBoxGenreFilter
+            // 
+            this.groupBoxGenreFilter.Controls.Add(this.tableLayoutPanelFGenre);
+            this.groupBoxGenreFilter.Location = new System.Drawing.Point(151, 28);
+            this.groupBoxGenreFilter.Name = "groupBoxGenreFilter";
+            this.groupBoxGenreFilter.Size = new System.Drawing.Size(396, 177);
+            this.groupBoxGenreFilter.TabIndex = 5;
+            this.groupBoxGenreFilter.TabStop = false;
+            // 
+            // tableLayoutPanelFGenre
+            // 
+            this.tableLayoutPanelFGenre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelFGenre.ColumnCount = 3;
+            this.tableLayoutPanelFGenre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelFGenre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelFGenre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonComedy, 1, 4);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonDrama, 0, 4);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonAdventure, 1, 3);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonRomance, 0, 3);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonSeries, 2, 2);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonHistorical, 1, 2);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonAction, 0, 2);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonBiographical, 2, 1);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonScifi, 1, 1);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonThriller, 0, 1);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonSoapOpera, 2, 0);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonHorror, 1, 0);
+            this.tableLayoutPanelFGenre.Controls.Add(this.radioButtonFantasy, 0, 0);
+            this.tableLayoutPanelFGenre.Location = new System.Drawing.Point(0, -2);
+            this.tableLayoutPanelFGenre.Name = "tableLayoutPanelFGenre";
+            this.tableLayoutPanelFGenre.RowCount = 5;
+            this.tableLayoutPanelFGenre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelFGenre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelFGenre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelFGenre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelFGenre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelFGenre.Size = new System.Drawing.Size(400, 190);
+            this.tableLayoutPanelFGenre.TabIndex = 1;
+            // 
+            // radioButtonComedy
+            // 
+            this.radioButtonComedy.AutoSize = true;
+            this.radioButtonComedy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonComedy.ForeColor = System.Drawing.Color.White;
+            this.radioButtonComedy.Location = new System.Drawing.Point(136, 155);
+            this.radioButtonComedy.Name = "radioButtonComedy";
+            this.radioButtonComedy.Size = new System.Drawing.Size(85, 24);
+            this.radioButtonComedy.TabIndex = 13;
+            this.radioButtonComedy.Text = "Comedy";
+            this.radioButtonComedy.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDrama
+            // 
+            this.radioButtonDrama.AutoSize = true;
+            this.radioButtonDrama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonDrama.ForeColor = System.Drawing.Color.White;
+            this.radioButtonDrama.Location = new System.Drawing.Point(3, 155);
+            this.radioButtonDrama.Name = "radioButtonDrama";
+            this.radioButtonDrama.Size = new System.Drawing.Size(75, 24);
+            this.radioButtonDrama.TabIndex = 12;
+            this.radioButtonDrama.Text = "Drama";
+            this.radioButtonDrama.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAdventure
+            // 
+            this.radioButtonAdventure.AutoSize = true;
+            this.radioButtonAdventure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonAdventure.ForeColor = System.Drawing.Color.White;
+            this.radioButtonAdventure.Location = new System.Drawing.Point(136, 117);
+            this.radioButtonAdventure.Name = "radioButtonAdventure";
+            this.radioButtonAdventure.Size = new System.Drawing.Size(100, 24);
+            this.radioButtonAdventure.TabIndex = 10;
+            this.radioButtonAdventure.Text = "Adventure";
+            this.radioButtonAdventure.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonRomance
+            // 
+            this.radioButtonRomance.AutoSize = true;
+            this.radioButtonRomance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonRomance.ForeColor = System.Drawing.Color.White;
+            this.radioButtonRomance.Location = new System.Drawing.Point(3, 117);
+            this.radioButtonRomance.Name = "radioButtonRomance";
+            this.radioButtonRomance.Size = new System.Drawing.Size(96, 24);
+            this.radioButtonRomance.TabIndex = 9;
+            this.radioButtonRomance.Text = "Romance";
+            this.radioButtonRomance.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSeries
+            // 
+            this.radioButtonSeries.AutoSize = true;
+            this.radioButtonSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonSeries.ForeColor = System.Drawing.Color.White;
+            this.radioButtonSeries.Location = new System.Drawing.Point(269, 79);
+            this.radioButtonSeries.Name = "radioButtonSeries";
+            this.radioButtonSeries.Size = new System.Drawing.Size(72, 24);
+            this.radioButtonSeries.TabIndex = 8;
+            this.radioButtonSeries.Text = "Series";
+            this.radioButtonSeries.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonHistorical
+            // 
+            this.radioButtonHistorical.AutoSize = true;
+            this.radioButtonHistorical.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonHistorical.ForeColor = System.Drawing.Color.White;
+            this.radioButtonHistorical.Location = new System.Drawing.Point(136, 79);
+            this.radioButtonHistorical.Name = "radioButtonHistorical";
+            this.radioButtonHistorical.Size = new System.Drawing.Size(92, 24);
+            this.radioButtonHistorical.TabIndex = 7;
+            this.radioButtonHistorical.Text = "Historical";
+            this.radioButtonHistorical.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAction
+            // 
+            this.radioButtonAction.AutoSize = true;
+            this.radioButtonAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonAction.ForeColor = System.Drawing.Color.White;
+            this.radioButtonAction.Location = new System.Drawing.Point(3, 79);
+            this.radioButtonAction.Name = "radioButtonAction";
+            this.radioButtonAction.Size = new System.Drawing.Size(72, 24);
+            this.radioButtonAction.TabIndex = 6;
+            this.radioButtonAction.Text = "Action";
+            this.radioButtonAction.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonBiographical
+            // 
+            this.radioButtonBiographical.AutoSize = true;
+            this.radioButtonBiographical.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonBiographical.ForeColor = System.Drawing.Color.White;
+            this.radioButtonBiographical.Location = new System.Drawing.Point(269, 41);
+            this.radioButtonBiographical.Name = "radioButtonBiographical";
+            this.radioButtonBiographical.Size = new System.Drawing.Size(114, 24);
+            this.radioButtonBiographical.TabIndex = 5;
+            this.radioButtonBiographical.Text = "Biographical";
+            this.radioButtonBiographical.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonScifi
+            // 
+            this.radioButtonScifi.AutoSize = true;
+            this.radioButtonScifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonScifi.ForeColor = System.Drawing.Color.White;
+            this.radioButtonScifi.Location = new System.Drawing.Point(136, 41);
+            this.radioButtonScifi.Name = "radioButtonScifi";
+            this.radioButtonScifi.Size = new System.Drawing.Size(62, 24);
+            this.radioButtonScifi.TabIndex = 4;
+            this.radioButtonScifi.Text = "Sci-fi";
+            this.radioButtonScifi.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonThriller
+            // 
+            this.radioButtonThriller.AutoSize = true;
+            this.radioButtonThriller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonThriller.ForeColor = System.Drawing.Color.White;
+            this.radioButtonThriller.Location = new System.Drawing.Point(3, 41);
+            this.radioButtonThriller.Name = "radioButtonThriller";
+            this.radioButtonThriller.Size = new System.Drawing.Size(73, 24);
+            this.radioButtonThriller.TabIndex = 3;
+            this.radioButtonThriller.Text = "Thriller";
+            this.radioButtonThriller.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSoapOpera
+            // 
+            this.radioButtonSoapOpera.AutoSize = true;
+            this.radioButtonSoapOpera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonSoapOpera.ForeColor = System.Drawing.Color.White;
+            this.radioButtonSoapOpera.Location = new System.Drawing.Point(269, 3);
+            this.radioButtonSoapOpera.Name = "radioButtonSoapOpera";
+            this.radioButtonSoapOpera.Size = new System.Drawing.Size(110, 24);
+            this.radioButtonSoapOpera.TabIndex = 2;
+            this.radioButtonSoapOpera.Text = "Soap opera";
+            this.radioButtonSoapOpera.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonHorror
+            // 
+            this.radioButtonHorror.AutoSize = true;
+            this.radioButtonHorror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonHorror.ForeColor = System.Drawing.Color.White;
+            this.radioButtonHorror.Location = new System.Drawing.Point(136, 3);
+            this.radioButtonHorror.Name = "radioButtonHorror";
+            this.radioButtonHorror.Size = new System.Drawing.Size(72, 24);
+            this.radioButtonHorror.TabIndex = 1;
+            this.radioButtonHorror.Text = "Horror";
+            this.radioButtonHorror.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonFantasy
+            // 
+            this.radioButtonFantasy.AutoSize = true;
+            this.radioButtonFantasy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonFantasy.ForeColor = System.Drawing.Color.White;
+            this.radioButtonFantasy.Location = new System.Drawing.Point(3, 3);
+            this.radioButtonFantasy.Name = "radioButtonFantasy";
+            this.radioButtonFantasy.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonFantasy.TabIndex = 0;
+            this.radioButtonFantasy.Text = "Fantasy";
+            this.radioButtonFantasy.UseVisualStyleBackColor = true;
             // 
             // labelFilterGenre
             // 
             this.labelFilterGenre.AutoSize = true;
             this.labelFilterGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFilterGenre.ForeColor = System.Drawing.Color.White;
-            this.labelFilterGenre.Location = new System.Drawing.Point(138, 0);
+            this.labelFilterGenre.Location = new System.Drawing.Point(151, 0);
             this.labelFilterGenre.Name = "labelFilterGenre";
             this.labelFilterGenre.Size = new System.Drawing.Size(59, 20);
             this.labelFilterGenre.TabIndex = 6;
             this.labelFilterGenre.Text = "Genre";
-            // 
-            // checkBoxFantasy
-            // 
-            this.checkBoxFantasy.AutoSize = true;
-            this.checkBoxFantasy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxFantasy.ForeColor = System.Drawing.Color.White;
-            this.checkBoxFantasy.Location = new System.Drawing.Point(138, 29);
-            this.checkBoxFantasy.Name = "checkBoxFantasy";
-            this.checkBoxFantasy.Size = new System.Drawing.Size(85, 24);
-            this.checkBoxFantasy.TabIndex = 7;
-            this.checkBoxFantasy.Text = "Fantasy";
-            this.checkBoxFantasy.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxDrama
-            // 
-            this.checkBoxDrama.AutoSize = true;
-            this.checkBoxDrama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxDrama.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDrama.Location = new System.Drawing.Point(138, 177);
-            this.checkBoxDrama.Name = "checkBoxDrama";
-            this.checkBoxDrama.Size = new System.Drawing.Size(76, 24);
-            this.checkBoxDrama.TabIndex = 12;
-            this.checkBoxDrama.Text = "Drama";
-            this.checkBoxDrama.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxHorror
-            // 
-            this.checkBoxHorror.AutoSize = true;
-            this.checkBoxHorror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxHorror.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHorror.Location = new System.Drawing.Point(300, 29);
-            this.checkBoxHorror.Name = "checkBoxHorror";
-            this.checkBoxHorror.Size = new System.Drawing.Size(73, 24);
-            this.checkBoxHorror.TabIndex = 11;
-            this.checkBoxHorror.Text = "Horror";
-            this.checkBoxHorror.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSciFi
-            // 
-            this.checkBoxSciFi.AutoSize = true;
-            this.checkBoxSciFi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxSciFi.ForeColor = System.Drawing.Color.White;
-            this.checkBoxSciFi.Location = new System.Drawing.Point(300, 66);
-            this.checkBoxSciFi.Name = "checkBoxSciFi";
-            this.checkBoxSciFi.Size = new System.Drawing.Size(63, 24);
-            this.checkBoxSciFi.TabIndex = 10;
-            this.checkBoxSciFi.Text = "Sci-fi";
-            this.checkBoxSciFi.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxHistorical
-            // 
-            this.checkBoxHistorical.AutoSize = true;
-            this.checkBoxHistorical.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxHistorical.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHistorical.Location = new System.Drawing.Point(300, 103);
-            this.checkBoxHistorical.Name = "checkBoxHistorical";
-            this.checkBoxHistorical.Size = new System.Drawing.Size(93, 24);
-            this.checkBoxHistorical.TabIndex = 9;
-            this.checkBoxHistorical.Text = "Historical";
-            this.checkBoxHistorical.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAdventure
-            // 
-            this.checkBoxAdventure.AutoSize = true;
-            this.checkBoxAdventure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxAdventure.ForeColor = System.Drawing.Color.White;
-            this.checkBoxAdventure.Location = new System.Drawing.Point(300, 140);
-            this.checkBoxAdventure.Name = "checkBoxAdventure";
-            this.checkBoxAdventure.Size = new System.Drawing.Size(101, 24);
-            this.checkBoxAdventure.TabIndex = 18;
-            this.checkBoxAdventure.Text = "Adventure";
-            this.checkBoxAdventure.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxLessT1
-            // 
-            this.checkBoxLessT1.AutoSize = true;
-            this.checkBoxLessT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxLessT1.ForeColor = System.Drawing.Color.White;
-            this.checkBoxLessT1.Location = new System.Drawing.Point(689, 29);
-            this.checkBoxLessT1.Name = "checkBoxLessT1";
-            this.checkBoxLessT1.Size = new System.Drawing.Size(147, 24);
-            this.checkBoxLessT1.TabIndex = 30;
-            this.checkBoxLessT1.Text = "Less than 1 hour";
-            this.checkBoxLessT1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBetween12
-            // 
-            this.checkBoxBetween12.AutoSize = true;
-            this.checkBoxBetween12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxBetween12.ForeColor = System.Drawing.Color.White;
-            this.checkBoxBetween12.Location = new System.Drawing.Point(689, 66);
-            this.checkBoxBetween12.Name = "checkBoxBetween12";
-            this.checkBoxBetween12.Size = new System.Drawing.Size(192, 24);
-            this.checkBoxBetween12.TabIndex = 31;
-            this.checkBoxBetween12.Text = "Between 1 and 2 hours";
-            this.checkBoxBetween12.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBetween23
-            // 
-            this.checkBoxBetween23.AutoSize = true;
-            this.checkBoxBetween23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxBetween23.ForeColor = System.Drawing.Color.White;
-            this.checkBoxBetween23.Location = new System.Drawing.Point(689, 103);
-            this.checkBoxBetween23.Name = "checkBoxBetween23";
-            this.checkBoxBetween23.Size = new System.Drawing.Size(192, 24);
-            this.checkBoxBetween23.TabIndex = 32;
-            this.checkBoxBetween23.Text = "Between 2 and 3 hours";
-            this.checkBoxBetween23.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMoreT3
-            // 
-            this.checkBoxMoreT3.AutoSize = true;
-            this.checkBoxMoreT3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxMoreT3.ForeColor = System.Drawing.Color.White;
-            this.checkBoxMoreT3.Location = new System.Drawing.Point(689, 140);
-            this.checkBoxMoreT3.Name = "checkBoxMoreT3";
-            this.checkBoxMoreT3.Size = new System.Drawing.Size(157, 24);
-            this.checkBoxMoreT3.TabIndex = 33;
-            this.checkBoxMoreT3.Text = "More than 3 hours";
-            this.checkBoxMoreT3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNoPG
-            // 
-            this.checkBoxNoPG.AutoSize = true;
-            this.checkBoxNoPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxNoPG.ForeColor = System.Drawing.Color.White;
-            this.checkBoxNoPG.Location = new System.Drawing.Point(955, 29);
-            this.checkBoxNoPG.Name = "checkBoxNoPG";
-            this.checkBoxNoPG.Size = new System.Drawing.Size(180, 24);
-            this.checkBoxNoPG.TabIndex = 34;
-            this.checkBoxNoPG.Text = "No Parental guidance";
-            this.checkBoxNoPG.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12Y
-            // 
-            this.checkBox12Y.AutoSize = true;
-            this.checkBox12Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox12Y.ForeColor = System.Drawing.Color.White;
-            this.checkBox12Y.Location = new System.Drawing.Point(955, 66);
-            this.checkBox12Y.Name = "checkBox12Y";
-            this.checkBox12Y.Size = new System.Drawing.Size(88, 24);
-            this.checkBox12Y.TabIndex = 35;
-            this.checkBox12Y.Text = "12 years";
-            this.checkBox12Y.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14Y
-            // 
-            this.checkBox14Y.AutoSize = true;
-            this.checkBox14Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox14Y.ForeColor = System.Drawing.Color.White;
-            this.checkBox14Y.Location = new System.Drawing.Point(955, 103);
-            this.checkBox14Y.Name = "checkBox14Y";
-            this.checkBox14Y.Size = new System.Drawing.Size(88, 24);
-            this.checkBox14Y.TabIndex = 36;
-            this.checkBox14Y.Text = "14 years";
-            this.checkBox14Y.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16Y
-            // 
-            this.checkBox16Y.AutoSize = true;
-            this.checkBox16Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox16Y.ForeColor = System.Drawing.Color.White;
-            this.checkBox16Y.Location = new System.Drawing.Point(955, 140);
-            this.checkBox16Y.Name = "checkBox16Y";
-            this.checkBox16Y.Size = new System.Drawing.Size(88, 24);
-            this.checkBox16Y.TabIndex = 37;
-            this.checkBox16Y.Text = "16 years";
-            this.checkBox16Y.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18Y
-            // 
-            this.checkBox18Y.AutoSize = true;
-            this.checkBox18Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox18Y.ForeColor = System.Drawing.Color.White;
-            this.checkBox18Y.Location = new System.Drawing.Point(955, 177);
-            this.checkBox18Y.Name = "checkBox18Y";
-            this.checkBox18Y.Size = new System.Drawing.Size(88, 24);
-            this.checkBox18Y.TabIndex = 38;
-            this.checkBox18Y.Text = "18 years";
-            this.checkBox18Y.UseVisualStyleBackColor = true;
             // 
             // buttonFilter
             // 
@@ -588,7 +586,7 @@
             this.buttonFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.buttonFilter.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonFilter.ForeColor = System.Drawing.Color.Black;
-            this.buttonFilter.Location = new System.Drawing.Point(583, 217);
+            this.buttonFilter.Location = new System.Drawing.Point(553, 217);
             this.buttonFilter.Name = "buttonFilter";
             this.buttonFilter.Size = new System.Drawing.Size(100, 30);
             this.buttonFilter.TabIndex = 39;
@@ -598,16 +596,95 @@
             // 
             // buttonClearFilters
             // 
-            this.buttonClearFilters.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClearFilters.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonClearFilters.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClearFilters.ForeColor = System.Drawing.Color.Black;
-            this.buttonClearFilters.Location = new System.Drawing.Point(1158, 215);
+            this.buttonClearFilters.Location = new System.Drawing.Point(1151, 217);
             this.buttonClearFilters.Name = "buttonClearFilters";
             this.buttonClearFilters.Size = new System.Drawing.Size(90, 30);
             this.buttonClearFilters.TabIndex = 40;
             this.buttonClearFilters.Text = "Clear All";
             this.buttonClearFilters.UseVisualStyleBackColor = true;
             this.buttonClearFilters.Click += new System.EventHandler(this.buttonClearFilters_Click);
+            // 
+            // groupBoxDurationFilter
+            // 
+            this.groupBoxDurationFilter.Controls.Add(this.tableLayoutPanel1);
+            this.groupBoxDurationFilter.Location = new System.Drawing.Point(659, 28);
+            this.groupBoxDurationFilter.Name = "groupBoxDurationFilter";
+            this.groupBoxDurationFilter.Size = new System.Drawing.Size(197, 177);
+            this.groupBoxDurationFilter.TabIndex = 6;
+            this.groupBoxDurationFilter.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonMoreT3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonBetween2A3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonBetween1A2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonLessT1Hour, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, -2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(210, 190);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // radioButtonMoreT3
+            // 
+            this.radioButtonMoreT3.AutoSize = true;
+            this.radioButtonMoreT3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonMoreT3.ForeColor = System.Drawing.Color.White;
+            this.radioButtonMoreT3.Location = new System.Drawing.Point(3, 117);
+            this.radioButtonMoreT3.Name = "radioButtonMoreT3";
+            this.radioButtonMoreT3.Size = new System.Drawing.Size(156, 24);
+            this.radioButtonMoreT3.TabIndex = 9;
+            this.radioButtonMoreT3.Text = "More than 3 hours";
+            this.radioButtonMoreT3.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonBetween2A3
+            // 
+            this.radioButtonBetween2A3.AutoSize = true;
+            this.radioButtonBetween2A3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonBetween2A3.ForeColor = System.Drawing.Color.White;
+            this.radioButtonBetween2A3.Location = new System.Drawing.Point(3, 79);
+            this.radioButtonBetween2A3.Name = "radioButtonBetween2A3";
+            this.radioButtonBetween2A3.Size = new System.Drawing.Size(191, 24);
+            this.radioButtonBetween2A3.TabIndex = 6;
+            this.radioButtonBetween2A3.Text = "Between 2 and 3 hours";
+            this.radioButtonBetween2A3.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonBetween1A2
+            // 
+            this.radioButtonBetween1A2.AutoSize = true;
+            this.radioButtonBetween1A2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonBetween1A2.ForeColor = System.Drawing.Color.White;
+            this.radioButtonBetween1A2.Location = new System.Drawing.Point(3, 41);
+            this.radioButtonBetween1A2.Name = "radioButtonBetween1A2";
+            this.radioButtonBetween1A2.Size = new System.Drawing.Size(191, 24);
+            this.radioButtonBetween1A2.TabIndex = 3;
+            this.radioButtonBetween1A2.Text = "Between 1 and 2 hours";
+            this.radioButtonBetween1A2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonLessT1Hour
+            // 
+            this.radioButtonLessT1Hour.AutoSize = true;
+            this.radioButtonLessT1Hour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonLessT1Hour.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLessT1Hour.Location = new System.Drawing.Point(3, 3);
+            this.radioButtonLessT1Hour.Name = "radioButtonLessT1Hour";
+            this.radioButtonLessT1Hour.Size = new System.Drawing.Size(146, 24);
+            this.radioButtonLessT1Hour.TabIndex = 0;
+            this.radioButtonLessT1Hour.Text = "Less than 1 hour";
+            this.radioButtonLessT1Hour.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanelSort
             // 
@@ -635,6 +712,7 @@
             // buttonSortOld
             // 
             this.buttonSortOld.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortOld.Location = new System.Drawing.Point(973, 8);
             this.buttonSortOld.Name = "buttonSortOld";
             this.buttonSortOld.Size = new System.Drawing.Size(75, 23);
@@ -646,6 +724,7 @@
             // buttonSortNew
             // 
             this.buttonSortNew.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortNew.Location = new System.Drawing.Point(846, 8);
             this.buttonSortNew.Name = "buttonSortNew";
             this.buttonSortNew.Size = new System.Drawing.Size(75, 23);
@@ -657,6 +736,7 @@
             // buttonSortZA
             // 
             this.buttonSortZA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortZA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortZA.Location = new System.Drawing.Point(347, 8);
             this.buttonSortZA.Name = "buttonSortZA";
             this.buttonSortZA.Size = new System.Drawing.Size(75, 23);
@@ -692,6 +772,7 @@
             // buttonSortAZ
             // 
             this.buttonSortAZ.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortAZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortAZ.Location = new System.Drawing.Point(218, 8);
             this.buttonSortAZ.Name = "buttonSortAZ";
             this.buttonSortAZ.Size = new System.Drawing.Size(75, 23);
@@ -817,10 +898,11 @@
             this.buttonDeleteMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteMovie.Location = new System.Drawing.Point(313, 3);
             this.buttonDeleteMovie.Name = "buttonDeleteMovie";
-            this.buttonDeleteMovie.Size = new System.Drawing.Size(124, 31);
+            this.buttonDeleteMovie.Size = new System.Drawing.Size(124, 35);
             this.buttonDeleteMovie.TabIndex = 1;
             this.buttonDeleteMovie.Text = "Delete movie";
             this.buttonDeleteMovie.UseVisualStyleBackColor = true;
+            this.buttonDeleteMovie.Visible = false;
             this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
             // 
             // buttonEditMovie
@@ -829,23 +911,26 @@
             this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEditMovie.Location = new System.Drawing.Point(443, 3);
             this.buttonEditMovie.Name = "buttonEditMovie";
-            this.buttonEditMovie.Size = new System.Drawing.Size(100, 30);
+            this.buttonEditMovie.Size = new System.Drawing.Size(100, 35);
             this.buttonEditMovie.TabIndex = 8;
             this.buttonEditMovie.Text = "Edit movie";
             this.buttonEditMovie.UseVisualStyleBackColor = true;
+            this.buttonEditMovie.Visible = false;
             this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
             // 
             // buttonAddMovie
             // 
             this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonAddMovie.AutoSize = true;
+            this.buttonAddMovie.Enabled = false;
             this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddMovie.Location = new System.Drawing.Point(162, 3);
             this.buttonAddMovie.Name = "buttonAddMovie";
-            this.buttonAddMovie.Size = new System.Drawing.Size(145, 31);
+            this.buttonAddMovie.Size = new System.Drawing.Size(145, 35);
             this.buttonAddMovie.TabIndex = 0;
             this.buttonAddMovie.Text = "Add new movie";
             this.buttonAddMovie.UseVisualStyleBackColor = true;
+            this.buttonAddMovie.Visible = false;
             this.buttonAddMovie.Click += new System.EventHandler(this.buttonAddMovie_Click);
             // 
             // buttonViewInfo
@@ -857,7 +942,7 @@
             this.buttonViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonViewInfo.Location = new System.Drawing.Point(3, 3);
             this.buttonViewInfo.Name = "buttonViewInfo";
-            this.buttonViewInfo.Size = new System.Drawing.Size(153, 31);
+            this.buttonViewInfo.Size = new System.Drawing.Size(153, 35);
             this.buttonViewInfo.TabIndex = 2;
             this.buttonViewInfo.Text = "View Information";
             this.buttonViewInfo.UseVisualStyleBackColor = false;
@@ -865,7 +950,7 @@
             // 
             // imageListMovies
             // 
-            this.imageListMovies.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListMovies.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
             this.imageListMovies.ImageSize = new System.Drawing.Size(180, 230);
             this.imageListMovies.TransparentColor = System.Drawing.Color.Transparent;
             // 
@@ -890,6 +975,15 @@
             this.tableLayoutPanelSortFilter.ResumeLayout(false);
             this.tableLayoutPanelFilter.ResumeLayout(false);
             this.tableLayoutPanelFilter.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.groupBoxGenreFilter.ResumeLayout(false);
+            this.tableLayoutPanelFGenre.ResumeLayout(false);
+            this.tableLayoutPanelFGenre.PerformLayout();
+            this.groupBoxDurationFilter.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanelSort.ResumeLayout(false);
             this.tableLayoutPanelSort.PerformLayout();
             this.tableLayoutPanelMoviesMenu.ResumeLayout(false);
@@ -927,31 +1021,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSortFilter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelFilter;
         private System.Windows.Forms.Label labelFilterPG;
-        private System.Windows.Forms.CheckBox checkBoxOther;
-        private System.Windows.Forms.CheckBox checkBoxSeries;
-        private System.Windows.Forms.CheckBox checkBoxBiographical;
-        private System.Windows.Forms.CheckBox checkBoxSoapOpera;
-        private System.Windows.Forms.CheckBox checkBoxComedy;
-        private System.Windows.Forms.CheckBox checkBoxRomance;
-        private System.Windows.Forms.CheckBox checkBoxAction;
-        private System.Windows.Forms.CheckBox checkBoxThriller;
         private System.Windows.Forms.Label labelFilterDuration;
         private System.Windows.Forms.Label labelFilterGenre;
-        private System.Windows.Forms.CheckBox checkBoxFantasy;
-        private System.Windows.Forms.CheckBox checkBoxDrama;
-        private System.Windows.Forms.CheckBox checkBoxHorror;
-        private System.Windows.Forms.CheckBox checkBoxSciFi;
-        private System.Windows.Forms.CheckBox checkBoxHistorical;
-        private System.Windows.Forms.CheckBox checkBoxAdventure;
-        private System.Windows.Forms.CheckBox checkBoxLessT1;
-        private System.Windows.Forms.CheckBox checkBoxBetween12;
-        private System.Windows.Forms.CheckBox checkBoxBetween23;
-        private System.Windows.Forms.CheckBox checkBoxMoreT3;
-        private System.Windows.Forms.CheckBox checkBoxNoPG;
-        private System.Windows.Forms.CheckBox checkBox12Y;
-        private System.Windows.Forms.CheckBox checkBox14Y;
-        private System.Windows.Forms.CheckBox checkBox16Y;
-        private System.Windows.Forms.CheckBox checkBox18Y;
         private System.Windows.Forms.Button buttonFilter;
         private System.Windows.Forms.Button buttonClearFilters;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSort;
@@ -963,5 +1034,33 @@
         private System.Windows.Forms.Button buttonSortAZ;
         private System.Windows.Forms.Button buttonEditMovie;
         private System.Windows.Forms.ImageList imageListMovies;
+        private System.Windows.Forms.GroupBox groupBoxGenreFilter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelFGenre;
+        private System.Windows.Forms.RadioButton radioButtonFantasy;
+        private System.Windows.Forms.RadioButton radioButtonComedy;
+        private System.Windows.Forms.RadioButton radioButtonDrama;
+        private System.Windows.Forms.RadioButton radioButtonAdventure;
+        private System.Windows.Forms.RadioButton radioButtonRomance;
+        private System.Windows.Forms.RadioButton radioButtonSeries;
+        private System.Windows.Forms.RadioButton radioButtonHistorical;
+        private System.Windows.Forms.RadioButton radioButtonAction;
+        private System.Windows.Forms.RadioButton radioButtonBiographical;
+        private System.Windows.Forms.RadioButton radioButtonScifi;
+        private System.Windows.Forms.RadioButton radioButtonThriller;
+        private System.Windows.Forms.RadioButton radioButtonSoapOpera;
+        private System.Windows.Forms.RadioButton radioButtonHorror;
+        private System.Windows.Forms.GroupBox groupBoxDurationFilter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.RadioButton radioButtonMoreT3;
+        private System.Windows.Forms.RadioButton radioButtonBetween2A3;
+        private System.Windows.Forms.RadioButton radioButtonBetween1A2;
+        private System.Windows.Forms.RadioButton radioButtonLessT1Hour;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.RadioButton radioButtonPG18;
+        private System.Windows.Forms.RadioButton radioButtonPG16;
+        private System.Windows.Forms.RadioButton radioButtonPG14;
+        private System.Windows.Forms.RadioButton radioButtonPG12;
+        private System.Windows.Forms.RadioButton radioButtonNoPG;
     }
 }

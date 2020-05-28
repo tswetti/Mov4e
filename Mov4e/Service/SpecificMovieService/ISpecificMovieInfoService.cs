@@ -104,5 +104,11 @@ namespace Mov4e.Service.SpecificMovieService
         /// <param name="id"></param>
         /// <returns></returns>
         int GetUserRate(int id);
+
+        /// <summary>
+        /// This method deletes the rate of user.
+        /// </summary>
+        /// <param name="userId"></param>
+        void DeleteUserRate(int userId);
     }
 }

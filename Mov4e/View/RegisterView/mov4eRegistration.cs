@@ -66,10 +66,13 @@ namespace Mov4e.View.RegisterView
             }
         }
 
+        bool hiddenPass;
+
         public mov4eRegistration(ILogIn mainform)
         {
             InitializeComponent();
             textBoxPassword.PasswordChar = '*';
+            hiddenPass = true;
             this.comboBoxAge.DropDownStyle = ComboBoxStyle.DropDownList;
             System.Object[] ageObject = new System.Object[71];
             for (int i = 0; i < 71; i++)
@@ -108,9 +111,16 @@ namespace Mov4e.View.RegisterView
 
         private void closeLabel_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Are You sure Want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult d = MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (d == DialogResult.OK)
             {
+                if (Properties.Settings.Default.Logged != true)
+                {
+                    Properties.Settings.Default.LoggedForOneTime = false;
+                    Properties.Settings.Default.userPosition = null;
+                    Properties.Settings.Default.id = 0;
+                    Properties.Settings.Default.Save();
+                }
                 this.Controls.Clear();
                 Environment.Exit(1);
             }
@@ -308,6 +318,22 @@ namespace Mov4e.View.RegisterView
         public void ShowForm()
         {
             this.Show();
+        }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            if (hiddenPass)
+            {
+                textBoxPassword.PasswordChar = '\0';
+                pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass_blue;
+                hiddenPass = false;
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '*';
+                pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass;
+                hiddenPass = true;
+            }
         }
     }
 }

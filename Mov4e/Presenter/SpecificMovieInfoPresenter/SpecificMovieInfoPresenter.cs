@@ -130,11 +130,11 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
         /// This method deletes movie from current user's watchlist.
         /// </summary>
         /// <param name="userId"></param>
-        public void DeleteMovieFromWatchList(int userId)
+        public void DeleteMovieFromWatchList()
         {
             try
             {
-                _specificMovieService.MovieRemover(userId);
+                _specificMovieService.MovieRemover(_specificMovieView.userId);
             }
             catch (Exception e)
             {
@@ -148,11 +148,11 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
         /// this method adds movie to current user's watchlis.
         /// </summary>
         /// <param name="userId"></param>
-        public void AddMovieINWatchList(int userId)
+        public void AddMovieINWatchList()
         {
             try
             {
-                _specificMovieService.MovieAdder(userId);
+                _specificMovieService.MovieAdder(_specificMovieView.userId);
             }
             catch (Exception e)
             {
@@ -277,12 +277,12 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
         /// <summary>
         /// This method gets the rate of current user.
         /// </summary>
-        /// <param name="id"></param>
-        public void SetUserRate(int id)
+        /// <returns></returns>
+        public void SetUserRate()
         {
             try
             {
-                _specificMovieView.userRate = _specificMovieService.GetUserRate(id);
+                _specificMovieView.userRate = _specificMovieService.GetUserRate(_specificMovieView.userId);
             }
             catch (Exception e)
             {
@@ -292,6 +292,22 @@ namespace Mov4e.Presenter.SpecificMovieInfoPresenter
             }
         }
 
- 
+        /// <summary>
+        /// This method removes rate of current user.
+        /// </summary>
+        public void DeleteRate()
+        {
+            try
+            {
+                _specificMovieService.DeleteUserRate(_specificMovieView.userId);
+                this.UpdateRate();
+            }
+            catch (Exception e)
+            {
+                Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
+                         + "\n" + e.ToString());
+                _specificMovieView.ErrorMassage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
+            }
+        }
     }
 }

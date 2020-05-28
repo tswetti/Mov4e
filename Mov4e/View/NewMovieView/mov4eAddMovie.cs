@@ -79,14 +79,18 @@ namespace Mov4e.View.NewMovieView
 
         private void closeLabel_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Are You sure Want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult d = MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (d == DialogResult.OK)
             {
-                Properties.Settings.Default.LoggedForOneTime = false;
-                Properties.Settings.Default.Save();
+                if (Properties.Settings.Default.Logged != true)
+                {
+                    Properties.Settings.Default.LoggedForOneTime = false;
+                    Properties.Settings.Default.userPosition = null;
+                    Properties.Settings.Default.id = 0;
+                    Properties.Settings.Default.Save();
+                }
                 this.Controls.Clear();
                 Environment.Exit(1);
-
             }
         }
 
@@ -323,6 +327,7 @@ namespace Mov4e.View.NewMovieView
         public void updateMovie()
         {
             MovieValidation.ValidateMovieUpdate(id, title, genre, pg, date, summary, picture, duration);
+            allM.UpdateMovie(id, textBoxName.Text, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
         }
     }
 }

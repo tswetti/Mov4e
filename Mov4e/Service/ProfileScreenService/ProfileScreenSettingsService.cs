@@ -88,7 +88,7 @@ namespace Mov4e.Service.ProfileScreenService
                 arePasswordsSame(CurrentUser.password, oldPass);
                 isPasswordCorrect(newPass);
                 _profileScreeenSettings.ChangePassword(Properties.Settings.Default.id, HashPassword(newPass));
-                CurrentUser.password = newPass;
+                CurrentUser.password = _profileScreeenSettings.GetUserFromDB(Properties.Settings.Default.id).password;
 
                 this.SendMessage(CurrentUserInfo.email, "Hello " + CurrentUser.userName + "! You have changed your password successfully!");
             }

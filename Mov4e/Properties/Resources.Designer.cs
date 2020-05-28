@@ -223,6 +223,26 @@ namespace Mov4e.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap show_pass {
+            get {
+                object obj = ResourceManager.GetObject("show_pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap show_pass_blue {
+            get {
+                object obj = ResourceManager.GetObject("show_pass_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sort_blue {
             get {
                 object obj = ResourceManager.GetObject("sort_blue", resourceCulture);

@@ -68,6 +68,8 @@
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.panelHr1 = new System.Windows.Forms.Panel();
+            this.panelPassword = new System.Windows.Forms.Panel();
+            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
@@ -81,6 +83,8 @@
             this.tableLayoutPanelGenderAndYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMale)).BeginInit();
+            this.panelPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -197,21 +201,21 @@
             this.tableLayoutPanelRegistrationContent.Location = new System.Drawing.Point(39, 12);
             this.tableLayoutPanelRegistrationContent.Name = "tableLayoutPanelRegistrationContent";
             this.tableLayoutPanelRegistrationContent.RowCount = 15;
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.888889F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.888889F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.894053F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.02765F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.809296F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.001843F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.809296F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.001843F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.809296F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.001843F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.809296F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.001843F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.891754F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.001843F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.02765F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.01843F));
+            this.tableLayoutPanelRegistrationContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.894053F));
             this.tableLayoutPanelRegistrationContent.Size = new System.Drawing.Size(320, 450);
             this.tableLayoutPanelRegistrationContent.TabIndex = 2;
             // 
@@ -283,9 +287,10 @@
             this.textBoxUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
             this.textBoxUsername.Location = new System.Drawing.Point(91, 3);
+            this.textBoxUsername.Multiline = true;
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(200, 19);
             this.textBoxUsername.TabIndex = 1;
@@ -296,11 +301,11 @@
             // 
             this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUsername.ForeColor = System.Drawing.Color.White;
-            this.labelUsername.Location = new System.Drawing.Point(3, 4);
+            this.labelUsername.Location = new System.Drawing.Point(3, 3);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(71, 16);
+            this.labelUsername.Size = new System.Drawing.Size(78, 18);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "username:";
             // 
@@ -316,7 +321,7 @@
             this.tableLayoutPanelFName.Name = "tableLayoutPanelFName";
             this.tableLayoutPanelFName.RowCount = 1;
             this.tableLayoutPanelFName.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFName.Size = new System.Drawing.Size(300, 22);
+            this.tableLayoutPanelFName.Size = new System.Drawing.Size(300, 25);
             this.tableLayoutPanelFName.TabIndex = 6;
             // 
             // textBoxFirstName
@@ -324,9 +329,10 @@
             this.textBoxFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.ForeColor = System.Drawing.Color.White;
             this.textBoxFirstName.Location = new System.Drawing.Point(91, 3);
+            this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(200, 19);
             this.textBoxFirstName.TabIndex = 1;
@@ -337,11 +343,11 @@
             // 
             this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.ForeColor = System.Drawing.Color.White;
             this.labelFirstName.Location = new System.Drawing.Point(3, 3);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(68, 16);
+            this.labelFirstName.Size = new System.Drawing.Size(77, 18);
             this.labelFirstName.TabIndex = 2;
             this.labelFirstName.Text = "first name:";
             // 
@@ -365,9 +371,10 @@
             this.textBoxLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.ForeColor = System.Drawing.Color.White;
             this.textBoxLastName.Location = new System.Drawing.Point(91, 3);
+            this.textBoxLastName.Multiline = true;
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(200, 19);
             this.textBoxLastName.TabIndex = 1;
@@ -378,11 +385,11 @@
             // 
             this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.ForeColor = System.Drawing.Color.White;
-            this.labelLastName.Location = new System.Drawing.Point(3, 4);
+            this.labelLastName.Location = new System.Drawing.Point(3, 3);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(69, 16);
+            this.labelLastName.Size = new System.Drawing.Size(76, 18);
             this.labelLastName.TabIndex = 2;
             this.labelLastName.Text = "last name:";
             // 
@@ -449,9 +456,10 @@
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.White;
             this.textBoxEmail.Location = new System.Drawing.Point(91, 3);
+            this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(200, 19);
             this.textBoxEmail.TabIndex = 1;
@@ -462,11 +470,11 @@
             // 
             this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.ForeColor = System.Drawing.Color.White;
-            this.labelEmail.Location = new System.Drawing.Point(3, 4);
+            this.labelEmail.Location = new System.Drawing.Point(3, 3);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(48, 16);
+            this.labelEmail.Size = new System.Drawing.Size(52, 18);
             this.labelEmail.TabIndex = 2;
             this.labelEmail.Text = "e-mail:";
             // 
@@ -476,13 +484,13 @@
             this.tableLayoutPanelPassword.ColumnCount = 2;
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.66667F));
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
-            this.tableLayoutPanelPassword.Controls.Add(this.textBoxPassword, 1, 0);
+            this.tableLayoutPanelPassword.Controls.Add(this.panelPassword, 1, 0);
             this.tableLayoutPanelPassword.Controls.Add(this.labelPassword, 0, 0);
             this.tableLayoutPanelPassword.Location = new System.Drawing.Point(10, 255);
             this.tableLayoutPanelPassword.Name = "tableLayoutPanelPassword";
             this.tableLayoutPanelPassword.RowCount = 1;
             this.tableLayoutPanelPassword.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 30);
             this.tableLayoutPanelPassword.TabIndex = 9;
             // 
             // textBoxPassword
@@ -490,9 +498,10 @@
             this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
-            this.textBoxPassword.Location = new System.Drawing.Point(91, 3);
+            this.textBoxPassword.Location = new System.Drawing.Point(1, 4);
+            this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(200, 19);
             this.textBoxPassword.TabIndex = 1;
@@ -503,11 +512,11 @@
             // 
             this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPassword.ForeColor = System.Drawing.Color.White;
-            this.labelPassword.Location = new System.Drawing.Point(3, 4);
+            this.labelPassword.Location = new System.Drawing.Point(3, 6);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(70, 16);
+            this.labelPassword.Size = new System.Drawing.Size(77, 18);
             this.labelPassword.TabIndex = 2;
             this.labelPassword.Text = "password:";
             // 
@@ -515,11 +524,11 @@
             // 
             this.tableLayoutPanelGenderAndYear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanelGenderAndYear.ColumnCount = 5;
-            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelGenderAndYear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelGenderAndYear.Controls.Add(this.pictureBoxFemale, 2, 0);
             this.tableLayoutPanelGenderAndYear.Controls.Add(this.labelGender, 0, 0);
             this.tableLayoutPanelGenderAndYear.Controls.Add(this.comboBoxAge, 4, 0);
@@ -530,8 +539,8 @@
             this.tableLayoutPanelGenderAndYear.Location = new System.Drawing.Point(10, 293);
             this.tableLayoutPanelGenderAndYear.Name = "tableLayoutPanelGenderAndYear";
             this.tableLayoutPanelGenderAndYear.RowCount = 2;
-            this.tableLayoutPanelGenderAndYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelGenderAndYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelGenderAndYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanelGenderAndYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanelGenderAndYear.Size = new System.Drawing.Size(300, 55);
             this.tableLayoutPanelGenderAndYear.TabIndex = 10;
             // 
@@ -539,7 +548,7 @@
             // 
             this.pictureBoxFemale.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBoxFemale.Image = global::Mov4e.Properties.Resources.female_symbol;
-            this.pictureBoxFemale.Location = new System.Drawing.Point(115, 7);
+            this.pictureBoxFemale.Location = new System.Drawing.Point(109, 10);
             this.pictureBoxFemale.Name = "pictureBoxFemale";
             this.pictureBoxFemale.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxFemale.TabIndex = 9;
@@ -549,11 +558,11 @@
             // 
             this.labelGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelGender.AutoSize = true;
-            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
-            this.labelGender.Location = new System.Drawing.Point(3, 9);
+            this.labelGender.Location = new System.Drawing.Point(3, 10);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(54, 16);
+            this.labelGender.Size = new System.Drawing.Size(57, 18);
             this.labelGender.TabIndex = 3;
             this.labelGender.Text = "gender:";
             // 
@@ -561,7 +570,7 @@
             // 
             this.comboBoxAge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxAge.FormattingEnabled = true;
-            this.comboBoxAge.Location = new System.Drawing.Point(225, 7);
+            this.comboBoxAge.Location = new System.Drawing.Point(230, 8);
             this.comboBoxAge.Name = "comboBoxAge";
             this.comboBoxAge.Size = new System.Drawing.Size(60, 21);
             this.comboBoxAge.TabIndex = 5;
@@ -571,7 +580,7 @@
             // 
             this.pictureBoxMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxMale.Image = global::Mov4e.Properties.Resources.male_symbol;
-            this.pictureBoxMale.Location = new System.Drawing.Point(68, 3);
+            this.pictureBoxMale.Location = new System.Drawing.Point(68, 4);
             this.pictureBoxMale.Name = "pictureBoxMale";
             this.pictureBoxMale.Size = new System.Drawing.Size(29, 29);
             this.pictureBoxMale.TabIndex = 6;
@@ -581,11 +590,11 @@
             // 
             this.labelAge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAge.AutoSize = true;
-            this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAge.ForeColor = System.Drawing.Color.White;
-            this.labelAge.Location = new System.Drawing.Point(161, 1);
+            this.labelAge.Location = new System.Drawing.Point(144, 10);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(38, 32);
+            this.labelAge.Size = new System.Drawing.Size(74, 18);
             this.labelAge.TabIndex = 4;
             this.labelAge.Text = "Birth year:";
             this.labelAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -594,9 +603,9 @@
             // 
             this.radioButtonMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Location = new System.Drawing.Point(75, 38);
+            this.radioButtonMale.Location = new System.Drawing.Point(75, 41);
             this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonMale.Size = new System.Drawing.Size(14, 11);
             this.radioButtonMale.TabIndex = 7;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.UseVisualStyleBackColor = true;
@@ -606,9 +615,9 @@
             // 
             this.radioButtonFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Location = new System.Drawing.Point(120, 38);
+            this.radioButtonFemale.Location = new System.Drawing.Point(114, 41);
             this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonFemale.Size = new System.Drawing.Size(14, 11);
             this.radioButtonFemale.TabIndex = 8;
             this.radioButtonFemale.TabStop = true;
             this.radioButtonFemale.UseVisualStyleBackColor = true;
@@ -622,6 +631,26 @@
             this.panelHr1.Name = "panelHr1";
             this.panelHr1.Size = new System.Drawing.Size(280, 1);
             this.panelHr1.TabIndex = 3;
+            // 
+            // panelPassword
+            // 
+            this.panelPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panelPassword.Controls.Add(this.pictureBoxShowPass);
+            this.panelPassword.Controls.Add(this.textBoxPassword);
+            this.panelPassword.Location = new System.Drawing.Point(91, 3);
+            this.panelPassword.Name = "panelPassword";
+            this.panelPassword.Size = new System.Drawing.Size(200, 24);
+            this.panelPassword.TabIndex = 4;
+            // 
+            // pictureBoxShowPass
+            // 
+            this.pictureBoxShowPass.Image = global::Mov4e.Properties.Resources.show_pass;
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(169, 1);
+            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(21, 21);
+            this.pictureBoxShowPass.TabIndex = 3;
+            this.pictureBoxShowPass.TabStop = false;
+            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
             // 
             // mov4eRegistration
             // 
@@ -658,6 +687,9 @@
             this.tableLayoutPanelGenderAndYear.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMale)).EndInit();
+            this.panelPassword.ResumeLayout(false);
+            this.panelPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -703,5 +735,7 @@
         private System.Windows.Forms.RadioButton radioButtonMale;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.Panel panelHr1;
+        private System.Windows.Forms.Panel panelPassword;
+        private System.Windows.Forms.PictureBox pictureBoxShowPass;
     }
 }
