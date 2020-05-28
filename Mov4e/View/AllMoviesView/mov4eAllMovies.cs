@@ -1138,7 +1138,17 @@ namespace Mov4e.View.AllMoviesView
             this.InitializeMoviesList(mov);
         }
 
-        private void mov4eAllMovies_Load_1(object sender, EventArgs e)
+        private void radioButtonLessT1Hour_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonMoreT3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonBetween1A2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
