@@ -13,15 +13,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
     public class AllMoviesPresenterTests
     {
         [Test]
-        public void Method1()
+        public void CorrectDeleteMovieDeletsAovieFromTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
            
-
             try
             {
-                mp.DeleteMovie(1);
+                movie_presenter.DeleteMovie(1);
             }
             catch (Exception)
             {
@@ -34,15 +33,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method2()
+        public void CorrectEditMovieUpdatesACertainMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.EditMovie(4, "Movie", 7, 18, DateTime.Now, "summary...", new byte[90], 93);
+                movie_presenter.EditMovie(4, "Movie", 7, 18, DateTime.Now, "summary...", new byte[90], 93);
             }
             catch (Exception)
             {
@@ -55,15 +53,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method3()
+        public void CorrectFilterMoviesByGenreDurationAndPGFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMovies(6, 2, 12);
+                movie_presenter.FilterMovies(6, 2, 12);
             }
             catch (Exception)
             {
@@ -76,15 +73,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method4()
+        public void CorrectFilterMoviesByDurationFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMoviesByDuration(2);
+                movie_presenter.FilterMoviesByDuration(2);
             }
             catch (Exception)
             {
@@ -97,15 +93,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method5()
+        public void CorrectFilterMoviesByDurationAndPGFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMoviesByDurationAndPG(2, 12);
+                movie_presenter.FilterMoviesByDurationAndPG(2, 12);
             }
             catch (Exception)
             {
@@ -118,15 +113,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method6()
+        public void CorrectFilterMoviesByGenreFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMoviesByGenres(6);
+                movie_presenter.FilterMoviesByGenres(6);
             }
             catch (Exception)
             {
@@ -139,15 +133,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method7()
+        public void CorrectFilterMoviesByGenreAndDurationFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMoviesByGenresAndDuration(6, 2);
+                movie_presenter.FilterMoviesByGenresAndDuration(6, 2);
             }
             catch (Exception)
             {
@@ -160,15 +153,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method8()
+        public void CorrectFilterMoviesByGenreAndPGFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMoviesByGenresAndPG(6, 12);
+                movie_presenter.FilterMoviesByGenresAndPG(6, 12);
             }
             catch (Exception)
             {
@@ -181,15 +173,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method9()
+        public void CorrectFilterMoviesByPGFiltersTheMovieInTheDataBase()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.FilterMoviesByPG(12);
+                movie_presenter.FilterMoviesByPG(12);
             }
             catch (Exception)
             {
@@ -202,15 +193,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method10()
+        public void CorrectGetMovieReturnsAMovieAsATuple()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.GetMovie(2);
+                movie_presenter.GetMovie(2);
             }
             catch (Exception)
             {
@@ -223,15 +213,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method11()
+        public void CorrectReturnsTheIdOfTheGenreByItsName()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.GetMovieGenre("Drama");
+                movie_presenter.GetMovieGenre("Drama");
             }
             catch (Exception)
             {
@@ -244,15 +233,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method12()
+        public void CorrectGetMoviesByTitleReturnsTheMoviesFromTheDataBaseByTheirTitles()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.GetMoviesByTitle(new List<string>{"Terminator", "Titanic"});
+                movie_presenter.GetMoviesByTitle(new List<string>{"Terminator", "Titanic"});
             }
             catch (Exception)
             {
@@ -265,15 +253,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method13()
+        public void CorrectGetMoviesTitlesReturnsTheTtitlesOfTheMoviesFromTheDataBaseAsAList()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.GetMovieTitles();
+                movie_presenter.GetMovieTitles();
             }
             catch (Exception)
             {
@@ -286,15 +273,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method14()
+        public void CorrectGetUserInfoMethodReturnsTheIdAndThePositionOfACertainUser()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.GetUserInfo("petya", "myPass");
+                movie_presenter.GetUserInfo("petya", "myPass");
             }
             catch (Exception)
             {
@@ -307,15 +293,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method15()
+        public void CorrectSetMovieInformationSetsTheInformationOfTheMovies()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.SetMovieInformation();
+                movie_presenter.SetMovieInformation();
             }
             catch (Exception)
             {
@@ -328,15 +313,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method16()
+        public void CorrectSetMovieTitleSetsTheTitleOfACertainMovie()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.SetMovieTitle(2);
+                movie_presenter.SetMovieTitle(2);
             }
             catch (Exception)
             {
@@ -349,15 +333,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method17()
+        public void CorrectSortByDateMethodSortsTheMoviesFromTheDataBaseByTheirPrimierDate_FromTheOldesToNewest()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.SortByDate();
+                movie_presenter.SortByDate();
             }
             catch (Exception)
             {
@@ -370,15 +353,14 @@ namespace Mov4eTests.PresenterTests.AllMoviesPresenterTests
         }
 
         [Test]
-        public void Method18()
+        public void CorrectSortByTtileMethodsSortsTheMoviesFromTheDataBaseByAlphabeticalOrder_FromAToZ()
         {
             DummyMockedAllMoviesService dummy = new DummyMockedAllMoviesService();
-            IAllMoviesPresenter mp = new AllMoviesPresenter(dummy._iallMoviesService);
-
+            IAllMoviesPresenter movie_presenter = new AllMoviesPresenter(dummy._iallMoviesService);
 
             try
             {
-                mp.SortMoviesByTitle();
+                movie_presenter.SortMoviesByTitle();
             }
             catch (Exception)
             {

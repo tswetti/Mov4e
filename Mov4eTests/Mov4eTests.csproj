@@ -123,6 +123,7 @@
     <Compile Include="ServiceTests\RegisterServiceTests\TestsRegisterService.cs" />
     <Compile Include="ServiceTests\SpecificMovieServiceTests\MockedDummySpecificMovieRepository.cs" />
     <Compile Include="ServiceTests\SpecificMovieServiceTests\TestsSpecificMovie.cs" />
+    <Compile Include="ValidationTests\FilteringValidationTests.cs" />
     <Compile Include="ValidationTests\MovieValidationTests.cs" />
     <Compile Include="ValidationTests\ProfileScreenValidationTests.cs" />
     <Compile Include="ValidationTests\RegisterValidationTests.cs" />

@@ -12,14 +12,14 @@ namespace Mov4eTests.PresenterTests.NewMoviePresenterTests
     public class NewMoviePresenterTests
     {
         [Test]
-        public void Method1()
+        public void CorrectAddMovieSuccessfullyAddsAMovieInTheDataBase()
         {
             DummyMockedNewMovieService dummy = new DummyMockedNewMovieService();
-            INewMoviePresenter mp = new NewMoviePresenter(dummy._inewMovieService);
+            INewMoviePresenter movie_presenter = new NewMoviePresenter(dummy._inewMovieService);
 
             try
             {
-                mp.AddMovie("Movie", 6, 14, DateTime.Now, "summary...", new byte[65], 123);
+                movie_presenter.AddMovie("Movie", 6, 14, DateTime.Now, "summary...", new byte[65], 123);
             }
             catch (Exception)
             {
@@ -32,14 +32,14 @@ namespace Mov4eTests.PresenterTests.NewMoviePresenterTests
         }
 
         [Test]
-        public void Method2()
+        public void CorrectLastMovieIdReturnsTheIdOfTheLastAddedMovieId()
         {
             DummyMockedNewMovieService dummy = new DummyMockedNewMovieService();
-            INewMoviePresenter mp = new NewMoviePresenter(dummy._inewMovieService);
+            INewMoviePresenter movie_presenter = new NewMoviePresenter(dummy._inewMovieService);
 
             try
             {
-                mp.LastMovieId();
+                movie_presenter.LastMovieId();
             }
             catch (Exception)
             {

@@ -13,7 +13,7 @@ namespace Mov4e.Service.AllMoviesService
     public class AllMoviesService: IAllMoviesService
     {
         // A private variable that keeps a reference to a AllMoviesRepository via an interface variable.
-        private IAllMoviesRepository mr = new AllMoviesRepository();
+        private IAllMoviesRepository movie_repo = new AllMoviesRepository();
 
         /// <summary>
         /// A no arguments constructor for the <c>AllMoviesService</c> class.
@@ -23,9 +23,13 @@ namespace Mov4e.Service.AllMoviesService
 
         }
         
+        /// <summary>
+        /// A one argument constructor for the <c>AllMoviesService</c> class.
+        /// </summary>
+        /// <param name="repo">This is a repository param for this class.</param>
         public AllMoviesService(IAllMoviesRepository repo)
         {
-            this.mr = repo;
+            this.movie_repo = repo;
         }
 
         /// <summary>
@@ -36,7 +40,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns a tuple from a movie object and its genre in words (string).</returns>
         public Tuple<Movie, string> GetMovie(int id)
         {
-            return mr.GetMovie(id);
+            return movie_repo.GetMovie(id);
         }
 
         /// <summary>
@@ -56,7 +60,7 @@ namespace Mov4e.Service.AllMoviesService
         {
             try
             {
-                mr.EditMovie(id, title, genre, pg, date, summary, picture, dur);
+                movie_repo.EditMovie(id, title, genre, pg, date, summary, picture, dur);
             }
             catch(ImpossibleDataBaseRecordUpdateException ex)
             {
@@ -77,7 +81,7 @@ namespace Mov4e.Service.AllMoviesService
         {
             try
             {
-                mr.DeleteMovie(id);
+                movie_repo.DeleteMovie(id);
             }
             catch(NotFoundSuchItemException ex)
             {
@@ -95,7 +99,7 @@ namespace Mov4e.Service.AllMoviesService
         {
             try
             {
-                return mr.SortMoviesByTitle();
+                return movie_repo.SortMoviesByTitle();
             }
             catch(NoDataBaseTableRecordsException ex)
             {
@@ -112,7 +116,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> SortByDate()
         {
-            return mr.SortByDate();
+            return movie_repo.SortByDate();
         }
 
         /// <summary>
@@ -126,7 +130,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMovies(int g, int d, int pg)
         {
-            return mr.FilterMovies(g, d, pg);
+            return movie_repo.FilterMovies(g, d, pg);
         }
 
         /// <summary>
@@ -139,7 +143,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByGenresAndDuration(int g, int d)
         {
-            return mr.FilterMoviesByGenresAndDuration(g, d);
+            return movie_repo.FilterMoviesByGenresAndDuration(g, d);
         }
 
         /// <summary>
@@ -152,7 +156,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByGenresAndPG(int g, int pg)
         {
-            return mr.FilterMoviesByGenresAndPG(g, pg);
+            return movie_repo.FilterMoviesByGenresAndPG(g, pg);
         }
 
         /// <summary>
@@ -165,7 +169,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByDurationAndPG(int d, int pg)
         {
-            return mr.FilterMoviesByDurationAndPG(d, pg);
+            return movie_repo.FilterMoviesByDurationAndPG(d, pg);
         }
 
         /// <summary>
@@ -177,7 +181,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByGenres(int g)
         {
-            return mr.FilterMoviesByGenres(g);
+            return movie_repo.FilterMoviesByGenres(g);
         }
 
         /// <summary>
@@ -189,7 +193,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByDuration(int d)
         {
-            return mr.FilterMoviesByDuration(d);
+            return movie_repo.FilterMoviesByDuration(d);
         }
 
         /// <summary>
@@ -201,7 +205,7 @@ namespace Mov4e.Service.AllMoviesService
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByPG(int pg)
         {
-            return mr.FilterMoviesByPG(pg);
+            return movie_repo.FilterMoviesByPG(pg);
         }
 
         /// <summary>
@@ -212,7 +216,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns a dictionaty from movies' ids (int) and movies' wrappers (byte[]).</returns>
         public Dictionary<int, byte[]> GetMoviesByTitles(List<string> titles)
         {
-            return mr.GetMoviesByTitles(titles);
+            return movie_repo.GetMoviesByTitles(titles);
         }
 
         /// <summary>
@@ -224,7 +228,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns the title of a certain movie from the database (string). </returns>
         public string SetMovieTitle(int movieId)
         {
-            return mr.GetMovieTitle(movieId);
+            return movie_repo.GetMovieTitle(movieId);
         }
 
         /// <summary>
@@ -234,7 +238,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns a dictionaty of the movies' ids (int) and wrappers (byte[]).</returns>
         public Dictionary<int, byte[]> SetMoviesList()
         {
-            return mr.GetMovies();
+            return movie_repo.GetMovies();
         }
 
         /// <summary>
@@ -244,7 +248,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns a list of all movies' titles.</returns>
         public List<string> GetMovieTitles()
         {
-            return mr.GetMoviesTitles();
+            return movie_repo.GetMoviesTitles();
         }
 
         /// <summary>
@@ -256,7 +260,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns a tuple of the user's id (int) and the user's position (string).</returns>
         public Tuple<int, string> GetUserInfo(string unm, string pass)
         {
-            return mr.GetUserInfo(unm, pass);
+            return movie_repo.GetUserInfo(unm, pass);
         }
 
         /// <summary>
@@ -266,7 +270,7 @@ namespace Mov4e.Service.AllMoviesService
         /// <returns>This method returns the id of a certain genre.</returns>
         public int GetMovieGenre(string gen)
         {
-            return mr.GetMovieGenre(gen);
+            return movie_repo.GetMovieGenre(gen);
         }
     }
 }

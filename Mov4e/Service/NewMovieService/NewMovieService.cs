@@ -10,7 +10,7 @@ namespace Mov4e.Service.NewMovieService
     public class NewMovieService: INewMovieService
     {
         // A private variable that keeps reference to the NewMovieRepository via an interface variable.
-        private INewMovieRepository mr = new NewMovieRepository();                          
+        private INewMovieRepository movie_repo = new NewMovieRepository();                          
         
         /// <summary>
         /// A no arguments constructor for <c>NewMovieService</c> class.
@@ -22,7 +22,7 @@ namespace Mov4e.Service.NewMovieService
 
         public NewMovieService(INewMovieRepository m_repo)
         {
-            this.mr = m_repo;
+            this.movie_repo = m_repo;
         }
 
         /// <summary>
@@ -39,12 +39,12 @@ namespace Mov4e.Service.NewMovieService
         public void CreateMovie(string t, Nullable<int> pg, int g, 
         Nullable<System.DateTime> p, string s, byte[] pic, int dur)
         {
-            mr.CreateMovie(t, pg, g, p, s, pic, dur);
+            movie_repo.CreateMovie(t, pg, g, p, s, pic, dur);
         }
 
         public int IdOfTheLastMovie()
         {
-            return mr.LastMovieId();
+            return movie_repo.LastMovieId();
         }
     }
 }

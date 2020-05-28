@@ -12,7 +12,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
     public class AllMoviesPresenter : IAllMoviesPresenter
     {
         // A private variable that keeps a reference to AllMoviesService class via an interface variable.
-        private IAllMoviesService ms = new AllMoviesService();
+        private IAllMoviesService movie_service = new AllMoviesService();
 
         /// <summary>
         /// A no arguments constructor for the <c>AllMoviesPresenter</c> class.
@@ -22,9 +22,13 @@ namespace Mov4e.Presenter.AllMoviesPresenter
 
         } 
 
+        /// <summary>
+        /// A one argument constructor for the <c>AllMoviesPresenter</c>, used for the unit testing.
+        /// </summary>
+        /// <param name="_iallMoviesService">This is the interface variable of the <c>IAllMoviesService</c> interface class.</param>
         public AllMoviesPresenter(IAllMoviesService _iallMoviesService)
         {
-            this.ms = _iallMoviesService;
+            this.movie_service = _iallMoviesService;
         }
 
         /// <summary>
@@ -35,7 +39,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// <returns>This method returns a tuple of a movie object and its genre as a string.</returns>
         public Tuple<Movie, string> GetMovie(int id)
         {
-            return ms.GetMovie(id);
+            return movie_service.GetMovie(id);
         }
 
         /// <summary>
@@ -55,7 +59,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         {
             try
             {
-                ms.EditMovie(id, title, genre, pg, date, summary, picture, dur);
+                movie_service.EditMovie(id, title, genre, pg, date, summary, picture, dur);
             }
             catch(Exception ex)
             {
@@ -72,7 +76,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         {
             try
             {
-                ms.DeleteMovie(id);
+                movie_service.DeleteMovie(id);
             }
             catch (Exception ex)
             {
@@ -90,7 +94,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         {
             try
             {
-                return ms.SortMoviesByTitle();
+                return movie_service.SortMoviesByTitle();
             }
             catch(Exception ex)
             {
@@ -107,7 +111,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> SortByDate()
         {
-            return ms.SortByDate();
+            return movie_service.SortByDate();
         }
 
         /// <summary>
@@ -121,7 +125,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMovies(int g, int d, int pg)
         {
-            return ms.FilterMovies(g, d, pg);
+            return movie_service.FilterMovies(g, d, pg);
         }
 
         /// <summary>
@@ -134,7 +138,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByGenresAndDuration(int g, int d)
         {
-            return ms.FilterMoviesByGenresAndDuration(g, d);
+            return movie_service.FilterMoviesByGenresAndDuration(g, d);
         }
 
         /// <summary>
@@ -147,7 +151,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByGenresAndPG(int g, int pg)
         {
-            return ms.FilterMoviesByGenresAndPG(g, pg);
+            return movie_service.FilterMoviesByGenresAndPG(g, pg);
         }
 
         /// <summary>
@@ -160,7 +164,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByDurationAndPG(int d, int pg)
         {
-            return ms.FilterMoviesByDurationAndPG(d, pg);
+            return movie_service.FilterMoviesByDurationAndPG(d, pg);
         }
 
         /// <summary>
@@ -172,7 +176,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByGenres(int g)
         {
-            return ms.FilterMoviesByGenres(g);
+            return movie_service.FilterMoviesByGenres(g);
         }
 
         /// <summary>
@@ -184,7 +188,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByDuration(int d)
         {
-            return ms.FilterMoviesByDuration(d);
+            return movie_service.FilterMoviesByDuration(d);
         }
 
         /// <summary>
@@ -196,7 +200,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the filtered movies' wrappers (byte[]) from the service class.</returns>
         public Dictionary<int, byte[]> FilterMoviesByPG(int pg)
         {
-            return ms.FilterMoviesByPG(pg);
+            return movie_service.FilterMoviesByPG(pg);
         }
 
         /// <summary>
@@ -208,7 +212,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and the gotten movies' wrappers (byte[]) from the service's method.</returns>
         public Dictionary<int, byte[]> GetMoviesByTitle(List<string> titles)
         {
-            return ms.GetMoviesByTitles(titles);
+            return movie_service.GetMoviesByTitles(titles);
         }
 
         /// <summary>
@@ -219,7 +223,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// <returns>This method returns a string from the service's method execution.</returns>
         public string SetMovieTitle(int movieId)
         {
-            return ms.SetMovieTitle(movieId);
+            return movie_service.SetMovieTitle(movieId);
         }
 
         /// <summary>
@@ -230,7 +234,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// and wrapper (byte[]) from the service's method.</returns>
         public Dictionary<int,byte[]> SetMovieInformation()
         {
-            return ms.SetMoviesList();
+            return movie_service.SetMoviesList();
         }
 
         /// <summary>
@@ -240,7 +244,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// <returns>This method returns a list of movies' titles from the service's method.</returns>
         public List<string> GetMovieTitles()
         {
-            return ms.GetMovieTitles();
+            return movie_service.GetMovieTitles();
         }
 
         /// <summary>
@@ -252,7 +256,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// <returns>This method returns a tuple of the user's id (int) and the user's position (string).</returns>
         public Tuple<int, string> GetUserInfo(string unm, string pass)
         {
-            return ms.GetUserInfo(unm, pass);
+            return movie_service.GetUserInfo(unm, pass);
         }
 
         /// <summary>
@@ -262,7 +266,7 @@ namespace Mov4e.Presenter.AllMoviesPresenter
         /// <returns>This method returns the id of a certain genre.</returns>
         public int GetMovieGenre(string gen)
         {
-            return ms.GetMovieGenre(gen);
+            return movie_service.GetMovieGenre(gen);
         }
     }
 }
