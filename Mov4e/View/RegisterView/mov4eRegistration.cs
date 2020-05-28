@@ -66,10 +66,13 @@ namespace Mov4e.View.RegisterView
             }
         }
 
+        bool hiddenPass;
+
         public mov4eRegistration(ILogIn mainform)
         {
             InitializeComponent();
             textBoxPassword.PasswordChar = '*';
+            hiddenPass = true;
             this.comboBoxAge.DropDownStyle = ComboBoxStyle.DropDownList;
             System.Object[] ageObject = new System.Object[71];
             for (int i = 0; i < 71; i++)
@@ -315,6 +318,22 @@ namespace Mov4e.View.RegisterView
         public void ShowForm()
         {
             this.Show();
+        }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            if (hiddenPass)
+            {
+                textBoxPassword.PasswordChar = '\0';
+                pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass_blue;
+                hiddenPass = false;
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '*';
+                pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass;
+                hiddenPass = true;
+            }
         }
     }
 }

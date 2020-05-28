@@ -312,6 +312,8 @@
       <DependentUpon>mov4eDB.edmx</DependentUpon>
       <LastGenOutput>mov4eDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\show-pass-blue.png" />
+    <None Include="Resources\show-pass.png" />
     <None Include="Resources\female_symbol_blue.png" />
     <None Include="Resources\female_symbol.png" />
     <None Include="Resources\go_back_white.png" />

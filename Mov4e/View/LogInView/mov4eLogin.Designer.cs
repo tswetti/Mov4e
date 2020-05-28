@@ -53,6 +53,8 @@
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelPassword = new System.Windows.Forms.TableLayoutPanel();
+            this.panelPassword = new System.Windows.Forms.Panel();
+            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelLoginButtons = new System.Windows.Forms.TableLayoutPanel();
@@ -68,6 +70,8 @@
             this.tableLayoutPanelUsername.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             this.tableLayoutPanelPassword.SuspendLayout();
+            this.panelPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             this.tableLayoutPanelLoginButtons.SuspendLayout();
             this.SuspendLayout();
@@ -404,8 +408,8 @@
             this.tableLayoutPanelPassword.ColumnCount = 2;
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
-            this.tableLayoutPanelPassword.Controls.Add(this.textBoxPassword, 1, 0);
             this.tableLayoutPanelPassword.Controls.Add(this.pictureBoxPassword, 0, 0);
+            this.tableLayoutPanelPassword.Controls.Add(this.panelPassword, 1, 0);
             this.tableLayoutPanelPassword.Location = new System.Drawing.Point(10, 116);
             this.tableLayoutPanelPassword.Name = "tableLayoutPanelPassword";
             this.tableLayoutPanelPassword.RowCount = 1;
@@ -413,13 +417,33 @@
             this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 17);
             this.tableLayoutPanelPassword.TabIndex = 2;
             // 
+            // panelPassword
+            // 
+            this.panelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelPassword.Controls.Add(this.pictureBoxShowPass);
+            this.panelPassword.Controls.Add(this.textBoxPassword);
+            this.panelPassword.Location = new System.Drawing.Point(60, 3);
+            this.panelPassword.Name = "panelPassword";
+            this.panelPassword.Size = new System.Drawing.Size(230, 11);
+            this.panelPassword.TabIndex = 3;
+            // 
+            // pictureBoxShowPass
+            // 
+            this.pictureBoxShowPass.Image = global::Mov4e.Properties.Resources.show_pass;
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(199, 2);
+            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(21, 21);
+            this.pictureBoxShowPass.TabIndex = 3;
+            this.pictureBoxShowPass.TabStop = false;
+            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
+            // 
             // textBoxPassword
             // 
             this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
-            this.textBoxPassword.Location = new System.Drawing.Point(60, 3);
+            this.textBoxPassword.Location = new System.Drawing.Point(0, -8);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(230, 26);
             this.textBoxPassword.TabIndex = 2;
@@ -430,7 +454,7 @@
             this.pictureBoxPassword.Image = global::Mov4e.Properties.Resources.password_icon;
             this.pictureBoxPassword.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
-            this.pictureBoxPassword.Size = new System.Drawing.Size(44, 11);
+            this.pictureBoxPassword.Size = new System.Drawing.Size(42, 11);
             this.pictureBoxPassword.TabIndex = 3;
             this.pictureBoxPassword.TabStop = false;
             // 
@@ -505,7 +529,9 @@
             this.tableLayoutPanelUsername.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
             this.tableLayoutPanelPassword.ResumeLayout(false);
-            this.tableLayoutPanelPassword.PerformLayout();
+            this.panelPassword.ResumeLayout(false);
+            this.panelPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             this.tableLayoutPanelLoginButtons.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -543,5 +569,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelForgPassBtns;
         private System.Windows.Forms.Button buttonSendEmail;
         private System.Windows.Forms.Button buttonBackToLogin;
+        private System.Windows.Forms.Panel panelPassword;
+        private System.Windows.Forms.PictureBox pictureBoxShowPass;
     }
 }

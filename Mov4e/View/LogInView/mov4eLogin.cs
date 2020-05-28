@@ -67,6 +67,7 @@ namespace Mov4e.View.LogInView
             pictureBoxUsername.Height = 40;
             pictureBoxPassword.Height = 40;
             tableLayoutPanelLoginButtons.Height = 41;
+            panelPassword.Height = 26;
             checkBoxSave.Visible = true;
         }
 
@@ -86,12 +87,15 @@ namespace Mov4e.View.LogInView
             checkBoxSave.Visible = false;
         }
 
+        bool hiddenPass;
+
         public mov4eLogin()
         {
             InitializeComponent();
             textBoxPassword.PasswordChar = '*';
             UserName = null;
             Password = null;
+            hiddenPass = true;
             _logInPresenter = new LogInPresenter(this);
             ShowLoginOnly();
         }
@@ -283,6 +287,22 @@ namespace Mov4e.View.LogInView
         public void ShowForm()
         {
             this.Show();
+        }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            if (hiddenPass)
+            {
+                textBoxPassword.PasswordChar = '\0';
+                pictureBoxShowPass.Image= Mov4e.Properties.Resources.show_pass_blue;
+                hiddenPass = false;
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '*';
+                pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass;
+                hiddenPass = true;
+            }
         }
     }
 }
