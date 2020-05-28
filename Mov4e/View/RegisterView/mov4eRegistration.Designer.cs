@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mov4eRegistration));
             this.topButtonsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.closeLabel = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.panelHr1 = new System.Windows.Forms.Panel();
+            this.toolTipValidReg = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
@@ -275,12 +277,13 @@
             this.tableLayoutPanelUsername.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelUsername.Controls.Add(this.textBoxUsername, 1, 0);
             this.tableLayoutPanelUsername.Controls.Add(this.labelUsername, 0, 0);
-            this.tableLayoutPanelUsername.Location = new System.Drawing.Point(10, 96);
+            this.tableLayoutPanelUsername.Location = new System.Drawing.Point(3, 96);
             this.tableLayoutPanelUsername.Name = "tableLayoutPanelUsername";
             this.tableLayoutPanelUsername.RowCount = 1;
             this.tableLayoutPanelUsername.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelUsername.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelUsername.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelUsername.TabIndex = 1;
+            this.tableLayoutPanelUsername.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelUsername_Paint);
             // 
             // textBoxUsername
             // 
@@ -289,10 +292,14 @@
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
-            this.textBoxUsername.Location = new System.Drawing.Point(91, 4);
+            this.textBoxUsername.Location = new System.Drawing.Point(96, 3);
+            this.textBoxUsername.MaxLength = 20;
+            this.textBoxUsername.Multiline = true;
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(200, 17);
+            this.textBoxUsername.Size = new System.Drawing.Size(215, 19);
             this.textBoxUsername.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxUsername, "less than 20 characters; can begin and end only with letters or numbers; other al" +
+        "lowed characters: -_ ");
             this.textBoxUsername.Click += new System.EventHandler(this.textBoxUsername_Click);
             this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
@@ -316,11 +323,11 @@
             this.tableLayoutPanelFName.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelFName.Controls.Add(this.textBoxFirstName, 1, 0);
             this.tableLayoutPanelFName.Controls.Add(this.labelFirstName, 0, 0);
-            this.tableLayoutPanelFName.Location = new System.Drawing.Point(10, 139);
+            this.tableLayoutPanelFName.Location = new System.Drawing.Point(3, 139);
             this.tableLayoutPanelFName.Name = "tableLayoutPanelFName";
             this.tableLayoutPanelFName.RowCount = 1;
             this.tableLayoutPanelFName.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFName.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelFName.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelFName.TabIndex = 6;
             // 
             // textBoxFirstName
@@ -330,10 +337,13 @@
             this.textBoxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.ForeColor = System.Drawing.Color.White;
-            this.textBoxFirstName.Location = new System.Drawing.Point(91, 4);
+            this.textBoxFirstName.Location = new System.Drawing.Point(96, 3);
+            this.textBoxFirstName.MaxLength = 25;
+            this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(200, 17);
+            this.textBoxFirstName.Size = new System.Drawing.Size(215, 19);
             this.textBoxFirstName.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxFirstName, "only letters; less than 25 characters");
             this.textBoxFirstName.Click += new System.EventHandler(this.textBoxFirstName_Click);
             this.textBoxFirstName.TextChanged += new System.EventHandler(this.textBoxFirstName_TextChanged);
             // 
@@ -357,11 +367,11 @@
             this.tableLayoutPanelLName.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelLName.Controls.Add(this.textBoxLastName, 1, 0);
             this.tableLayoutPanelLName.Controls.Add(this.labelLastName, 0, 0);
-            this.tableLayoutPanelLName.Location = new System.Drawing.Point(10, 182);
+            this.tableLayoutPanelLName.Location = new System.Drawing.Point(3, 182);
             this.tableLayoutPanelLName.Name = "tableLayoutPanelLName";
             this.tableLayoutPanelLName.RowCount = 1;
             this.tableLayoutPanelLName.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelLName.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelLName.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelLName.TabIndex = 7;
             // 
             // textBoxLastName
@@ -371,10 +381,13 @@
             this.textBoxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.ForeColor = System.Drawing.Color.White;
-            this.textBoxLastName.Location = new System.Drawing.Point(91, 4);
+            this.textBoxLastName.Location = new System.Drawing.Point(96, 3);
+            this.textBoxLastName.MaxLength = 25;
+            this.textBoxLastName.Multiline = true;
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(200, 17);
+            this.textBoxLastName.Size = new System.Drawing.Size(215, 19);
             this.textBoxLastName.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxLastName, "only letters; less than 25 characters");
             this.textBoxLastName.Click += new System.EventHandler(this.textBoxLastName_Click);
             this.textBoxLastName.TextChanged += new System.EventHandler(this.textBoxLastName_TextChanged);
             // 
@@ -441,11 +454,11 @@
             this.tableLayoutPanelEmail.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelEmail.Controls.Add(this.textBoxEmail, 1, 0);
             this.tableLayoutPanelEmail.Controls.Add(this.labelEmail, 0, 0);
-            this.tableLayoutPanelEmail.Location = new System.Drawing.Point(10, 225);
+            this.tableLayoutPanelEmail.Location = new System.Drawing.Point(3, 225);
             this.tableLayoutPanelEmail.Name = "tableLayoutPanelEmail";
             this.tableLayoutPanelEmail.RowCount = 1;
             this.tableLayoutPanelEmail.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelEmail.Size = new System.Drawing.Size(300, 25);
+            this.tableLayoutPanelEmail.Size = new System.Drawing.Size(314, 25);
             this.tableLayoutPanelEmail.TabIndex = 8;
             // 
             // textBoxEmail
@@ -455,11 +468,13 @@
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.White;
-            this.textBoxEmail.Location = new System.Drawing.Point(91, 3);
+            this.textBoxEmail.Location = new System.Drawing.Point(96, 3);
+            this.textBoxEmail.MaxLength = 100;
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(200, 19);
+            this.textBoxEmail.Size = new System.Drawing.Size(215, 19);
             this.textBoxEmail.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxEmail, "a valid e-mail");
             this.textBoxEmail.Click += new System.EventHandler(this.textBoxEmail_Click);
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
@@ -483,11 +498,11 @@
             this.tableLayoutPanelPassword.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.33334F));
             this.tableLayoutPanelPassword.Controls.Add(this.panelPassword, 1, 0);
             this.tableLayoutPanelPassword.Controls.Add(this.labelPassword, 0, 0);
-            this.tableLayoutPanelPassword.Location = new System.Drawing.Point(10, 268);
+            this.tableLayoutPanelPassword.Location = new System.Drawing.Point(3, 268);
             this.tableLayoutPanelPassword.Name = "tableLayoutPanelPassword";
             this.tableLayoutPanelPassword.RowCount = 1;
             this.tableLayoutPanelPassword.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(300, 30);
+            this.tableLayoutPanelPassword.Size = new System.Drawing.Size(314, 30);
             this.tableLayoutPanelPassword.TabIndex = 9;
             // 
             // panelPassword
@@ -495,7 +510,7 @@
             this.panelPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelPassword.Controls.Add(this.pictureBoxShowPass);
             this.panelPassword.Controls.Add(this.textBoxPassword);
-            this.panelPassword.Location = new System.Drawing.Point(91, 3);
+            this.panelPassword.Location = new System.Drawing.Point(96, 3);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(200, 24);
             this.panelPassword.TabIndex = 4;
@@ -503,7 +518,7 @@
             // pictureBoxShowPass
             // 
             this.pictureBoxShowPass.Image = global::Mov4e.Properties.Resources.show_pass;
-            this.pictureBoxShowPass.Location = new System.Drawing.Point(169, 1);
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(175, 2);
             this.pictureBoxShowPass.Name = "pictureBoxShowPass";
             this.pictureBoxShowPass.Size = new System.Drawing.Size(21, 21);
             this.pictureBoxShowPass.TabIndex = 3;
@@ -518,9 +533,13 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(1, 4);
+            this.textBoxPassword.MaxLength = 20;
+            this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(200, 17);
+            this.textBoxPassword.Size = new System.Drawing.Size(215, 19);
             this.textBoxPassword.TabIndex = 1;
+            this.toolTipValidReg.SetToolTip(this.textBoxPassword, "between 8 and 30 symbols, a lowercase letter, capital letter, number and a specia" +
+        "l symbol: #?!@$%^&*-");
             this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
@@ -569,6 +588,7 @@
             this.pictureBoxFemale.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxFemale.TabIndex = 9;
             this.pictureBoxFemale.TabStop = false;
+            this.toolTipValidReg.SetToolTip(this.pictureBoxFemale, "female");
             // 
             // labelGender
             // 
@@ -601,6 +621,7 @@
             this.pictureBoxMale.Size = new System.Drawing.Size(29, 29);
             this.pictureBoxMale.TabIndex = 6;
             this.pictureBoxMale.TabStop = false;
+            this.toolTipValidReg.SetToolTip(this.pictureBoxMale, "male");
             // 
             // labelAge
             // 
@@ -733,5 +754,6 @@
         private System.Windows.Forms.Panel panelHr1;
         private System.Windows.Forms.Panel panelPassword;
         private System.Windows.Forms.PictureBox pictureBoxShowPass;
+        private System.Windows.Forms.ToolTip toolTipValidReg;
     }
 }

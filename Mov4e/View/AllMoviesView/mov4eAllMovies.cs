@@ -70,6 +70,7 @@ namespace Mov4e.View.AllMoviesView
             listViewMovies.Height = 570;
             sortOpened = false;
             filterOpened = false;
+            //toolTipMovies.SetToolTip(buttonViewInfo, "Select a movie first!");
 
             user_id = uid;
             user_position = upos;
@@ -202,7 +203,7 @@ namespace Mov4e.View.AllMoviesView
         private void pictureBoxFilter_Click(object sender, EventArgs e)
         {
             pictureBoxFilter.Image = Mov4e.Properties.Resources.filter_blue;
-            pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
+           //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
             pictureBoxSort.Image = Mov4e.Properties.Resources.sort_white;
             if (filterOpened)
             {
@@ -247,7 +248,7 @@ namespace Mov4e.View.AllMoviesView
         private void pictureBoxSort_Click(object sender, EventArgs e)
         {
             pictureBoxSort.Image = Mov4e.Properties.Resources.sort_blue;
-            pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
+            //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
             pictureBoxFilter.Image = Mov4e.Properties.Resources.filter_white;
             if (sortOpened)
             {
@@ -1064,10 +1065,12 @@ namespace Mov4e.View.AllMoviesView
         {
             if (textBoxSearch.Focused == true && !string.IsNullOrEmpty(textBoxSearch.Text) && !string.IsNullOrWhiteSpace(textBoxSearch.Text))
             {
-                pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_blue;
+                //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_blue;
             }
             else
-                pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
+            {
+                //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
+            }
         }
 
         private void listViewMovies_SelectedIndexChanged(object sender, EventArgs e)
@@ -1083,6 +1086,7 @@ namespace Mov4e.View.AllMoviesView
                 buttonViewInfo.Enabled = true;
                 buttonDeleteMovie.Enabled = true;
                 buttonEditMovie.Enabled = true;
+                toolTipMovies.Active = false;
             }
         }
 

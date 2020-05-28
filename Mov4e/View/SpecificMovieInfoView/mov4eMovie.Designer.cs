@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mov4eMovie));
             this.topButtonsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.minimizeLabel = new System.Windows.Forms.Label();
@@ -50,6 +51,9 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanelDetails = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelComments = new System.Windows.Forms.TableLayoutPanel();
+            this.panelAddComment = new System.Windows.Forms.Panel();
+            this.labelCharactersLeft = new System.Windows.Forms.Label();
+            this.textBoxAddComment = new System.Windows.Forms.TextBox();
             this.tabControlComments = new System.Windows.Forms.TabControl();
             this.tabPageAllComments = new System.Windows.Forms.TabPage();
             this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
@@ -58,7 +62,6 @@
             this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectComments = new System.Windows.Forms.Button();
             this.buttonDelAllMyComments = new System.Windows.Forms.Button();
-            this.textBoxAddComment = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelDescription = new System.Windows.Forms.TableLayoutPanel();
             this.labelMovieSummary = new System.Windows.Forms.Label();
             this.labelMovieAverageRating = new System.Windows.Forms.Label();
@@ -79,8 +82,7 @@
             this.labelBack = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelGoBack = new System.Windows.Forms.TableLayoutPanel();
-            this.labelCharactersLeft = new System.Windows.Forms.Label();
-            this.panelAddComment = new System.Windows.Forms.Panel();
+            this.toolTipComment = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -95,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoviePicture)).BeginInit();
             this.tableLayoutPanelDetails.SuspendLayout();
             this.tableLayoutPanelComments.SuspendLayout();
+            this.panelAddComment.SuspendLayout();
             this.tabControlComments.SuspendLayout();
             this.tabPageAllComments.SuspendLayout();
             this.tabPageYourComments.SuspendLayout();
@@ -102,7 +105,6 @@
             this.tableLayoutPanelWatchlistActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.tableLayoutPanelGoBack.SuspendLayout();
-            this.panelAddComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -416,6 +418,42 @@
             this.tableLayoutPanelComments.Size = new System.Drawing.Size(842, 341);
             this.tableLayoutPanelComments.TabIndex = 10;
             // 
+            // panelAddComment
+            // 
+            this.panelAddComment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAddComment.Controls.Add(this.labelCharactersLeft);
+            this.panelAddComment.Controls.Add(this.textBoxAddComment);
+            this.panelAddComment.Location = new System.Drawing.Point(46, 6);
+            this.panelAddComment.Name = "panelAddComment";
+            this.panelAddComment.Size = new System.Drawing.Size(750, 100);
+            this.panelAddComment.TabIndex = 12;
+            // 
+            // labelCharactersLeft
+            // 
+            this.labelCharactersLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCharactersLeft.AutoSize = true;
+            this.labelCharactersLeft.BackColor = System.Drawing.Color.White;
+            this.labelCharactersLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCharactersLeft.ForeColor = System.Drawing.Color.Black;
+            this.labelCharactersLeft.Location = new System.Drawing.Point(693, 81);
+            this.labelCharactersLeft.Name = "labelCharactersLeft";
+            this.labelCharactersLeft.Size = new System.Drawing.Size(0, 16);
+            this.labelCharactersLeft.TabIndex = 11;
+            // 
+            // textBoxAddComment
+            // 
+            this.textBoxAddComment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAddComment.Location = new System.Drawing.Point(0, 0);
+            this.textBoxAddComment.MaxLength = 300;
+            this.textBoxAddComment.Multiline = true;
+            this.textBoxAddComment.Name = "textBoxAddComment";
+            this.textBoxAddComment.Size = new System.Drawing.Size(750, 100);
+            this.textBoxAddComment.TabIndex = 7;
+            this.toolTipComment.SetToolTip(this.textBoxAddComment, "Press enter to go to the next line");
+            this.textBoxAddComment.Click += new System.EventHandler(this.textBoxAddComment_Click);
+            this.textBoxAddComment.TextChanged += new System.EventHandler(this.textBoxAddComment_TextChanged);
+            // 
             // tabControlComments
             // 
             this.tabControlComments.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -501,19 +539,6 @@
             this.buttonDelAllMyComments.Text = "Delete all comments";
             this.buttonDelAllMyComments.UseVisualStyleBackColor = true;
             this.buttonDelAllMyComments.Click += new System.EventHandler(this.buttonDelAllMyComments_Click);
-            // 
-            // textBoxAddComment
-            // 
-            this.textBoxAddComment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAddComment.Location = new System.Drawing.Point(0, 0);
-            this.textBoxAddComment.MaxLength = 300;
-            this.textBoxAddComment.Multiline = true;
-            this.textBoxAddComment.Name = "textBoxAddComment";
-            this.textBoxAddComment.Size = new System.Drawing.Size(750, 100);
-            this.textBoxAddComment.TabIndex = 7;
-            this.textBoxAddComment.Click += new System.EventHandler(this.textBoxAddComment_Click);
-            this.textBoxAddComment.TextChanged += new System.EventHandler(this.textBoxAddComment_TextChanged);
             // 
             // tableLayoutPanelDescription
             // 
@@ -780,28 +805,6 @@
             this.tableLayoutPanelGoBack.Size = new System.Drawing.Size(90, 40);
             this.tableLayoutPanelGoBack.TabIndex = 10;
             // 
-            // labelCharactersLeft
-            // 
-            this.labelCharactersLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCharactersLeft.AutoSize = true;
-            this.labelCharactersLeft.BackColor = System.Drawing.Color.White;
-            this.labelCharactersLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCharactersLeft.ForeColor = System.Drawing.Color.Black;
-            this.labelCharactersLeft.Location = new System.Drawing.Point(693, 81);
-            this.labelCharactersLeft.Name = "labelCharactersLeft";
-            this.labelCharactersLeft.Size = new System.Drawing.Size(0, 16);
-            this.labelCharactersLeft.TabIndex = 11;
-            // 
-            // panelAddComment
-            // 
-            this.panelAddComment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelAddComment.Controls.Add(this.labelCharactersLeft);
-            this.panelAddComment.Controls.Add(this.textBoxAddComment);
-            this.panelAddComment.Location = new System.Drawing.Point(46, 6);
-            this.panelAddComment.Name = "panelAddComment";
-            this.panelAddComment.Size = new System.Drawing.Size(750, 100);
-            this.panelAddComment.TabIndex = 12;
-            // 
             // mov4eMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -833,6 +836,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoviePicture)).EndInit();
             this.tableLayoutPanelDetails.ResumeLayout(false);
             this.tableLayoutPanelComments.ResumeLayout(false);
+            this.panelAddComment.ResumeLayout(false);
+            this.panelAddComment.PerformLayout();
             this.tabControlComments.ResumeLayout(false);
             this.tabPageAllComments.ResumeLayout(false);
             this.tabPageYourComments.ResumeLayout(false);
@@ -843,8 +848,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.tableLayoutPanelGoBack.ResumeLayout(false);
             this.tableLayoutPanelGoBack.PerformLayout();
-            this.panelAddComment.ResumeLayout(false);
-            this.panelAddComment.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -904,5 +907,6 @@
         private System.Windows.Forms.Button buttonChangeRating;
         private System.Windows.Forms.Label labelCharactersLeft;
         private System.Windows.Forms.Panel panelAddComment;
+        private System.Windows.Forms.ToolTip toolTipComment;
     }
 }

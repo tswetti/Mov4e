@@ -335,5 +335,10 @@ namespace Mov4e.View.RegisterView
                 hiddenPass = true;
             }
         }
+
+        private void tableLayoutPanelUsername_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

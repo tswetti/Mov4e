@@ -57,6 +57,7 @@ namespace Mov4e.View.ProfileScreenView
             }
             labelOldPassword.ForeColor = white;
             labelNewPassword.ForeColor = white;
+            labelRepNewPassword.ForeColor = white;
         }
 
         public mov4eProfileSettings(IProfileScreen _profileSc)
@@ -213,18 +214,22 @@ namespace Mov4e.View.ProfileScreenView
 
 
         private void textBoxOldPassword_Click(object sender, EventArgs e)
-        {          
+        {
+            ClearAllSettingsColors();
             labelOldPassword.ForeColor = neonBlue;
         }
 
         private void textBoxNewPassword_Click(object sender, EventArgs e)
-        {          
+        {
+            ClearAllSettingsColors();
             labelNewPassword.ForeColor = neonBlue;
         }
 
         private void textBoxNewPasswordRepeat_Click(object sender, EventArgs e)
-        {          
-            ChangeSettingsColors(labelRepNewPassword, buttonChangePassword, panelHrPassword, neonBlue);
+        {
+            //ChangeSettingsColors(labelRepNewPassword, buttonChangePassword, panelHrPassword, neonBlue);
+            ClearAllSettingsColors();
+            labelRepNewPassword.ForeColor = neonBlue;
         }
 
         private void comboBoxBYearChanged_Click(object sender, EventArgs e)
