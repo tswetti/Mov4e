@@ -142,7 +142,9 @@ namespace Mov4e.View.NewMovieView
 
         private void buttonChangePic_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog fd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+            using (OpenFileDialog fd = new OpenFileDialog()
+            { Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg",
+                ValidateNames = true, Multiselect = false })
             {
                 if (fd.ShowDialog() == DialogResult.OK)
                 {
@@ -303,8 +305,8 @@ namespace Mov4e.View.NewMovieView
         /// <value>This property sets/gets byte[] values for the wrapper.</value>
         public byte[] picture
         {
-            get => ConvertImageToBinary(pictureBoxMoviePic.Image);
-            set => picture = ConvertImageToBinary(pictureBoxMoviePic.Image);
+            get => (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[]));
+            set => picture = (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[]));
         }
         public int duration
         {
@@ -327,7 +329,7 @@ namespace Mov4e.View.NewMovieView
         public void updateMovie()
         {
             MovieValidation.ValidateMovieUpdate(id, title, genre, pg, date, summary, picture, duration);
-            all_movies.UpdateMovie(id, textBoxName.Text, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
+            all_movies.UpdateMovie(id, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
         }
     }
 }

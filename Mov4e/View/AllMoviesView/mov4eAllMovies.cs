@@ -23,7 +23,7 @@ namespace Mov4e.View.AllMoviesView
     /// </summary>
     /// <inheritdoc cref="Form"/>
     /// <inheritdoc cref="IAllMovies"/>
-    public partial class mov4eAllMovies : Form, IScreenView, IAllMovies
+    public partial class mov4eAllMovies : Form,IAllMovies
     {
         // A private variable that keeps a reference to AllMoviesPresenter via an interface variable.
         private IAllMoviesPresenter rp = new AllMoviesPresenter();
@@ -1124,7 +1124,7 @@ namespace Mov4e.View.AllMoviesView
         }
 
         //This method is not Ok it will be chnanged in future!
-        public void UpdateMovie(int movieId, string movieName, byte[] moviePic)
+        public void UpdateMovie(int movieId, byte[] moviePic)
         {
             mov[movieId] = moviePic;
             this.listViewMovies.Clear();
