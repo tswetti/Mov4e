@@ -78,7 +78,9 @@
             this.buttonAddToWatchlist = new System.Windows.Forms.Button();
             this.labelBack = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelGoBack = new System.Windows.Forms.TableLayoutPanel();
+            this.labelCharactersLeft = new System.Windows.Forms.Label();
+            this.panelAddComment = new System.Windows.Forms.Panel();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -99,7 +101,8 @@
             this.tableLayoutPanelDescription.SuspendLayout();
             this.tableLayoutPanelWatchlistActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelGoBack.SuspendLayout();
+            this.panelAddComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -403,8 +406,8 @@
             this.tableLayoutPanelComments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanelComments.ColumnCount = 1;
             this.tableLayoutPanelComments.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelComments.Controls.Add(this.panelAddComment, 0, 0);
             this.tableLayoutPanelComments.Controls.Add(this.tabControlComments, 0, 1);
-            this.tableLayoutPanelComments.Controls.Add(this.textBoxAddComment, 0, 0);
             this.tableLayoutPanelComments.Location = new System.Drawing.Point(3, 350);
             this.tableLayoutPanelComments.Name = "tableLayoutPanelComments";
             this.tableLayoutPanelComments.RowCount = 2;
@@ -443,7 +446,7 @@
             this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
             this.commentBoxAllComments.Name = "commentBoxAllComments";
-            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 141);
+            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 163);
             this.commentBoxAllComments.TabIndex = 2;
             // 
             // buttonDelSelectFromAllComments
@@ -503,13 +506,12 @@
             // 
             this.textBoxAddComment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAddComment.Location = new System.Drawing.Point(46, 6);
+            this.textBoxAddComment.Location = new System.Drawing.Point(0, 0);
             this.textBoxAddComment.MaxLength = 300;
             this.textBoxAddComment.Multiline = true;
             this.textBoxAddComment.Name = "textBoxAddComment";
             this.textBoxAddComment.Size = new System.Drawing.Size(750, 100);
             this.textBoxAddComment.TabIndex = 7;
-            this.textBoxAddComment.Text = "Type your comment here...";
             this.textBoxAddComment.Click += new System.EventHandler(this.textBoxAddComment_Click);
             this.textBoxAddComment.TextChanged += new System.EventHandler(this.textBoxAddComment_TextChanged);
             // 
@@ -764,19 +766,41 @@
             this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
             this.pictureBoxBack.MouseHover += new System.EventHandler(this.pictureBoxBack_MouseHover);
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanelGoBack
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxBack, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelBack, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(90, 40);
-            this.tableLayoutPanel1.TabIndex = 10;
+            this.tableLayoutPanelGoBack.ColumnCount = 2;
+            this.tableLayoutPanelGoBack.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanelGoBack.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanelGoBack.Controls.Add(this.pictureBoxBack, 0, 0);
+            this.tableLayoutPanelGoBack.Controls.Add(this.labelBack, 1, 0);
+            this.tableLayoutPanelGoBack.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelGoBack.Name = "tableLayoutPanelGoBack";
+            this.tableLayoutPanelGoBack.RowCount = 1;
+            this.tableLayoutPanelGoBack.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelGoBack.Size = new System.Drawing.Size(90, 40);
+            this.tableLayoutPanelGoBack.TabIndex = 10;
+            // 
+            // labelCharactersLeft
+            // 
+            this.labelCharactersLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCharactersLeft.AutoSize = true;
+            this.labelCharactersLeft.BackColor = System.Drawing.Color.White;
+            this.labelCharactersLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCharactersLeft.ForeColor = System.Drawing.Color.Black;
+            this.labelCharactersLeft.Location = new System.Drawing.Point(693, 81);
+            this.labelCharactersLeft.Name = "labelCharactersLeft";
+            this.labelCharactersLeft.Size = new System.Drawing.Size(0, 16);
+            this.labelCharactersLeft.TabIndex = 11;
+            // 
+            // panelAddComment
+            // 
+            this.panelAddComment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAddComment.Controls.Add(this.labelCharactersLeft);
+            this.panelAddComment.Controls.Add(this.textBoxAddComment);
+            this.panelAddComment.Location = new System.Drawing.Point(46, 6);
+            this.panelAddComment.Name = "panelAddComment";
+            this.panelAddComment.Size = new System.Drawing.Size(750, 100);
+            this.panelAddComment.TabIndex = 12;
             // 
             // mov4eMovie
             // 
@@ -784,7 +808,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1280, 788);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanelGoBack);
             this.Controls.Add(this.tableLayoutPanelMain);
             this.Controls.Add(this.topButtonsLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -809,7 +833,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoviePicture)).EndInit();
             this.tableLayoutPanelDetails.ResumeLayout(false);
             this.tableLayoutPanelComments.ResumeLayout(false);
-            this.tableLayoutPanelComments.PerformLayout();
             this.tabControlComments.ResumeLayout(false);
             this.tabPageAllComments.ResumeLayout(false);
             this.tabPageYourComments.ResumeLayout(false);
@@ -818,8 +841,10 @@
             this.tableLayoutPanelWatchlistActions.ResumeLayout(false);
             this.tableLayoutPanelWatchlistActions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelGoBack.ResumeLayout(false);
+            this.tableLayoutPanelGoBack.PerformLayout();
+            this.panelAddComment.ResumeLayout(false);
+            this.panelAddComment.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -868,7 +893,7 @@
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanelComments;
     private System.Windows.Forms.TextBox textBoxAddComment;
     private System.Windows.Forms.Label labelAlreadyRated;
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGoBack;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWatchlistActions;
     private System.Windows.Forms.Button buttonRemoveFWatchlist;
     private System.Windows.Forms.Button buttonDelSelectFromAllComments;
@@ -877,5 +902,7 @@
         private CommentBox commentBoxMyComments;
         private CommentBox commentBoxAllComments;
         private System.Windows.Forms.Button buttonChangeRating;
+        private System.Windows.Forms.Label labelCharactersLeft;
+        private System.Windows.Forms.Panel panelAddComment;
     }
 }
