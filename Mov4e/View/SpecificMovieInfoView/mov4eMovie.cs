@@ -87,6 +87,8 @@ namespace Mov4e.View.SpecificMovieInfoView
 
 
         List<PictureBox> stars = new List<PictureBox>();
+        int charactersCount;
+        int maxCharacters;
 
 
         public mov4eMovie(int movieId, int userId, IScreenView screen)
@@ -103,8 +105,13 @@ namespace Mov4e.View.SpecificMovieInfoView
             tableLayoutPanelWatchlistActions.RowStyles[1].Height = 0;
             buttonRemoveFWatchlist.Visible = false;
             buttonAddToWatchlist.Height = 27;
+            textBoxAddComment.Text = "Type your comment here...";
+            charactersCount = textBoxAddComment.Text.Length;
+            maxCharacters = textBoxAddComment.MaxLength;
+            labelCharactersLeft.Text = "0/" + maxCharacters;
 
-            stars.Add(pictureBoxStar1);
+
+             stars.Add(pictureBoxStar1);
             stars.Add(pictureBoxStar2);
             stars.Add(pictureBoxStar3);
             stars.Add(pictureBoxStar4);
@@ -521,6 +528,9 @@ namespace Mov4e.View.SpecificMovieInfoView
             }
 
             textBoxAddComment.ClearUndo();
+
+            charactersCount=textBoxAddComment.Text.Length;
+            labelCharactersLeft.Text = charactersCount + "/" + maxCharacters;
         }
 
         private void buttonDelSelectFromAllComments_Click(object sender, EventArgs e)
