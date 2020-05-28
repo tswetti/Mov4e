@@ -44,6 +44,7 @@
             this.pictureBoxStar2 = new System.Windows.Forms.PictureBox();
             this.labelRating = new System.Windows.Forms.Label();
             this.labelAlreadyRated = new System.Windows.Forms.Label();
+            this.buttonChangeRating = new System.Windows.Forms.Button();
             this.tableLayoutPanelMovie = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxMoviePicture = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
@@ -51,8 +52,10 @@
             this.tableLayoutPanelComments = new System.Windows.Forms.TableLayoutPanel();
             this.tabControlComments = new System.Windows.Forms.TabControl();
             this.tabPageAllComments = new System.Windows.Forms.TabPage();
+            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectFromAllComments = new System.Windows.Forms.Button();
             this.tabPageYourComments = new System.Windows.Forms.TabPage();
+            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectComments = new System.Windows.Forms.Button();
             this.buttonDelAllMyComments = new System.Windows.Forms.Button();
             this.textBoxAddComment = new System.Windows.Forms.TextBox();
@@ -76,9 +79,6 @@
             this.labelBack = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonChangeRating = new System.Windows.Forms.Button();
-            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
-            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -211,8 +211,8 @@
             this.tableLayoutPanelRating.Name = "tableLayoutPanelRating";
             this.tableLayoutPanelRating.RowCount = 4;
             this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.17084F));
-            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.92484F));
-            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.81889F));
+            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.63158F));
+            this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.54135F));
             this.tableLayoutPanelRating.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.08542F));
             this.tableLayoutPanelRating.Size = new System.Drawing.Size(414, 133);
             this.tableLayoutPanelRating.TabIndex = 8;
@@ -235,7 +235,7 @@
             this.tableLayoutPanelStars.Name = "tableLayoutPanelStars";
             this.tableLayoutPanelStars.RowCount = 1;
             this.tableLayoutPanelStars.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelStars.Size = new System.Drawing.Size(350, 65);
+            this.tableLayoutPanelStars.Size = new System.Drawing.Size(350, 64);
             this.tableLayoutPanelStars.TabIndex = 10;
             // 
             // pictureBoxStar4
@@ -244,7 +244,7 @@
             this.pictureBoxStar4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar4.Image")));
             this.pictureBoxStar4.Location = new System.Drawing.Point(215, 3);
             this.pictureBoxStar4.Name = "pictureBoxStar4";
-            this.pictureBoxStar4.Size = new System.Drawing.Size(60, 59);
+            this.pictureBoxStar4.Size = new System.Drawing.Size(60, 58);
             this.pictureBoxStar4.TabIndex = 13;
             this.pictureBoxStar4.TabStop = false;
             this.pictureBoxStar4.Tag = "4";
@@ -258,7 +258,7 @@
             this.pictureBoxStar5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar5.Image")));
             this.pictureBoxStar5.Location = new System.Drawing.Point(285, 3);
             this.pictureBoxStar5.Name = "pictureBoxStar5";
-            this.pictureBoxStar5.Size = new System.Drawing.Size(60, 59);
+            this.pictureBoxStar5.Size = new System.Drawing.Size(60, 58);
             this.pictureBoxStar5.TabIndex = 12;
             this.pictureBoxStar5.TabStop = false;
             this.pictureBoxStar5.Tag = "5";
@@ -272,7 +272,7 @@
             this.pictureBoxStar3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar3.Image")));
             this.pictureBoxStar3.Location = new System.Drawing.Point(145, 3);
             this.pictureBoxStar3.Name = "pictureBoxStar3";
-            this.pictureBoxStar3.Size = new System.Drawing.Size(60, 59);
+            this.pictureBoxStar3.Size = new System.Drawing.Size(60, 58);
             this.pictureBoxStar3.TabIndex = 11;
             this.pictureBoxStar3.TabStop = false;
             this.pictureBoxStar3.Tag = "3";
@@ -286,7 +286,7 @@
             this.pictureBoxStar1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar1.Image")));
             this.pictureBoxStar1.Location = new System.Drawing.Point(5, 3);
             this.pictureBoxStar1.Name = "pictureBoxStar1";
-            this.pictureBoxStar1.Size = new System.Drawing.Size(60, 59);
+            this.pictureBoxStar1.Size = new System.Drawing.Size(60, 58);
             this.pictureBoxStar1.TabIndex = 10;
             this.pictureBoxStar1.TabStop = false;
             this.pictureBoxStar1.Tag = "1";
@@ -300,7 +300,7 @@
             this.pictureBoxStar2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar2.Image")));
             this.pictureBoxStar2.Location = new System.Drawing.Point(75, 3);
             this.pictureBoxStar2.Name = "pictureBoxStar2";
-            this.pictureBoxStar2.Size = new System.Drawing.Size(60, 59);
+            this.pictureBoxStar2.Size = new System.Drawing.Size(60, 58);
             this.pictureBoxStar2.TabIndex = 9;
             this.pictureBoxStar2.TabStop = false;
             this.pictureBoxStar2.Tag = "2";
@@ -331,6 +331,18 @@
             this.labelAlreadyRated.Size = new System.Drawing.Size(363, 20);
             this.labelAlreadyRated.TabIndex = 11;
             this.labelAlreadyRated.Text = "You have already rated for this movie! Your rating: ";
+            // 
+            // buttonChangeRating
+            // 
+            this.buttonChangeRating.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonChangeRating.BackColor = System.Drawing.Color.Transparent;
+            this.buttonChangeRating.Location = new System.Drawing.Point(157, 121);
+            this.buttonChangeRating.Name = "buttonChangeRating";
+            this.buttonChangeRating.Size = new System.Drawing.Size(100, 9);
+            this.buttonChangeRating.TabIndex = 12;
+            this.buttonChangeRating.Text = "Change rate";
+            this.buttonChangeRating.UseVisualStyleBackColor = false;
+            this.buttonChangeRating.Click += new System.EventHandler(this.buttonChangeRating_Click);
             // 
             // tableLayoutPanelMovie
             // 
@@ -425,6 +437,15 @@
             this.tabPageAllComments.Text = "All comments";
             this.tabPageAllComments.UseVisualStyleBackColor = true;
             // 
+            // commentBoxAllComments
+            // 
+            this.commentBoxAllComments.AutoScroll = true;
+            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxAllComments.Name = "commentBoxAllComments";
+            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 141);
+            this.commentBoxAllComments.TabIndex = 2;
+            // 
             // buttonDelSelectFromAllComments
             // 
             this.buttonDelSelectFromAllComments.Enabled = false;
@@ -449,6 +470,14 @@
             this.tabPageYourComments.TabIndex = 1;
             this.tabPageYourComments.Text = "My comments";
             this.tabPageYourComments.UseVisualStyleBackColor = true;
+            // 
+            // commentBoxMyComments
+            // 
+            this.commentBoxMyComments.AutoScroll = true;
+            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxMyComments.Name = "commentBoxMyComments";
+            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
+            this.commentBoxMyComments.TabIndex = 4;
             // 
             // buttonDelSelectComments
             // 
@@ -626,7 +655,7 @@
             this.buttonAddComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddComment.Enabled = false;
             this.buttonAddComment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddComment.Location = new System.Drawing.Point(179, 314);
+            this.buttonAddComment.Location = new System.Drawing.Point(179, 311);
             this.buttonAddComment.Name = "buttonAddComment";
             this.buttonAddComment.Size = new System.Drawing.Size(113, 27);
             this.buttonAddComment.TabIndex = 16;
@@ -676,12 +705,12 @@
             this.tableLayoutPanelWatchlistActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelWatchlistActions.Controls.Add(this.buttonRemoveFWatchlist, 0, 1);
             this.tableLayoutPanelWatchlistActions.Controls.Add(this.buttonAddToWatchlist, 0, 0);
-            this.tableLayoutPanelWatchlistActions.Location = new System.Drawing.Point(3, 306);
+            this.tableLayoutPanelWatchlistActions.Location = new System.Drawing.Point(3, 308);
             this.tableLayoutPanelWatchlistActions.Name = "tableLayoutPanelWatchlistActions";
             this.tableLayoutPanelWatchlistActions.RowCount = 2;
             this.tableLayoutPanelWatchlistActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
             this.tableLayoutPanelWatchlistActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
-            this.tableLayoutPanelWatchlistActions.Size = new System.Drawing.Size(170, 35);
+            this.tableLayoutPanelWatchlistActions.Size = new System.Drawing.Size(170, 30);
             this.tableLayoutPanelWatchlistActions.TabIndex = 34;
             // 
             // buttonRemoveFWatchlist
@@ -689,9 +718,9 @@
             this.buttonRemoveFWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemoveFWatchlist.AutoSize = true;
             this.buttonRemoveFWatchlist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemoveFWatchlist.Location = new System.Drawing.Point(4, 19);
+            this.buttonRemoveFWatchlist.Location = new System.Drawing.Point(4, 17);
             this.buttonRemoveFWatchlist.Name = "buttonRemoveFWatchlist";
-            this.buttonRemoveFWatchlist.Size = new System.Drawing.Size(163, 13);
+            this.buttonRemoveFWatchlist.Size = new System.Drawing.Size(163, 10);
             this.buttonRemoveFWatchlist.TabIndex = 16;
             this.buttonRemoveFWatchlist.Text = "Remove from wachlist";
             this.buttonRemoveFWatchlist.UseVisualStyleBackColor = true;
@@ -699,12 +728,12 @@
             // 
             // buttonAddToWatchlist
             // 
-            this.buttonAddToWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddToWatchlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddToWatchlist.AutoSize = true;
             this.buttonAddToWatchlist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddToWatchlist.Location = new System.Drawing.Point(47, 3);
+            this.buttonAddToWatchlist.Location = new System.Drawing.Point(3, 3);
             this.buttonAddToWatchlist.Name = "buttonAddToWatchlist";
-            this.buttonAddToWatchlist.Size = new System.Drawing.Size(120, 10);
+            this.buttonAddToWatchlist.Size = new System.Drawing.Size(120, 8);
             this.buttonAddToWatchlist.TabIndex = 15;
             this.buttonAddToWatchlist.Text = "Add to wachlist";
             this.buttonAddToWatchlist.UseVisualStyleBackColor = true;
@@ -748,35 +777,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(90, 40);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // buttonChangeRating
-            // 
-            this.buttonChangeRating.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonChangeRating.BackColor = System.Drawing.Color.Transparent;
-            this.buttonChangeRating.Location = new System.Drawing.Point(157, 121);
-            this.buttonChangeRating.Name = "buttonChangeRating";
-            this.buttonChangeRating.Size = new System.Drawing.Size(100, 9);
-            this.buttonChangeRating.TabIndex = 12;
-            this.buttonChangeRating.Text = "Change rating";
-            this.buttonChangeRating.UseVisualStyleBackColor = false;
-            this.buttonChangeRating.Click += new System.EventHandler(this.buttonChangeRating_Click);
-            // 
-            // commentBoxAllComments
-            // 
-            this.commentBoxAllComments.AutoScroll = true;
-            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxAllComments.Name = "commentBoxAllComments";
-            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 141);
-            this.commentBoxAllComments.TabIndex = 2;
-            // 
-            // commentBoxMyComments
-            // 
-            this.commentBoxMyComments.AutoScroll = true;
-            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxMyComments.Name = "commentBoxMyComments";
-            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
-            this.commentBoxMyComments.TabIndex = 4;
             // 
             // mov4eMovie
             // 

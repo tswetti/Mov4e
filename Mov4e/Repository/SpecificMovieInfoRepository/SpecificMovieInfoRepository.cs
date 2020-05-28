@@ -205,5 +205,14 @@ namespace Mov4e.Repository.SpecificMovieInfoRepository
                 return rate;
             }
         }
+
+        public void RemoveUserRateFromDB(int userId, int movieId)
+        {
+            using (mov4eEntities context = new mov4eEntities())
+            {
+                context.Ratings.Remove(context.Ratings.Where(r => r.user_Id == userId && r.movie_Id == movieId).Single());
+                context.SaveChanges();
+            }
+        }
     }
 }

@@ -91,7 +91,6 @@
             this.buttonAddMovie = new System.Windows.Forms.Button();
             this.buttonViewInfo = new System.Windows.Forms.Button();
             this.imageListMovies = new System.Windows.Forms.ImageList(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMovies.SuspendLayout();
             this.tableLayoutPanelSortFilter.SuspendLayout();
@@ -1037,7 +1036,6 @@
         private System.Windows.Forms.ImageList imageListMovies;
         private System.Windows.Forms.GroupBox groupBoxGenreFilter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelFGenre;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RadioButton radioButtonFantasy;
         private System.Windows.Forms.RadioButton radioButtonComedy;
         private System.Windows.Forms.RadioButton radioButtonDrama;

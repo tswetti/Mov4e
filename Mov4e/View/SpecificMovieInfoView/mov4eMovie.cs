@@ -388,9 +388,11 @@ namespace Mov4e.View.SpecificMovieInfoView
                 _specificMoviePresenter.SetUserRate();
                 tableLayoutPanelStars.Visible = false;
                 labelAlreadyRated.Text += " " + userRate + "!";
-                this.tableLayoutPanelRating.RowStyles[0].Height = 20;
+                this.tableLayoutPanelRating.RowStyles[0].Height = 15;
                 this.tableLayoutPanelRating.RowStyles[1].Height = 0;
-                this.tableLayoutPanelRating.RowStyles[2].Height = 80;
+                this.tableLayoutPanelRating.RowStyles[2].Height = 60;
+                this.tableLayoutPanelRating.RowStyles[3].Height = 25;
+                buttonChangeRating.Height = 35;
                 labelAlreadyRated.Visible = true;
             }
             if (_specificMoviePresenter.UserHasMovieInWatchList())
@@ -547,11 +549,19 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         private void buttonChangeRating_Click(object sender, EventArgs e)
         {
-            tableLayoutPanelRating.RowStyles[1].Height = 66;
-            tableLayoutPanelRating.RowStyles[2].Height = 0;
-            this.tableLayoutPanelRating.RowStyles[3].Height = 0;
-            tableLayoutPanelStars.Visible = true;
-            labelAlreadyRated.Visible = false;
+
+            DialogResult d = MessageBox.Show("Your current rate will be deleted after pressing OK!\nAre you sure you want to continue?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (d==DialogResult.OK)
+            {
+                tableLayoutPanelRating.RowStyles[1].Height = 66;
+                tableLayoutPanelRating.RowStyles[2].Height = 0;
+                this.tableLayoutPanelRating.RowStyles[3].Height = 0;
+                tableLayoutPanelStars.Visible = true;
+                labelAlreadyRated.Visible = false;
+                _specificMoviePresenter.DeleteRate();
+                labelAlreadyRated.Text = "You have already rated for this movie! Your rating: ";
+                labelMovieAverageRating.Text = movieAVGRate.ToString();
+            }           
         }
     }
 }

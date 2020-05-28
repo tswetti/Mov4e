@@ -349,12 +349,6 @@ namespace Mov4e.View.AllMoviesView
                 if (mov.Count > 0)
                 {
                     InitializeMoviesList(mov);
-                    buttonAddMovie.Visible = false;
-                    buttonDeleteMovie.Visible = false;
-                    buttonEditMovie.Visible = false;
-                    buttonAddMovie.Enabled = false;
-                    buttonDeleteMovie.Enabled = false;
-                    buttonEditMovie.Enabled = false;
                     tableLayoutPanelActionsWMovie.ColumnStyles[0].SizeType = SizeType.Percent;
                     tableLayoutPanelActionsWMovie.ColumnStyles[1].SizeType = SizeType.Percent;
                     tableLayoutPanelActionsWMovie.ColumnStyles[2].SizeType = SizeType.Percent;

@@ -131,5 +131,12 @@ namespace Mov4e.Repository.SpecificMovieInfoRepository
         /// /// <param name="movieId"></param>
         /// <returns></returns>
         int GetUserRateFromDB(int userId,int movieId);
+
+        /// <summary>
+        /// This method removes rate of user from DB 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="movieId"></param>
+        void RemoveUserRateFromDB(int userId, int movieId);
     }
 }
