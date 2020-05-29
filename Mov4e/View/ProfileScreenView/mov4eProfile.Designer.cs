@@ -38,20 +38,20 @@
             this.tableLayoutPanelProfileInformation = new System.Windows.Forms.TableLayoutPanel();
             this.labelUsername = new System.Windows.Forms.Label();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanelUserActions = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonProfileSettings = new System.Windows.Forms.Button();
+            this.buttonLogOffProfile = new System.Windows.Forms.Button();
             this.tableLayoutPanelUserInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.labelUserEmail = new System.Windows.Forms.Label();
             this.labelUserLName = new System.Windows.Forms.Label();
-            this.labelUserGender = new System.Windows.Forms.Label();
+            this.labelUserEmail = new System.Windows.Forms.Label();
             this.labelUserFName = new System.Windows.Forms.Label();
+            this.labelUserGender = new System.Windows.Forms.Label();
             this.labelUserAge = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
             this.labelGender = new System.Windows.Forms.Label();
-            this.tableLayoutPanelUserActions = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonProfileSettings = new System.Windows.Forms.Button();
-            this.buttonLogOffProfile = new System.Windows.Forms.Button();
             this.tableLayoutPanelWatchlist = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonViewInformation = new System.Windows.Forms.Button();
@@ -74,8 +74,8 @@
             this.tableLayoutPanelProfileContent.SuspendLayout();
             this.tableLayoutPanelProfileInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).BeginInit();
-            this.tableLayoutPanelUserInfo.SuspendLayout();
             this.tableLayoutPanelUserActions.SuspendLayout();
+            this.tableLayoutPanelUserInfo.SuspendLayout();
             this.tableLayoutPanelWatchlist.SuspendLayout();
             this.tableLayoutPanelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
@@ -207,6 +207,48 @@
             this.pictureBoxProfilePicture.TabStop = false;
             this.pictureBoxProfilePicture.Click += new System.EventHandler(this.pictureBoxProfilePicture_Click);
             // 
+            // tableLayoutPanelUserActions
+            // 
+            this.tableLayoutPanelUserActions.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelUserActions.ColumnCount = 1;
+            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelUserActions.Controls.Add(this.buttonProfileSettings, 0, 0);
+            this.tableLayoutPanelUserActions.Controls.Add(this.buttonLogOffProfile, 0, 1);
+            this.tableLayoutPanelUserActions.Location = new System.Drawing.Point(50, 452);
+            this.tableLayoutPanelUserActions.Name = "tableLayoutPanelUserActions";
+            this.tableLayoutPanelUserActions.RowCount = 2;
+            this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelUserActions.Size = new System.Drawing.Size(150, 76);
+            this.tableLayoutPanelUserActions.TabIndex = 3;
+            // 
+            // buttonProfileSettings
+            // 
+            this.buttonProfileSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonProfileSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonProfileSettings.Location = new System.Drawing.Point(35, 4);
+            this.buttonProfileSettings.Name = "buttonProfileSettings";
+            this.buttonProfileSettings.Size = new System.Drawing.Size(80, 30);
+            this.buttonProfileSettings.TabIndex = 0;
+            this.buttonProfileSettings.Text = "Settings";
+            this.buttonProfileSettings.UseVisualStyleBackColor = true;
+            this.buttonProfileSettings.Click += new System.EventHandler(this.buttonProfileSettings_Click);
+            // 
+            // buttonLogOffProfile
+            // 
+            this.buttonLogOffProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLogOffProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLogOffProfile.Location = new System.Drawing.Point(35, 42);
+            this.buttonLogOffProfile.Name = "buttonLogOffProfile";
+            this.buttonLogOffProfile.Size = new System.Drawing.Size(80, 30);
+            this.buttonLogOffProfile.TabIndex = 1;
+            this.buttonLogOffProfile.Text = "Log off";
+            this.buttonLogOffProfile.UseVisualStyleBackColor = true;
+            this.buttonLogOffProfile.Click += new System.EventHandler(this.buttonLogOffProfile_Click);
+            this.buttonLogOffProfile.MouseLeave += new System.EventHandler(this.buttonLogOffProfile_MouseLeave);
+            this.buttonLogOffProfile.MouseHover += new System.EventHandler(this.buttonLogOffProfile_MouseHover);
+            // 
             // tableLayoutPanelUserInfo
             // 
             this.tableLayoutPanelUserInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -235,6 +277,18 @@
             this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(244, 194);
             this.tableLayoutPanelUserInfo.TabIndex = 1;
             // 
+            // labelUserLName
+            // 
+            this.labelUserLName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelUserLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserLName.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelUserLName.Location = new System.Drawing.Point(82, 46);
+            this.labelUserLName.Name = "labelUserLName";
+            this.labelUserLName.Size = new System.Drawing.Size(145, 21);
+            this.labelUserLName.TabIndex = 6;
+            this.labelUserLName.Text = "last name";
+            this.labelUserLName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // labelUserEmail
             // 
             this.labelUserEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -248,17 +302,17 @@
             this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelUserEmail.Click += new System.EventHandler(this.labelUserEmail_Click);
             // 
-            // labelUserLName
+            // labelUserFName
             // 
-            this.labelUserLName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUserLName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserLName.Location = new System.Drawing.Point(82, 46);
-            this.labelUserLName.Name = "labelUserLName";
-            this.labelUserLName.Size = new System.Drawing.Size(145, 21);
-            this.labelUserLName.TabIndex = 6;
-            this.labelUserLName.Text = "last name";
-            this.labelUserLName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelUserFName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelUserFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserFName.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelUserFName.Location = new System.Drawing.Point(82, 8);
+            this.labelUserFName.Name = "labelUserFName";
+            this.labelUserFName.Size = new System.Drawing.Size(150, 21);
+            this.labelUserFName.TabIndex = 5;
+            this.labelUserFName.Text = "first name";
+            this.labelUserFName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelUserGender
             // 
@@ -271,18 +325,6 @@
             this.labelUserGender.TabIndex = 9;
             this.labelUserGender.Text = "gender";
             this.labelUserGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelUserFName
-            // 
-            this.labelUserFName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUserFName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserFName.Location = new System.Drawing.Point(82, 8);
-            this.labelUserFName.Name = "labelUserFName";
-            this.labelUserFName.Size = new System.Drawing.Size(150, 21);
-            this.labelUserFName.TabIndex = 5;
-            this.labelUserFName.Text = "first name";
-            this.labelUserFName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelUserAge
             // 
@@ -360,48 +402,6 @@
             this.labelGender.TabIndex = 4;
             this.labelGender.Text = "Gender:";
             this.labelGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanelUserActions
-            // 
-            this.tableLayoutPanelUserActions.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanelUserActions.ColumnCount = 1;
-            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelUserActions.Controls.Add(this.buttonProfileSettings, 0, 0);
-            this.tableLayoutPanelUserActions.Controls.Add(this.buttonLogOffProfile, 0, 1);
-            this.tableLayoutPanelUserActions.Location = new System.Drawing.Point(50, 452);
-            this.tableLayoutPanelUserActions.Name = "tableLayoutPanelUserActions";
-            this.tableLayoutPanelUserActions.RowCount = 2;
-            this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelUserActions.Size = new System.Drawing.Size(150, 76);
-            this.tableLayoutPanelUserActions.TabIndex = 3;
-            // 
-            // buttonProfileSettings
-            // 
-            this.buttonProfileSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonProfileSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonProfileSettings.Location = new System.Drawing.Point(35, 4);
-            this.buttonProfileSettings.Name = "buttonProfileSettings";
-            this.buttonProfileSettings.Size = new System.Drawing.Size(80, 30);
-            this.buttonProfileSettings.TabIndex = 0;
-            this.buttonProfileSettings.Text = "Settings";
-            this.buttonProfileSettings.UseVisualStyleBackColor = true;
-            this.buttonProfileSettings.Click += new System.EventHandler(this.buttonProfileSettings_Click);
-            // 
-            // buttonLogOffProfile
-            // 
-            this.buttonLogOffProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonLogOffProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogOffProfile.Location = new System.Drawing.Point(35, 42);
-            this.buttonLogOffProfile.Name = "buttonLogOffProfile";
-            this.buttonLogOffProfile.Size = new System.Drawing.Size(80, 30);
-            this.buttonLogOffProfile.TabIndex = 1;
-            this.buttonLogOffProfile.Text = "Log off";
-            this.buttonLogOffProfile.UseVisualStyleBackColor = true;
-            this.buttonLogOffProfile.Click += new System.EventHandler(this.buttonLogOffProfile_Click);
-            this.buttonLogOffProfile.MouseLeave += new System.EventHandler(this.buttonLogOffProfile_MouseLeave);
-            this.buttonLogOffProfile.MouseHover += new System.EventHandler(this.buttonLogOffProfile_MouseHover);
             // 
             // tableLayoutPanelWatchlist
             // 
@@ -605,9 +605,9 @@
             this.tableLayoutPanelProfileInformation.ResumeLayout(false);
             this.tableLayoutPanelProfileInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).EndInit();
+            this.tableLayoutPanelUserActions.ResumeLayout(false);
             this.tableLayoutPanelUserInfo.ResumeLayout(false);
             this.tableLayoutPanelUserInfo.PerformLayout();
-            this.tableLayoutPanelUserActions.ResumeLayout(false);
             this.tableLayoutPanelWatchlist.ResumeLayout(false);
             this.tableLayoutPanelWatchlist.PerformLayout();
             this.tableLayoutPanelButtons.ResumeLayout(false);
