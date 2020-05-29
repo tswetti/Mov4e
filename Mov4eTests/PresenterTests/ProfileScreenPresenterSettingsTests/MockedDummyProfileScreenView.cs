@@ -19,7 +19,7 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterSettingsTests
         public string UserName { get; set; }
         public Dictionary<int, byte[]> watchList { get; set; }
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             //works
         }
@@ -49,10 +49,11 @@ namespace Mov4eTests.PresenterTests.ProfileScreenPresenterSettingsTests
             
         }
 
-        public void UpdateLastNmae()
+        public void UpdateLastName()
         {
            
         }
+
 
         public void UpdateUserName()
         {

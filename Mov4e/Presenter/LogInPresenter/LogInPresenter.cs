@@ -62,7 +62,7 @@ namespace Mov4e.Presenter.LogInPresenter
             {
                 Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
                          + "\n" + e.ToString());
-                _login.ErrorMassage(e.Message);
+                _login.ErrorMessage(e.Message);
             }
         }
 

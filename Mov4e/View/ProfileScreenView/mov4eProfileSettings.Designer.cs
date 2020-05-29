@@ -537,6 +537,7 @@
             // 
             this.comboBoxGenderChanged.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxGenderChanged.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.comboBoxGenderChanged.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGenderChanged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxGenderChanged.ForeColor = System.Drawing.Color.White;
             this.comboBoxGenderChanged.FormattingEnabled = true;
@@ -649,13 +650,89 @@
             // 
             this.comboBoxBYearChanged.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxBYearChanged.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
-            this.comboBoxBYearChanged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxBYearChanged.DropDownHeight = 120;
+            this.comboBoxBYearChanged.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBYearChanged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBoxBYearChanged.ForeColor = System.Drawing.Color.White;
             this.comboBoxBYearChanged.FormattingEnabled = true;
+            this.comboBoxBYearChanged.IntegralHeight = false;
+            this.comboBoxBYearChanged.Items.AddRange(new object[] {
+            "1950",
+            "1951",
+            "1952",
+            "1953",
+            "1954",
+            "1955",
+            "1956",
+            "1957",
+            "1958",
+            "1959",
+            "1960",
+            "1961",
+            "1962",
+            "1963",
+            "1964",
+            "1965",
+            "1966",
+            "1967",
+            "1968",
+            "1969",
+            "1970",
+            "1971",
+            "1972",
+            "1973",
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020"});
             this.comboBoxBYearChanged.Location = new System.Drawing.Point(169, 9);
+            this.comboBoxBYearChanged.MaxDropDownItems = 5;
             this.comboBoxBYearChanged.Name = "comboBoxBYearChanged";
             this.comboBoxBYearChanged.Size = new System.Drawing.Size(160, 28);
-            this.comboBoxBYearChanged.TabIndex = 16;
+            this.comboBoxBYearChanged.TabIndex = 10;
             this.comboBoxBYearChanged.SelectedIndexChanged += new System.EventHandler(this.comboBoxBYearChanged_SelectedIndexChanged);
             this.comboBoxBYearChanged.Click += new System.EventHandler(this.comboBoxBYearChanged_Click);
             // 
@@ -813,6 +890,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mov4eProfileSettings";
             this.Text = "mov4eProfileSettings";
+            this.Load += new System.EventHandler(this.mov4eProfileSettings_Load);
             this.topButtonsLayoutPanel.ResumeLayout(false);
             this.topButtonsLayoutPanel.PerformLayout();
             this.tableLayoutPanelBackButton.ResumeLayout(false);
@@ -867,7 +945,6 @@
         private System.Windows.Forms.Label labelOldPassword;
         private System.Windows.Forms.Label labelChangePassword;
         private System.Windows.Forms.TextBox textBoxEmailChanged;
-        private System.Windows.Forms.ComboBox comboBoxBYearChanged;
         private System.Windows.Forms.ComboBox comboBoxGenderChanged;
         private System.Windows.Forms.TextBox textBoxOldPassword;
         private System.Windows.Forms.TextBox textBoxNewPassword;
@@ -893,5 +970,6 @@
         private System.Windows.Forms.Panel panelHrEmail;
         private System.Windows.Forms.Panel panelHrLName;
         private System.Windows.Forms.ToolTip toolTipValidInfo;
+        private System.Windows.Forms.ComboBox comboBoxBYearChanged;
     }
 }

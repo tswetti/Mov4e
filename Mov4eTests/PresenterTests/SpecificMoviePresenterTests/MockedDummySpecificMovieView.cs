@@ -26,7 +26,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
         public event EventHandler<SpecificMovieEventArgs> MovieDeletedFromWatchList;
         public event EventHandler<SpecificMovieEventArgs> MovieAddedToWatchList;
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             //ok
         }

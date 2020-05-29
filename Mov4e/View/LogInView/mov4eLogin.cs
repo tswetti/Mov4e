@@ -22,7 +22,7 @@ namespace Mov4e.View.LogInView
             this.Hide();
         }
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -268,7 +268,7 @@ namespace Mov4e.View.LogInView
             }
             catch (Exception ex)
             {
-                ErrorMassage(ex.Message);
+                ErrorMessage(ex.Message);
             }
         }
 

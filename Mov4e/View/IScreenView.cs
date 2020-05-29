@@ -14,6 +14,6 @@ namespace Mov4e.View
         /// This method displays MessageBox with the error
         /// </summary>
         /// <param name="msg"></param>
-        void ErrorMassage(string msg);
+        void ErrorMessage(string msg);
     }
 }
