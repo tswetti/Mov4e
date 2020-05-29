@@ -236,7 +236,7 @@
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(234, 129);
+            this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(234, 139);
             this.tableLayoutPanelUserInfo.TabIndex = 1;
             // 
             // labelUserGender
@@ -245,7 +245,7 @@
             this.labelUserGender.AutoSize = true;
             this.labelUserGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserGender.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserGender.Location = new System.Drawing.Point(82, 106);
+            this.labelUserGender.Location = new System.Drawing.Point(82, 115);
             this.labelUserGender.Name = "labelUserGender";
             this.labelUserGender.Size = new System.Drawing.Size(51, 16);
             this.labelUserGender.TabIndex = 9;
@@ -257,7 +257,7 @@
             this.labelUserAge.AutoSize = true;
             this.labelUserAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserAge.Location = new System.Drawing.Point(82, 79);
+            this.labelUserAge.Location = new System.Drawing.Point(82, 86);
             this.labelUserAge.Name = "labelUserAge";
             this.labelUserAge.Size = new System.Drawing.Size(32, 16);
             this.labelUserAge.TabIndex = 8;
@@ -269,9 +269,9 @@
             this.labelUserEmail.AutoSize = true;
             this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserEmail.Location = new System.Drawing.Point(82, 54);
+            this.labelUserEmail.Location = new System.Drawing.Point(82, 59);
             this.labelUserEmail.Name = "labelUserEmail";
-            this.labelUserEmail.Size = new System.Drawing.Size(150, 16);
+            this.labelUserEmail.Size = new System.Drawing.Size(48, 16);
             this.labelUserEmail.TabIndex = 7;
             this.labelUserEmail.Text = " e-mail";
             // 
@@ -281,7 +281,7 @@
             this.labelUserLName.AutoSize = true;
             this.labelUserLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserLName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserLName.Location = new System.Drawing.Point(82, 29);
+            this.labelUserLName.Location = new System.Drawing.Point(82, 32);
             this.labelUserLName.Name = "labelUserLName";
             this.labelUserLName.Size = new System.Drawing.Size(65, 16);
             this.labelUserLName.TabIndex = 6;
@@ -293,7 +293,7 @@
             this.labelUserFName.AutoSize = true;
             this.labelUserFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserFName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserFName.Location = new System.Drawing.Point(82, 4);
+            this.labelUserFName.Location = new System.Drawing.Point(82, 5);
             this.labelUserFName.Name = "labelUserFName";
             this.labelUserFName.Size = new System.Drawing.Size(65, 16);
             this.labelUserFName.TabIndex = 5;
@@ -305,7 +305,7 @@
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFirstName.Location = new System.Drawing.Point(3, 4);
+            this.labelFirstName.Location = new System.Drawing.Point(3, 5);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(73, 16);
             this.labelFirstName.TabIndex = 0;
@@ -317,7 +317,7 @@
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelLastName.Location = new System.Drawing.Point(3, 29);
+            this.labelLastName.Location = new System.Drawing.Point(3, 32);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(73, 16);
             this.labelLastName.TabIndex = 1;
@@ -329,7 +329,7 @@
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelEmail.Location = new System.Drawing.Point(3, 54);
+            this.labelEmail.Location = new System.Drawing.Point(3, 59);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(49, 16);
             this.labelEmail.TabIndex = 2;
@@ -341,7 +341,7 @@
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAge.Location = new System.Drawing.Point(3, 79);
+            this.labelAge.Location = new System.Drawing.Point(3, 86);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(36, 16);
             this.labelAge.TabIndex = 3;
@@ -353,7 +353,7 @@
             this.labelGender.AutoSize = true;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGender.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelGender.Location = new System.Drawing.Point(3, 106);
+            this.labelGender.Location = new System.Drawing.Point(3, 115);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(56, 16);
             this.labelGender.TabIndex = 4;
@@ -429,13 +429,13 @@
             this.tableLayoutPanelWatchlist.Controls.Add(this.tableLayoutPanel1, 0, 2);
             this.tableLayoutPanelWatchlist.Controls.Add(this.listViewWatchlist, 0, 1);
             this.tableLayoutPanelWatchlist.Controls.Add(this.labelWatchlist, 0, 0);
-            this.tableLayoutPanelWatchlist.Location = new System.Drawing.Point(268, 3);
+            this.tableLayoutPanelWatchlist.Location = new System.Drawing.Point(259, 3);
             this.tableLayoutPanelWatchlist.Name = "tableLayoutPanelWatchlist";
             this.tableLayoutPanelWatchlist.RowCount = 3;
             this.tableLayoutPanelWatchlist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelWatchlist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanelWatchlist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelWatchlist.Size = new System.Drawing.Size(1000, 720);
+            this.tableLayoutPanelWatchlist.Size = new System.Drawing.Size(1017, 720);
             this.tableLayoutPanelWatchlist.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -446,7 +446,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.buttonViewInformation, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonRemoveFW, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(290, 651);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(298, 651);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -492,9 +492,9 @@
             this.listViewWatchlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewWatchlist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listViewWatchlist.HideSelection = false;
-            this.listViewWatchlist.Location = new System.Drawing.Point(3, 93);
+            this.listViewWatchlist.Location = new System.Drawing.Point(5, 93);
             this.listViewWatchlist.Name = "listViewWatchlist";
-            this.listViewWatchlist.Size = new System.Drawing.Size(994, 534);
+            this.listViewWatchlist.Size = new System.Drawing.Size(1006, 534);
             this.listViewWatchlist.TabIndex = 5;
             this.listViewWatchlist.UseCompatibleStateImageBehavior = false;
             this.listViewWatchlist.SelectedIndexChanged += new System.EventHandler(this.listViewWatchlist_SelectedIndexChanged);
@@ -505,7 +505,7 @@
             this.labelWatchlist.AutoSize = true;
             this.labelWatchlist.Font = new System.Drawing.Font("Broadway", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWatchlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.labelWatchlist.Location = new System.Drawing.Point(336, 17);
+            this.labelWatchlist.Location = new System.Drawing.Point(345, 17);
             this.labelWatchlist.Name = "labelWatchlist";
             this.labelWatchlist.Size = new System.Drawing.Size(327, 55);
             this.labelWatchlist.TabIndex = 1;

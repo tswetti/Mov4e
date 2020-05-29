@@ -369,7 +369,7 @@
             this.textBoxLNameChanged.ForeColor = System.Drawing.Color.White;
             this.textBoxLNameChanged.Location = new System.Drawing.Point(169, 18);
             this.textBoxLNameChanged.Name = "textBoxLNameChanged";
-            this.textBoxLNameChanged.Size = new System.Drawing.Size(150, 19);
+            this.textBoxLNameChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxLNameChanged.TabIndex = 26;
             this.toolTipValidInfo.SetToolTip(this.textBoxLNameChanged, "only letters; less than 25 characters");
             this.textBoxLNameChanged.Click += new System.EventHandler(this.textBoxLNameChanged_Click);
@@ -425,7 +425,7 @@
             this.textBoxFNameChanged.ForeColor = System.Drawing.Color.White;
             this.textBoxFNameChanged.Location = new System.Drawing.Point(169, 18);
             this.textBoxFNameChanged.Name = "textBoxFNameChanged";
-            this.textBoxFNameChanged.Size = new System.Drawing.Size(150, 19);
+            this.textBoxFNameChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxFNameChanged.TabIndex = 25;
             this.toolTipValidInfo.SetToolTip(this.textBoxFNameChanged, "only letters; less than 25 characters");
             this.textBoxFNameChanged.Click += new System.EventHandler(this.textBoxFNameChanged_Click);
@@ -483,7 +483,7 @@
             this.textBoxUsernameChanged.Location = new System.Drawing.Point(169, 18);
             this.textBoxUsernameChanged.MaxLength = 20;
             this.textBoxUsernameChanged.Name = "textBoxUsernameChanged";
-            this.textBoxUsernameChanged.Size = new System.Drawing.Size(150, 19);
+            this.textBoxUsernameChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxUsernameChanged.TabIndex = 24;
             this.toolTipValidInfo.SetToolTip(this.textBoxUsernameChanged, "less than 20 characters; can begin and end only with letters or numbers; other al" +
         "lowed characters: -_ ");
@@ -582,7 +582,7 @@
             this.textBoxEmailChanged.ForeColor = System.Drawing.Color.White;
             this.textBoxEmailChanged.Location = new System.Drawing.Point(169, 18);
             this.textBoxEmailChanged.Name = "textBoxEmailChanged";
-            this.textBoxEmailChanged.Size = new System.Drawing.Size(150, 19);
+            this.textBoxEmailChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxEmailChanged.TabIndex = 15;
             this.toolTipValidInfo.SetToolTip(this.textBoxEmailChanged, "a valid e-mail");
             this.textBoxEmailChanged.Click += new System.EventHandler(this.textBoxEmailChanged_Click);
@@ -737,7 +737,7 @@
             this.textBoxOldPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxOldPassword.Location = new System.Drawing.Point(168, 66);
             this.textBoxOldPassword.Name = "textBoxOldPassword";
-            this.textBoxOldPassword.Size = new System.Drawing.Size(150, 19);
+            this.textBoxOldPassword.Size = new System.Drawing.Size(160, 19);
             this.textBoxOldPassword.TabIndex = 18;
             this.textBoxOldPassword.Click += new System.EventHandler(this.textBoxOldPassword_Click);
             this.textBoxOldPassword.TextChanged += new System.EventHandler(this.textBoxOldPassword_TextChanged);
@@ -751,7 +751,7 @@
             this.textBoxNewPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxNewPassword.Location = new System.Drawing.Point(168, 110);
             this.textBoxNewPassword.Name = "textBoxNewPassword";
-            this.textBoxNewPassword.Size = new System.Drawing.Size(150, 19);
+            this.textBoxNewPassword.Size = new System.Drawing.Size(160, 19);
             this.textBoxNewPassword.TabIndex = 19;
             this.toolTipValidInfo.SetToolTip(this.textBoxNewPassword, "between 8 and 30 symbols, a lowercase letter, capital letter, number and a specia" +
         "l symbol: #?!@$%^&*-");
@@ -767,7 +767,7 @@
             this.textBoxNewPasswordRepeat.ForeColor = System.Drawing.Color.White;
             this.textBoxNewPasswordRepeat.Location = new System.Drawing.Point(168, 156);
             this.textBoxNewPasswordRepeat.Name = "textBoxNewPasswordRepeat";
-            this.textBoxNewPasswordRepeat.Size = new System.Drawing.Size(150, 19);
+            this.textBoxNewPasswordRepeat.Size = new System.Drawing.Size(160, 19);
             this.textBoxNewPasswordRepeat.TabIndex = 20;
             this.textBoxNewPasswordRepeat.Click += new System.EventHandler(this.textBoxNewPasswordRepeat_Click);
             this.textBoxNewPasswordRepeat.TextChanged += new System.EventHandler(this.textBoxNewPasswordRepeat_TextChanged);

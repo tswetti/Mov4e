@@ -89,7 +89,7 @@ namespace Mov4e.View.SpecificMovieInfoView
         List<PictureBox> stars = new List<PictureBox>();
         int charactersCount;
         int maxCharacters;
-
+        bool commentFirstClick;
 
         public mov4eMovie(int movieId, int userId, IScreenView screen)
         {
@@ -102,20 +102,22 @@ namespace Mov4e.View.SpecificMovieInfoView
             labelAlreadyRated.Visible = false;
 
             tableLayoutPanelWatchlistActions.RowStyles[0].Height = 100;
+            buttonAddToWatchlist.Height = buttonAddComment.Height;
             tableLayoutPanelWatchlistActions.RowStyles[1].Height = 0;
             buttonRemoveFWatchlist.Visible = false;
-            buttonAddToWatchlist.Height = 27;
             textBoxAddComment.Text = "Type your comment here...";
+            commentFirstClick = true;
             charactersCount = textBoxAddComment.Text.Length;
             maxCharacters = textBoxAddComment.MaxLength;
             labelCharactersLeft.Text = "0/" + maxCharacters;
-
 
              stars.Add(pictureBoxStar1);
             stars.Add(pictureBoxStar2);
             stars.Add(pictureBoxStar3);
             stars.Add(pictureBoxStar4);
             stars.Add(pictureBoxStar5);
+
+            this.ActiveControl = labelTitle;
 
             _screnToGoback = screen;
             this.userId = userId;
@@ -303,12 +305,13 @@ namespace Mov4e.View.SpecificMovieInfoView
             tableLayoutPanelWatchlistActions.RowStyles[0].Height = 0;
             tableLayoutPanelWatchlistActions.RowStyles[1].Height = 100;
             buttonRemoveFWatchlist.Visible = true;
-            buttonRemoveFWatchlist.Height = 30;
+            buttonAddToWatchlist.Visible = false;
+            buttonRemoveFWatchlist.Height = buttonAddComment.Height;
 
             try
             {
                 Validation.ValidateSpecificMovie.isThereAnythingToRemoveOrAddFromWatchList(this.movieId);
-                buttonRemoveFWatchlist.Height = 30;
+                buttonRemoveFWatchlist.Height = buttonAddComment.Height;
 
                 Validation.ValidateSpecificMovie.isThereAnUser(this.userId);
                 _specificMoviePresenter.AddMovieINWatchList();
@@ -326,13 +329,13 @@ namespace Mov4e.View.SpecificMovieInfoView
             tableLayoutPanelWatchlistActions.RowStyles[0].Height = 100;
             buttonAddToWatchlist.Visible = true;
             buttonRemoveFWatchlist.Visible = false;
-            buttonAddToWatchlist.Height = 30;
+            buttonAddToWatchlist.Height = buttonAddComment.Height;
 
             try
             {
                 Validation.ValidateSpecificMovie.isThereAnythingToRemoveOrAddFromWatchList(this.movieId);
                 OnMovieDeletedFromWatchList(spEventArgs);
-                buttonAddToWatchlist.Height = 30;
+                buttonAddToWatchlist.Height = buttonAddComment.Height;
                 Validation.ValidateSpecificMovie.isThereAnUser(this.userId);
                 _specificMoviePresenter.DeleteMovieFromWatchList();
             }
@@ -344,10 +347,11 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         private void textBoxAddComment_Click(object sender, EventArgs e)
         {
-            if (textBoxAddComment.Text == "Type your comment here...")
+            if (commentFirstClick==true)
             {
                 textBoxAddComment.Text = null;
             }
+            commentFirstClick = false;
         }
 
         private void mov4eMovie_Load(object sender, EventArgs e)
@@ -387,8 +391,13 @@ namespace Mov4e.View.SpecificMovieInfoView
             labelMovieDuration.Text = duration.ToString()+" mins";
             labelMoviePG.Text = moviePG.ToString();
             labelMoviePremiereDate.Text = moviePrimeDate;
-            labelMovieSummary.Text = movieSummary;
             labelMovieAverageRating.Text = movieAVGRate.ToString();
+
+            if (movieSummary.Length>textBoxMovieSummary.Text.Length)
+            {
+                textBoxMovieSummary.ScrollBars = ScrollBars.Vertical;
+            }
+            textBoxMovieSummary.Text = movieSummary;
 
             if (_specificMoviePresenter.UserAlreadyRated())
             {
@@ -447,8 +456,6 @@ namespace Mov4e.View.SpecificMovieInfoView
             commentBoxAllComments.currentUserName = _specificMoviePresenter.GetUserName();
             if (comments.Count > 0)
             {
-
-
                 commentBoxAllComments.allComentsCounter = comments.Count;
                 foreach (var el in comments)
                 {
@@ -500,14 +507,12 @@ namespace Mov4e.View.SpecificMovieInfoView
                         commentBoxAllComments.Reset();
                         initializeAllComments();
                     }
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void textBoxAddComment_TextChanged(object sender, EventArgs e)
@@ -572,6 +577,11 @@ namespace Mov4e.View.SpecificMovieInfoView
                 labelAlreadyRated.Text = "You have already rated for this movie! Your rating: ";
                 labelMovieAverageRating.Text = movieAVGRate.ToString();
             }           
+        }
+
+        private void textBoxMovieSummary_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

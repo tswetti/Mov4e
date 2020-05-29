@@ -88,6 +88,8 @@ namespace Mov4e.View.ProfileScreenView
             buttonChangeLName,buttonChangeBYear };
             panels=new List<Panel> {panelHrEmail, panelHrPassword, panelHrUsername, panelHrFName,
             panelHrLName};
+
+            this.ActiveControl = null;
         }
 
         private void minimizeLabel_Click(object sender, EventArgs e)

@@ -86,10 +86,10 @@
             this.pictureBoxSort = new System.Windows.Forms.PictureBox();
             this.buttonStartSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanelActionsWMovie = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonDeleteMovie = new System.Windows.Forms.Button();
-            this.buttonEditMovie = new System.Windows.Forms.Button();
             this.buttonAddMovie = new System.Windows.Forms.Button();
             this.buttonViewInfo = new System.Windows.Forms.Button();
+            this.buttonDeleteMovie = new System.Windows.Forms.Button();
+            this.buttonEditMovie = new System.Windows.Forms.Button();
             this.imageListMovies = new System.Windows.Forms.ImageList(this.components);
             this.toolTipMovies = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
@@ -884,45 +884,16 @@
             this.tableLayoutPanelActionsWMovie.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelActionsWMovie.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelActionsWMovie.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonDeleteMovie, 1, 0);
-            this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonEditMovie, 3, 0);
-            this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonAddMovie, 1, 0);
             this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonViewInfo, 0, 0);
+            this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonEditMovie, 1, 0);
+            this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonDeleteMovie, 3, 0);
+            this.tableLayoutPanelActionsWMovie.Controls.Add(this.buttonAddMovie, 2, 0);
             this.tableLayoutPanelActionsWMovie.Location = new System.Drawing.Point(364, 659);
             this.tableLayoutPanelActionsWMovie.Name = "tableLayoutPanelActionsWMovie";
             this.tableLayoutPanelActionsWMovie.RowCount = 1;
             this.tableLayoutPanelActionsWMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelActionsWMovie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelActionsWMovie.Size = new System.Drawing.Size(552, 50);
             this.tableLayoutPanelActionsWMovie.TabIndex = 5;
-            // 
-            // buttonDeleteMovie
-            // 
-            this.buttonDeleteMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonDeleteMovie.AutoSize = true;
-            this.buttonDeleteMovie.Enabled = false;
-            this.buttonDeleteMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteMovie.Location = new System.Drawing.Point(313, 3);
-            this.buttonDeleteMovie.Name = "buttonDeleteMovie";
-            this.buttonDeleteMovie.Size = new System.Drawing.Size(124, 35);
-            this.buttonDeleteMovie.TabIndex = 1;
-            this.buttonDeleteMovie.Text = "Delete movie";
-            this.buttonDeleteMovie.UseVisualStyleBackColor = true;
-            this.buttonDeleteMovie.Visible = false;
-            this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
-            // 
-            // buttonEditMovie
-            // 
-            this.buttonEditMovie.Enabled = false;
-            this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditMovie.Location = new System.Drawing.Point(443, 3);
-            this.buttonEditMovie.Name = "buttonEditMovie";
-            this.buttonEditMovie.Size = new System.Drawing.Size(100, 35);
-            this.buttonEditMovie.TabIndex = 8;
-            this.buttonEditMovie.Text = "Edit movie";
-            this.buttonEditMovie.UseVisualStyleBackColor = true;
-            this.buttonEditMovie.Visible = false;
-            this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
             // 
             // buttonAddMovie
             // 
@@ -930,7 +901,7 @@
             this.buttonAddMovie.AutoSize = true;
             this.buttonAddMovie.Enabled = false;
             this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddMovie.Location = new System.Drawing.Point(162, 3);
+            this.buttonAddMovie.Location = new System.Drawing.Point(268, 3);
             this.buttonAddMovie.Name = "buttonAddMovie";
             this.buttonAddMovie.Size = new System.Drawing.Size(145, 35);
             this.buttonAddMovie.TabIndex = 0;
@@ -954,6 +925,34 @@
             this.toolTipMovies.SetToolTip(this.buttonViewInfo, "Select a movie first!");
             this.buttonViewInfo.UseVisualStyleBackColor = false;
             this.buttonViewInfo.Click += new System.EventHandler(this.buttonViewInfo_Click);
+            // 
+            // buttonDeleteMovie
+            // 
+            this.buttonDeleteMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonDeleteMovie.AutoSize = true;
+            this.buttonDeleteMovie.Enabled = false;
+            this.buttonDeleteMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDeleteMovie.Location = new System.Drawing.Point(422, 3);
+            this.buttonDeleteMovie.Name = "buttonDeleteMovie";
+            this.buttonDeleteMovie.Size = new System.Drawing.Size(124, 35);
+            this.buttonDeleteMovie.TabIndex = 1;
+            this.buttonDeleteMovie.Text = "Delete movie";
+            this.buttonDeleteMovie.UseVisualStyleBackColor = true;
+            this.buttonDeleteMovie.Visible = false;
+            this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
+            // 
+            // buttonEditMovie
+            // 
+            this.buttonEditMovie.Enabled = false;
+            this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditMovie.Location = new System.Drawing.Point(162, 3);
+            this.buttonEditMovie.Name = "buttonEditMovie";
+            this.buttonEditMovie.Size = new System.Drawing.Size(100, 35);
+            this.buttonEditMovie.TabIndex = 8;
+            this.buttonEditMovie.Text = "Edit movie";
+            this.buttonEditMovie.UseVisualStyleBackColor = true;
+            this.buttonEditMovie.Visible = false;
+            this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
             // 
             // imageListMovies
             // 

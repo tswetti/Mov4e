@@ -173,6 +173,9 @@ namespace Mov4e.View.NewMovieView
         }
 
         int summaryHeight;
+        bool nameFirstClick;
+        bool durationFirstClick;
+        bool summaryFirstClick;
 
         // This method initializes the form.
         private void InitializeForm()
@@ -206,6 +209,10 @@ namespace Mov4e.View.NewMovieView
             pgComboBox.ValueMember = "Key";
 
             summaryHeight = textBoxSummary.Height;
+            nameFirstClick = true;
+            durationFirstClick = true;
+            summaryFirstClick = true;
+            this.ActiveControl = buttonChangePic;
         }
 
         public mov4eAddMovie()
@@ -251,6 +258,15 @@ namespace Mov4e.View.NewMovieView
             pictureBoxMoviePic.Image = (Bitmap)((new ImageConverter()).ConvertFrom((byte[])movie.Item1.picture));
             textBoxDuration.Text = movie.Item1.duration.ToString();
             id = movie_id;
+
+            textBoxName.ForeColor = Color.White;
+            nameFirstClick = false;
+            textBoxDuration.ForeColor = Color.White;
+            durationFirstClick = false;
+            textBoxSummary.ForeColor = Color.White;
+            summaryFirstClick = false;
+
+            labelMovieName.Visible = true;
         }
 
         /// <summary>
@@ -361,6 +377,40 @@ namespace Mov4e.View.NewMovieView
                 summaryHeight += 20;
                 textBoxSummary.Text += Environment.NewLine + "";
             }*/
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxName_Click(object sender, EventArgs e)
+        {
+            if (nameFirstClick==true)
+            {
+                textBoxName.Text = null;
+                textBoxName.ForeColor = Color.White;
+            }
+            nameFirstClick = false;
+        }
+
+        private void textBoxDuration_Click(object sender, EventArgs e)
+        {
+            if (durationFirstClick==true)
+            {
+                textBoxDuration.Text = null;
+                textBoxDuration.ForeColor = Color.White;
+            }
+            durationFirstClick = false;
+        }
+
+        private void textBoxSummary_Click(object sender, EventArgs e)
+        {
+            if (summaryFirstClick==true)
+            {
+                textBoxSummary.Text = null;
+                textBoxSummary.ForeColor = Color.White;
+            }
+            summaryFirstClick = false;
         }
     }
 }
