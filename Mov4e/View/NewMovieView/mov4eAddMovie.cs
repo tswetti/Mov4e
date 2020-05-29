@@ -12,7 +12,7 @@ using Mov4e.Presenter.AllMoviesPresenter;
 using Mov4e.Presenter.NewMoviePresenter;
 using Mov4e.Validation;
 using Mov4e.Model;
-
+using System.Text.RegularExpressions;
 
 namespace Mov4e.View.NewMovieView
 {
@@ -37,6 +37,8 @@ namespace Mov4e.View.NewMovieView
 
         // A private variable that conserve a certain movie's id.
         private int id = 0;
+
+        private bool enableDurationCheck = false;
 
         private static void TopLabelsMouseHover(Label label)
         {
@@ -157,7 +159,7 @@ namespace Mov4e.View.NewMovieView
 
         private void mov4eAddMovie_Load(object sender, EventArgs e)
         {
-
+            this.enableDurationCheck = true;
         }
 
         private void buttonSaveMovie_Click(object sender, EventArgs e)
@@ -315,8 +317,8 @@ namespace Mov4e.View.NewMovieView
         /// </summary>
         /// <value>This property sets/gets int values for the genre.</value>
         public int genre
-        {
-            get => ((KeyValuePair<int, string>)genreComboBox.SelectedItem).Key;
+        { 
+            get => ((KeyValuePair<int, string>)genreComboBox.SelectedItem).Key;      
             set => genreComboBox.SelectedItem = value;
         }
 
@@ -402,6 +404,65 @@ namespace Mov4e.View.NewMovieView
                 textBoxSummary.ForeColor = Color.White;
             }
             summaryFirstClick = false;
+        }
+
+        private void CheckIfEverithingIsFilled()
+        {
+            if ((!string.IsNullOrEmpty(textBoxName.Text) && !string.IsNullOrWhiteSpace(textBoxName.Text)) &&
+                (!string.IsNullOrEmpty(textBoxDuration.Text) && !string.IsNullOrWhiteSpace(textBoxDuration.Text))&&
+                (!string.IsNullOrEmpty(textBoxSummary.Text) && !string.IsNullOrWhiteSpace(textBoxSummary.Text))&&
+                (!string.IsNullOrEmpty(genreComboBox.Text) && !string.IsNullOrWhiteSpace(genreComboBox.Text))&&
+                (!string.IsNullOrEmpty(pgComboBox.Text) && !string.IsNullOrWhiteSpace(pgComboBox.Text)) &&
+                pictureBoxMoviePic.Image!=null)           
+            {
+                buttonSaveMovie.Enabled = true;
+            }
+            else
+                buttonSaveMovie.Enabled = false;
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            CheckIfEverithingIsFilled();
+        }
+
+        private void genreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckIfEverithingIsFilled();
+        }
+
+        private void pgComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckIfEverithingIsFilled();
+        }
+
+        private void textBoxDuration_TextChanged(object sender, EventArgs e)
+        {
+            if (enableDurationCheck)
+            {
+                string regex = "^[0-9]*$";
+                if (!Regex.IsMatch(textBoxDuration.Text,regex))
+                {
+                    MessageBox.Show("You can type only numbers!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBoxDuration.Text = null;
+                }
+            }
+            CheckIfEverithingIsFilled();
+        }
+
+        private void datePickerPrDate_ValueChanged(object sender, EventArgs e)
+        {
+            CheckIfEverithingIsFilled();
+        }
+
+        private void textBoxSummary_TextChanged(object sender, EventArgs e)
+        {
+            CheckIfEverithingIsFilled();
+        }
+
+        private void pictureBoxMoviePic_Paint(object sender, PaintEventArgs e)
+        {
+            CheckIfEverithingIsFilled();
         }
     }
 }

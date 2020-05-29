@@ -191,6 +191,7 @@
             this.pictureBoxMoviePic.TabIndex = 7;
             this.pictureBoxMoviePic.TabStop = false;
             this.toolTipFormats.SetToolTip(this.pictureBoxMoviePic, "formats: .jpg, .jpeg, .png, .bmp");
+            this.pictureBoxMoviePic.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxMoviePic_Paint);
             // 
             // labelMovieName
             // 
@@ -263,10 +264,11 @@
             this.textBoxName.MaxLength = 50;
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(661, 34);
+            this.textBoxName.Size = new System.Drawing.Size(516, 34);
             this.textBoxName.TabIndex = 31;
             this.textBoxName.Text = "Type the movie\'s name here...";
             this.textBoxName.Click += new System.EventHandler(this.textBoxName_Click);
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelName
             // 
@@ -308,6 +310,7 @@
             this.textBoxSummary.TabIndex = 26;
             this.textBoxSummary.Text = "Type the movie\'s summary here...";
             this.textBoxSummary.Click += new System.EventHandler(this.textBoxSummary_Click);
+            this.textBoxSummary.TextChanged += new System.EventHandler(this.textBoxSummary_TextChanged);
             // 
             // labelSummary
             // 
@@ -355,11 +358,12 @@
             this.textBoxDuration.MaxLength = 10;
             this.textBoxDuration.Multiline = true;
             this.textBoxDuration.Name = "textBoxDuration";
-            this.textBoxDuration.Size = new System.Drawing.Size(650, 34);
+            this.textBoxDuration.Size = new System.Drawing.Size(516, 34);
             this.textBoxDuration.TabIndex = 28;
             this.textBoxDuration.Text = "Type the movie\'s duration here...";
             this.toolTipFormats.SetToolTip(this.textBoxDuration, "in minutes; example: 90");
             this.textBoxDuration.Click += new System.EventHandler(this.textBoxDuration_Click);
+            this.textBoxDuration.TextChanged += new System.EventHandler(this.textBoxDuration_TextChanged);
             // 
             // labelPG
             // 
@@ -392,6 +396,7 @@
             this.datePickerPrDate.Name = "datePickerPrDate";
             this.datePickerPrDate.Size = new System.Drawing.Size(256, 22);
             this.datePickerPrDate.TabIndex = 32;
+            this.datePickerPrDate.ValueChanged += new System.EventHandler(this.datePickerPrDate_ValueChanged);
             // 
             // pgComboBox
             // 
@@ -401,6 +406,7 @@
             this.pgComboBox.Name = "pgComboBox";
             this.pgComboBox.Size = new System.Drawing.Size(82, 24);
             this.pgComboBox.TabIndex = 33;
+            this.pgComboBox.SelectedIndexChanged += new System.EventHandler(this.pgComboBox_SelectedIndexChanged);
             // 
             // genreComboBox
             // 
@@ -410,14 +416,16 @@
             this.genreComboBox.Name = "genreComboBox";
             this.genreComboBox.Size = new System.Drawing.Size(82, 24);
             this.genreComboBox.TabIndex = 34;
+            this.genreComboBox.SelectedIndexChanged += new System.EventHandler(this.genreComboBox_SelectedIndexChanged);
             // 
             // buttonSaveMovie
             // 
             this.buttonSaveMovie.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSaveMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.buttonSaveMovie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveMovie.Enabled = false;
             this.buttonSaveMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSaveMovie.Location = new System.Drawing.Point(404, 471);
+            this.buttonSaveMovie.Location = new System.Drawing.Point(332, 471);
             this.buttonSaveMovie.Name = "buttonSaveMovie";
             this.buttonSaveMovie.Size = new System.Drawing.Size(130, 32);
             this.buttonSaveMovie.TabIndex = 30;

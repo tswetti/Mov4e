@@ -304,7 +304,7 @@ namespace Mov4e.View.AllMoviesView
 
         private void mov4eAllMovies_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         // This method makes initial settings for the administrator profile.
@@ -528,6 +528,7 @@ namespace Mov4e.View.AllMoviesView
                             }
                             mov4eMovie mi = new mov4eMovie(p, this.user_id, this);
                             this.Hide();
+                            listViewMovies.SelectedItems.Clear();
                             mi.ShowDialog();                           
                             break;
                         }
@@ -918,6 +919,7 @@ namespace Mov4e.View.AllMoviesView
                                 p = item.Key;
                             }
                             mov4eAddMovie me = new mov4eAddMovie(movie_presenter.GetMovie(p).Item1.id, this);
+                            listViewMovies.SelectedItems.Clear();
                             me.ShowDialog();
                             break;
                         }

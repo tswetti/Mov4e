@@ -294,7 +294,7 @@
             this.textBoxUsername.Location = new System.Drawing.Point(96, 6);
             this.textBoxUsername.MaxLength = 20;
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(215, 17);
+            this.textBoxUsername.Size = new System.Drawing.Size(201, 17);
             this.textBoxUsername.TabIndex = 1;
             this.toolTipValidReg.SetToolTip(this.textBoxUsername, "less than 20 characters; can begin and end only with letters or numbers; other al" +
         "lowed characters: -_ ");
@@ -303,11 +303,11 @@
             // 
             // labelUsername
             // 
-            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUsername.ForeColor = System.Drawing.Color.White;
-            this.labelUsername.Location = new System.Drawing.Point(3, 6);
+            this.labelUsername.Location = new System.Drawing.Point(12, 6);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(78, 18);
             this.labelUsername.TabIndex = 2;
@@ -338,7 +338,7 @@
             this.textBoxFirstName.Location = new System.Drawing.Point(96, 6);
             this.textBoxFirstName.MaxLength = 25;
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(215, 17);
+            this.textBoxFirstName.Size = new System.Drawing.Size(201, 17);
             this.textBoxFirstName.TabIndex = 1;
             this.toolTipValidReg.SetToolTip(this.textBoxFirstName, "only letters; less than 25 characters");
             this.textBoxFirstName.Click += new System.EventHandler(this.textBoxFirstName_Click);
@@ -346,11 +346,11 @@
             // 
             // labelFirstName
             // 
-            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.ForeColor = System.Drawing.Color.White;
-            this.labelFirstName.Location = new System.Drawing.Point(3, 6);
+            this.labelFirstName.Location = new System.Drawing.Point(13, 6);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(77, 18);
             this.labelFirstName.TabIndex = 2;
@@ -381,7 +381,7 @@
             this.textBoxLastName.Location = new System.Drawing.Point(96, 6);
             this.textBoxLastName.MaxLength = 25;
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(215, 17);
+            this.textBoxLastName.Size = new System.Drawing.Size(201, 17);
             this.textBoxLastName.TabIndex = 1;
             this.toolTipValidReg.SetToolTip(this.textBoxLastName, "only letters; less than 25 characters");
             this.textBoxLastName.Click += new System.EventHandler(this.textBoxLastName_Click);
@@ -389,11 +389,11 @@
             // 
             // labelLastName
             // 
-            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.ForeColor = System.Drawing.Color.White;
-            this.labelLastName.Location = new System.Drawing.Point(3, 6);
+            this.labelLastName.Location = new System.Drawing.Point(14, 6);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(76, 18);
             this.labelLastName.TabIndex = 2;
@@ -467,7 +467,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(96, 6);
             this.textBoxEmail.MaxLength = 40;
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(215, 17);
+            this.textBoxEmail.Size = new System.Drawing.Size(201, 17);
             this.textBoxEmail.TabIndex = 1;
             this.toolTipValidReg.SetToolTip(this.textBoxEmail, "a valid e-mail; less than 25 characters;");
             this.textBoxEmail.Click += new System.EventHandler(this.textBoxEmail_Click);
@@ -475,11 +475,11 @@
             // 
             // labelEmail
             // 
-            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.ForeColor = System.Drawing.Color.White;
-            this.labelEmail.Location = new System.Drawing.Point(3, 6);
+            this.labelEmail.Location = new System.Drawing.Point(38, 6);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(52, 18);
             this.labelEmail.TabIndex = 2;
@@ -530,7 +530,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(1, 4);
             this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(215, 17);
+            this.textBoxPassword.Size = new System.Drawing.Size(200, 17);
             this.textBoxPassword.TabIndex = 1;
             this.toolTipValidReg.SetToolTip(this.textBoxPassword, "between 8 and 30 symbols, a lowercase letter, capital letter, number and a specia" +
         "l symbol: #?!@$%^&*-");
@@ -539,11 +539,11 @@
             // 
             // labelPassword
             // 
-            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPassword.ForeColor = System.Drawing.Color.White;
-            this.labelPassword.Location = new System.Drawing.Point(3, 6);
+            this.labelPassword.Location = new System.Drawing.Point(13, 6);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(77, 18);
             this.labelPassword.TabIndex = 2;
@@ -586,7 +586,7 @@
             // 
             // labelGender
             // 
-            this.labelGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelGender.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelGender.AutoSize = true;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
@@ -619,7 +619,7 @@
             // 
             // labelAge
             // 
-            this.labelAge.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelAge.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAge.ForeColor = System.Drawing.Color.White;
