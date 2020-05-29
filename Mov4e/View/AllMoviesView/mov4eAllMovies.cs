@@ -305,8 +305,6 @@ namespace Mov4e.View.AllMoviesView
             buttonDeleteMovie.Visible = true;
             buttonEditMovie.Visible =true;
             buttonAddMovie.Enabled = true;
-            buttonDeleteMovie.Enabled = true;
-            buttonEditMovie.Enabled = true;
 
             try
             {
