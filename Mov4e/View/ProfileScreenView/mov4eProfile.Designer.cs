@@ -199,6 +199,7 @@
             // pictureBoxProfilePicture
             // 
             this.pictureBoxProfilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxProfilePicture.Location = new System.Drawing.Point(40, 9);
             this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
             this.pictureBoxProfilePicture.Size = new System.Drawing.Size(170, 170);
@@ -226,6 +227,7 @@
             // buttonProfileSettings
             // 
             this.buttonProfileSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonProfileSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonProfileSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonProfileSettings.Location = new System.Drawing.Point(35, 4);
             this.buttonProfileSettings.Name = "buttonProfileSettings";
@@ -238,6 +240,7 @@
             // buttonLogOffProfile
             // 
             this.buttonLogOffProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLogOffProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogOffProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogOffProfile.Location = new System.Drawing.Point(35, 42);
             this.buttonLogOffProfile.Name = "buttonLogOffProfile";
@@ -300,7 +303,6 @@
             this.labelUserEmail.TabIndex = 7;
             this.labelUserEmail.Text = " e-mail";
             this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelUserEmail.Click += new System.EventHandler(this.labelUserEmail_Click);
             // 
             // labelUserFName
             // 
@@ -438,15 +440,16 @@
             // 
             // buttonViewInformation
             // 
-            this.buttonViewInformation.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonViewInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonViewInformation.AutoSize = true;
             this.buttonViewInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.buttonViewInformation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonViewInformation.Enabled = false;
             this.buttonViewInformation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonViewInformation.ForeColor = System.Drawing.Color.Black;
-            this.buttonViewInformation.Location = new System.Drawing.Point(56, 8);
+            this.buttonViewInformation.Location = new System.Drawing.Point(56, 3);
             this.buttonViewInformation.Name = "buttonViewInformation";
-            this.buttonViewInformation.Size = new System.Drawing.Size(151, 50);
+            this.buttonViewInformation.Size = new System.Drawing.Size(151, 35);
             this.buttonViewInformation.TabIndex = 7;
             this.buttonViewInformation.Text = "View information";
             this.toolTipView.SetToolTip(this.buttonViewInformation, "Select a movie first!");
@@ -455,13 +458,13 @@
             // 
             // buttonRemoveFW
             // 
-            this.buttonRemoveFW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonRemoveFW.AutoSize = true;
+            this.buttonRemoveFW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRemoveFW.Enabled = false;
             this.buttonRemoveFW.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemoveFW.Location = new System.Drawing.Point(215, 8);
+            this.buttonRemoveFW.Location = new System.Drawing.Point(213, 3);
             this.buttonRemoveFW.Name = "buttonRemoveFW";
-            this.buttonRemoveFW.Size = new System.Drawing.Size(199, 50);
+            this.buttonRemoveFW.Size = new System.Drawing.Size(199, 35);
             this.buttonRemoveFW.TabIndex = 6;
             this.buttonRemoveFW.Text = "Remove from watchlist";
             this.buttonRemoveFW.UseVisualStyleBackColor = true;
@@ -503,6 +506,7 @@
             // pictureBoxBack
             // 
             this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBack.Image = global::Mov4e.Properties.Resources.go_back_white;
             this.pictureBoxBack.Location = new System.Drawing.Point(4, 7);
             this.pictureBoxBack.Name = "pictureBoxBack";

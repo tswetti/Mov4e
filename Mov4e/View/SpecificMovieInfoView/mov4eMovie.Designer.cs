@@ -248,6 +248,7 @@
             // pictureBoxStar4
             // 
             this.pictureBoxStar4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxStar4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStar4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar4.Image")));
             this.pictureBoxStar4.Location = new System.Drawing.Point(215, 3);
             this.pictureBoxStar4.Name = "pictureBoxStar4";
@@ -262,6 +263,7 @@
             // pictureBoxStar5
             // 
             this.pictureBoxStar5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxStar5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStar5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar5.Image")));
             this.pictureBoxStar5.Location = new System.Drawing.Point(285, 3);
             this.pictureBoxStar5.Name = "pictureBoxStar5";
@@ -276,6 +278,7 @@
             // pictureBoxStar3
             // 
             this.pictureBoxStar3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxStar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStar3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar3.Image")));
             this.pictureBoxStar3.Location = new System.Drawing.Point(145, 3);
             this.pictureBoxStar3.Name = "pictureBoxStar3";
@@ -290,6 +293,7 @@
             // pictureBoxStar1
             // 
             this.pictureBoxStar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxStar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStar1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar1.Image")));
             this.pictureBoxStar1.Location = new System.Drawing.Point(5, 3);
             this.pictureBoxStar1.Name = "pictureBoxStar1";
@@ -304,6 +308,7 @@
             // pictureBoxStar2
             // 
             this.pictureBoxStar2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxStar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStar2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStar2.Image")));
             this.pictureBoxStar2.Location = new System.Drawing.Point(75, 3);
             this.pictureBoxStar2.Name = "pictureBoxStar2";
@@ -343,6 +348,7 @@
             // 
             this.buttonChangeRating.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonChangeRating.BackColor = System.Drawing.Color.Transparent;
+            this.buttonChangeRating.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeRating.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeRating.Location = new System.Drawing.Point(147, 121);
             this.buttonChangeRating.Name = "buttonChangeRating";
@@ -463,6 +469,7 @@
             this.tabControlComments.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControlComments.Controls.Add(this.tabPageAllComments);
             this.tabControlComments.Controls.Add(this.tabPageYourComments);
+            this.tabControlComments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControlComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabControlComments.Location = new System.Drawing.Point(46, 116);
             this.tabControlComments.Name = "tabControlComments";
@@ -593,6 +600,7 @@
             // buttonAddComment
             // 
             this.buttonAddComment.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonAddComment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddComment.Enabled = false;
             this.buttonAddComment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddComment.Location = new System.Drawing.Point(3, 6);
@@ -616,7 +624,6 @@
             this.textBoxMovieSummary.Size = new System.Drawing.Size(645, 135);
             this.textBoxMovieSummary.TabIndex = 11;
             this.textBoxMovieSummary.Text = resources.GetString("textBoxMovieSummary.Text");
-            this.textBoxMovieSummary.TextChanged += new System.EventHandler(this.textBoxMovieSummary_TextChanged);
             // 
             // labelMovieAverageRating
             // 
@@ -766,6 +773,7 @@
             // 
             this.buttonRemoveFWatchlist.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonRemoveFWatchlist.AutoSize = true;
+            this.buttonRemoveFWatchlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRemoveFWatchlist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRemoveFWatchlist.Location = new System.Drawing.Point(4, 21);
             this.buttonRemoveFWatchlist.Name = "buttonRemoveFWatchlist";
@@ -779,6 +787,7 @@
             // 
             this.buttonAddToWatchlist.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonAddToWatchlist.AutoSize = true;
+            this.buttonAddToWatchlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddToWatchlist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddToWatchlist.Location = new System.Drawing.Point(47, 3);
             this.buttonAddToWatchlist.Name = "buttonAddToWatchlist";
@@ -803,6 +812,7 @@
             // pictureBoxBack
             // 
             this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBack.Image = global::Mov4e.Properties.Resources.go_back_white;
             this.pictureBoxBack.Location = new System.Drawing.Point(4, 7);
             this.pictureBoxBack.Name = "pictureBoxBack";

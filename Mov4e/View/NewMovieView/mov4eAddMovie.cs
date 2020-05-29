@@ -373,15 +373,6 @@ namespace Mov4e.View.NewMovieView
             all_movies.UpdateMovie(id, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
         }
 
-        private void textBoxSummary_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBoxName_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-
         // the next three events hide guide text from textbox when the user click on them
         private void textBoxName_Click(object sender, EventArgs e)
         {

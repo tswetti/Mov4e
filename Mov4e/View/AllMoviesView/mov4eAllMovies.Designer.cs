@@ -213,7 +213,6 @@
             this.tableLayoutPanelMovies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelMovies.Size = new System.Drawing.Size(1280, 730);
             this.tableLayoutPanelMovies.TabIndex = 4;
-            this.tableLayoutPanelMovies.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelMovies_Paint);
             // 
             // tableLayoutPanelSortFilter
             // 
@@ -585,6 +584,7 @@
             // 
             this.buttonFilter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.buttonFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonFilter.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonFilter.ForeColor = System.Drawing.Color.Black;
             this.buttonFilter.Location = new System.Drawing.Point(553, 217);
@@ -598,6 +598,7 @@
             // buttonClearFilters
             // 
             this.buttonClearFilters.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonClearFilters.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClearFilters.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClearFilters.ForeColor = System.Drawing.Color.Black;
             this.buttonClearFilters.Location = new System.Drawing.Point(1151, 217);
@@ -713,6 +714,7 @@
             // buttonSortOld
             // 
             this.buttonSortOld.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortOld.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSortOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortOld.Location = new System.Drawing.Point(973, 8);
             this.buttonSortOld.Name = "buttonSortOld";
@@ -725,6 +727,7 @@
             // buttonSortNew
             // 
             this.buttonSortNew.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSortNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortNew.Location = new System.Drawing.Point(846, 8);
             this.buttonSortNew.Name = "buttonSortNew";
@@ -737,6 +740,7 @@
             // buttonSortZA
             // 
             this.buttonSortZA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortZA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSortZA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortZA.Location = new System.Drawing.Point(347, 8);
             this.buttonSortZA.Name = "buttonSortZA";
@@ -773,6 +777,7 @@
             // buttonSortAZ
             // 
             this.buttonSortAZ.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSortAZ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSortAZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSortAZ.Location = new System.Drawing.Point(218, 8);
             this.buttonSortAZ.Name = "buttonSortAZ";
@@ -808,6 +813,7 @@
             // pictureBoxFilter
             // 
             this.pictureBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxFilter.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFilter.Image")));
             this.pictureBoxFilter.Location = new System.Drawing.Point(648, 10);
             this.pictureBoxFilter.Name = "pictureBoxFilter";
@@ -820,6 +826,7 @@
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBoxProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxProfile.Image = global::Mov4e.Properties.Resources.username;
             this.pictureBoxProfile.Location = new System.Drawing.Point(1117, 10);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
@@ -850,11 +857,11 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(440, 24);
             this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // pictureBoxSort
             // 
             this.pictureBoxSort.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxSort.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxSort.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSort.Image")));
             this.pictureBoxSort.Location = new System.Drawing.Point(603, 10);
             this.pictureBoxSort.Name = "pictureBoxSort";
@@ -867,6 +874,7 @@
             // buttonStartSearch
             // 
             this.buttonStartSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonStartSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonStartSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonStartSearch.Location = new System.Drawing.Point(507, 10);
             this.buttonStartSearch.Name = "buttonStartSearch";
@@ -900,6 +908,7 @@
             this.buttonViewInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonViewInfo.AutoSize = true;
             this.buttonViewInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.buttonViewInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonViewInfo.Enabled = false;
             this.buttonViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonViewInfo.Location = new System.Drawing.Point(3, 3);
@@ -913,6 +922,7 @@
             // 
             // buttonEditMovie
             // 
+            this.buttonEditMovie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEditMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonEditMovie.Enabled = false;
             this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -928,6 +938,7 @@
             // buttonDeleteMovie
             // 
             this.buttonDeleteMovie.AutoSize = true;
+            this.buttonDeleteMovie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDeleteMovie.Enabled = false;
             this.buttonDeleteMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteMovie.Location = new System.Drawing.Point(419, 3);
@@ -943,6 +954,7 @@
             // 
             this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonAddMovie.AutoSize = true;
+            this.buttonAddMovie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddMovie.Enabled = false;
             this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddMovie.Location = new System.Drawing.Point(268, 3);

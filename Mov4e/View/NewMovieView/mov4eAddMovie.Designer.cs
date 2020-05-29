@@ -267,7 +267,6 @@
             this.textBoxName.TabIndex = 31;
             this.textBoxName.Text = "Type the movie\'s name here...";
             this.textBoxName.Click += new System.EventHandler(this.textBoxName_Click);
-            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelName
             // 
@@ -284,6 +283,7 @@
             // buttonChangePic
             // 
             this.buttonChangePic.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonChangePic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangePic.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangePic.Location = new System.Drawing.Point(3, 407);
             this.buttonChangePic.Name = "buttonChangePic";
@@ -308,7 +308,6 @@
             this.textBoxSummary.TabIndex = 26;
             this.textBoxSummary.Text = "Type the movie\'s summary here...";
             this.textBoxSummary.Click += new System.EventHandler(this.textBoxSummary_Click);
-            this.textBoxSummary.TextChanged += new System.EventHandler(this.textBoxSummary_TextChanged);
             // 
             // labelSummary
             // 
@@ -416,6 +415,7 @@
             // 
             this.buttonSaveMovie.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSaveMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.buttonSaveMovie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSaveMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSaveMovie.Location = new System.Drawing.Point(404, 471);
             this.buttonSaveMovie.Name = "buttonSaveMovie";
@@ -440,6 +440,7 @@
             // pictureBoxBack
             // 
             this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBack.Image = global::Mov4e.Properties.Resources.go_back_white;
             this.pictureBoxBack.Location = new System.Drawing.Point(4, 5);
             this.pictureBoxBack.Name = "pictureBoxBack";

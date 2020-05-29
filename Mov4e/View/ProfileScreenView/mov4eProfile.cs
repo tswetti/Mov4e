@@ -368,10 +368,5 @@ namespace Mov4e.View.ProfileScreenView
             this.labelUserLName.Text = LastName;
             ResizeUserInfoPanel();
         }
-
-        private void labelUserEmail_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

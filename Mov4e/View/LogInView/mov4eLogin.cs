@@ -192,7 +192,6 @@ namespace Mov4e.View.LogInView
                     Application.Restart();
                 }
             }
-
             else
             {
                 MessageBox.Show("You must type something in the boxes first!!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);

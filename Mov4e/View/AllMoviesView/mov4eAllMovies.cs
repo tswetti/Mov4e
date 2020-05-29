@@ -560,8 +560,6 @@ namespace Mov4e.View.AllMoviesView
             }
         }
 
-
-
         /// <summary>
         /// The <c>DeleteMovie()</c> method asks the user whether they want to delete this movie. If the answer is yes 
         /// and the id of the selected movie is valid, the application executes the presentér's method, which executes 
@@ -592,7 +590,8 @@ namespace Mov4e.View.AllMoviesView
                                     p = item.Key;
                                 }
                                 movie_presenter.DeleteMovie(p);
-                                MessageBox.Show("Movie: " + listViewMovies.Items[var2].Text + " was successfully deleted!","Deleted",MessageBoxButtons.OK);
+                                listViewMovies.SelectedItems.Clear();
+                                MessageBox.Show("Movie: " + listViewMovies.Items[var2].Text + " was successfully deleted!");
                                 break;
                             }
                         }
@@ -939,11 +938,6 @@ namespace Mov4e.View.AllMoviesView
             EditMovie();
         }
 
-        private void buttonDeleteMovie_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonStartSearch_Click(object sender, EventArgs e)
         {
             SearchMovie();
@@ -1062,18 +1056,6 @@ namespace Mov4e.View.AllMoviesView
             radioButtonPG18.Checked = false;
         }
 
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxSearch.Focused == true && !string.IsNullOrEmpty(textBoxSearch.Text) && !string.IsNullOrWhiteSpace(textBoxSearch.Text))
-            {
-                //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_blue;
-            }
-            else
-            {
-                //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
-            }
-        }
-
         private void listViewMovies_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewMovies.SelectedItems.Count == 0)
@@ -1094,11 +1076,6 @@ namespace Mov4e.View.AllMoviesView
         private void buttonDeleteMovie_Click(object sender, EventArgs e)
         {
             DeleteMovie();
-        }
-
-        private void tableLayoutPanelMovies_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void buttonSortZA_Click(object sender, EventArgs e)

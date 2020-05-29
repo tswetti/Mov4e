@@ -126,7 +126,6 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
-
         // changes labels' colors according to the mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
@@ -483,6 +482,5 @@ namespace Mov4e.View.ProfileScreenView
             labelBirthYear.ForeColor = neonBlue;
             buttonChangeBYear.BackColor = neonBlue;
         }
-
     }
 }
