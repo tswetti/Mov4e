@@ -70,6 +70,8 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTipFormats = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipView = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelProfileContent.SuspendLayout();
             this.tableLayoutPanelProfileInformation.SuspendLayout();
@@ -269,7 +271,7 @@
             this.labelUserEmail.ForeColor = System.Drawing.SystemColors.Control;
             this.labelUserEmail.Location = new System.Drawing.Point(82, 54);
             this.labelUserEmail.Name = "labelUserEmail";
-            this.labelUserEmail.Size = new System.Drawing.Size(48, 16);
+            this.labelUserEmail.Size = new System.Drawing.Size(150, 16);
             this.labelUserEmail.TabIndex = 7;
             this.labelUserEmail.Text = " e-mail";
             // 
@@ -465,6 +467,7 @@
             this.buttonViewInformation.Size = new System.Drawing.Size(151, 50);
             this.buttonViewInformation.TabIndex = 7;
             this.buttonViewInformation.Text = "View information";
+            this.toolTipView.SetToolTip(this.buttonViewInformation, "Select a movie first!");
             this.buttonViewInformation.UseVisualStyleBackColor = false;
             this.buttonViewInformation.Click += new System.EventHandler(this.buttonViewInformation_Click);
             // 
@@ -489,9 +492,9 @@
             this.listViewWatchlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewWatchlist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listViewWatchlist.HideSelection = false;
-            this.listViewWatchlist.Location = new System.Drawing.Point(25, 93);
+            this.listViewWatchlist.Location = new System.Drawing.Point(3, 93);
             this.listViewWatchlist.Name = "listViewWatchlist";
-            this.listViewWatchlist.Size = new System.Drawing.Size(950, 534);
+            this.listViewWatchlist.Size = new System.Drawing.Size(994, 534);
             this.listViewWatchlist.TabIndex = 5;
             this.listViewWatchlist.UseCompatibleStateImageBehavior = false;
             this.listViewWatchlist.SelectedIndexChanged += new System.EventHandler(this.listViewWatchlist_SelectedIndexChanged);
@@ -571,6 +574,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
             this.toolStripMenuItem1.Text = "Change profile picture";
+            this.toolStripMenuItem1.ToolTipText = "formats: .jpg, .jpeg, .png, .bmp";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
@@ -679,5 +683,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolTip toolTipFormats;
+        private System.Windows.Forms.ToolTip toolTipView;
     }
 }

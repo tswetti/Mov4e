@@ -70,7 +70,6 @@ namespace Mov4e.View.AllMoviesView
             listViewMovies.Height = 570;
             sortOpened = false;
             filterOpened = false;
-            //toolTipMovies.SetToolTip(buttonViewInfo, "Select a movie first!");
 
             user_id = uid;
             user_position = upos;
@@ -188,7 +187,6 @@ namespace Mov4e.View.AllMoviesView
         private void pictureBoxProfile_Click(object sender, EventArgs e)
         {
             mov4eProfile _profileScreen = new mov4eProfile(this.user_id, this);
-            //this.close trqbwa da e ppc
             this.Hide();
             _profileScreen.ShowDialog();
         }
@@ -661,7 +659,7 @@ namespace Mov4e.View.AllMoviesView
 
             if (moviesList.Count == 0)
             {
-                MessageBox.Show("Hmm...You may have something different in mind?", "Not Found Movie",
+                MessageBox.Show("Hmm...You may have something different in mind?", "Movie not found",
                 MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
