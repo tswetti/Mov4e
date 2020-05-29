@@ -75,6 +75,26 @@ namespace Mov4e.View.ProfileScreenView
             label.ForeColor = Color.White;
         }
 
+        private void ResizeUserInfoPanel()
+        {
+            Size emailSize = TextRenderer.MeasureText(Email, labelUserEmail.Font);
+            labelUserEmail.Width = emailSize.Width;
+            Size fNameSize = TextRenderer.MeasureText(FirstName, labelUserFName.Font);
+            labelUserFName.Width = fNameSize.Width;
+            Size lNameSize = TextRenderer.MeasureText(LastName, labelUserLName.Font);
+            labelUserLName.Width = lNameSize.Width;
+            if (labelUserFName.Width+tableLayoutPanelUserInfo.ColumnStyles[0].Width>tableLayoutPanelUserInfo.Width ||
+                labelUserLName.Width + tableLayoutPanelUserInfo.ColumnStyles[0].Width > tableLayoutPanelUserInfo.Width ||
+                labelEmail.Width + tableLayoutPanelUserInfo.ColumnStyles[0].Width > tableLayoutPanelUserInfo.Width)
+            {
+                tableLayoutPanelUserInfo.AutoScroll = true;
+            }
+            else
+            {
+                tableLayoutPanelUserInfo.AutoScroll = false;
+            }
+        }
+
         public mov4eProfile(int id, AllMoviesView.IAllMovies mainMov)
         {
             InitializeComponent();
@@ -83,6 +103,7 @@ namespace Mov4e.View.ProfileScreenView
             _profileScreenPresenter.SetUserInformation(id);
             mainForm = mainMov;
             initializeWatchList();
+            ResizeUserInfoPanel();
         }
 
         //Initilize the watchlist Setes information fro Db in the control
@@ -321,6 +342,7 @@ namespace Mov4e.View.ProfileScreenView
         public void UpdateEmail()
         {
             this.labelUserEmail.Text =Email;
+            ResizeUserInfoPanel();
         }
 
         public void UpdateBirthYear()
@@ -341,16 +363,24 @@ namespace Mov4e.View.ProfileScreenView
         public void UpdateUserName()
         {
             this.labelUsername.Text = UserName;
+            ResizeUserInfoPanel();
         }
 
         public void UpdateFirstNmae()
         {
             this.labelUserFName.Text = FirstName;
+            ResizeUserInfoPanel();
         }
 
         public void UpdateLastName()
         {
             this.labelUserLName.Text = LastName;
+            ResizeUserInfoPanel();
+        }
+
+        private void labelUserEmail_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
