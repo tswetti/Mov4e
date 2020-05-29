@@ -56,8 +56,10 @@
             this.textBoxAddComment = new System.Windows.Forms.TextBox();
             this.tabControlComments = new System.Windows.Forms.TabControl();
             this.tabPageAllComments = new System.Windows.Forms.TabPage();
+            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectFromAllComments = new System.Windows.Forms.Button();
             this.tabPageYourComments = new System.Windows.Forms.TabPage();
+            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectComments = new System.Windows.Forms.Button();
             this.buttonDelAllMyComments = new System.Windows.Forms.Button();
             this.tableLayoutPanelDescription = new System.Windows.Forms.TableLayoutPanel();
@@ -82,8 +84,6 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelGoBack = new System.Windows.Forms.TableLayoutPanel();
             this.toolTipComment = new System.Windows.Forms.ToolTip(this.components);
-            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
-            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -488,7 +488,7 @@
             this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
             this.commentBoxAllComments.Name = "commentBoxAllComments";
-            this.commentBoxAllComments.Size = new System.Drawing.Size(736, 163);
+            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 163);
             this.commentBoxAllComments.TabIndex = 2;
             // 
             // buttonDelSelectFromAllComments
@@ -515,6 +515,14 @@
             this.tabPageYourComments.TabIndex = 1;
             this.tabPageYourComments.Text = "My comments";
             this.tabPageYourComments.UseVisualStyleBackColor = true;
+            // 
+            // commentBoxMyComments
+            // 
+            this.commentBoxMyComments.AutoScroll = true;
+            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxMyComments.Name = "commentBoxMyComments";
+            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
+            this.commentBoxMyComments.TabIndex = 4;
             // 
             // buttonDelSelectComments
             // 
@@ -818,23 +826,6 @@
             this.tableLayoutPanelGoBack.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelGoBack.Size = new System.Drawing.Size(90, 40);
             this.tableLayoutPanelGoBack.TabIndex = 10;
-            // 
-            // commentBoxAllComments
-            // 
-            this.commentBoxAllComments.AutoScroll = true;
-            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxAllComments.Name = "commentBoxAllComments";
-            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 163);
-            this.commentBoxAllComments.TabIndex = 2;
-            // 
-            // commentBoxMyComments
-            // 
-            this.commentBoxMyComments.AutoScroll = true;
-            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxMyComments.Name = "commentBoxMyComments";
-            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
-            this.commentBoxMyComments.TabIndex = 4;
             // 
             // mov4eMovie
             // 
