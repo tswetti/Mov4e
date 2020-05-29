@@ -43,7 +43,7 @@ namespace Mov4e.Presenter.RegisterPresenter
             {
                 Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
                          + "\n" + e.ToString());
-                _register.ErrorMassage("In the application sprang up an error! Please, check errors.txt file for more information!\n"+e.Message);
+                _register.ErrorMessage("In the application sprang up an error! Please, check errors.txt file for more information!\n"+e.Message);
                 return false;
             }
         }

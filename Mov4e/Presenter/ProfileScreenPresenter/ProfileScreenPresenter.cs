@@ -75,7 +75,7 @@ namespace Mov4e.Presenter.ProfileScreenPresenter
             {
                 Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
                          + "\n" + e.ToString());
-                _profileScreen.ErrorMassage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
+                _profileScreen.ErrorMessage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
             }
         }
 
@@ -93,7 +93,7 @@ namespace Mov4e.Presenter.ProfileScreenPresenter
             {
                 Logger.Logger.WriteToLogFile(DateTime.Now.ToString()
                          + "\n" + e.ToString());
-                _profileScreen.ErrorMassage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
+                _profileScreen.ErrorMessage("In the application sprang up an error! Please, check errors.txt file for more information!\n" + e.Message);
             }
         }
         

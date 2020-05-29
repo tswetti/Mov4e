@@ -50,7 +50,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 MovieAddedToWatchList.Invoke(this, e);
         }
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

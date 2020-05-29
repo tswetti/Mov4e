@@ -1121,7 +1121,7 @@ namespace Mov4e.View.AllMoviesView
             InitializeMoviesList(mov);
         }
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             MessageBox.Show(msg,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

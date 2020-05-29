@@ -727,8 +727,7 @@
             "2017",
             "2018",
             "2019",
-            "2020",
-            "  "});
+            "2020"});
             this.comboBoxBYearChanged.Location = new System.Drawing.Point(169, 9);
             this.comboBoxBYearChanged.MaxDropDownItems = 5;
             this.comboBoxBYearChanged.Name = "comboBoxBYearChanged";

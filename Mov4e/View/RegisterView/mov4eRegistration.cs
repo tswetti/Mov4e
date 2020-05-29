@@ -26,7 +26,7 @@ namespace Mov4e.View.RegisterView
         private LogInView.ILogIn mainForm;
         private IRegisterPresenter rp;
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

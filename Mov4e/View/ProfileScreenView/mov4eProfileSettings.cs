@@ -17,7 +17,7 @@ namespace Mov4e.View.ProfileScreenView
         IProfileScreen _profileScreen;
         ISettingsPresenter _imov4EProfileSettingsPresenter;
 
-        public void ErrorMassage(string msg)
+        public void ErrorMessage(string msg)
         {
             MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -76,8 +76,6 @@ namespace Mov4e.View.ProfileScreenView
             textBoxOldPassword.PasswordChar = '*';
             textBoxNewPassword.PasswordChar = '*';
             textBoxNewPasswordRepeat.PasswordChar = '*';
-
-            System.Object[] yearsObject = new System.Object[71];
             comboBoxGenderChanged.Items.Add("Male");
             comboBoxGenderChanged.Items.Add("Female");
 
