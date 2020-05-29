@@ -592,7 +592,7 @@ namespace Mov4e.View.AllMoviesView
                                     p = item.Key;
                                 }
                                 movie_presenter.DeleteMovie(p);
-                                MessageBox.Show("Movie: " + listViewMovies.Items[var2].Text + " was successfully deleted!");
+                                MessageBox.Show("Movie: " + listViewMovies.Items[var2].Text + " was successfully deleted!","Deleted",MessageBoxButtons.OK);
                                 break;
                             }
                         }
