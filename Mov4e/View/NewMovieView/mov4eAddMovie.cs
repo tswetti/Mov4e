@@ -166,21 +166,29 @@ namespace Mov4e.View.NewMovieView
             if (id == 0)
             {
                 addNewMovie();
-                textBoxName.Text = "Type movie's name here...";
-                textBoxName.ForeColor = Color.Gray;
-                textBoxDuration.Text = "Type movie's name here...";
-                textBoxDuration.ForeColor = Color.Gray;
-                textBoxSummary.Text = "Type movie's name here...";
-                textBoxSummary.ForeColor = Color.Gray;
-                nameFirstClick = true;
-                durationFirstClick = true;
-                summaryFirstClick = true;
-                pictureBoxMoviePic.Image = null;
+                ClearAllFields();
             }
             else
             {
                 updateMovie();
             }
+        }
+
+        private void ClearAllFields()
+        {
+            textBoxName.Text = "Type movie's name here...";
+            textBoxName.ForeColor = Color.Gray;
+            textBoxDuration.Text = "Type movie's name here...";
+            textBoxDuration.ForeColor = Color.Gray;
+            textBoxSummary.Text = "Type movie's name here...";
+            textBoxSummary.ForeColor = Color.Gray;
+            nameFirstClick = true;
+            durationFirstClick = true;
+            summaryFirstClick = true;
+            pictureBoxMoviePic.Image = null;
+            genreComboBox.Text = null;
+            pgComboBox.Text = null;
+            datePickerPrDate.Text = null;
         }
 
         // this is used to hide guide text in textboxes after the first click
@@ -223,6 +231,8 @@ namespace Mov4e.View.NewMovieView
             durationFirstClick = true;
             summaryFirstClick = true;
             this.ActiveControl = buttonChangePic;
+
+            ClearAllFields();
         }
 
         public mov4eAddMovie()
