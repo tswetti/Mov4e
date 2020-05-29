@@ -36,7 +36,7 @@ namespace Mov4e.View.ProfileScreenView
 
         void UpdateFirstNmae();
 
-        void UpdateLastNmae();
+        void UpdateLastName();
 
     }
 }
