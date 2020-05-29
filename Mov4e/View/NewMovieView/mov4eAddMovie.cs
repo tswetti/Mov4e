@@ -166,6 +166,16 @@ namespace Mov4e.View.NewMovieView
             if (id == 0)
             {
                 addNewMovie();
+                textBoxName.Text = "Type movie's name here...";
+                textBoxName.ForeColor = Color.Gray;
+                textBoxDuration.Text = "Type movie's name here...";
+                textBoxDuration.ForeColor = Color.Gray;
+                textBoxSummary.Text = "Type movie's name here...";
+                textBoxSummary.ForeColor = Color.Gray;
+                nameFirstClick = true;
+                durationFirstClick = true;
+                summaryFirstClick = true;
+                pictureBoxMoviePic.Image = null;
             }
             else
             {
