@@ -261,10 +261,9 @@
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxName.ForeColor = System.Drawing.Color.Gray;
             this.textBoxName.Location = new System.Drawing.Point(139, 3);
-            this.textBoxName.MaxLength = 50;
-            this.textBoxName.Multiline = true;
+            this.textBoxName.MaxLength = 80;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(516, 34);
+            this.textBoxName.Size = new System.Drawing.Size(661, 19);
             this.textBoxName.TabIndex = 31;
             this.textBoxName.Text = "Type the movie\'s name here...";
             this.textBoxName.Click += new System.EventHandler(this.textBoxName_Click);
@@ -302,7 +301,7 @@
             this.textBoxSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSummary.ForeColor = System.Drawing.Color.Gray;
             this.textBoxSummary.Location = new System.Drawing.Point(139, 203);
-            this.textBoxSummary.MaxLength = 100000;
+            this.textBoxSummary.MaxLength = 10000;
             this.textBoxSummary.Multiline = true;
             this.textBoxSummary.Name = "textBoxSummary";
             this.textBoxSummary.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -355,10 +354,9 @@
             this.textBoxDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxDuration.ForeColor = System.Drawing.Color.Gray;
             this.textBoxDuration.Location = new System.Drawing.Point(139, 123);
-            this.textBoxDuration.MaxLength = 10;
-            this.textBoxDuration.Multiline = true;
+            this.textBoxDuration.MaxLength = 11;
             this.textBoxDuration.Name = "textBoxDuration";
-            this.textBoxDuration.Size = new System.Drawing.Size(516, 34);
+            this.textBoxDuration.Size = new System.Drawing.Size(650, 19);
             this.textBoxDuration.TabIndex = 28;
             this.textBoxDuration.Text = "Type the movie\'s duration here...";
             this.toolTipFormats.SetToolTip(this.textBoxDuration, "in minutes; example: 90");

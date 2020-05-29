@@ -858,6 +858,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(440, 24);
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.Click += new System.EventHandler(this.textBoxSearch_Click);
             // 
             // pictureBoxSort
             // 
