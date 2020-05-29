@@ -307,6 +307,8 @@ namespace Mov4e.View.SpecificMovieInfoView
                 this.Close();
                 _screnToGoback.ShowForm();
             }
+
+            this.ActiveControl = labelTitle;
         }
 
         private void buttonAddToWatchlist_Click(object sender, EventArgs e)
