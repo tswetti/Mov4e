@@ -239,6 +239,7 @@
             // buttonSendEmail
             // 
             this.buttonSendEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonSendEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSendEmail.Enabled = false;
             this.buttonSendEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSendEmail.Location = new System.Drawing.Point(31, 3);
@@ -252,6 +253,7 @@
             // buttonBackToLogin
             // 
             this.buttonBackToLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBackToLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBackToLogin.Location = new System.Drawing.Point(157, 3);
             this.buttonBackToLogin.Name = "buttonBackToLogin";
@@ -441,6 +443,7 @@
             // 
             // pictureBoxShowPass
             // 
+            this.pictureBoxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxShowPass.Image = global::Mov4e.Properties.Resources.show_pass;
             this.pictureBoxShowPass.Location = new System.Drawing.Point(199, 2);
             this.pictureBoxShowPass.Name = "pictureBoxShowPass";
@@ -482,6 +485,7 @@
             this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.buttonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.Enabled = false;
             this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogin.Location = new System.Drawing.Point(8, 3);
@@ -495,6 +499,7 @@
             // buttonRegister
             // 
             this.buttonRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRegister.Location = new System.Drawing.Point(165, 3);
             this.buttonRegister.Name = "buttonRegister";

@@ -283,7 +283,6 @@
             this.tableLayoutPanelUsername.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelUsername.Size = new System.Drawing.Size(314, 30);
             this.tableLayoutPanelUsername.TabIndex = 1;
-            this.tableLayoutPanelUsername.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelUsername_Paint);
             // 
             // textBoxUsername
             // 

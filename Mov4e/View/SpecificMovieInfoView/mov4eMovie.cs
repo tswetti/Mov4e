@@ -170,7 +170,6 @@ namespace Mov4e.View.SpecificMovieInfoView
             }
         }
 
-
         // the following code changes labels' colors according to the mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
@@ -251,11 +250,6 @@ namespace Mov4e.View.SpecificMovieInfoView
         private void pictureBoxStar5_MouseLeave(object sender, EventArgs e)
         {
             ClearAllStars(stars);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
@@ -596,11 +590,6 @@ namespace Mov4e.View.SpecificMovieInfoView
                 labelAlreadyRated.Text = "You have already rated for this movie! Your rating: ";
                 labelMovieAverageRating.Text = movieAVGRate.ToString();
             }           
-        }
-
-        private void textBoxMovieSummary_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

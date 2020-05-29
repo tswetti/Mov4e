@@ -180,6 +180,7 @@
             // pictureBoxBack
             // 
             this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBack.Image = global::Mov4e.Properties.Resources.go_back_white;
             this.pictureBoxBack.Location = new System.Drawing.Point(4, 7);
             this.pictureBoxBack.Name = "pictureBoxBack";
@@ -338,6 +339,7 @@
             // buttonChangeLName
             // 
             this.buttonChangeLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeLName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeLName.Enabled = false;
             this.buttonChangeLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeLName.Location = new System.Drawing.Point(335, 12);
@@ -395,6 +397,7 @@
             // buttonChangeFName
             // 
             this.buttonChangeFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeFName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeFName.Enabled = false;
             this.buttonChangeFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeFName.Location = new System.Drawing.Point(335, 12);
@@ -453,6 +456,7 @@
             // buttonChangeUsername
             // 
             this.buttonChangeUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeUsername.Enabled = false;
             this.buttonChangeUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeUsername.Location = new System.Drawing.Point(335, 12);
@@ -511,6 +515,7 @@
             // buttonChangeGender
             // 
             this.buttonChangeGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeGender.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeGender.Enabled = false;
             this.buttonChangeGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeGender.Location = new System.Drawing.Point(335, 12);
@@ -595,6 +600,7 @@
             // buttonChangeEmail
             // 
             this.buttonChangeEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeEmail.Enabled = false;
             this.buttonChangeEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeEmail.Location = new System.Drawing.Point(335, 12);
@@ -636,6 +642,7 @@
             // buttonChangeBYear
             // 
             this.buttonChangeBYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeBYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeBYear.Enabled = false;
             this.buttonChangeBYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangeBYear.Location = new System.Drawing.Point(335, 12);
@@ -858,6 +865,7 @@
             // buttonChangePassword
             // 
             this.buttonChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangePassword.Enabled = false;
             this.buttonChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChangePassword.Location = new System.Drawing.Point(335, 150);
