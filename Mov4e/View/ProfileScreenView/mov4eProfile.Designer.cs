@@ -39,21 +39,19 @@
             this.labelUsername = new System.Windows.Forms.Label();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelUserInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.labelUserGender = new System.Windows.Forms.Label();
-            this.labelUserAge = new System.Windows.Forms.Label();
             this.labelUserEmail = new System.Windows.Forms.Label();
             this.labelUserLName = new System.Windows.Forms.Label();
+            this.labelUserGender = new System.Windows.Forms.Label();
             this.labelUserFName = new System.Windows.Forms.Label();
+            this.labelUserAge = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
             this.labelGender = new System.Windows.Forms.Label();
             this.tableLayoutPanelUserActions = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             this.buttonProfileSettings = new System.Windows.Forms.Button();
             this.buttonLogOffProfile = new System.Windows.Forms.Button();
-            this.pictureBoxSettings = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelWatchlist = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonViewInformation = new System.Windows.Forms.Button();
@@ -72,25 +70,17 @@
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTipFormats = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipView = new System.Windows.Forms.ToolTip(this.components);
-            this.panelFName = new System.Windows.Forms.Panel();
-            this.panelEmail = new System.Windows.Forms.Panel();
-            this.panelLName = new System.Windows.Forms.Panel();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelProfileContent.SuspendLayout();
             this.tableLayoutPanelProfileInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).BeginInit();
             this.tableLayoutPanelUserInfo.SuspendLayout();
             this.tableLayoutPanelUserActions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).BeginInit();
             this.tableLayoutPanelWatchlist.SuspendLayout();
             this.tableLayoutPanelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.tableLayoutPanelBackBtns.SuspendLayout();
             this.contextMenuStripEditPicture.SuspendLayout();
-            this.panelFName.SuspendLayout();
-            this.panelEmail.SuspendLayout();
-            this.panelLName.SuspendLayout();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -182,16 +172,16 @@
             this.tableLayoutPanelProfileInformation.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelProfileInformation.Controls.Add(this.labelUsername, 0, 1);
             this.tableLayoutPanelProfileInformation.Controls.Add(this.pictureBoxProfilePicture, 0, 0);
-            this.tableLayoutPanelProfileInformation.Controls.Add(this.tableLayoutPanelUserInfo, 0, 2);
             this.tableLayoutPanelProfileInformation.Controls.Add(this.tableLayoutPanelUserActions, 0, 3);
-            this.tableLayoutPanelProfileInformation.Location = new System.Drawing.Point(3, 113);
+            this.tableLayoutPanelProfileInformation.Controls.Add(this.tableLayoutPanelUserInfo, 0, 2);
+            this.tableLayoutPanelProfileInformation.Location = new System.Drawing.Point(3, 95);
             this.tableLayoutPanelProfileInformation.Name = "tableLayoutPanelProfileInformation";
             this.tableLayoutPanelProfileInformation.RowCount = 4;
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.90676F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.47669F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.43006F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.18649F));
-            this.tableLayoutPanelProfileInformation.Size = new System.Drawing.Size(250, 500);
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.47423F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.61864F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.50133F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.40581F));
+            this.tableLayoutPanelProfileInformation.Size = new System.Drawing.Size(250, 535);
             this.tableLayoutPanelProfileInformation.TabIndex = 0;
             // 
             // labelUsername
@@ -200,7 +190,7 @@
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.labelUsername.Location = new System.Drawing.Point(77, 223);
+            this.labelUsername.Location = new System.Drawing.Point(77, 205);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(95, 24);
             this.labelUsername.TabIndex = 2;
@@ -209,7 +199,7 @@
             // pictureBoxProfilePicture
             // 
             this.pictureBoxProfilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(40, 19);
+            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(40, 9);
             this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
             this.pictureBoxProfilePicture.Size = new System.Drawing.Size(170, 170);
             this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -220,20 +210,21 @@
             // tableLayoutPanelUserInfo
             // 
             this.tableLayoutPanelUserInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanelUserInfo.AutoScroll = true;
             this.tableLayoutPanelUserInfo.ColumnCount = 2;
             this.tableLayoutPanelUserInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelUserInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelUserInfo.Controls.Add(this.panelEmail, 1, 2);
-            this.tableLayoutPanelUserInfo.Controls.Add(this.panelLName, 1, 1);
+            this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserLName, 1, 1);
+            this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserEmail, 1, 2);
+            this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserFName, 1, 0);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserGender, 1, 4);
-            this.tableLayoutPanelUserInfo.Controls.Add(this.panelFName, 1, 0);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserAge, 1, 3);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelFirstName, 0, 0);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelLastName, 0, 1);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelEmail, 0, 2);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelAge, 0, 3);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelGender, 0, 4);
-            this.tableLayoutPanelUserInfo.Location = new System.Drawing.Point(8, 264);
+            this.tableLayoutPanelUserInfo.Location = new System.Drawing.Point(3, 248);
             this.tableLayoutPanelUserInfo.Name = "tableLayoutPanelUserInfo";
             this.tableLayoutPanelUserInfo.RowCount = 5;
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -241,130 +232,144 @@
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(234, 151);
+            this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(244, 194);
             this.tableLayoutPanelUserInfo.TabIndex = 1;
-            // 
-            // labelUserGender
-            // 
-            this.labelUserGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUserGender.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserGender.Location = new System.Drawing.Point(82, 123);
-            this.labelUserGender.Name = "labelUserGender";
-            this.labelUserGender.Size = new System.Drawing.Size(150, 24);
-            this.labelUserGender.TabIndex = 9;
-            this.labelUserGender.Text = "gender";
-            // 
-            // labelUserAge
-            // 
-            this.labelUserAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUserAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserAge.Location = new System.Drawing.Point(82, 90);
-            this.labelUserAge.Name = "labelUserAge";
-            this.labelUserAge.Size = new System.Drawing.Size(150, 29);
-            this.labelUserAge.TabIndex = 8;
-            this.labelUserAge.Text = "age";
             // 
             // labelUserEmail
             // 
             this.labelUserEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserEmail.Location = new System.Drawing.Point(3, 2);
+            this.labelUserEmail.Location = new System.Drawing.Point(82, 84);
             this.labelUserEmail.Name = "labelUserEmail";
-            this.labelUserEmail.Size = new System.Drawing.Size(145, 27);
+            this.labelUserEmail.Size = new System.Drawing.Size(146, 21);
             this.labelUserEmail.TabIndex = 7;
             this.labelUserEmail.Text = " e-mail";
+            this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelUserEmail.Click += new System.EventHandler(this.labelUserEmail_Click);
             // 
             // labelUserLName
             // 
             this.labelUserLName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelUserLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserLName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserLName.Location = new System.Drawing.Point(0, -1);
+            this.labelUserLName.Location = new System.Drawing.Point(82, 46);
             this.labelUserLName.Name = "labelUserLName";
-            this.labelUserLName.Size = new System.Drawing.Size(145, 27);
+            this.labelUserLName.Size = new System.Drawing.Size(145, 21);
             this.labelUserLName.TabIndex = 6;
             this.labelUserLName.Text = "last name";
+            this.labelUserLName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelUserGender
+            // 
+            this.labelUserGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelUserGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserGender.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelUserGender.Location = new System.Drawing.Point(82, 163);
+            this.labelUserGender.Name = "labelUserGender";
+            this.labelUserGender.Size = new System.Drawing.Size(150, 20);
+            this.labelUserGender.TabIndex = 9;
+            this.labelUserGender.Text = "gender";
+            this.labelUserGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelUserFName
             // 
             this.labelUserFName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelUserFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserFName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserFName.Location = new System.Drawing.Point(4, 0);
+            this.labelUserFName.Location = new System.Drawing.Point(82, 8);
             this.labelUserFName.Name = "labelUserFName";
-            this.labelUserFName.Size = new System.Drawing.Size(145, 27);
+            this.labelUserFName.Size = new System.Drawing.Size(150, 21);
             this.labelUserFName.TabIndex = 5;
             this.labelUserFName.Text = "first name";
+            this.labelUserFName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelUserAge
+            // 
+            this.labelUserAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelUserAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserAge.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelUserAge.Location = new System.Drawing.Point(82, 122);
+            this.labelUserAge.Name = "labelUserAge";
+            this.labelUserAge.Size = new System.Drawing.Size(150, 22);
+            this.labelUserAge.TabIndex = 8;
+            this.labelUserAge.Text = "age";
+            this.labelUserAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelFirstName
             // 
+            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFirstName.Location = new System.Drawing.Point(3, 0);
+            this.labelFirstName.Location = new System.Drawing.Point(3, 11);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(73, 16);
             this.labelFirstName.TabIndex = 0;
             this.labelFirstName.Text = "First name:";
+            this.labelFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelLastName
             // 
+            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelLastName.Location = new System.Drawing.Point(3, 30);
+            this.labelLastName.Location = new System.Drawing.Point(3, 49);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(73, 16);
             this.labelLastName.TabIndex = 1;
             this.labelLastName.Text = "Last name:";
+            this.labelLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelEmail
             // 
+            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelEmail.Location = new System.Drawing.Point(3, 60);
+            this.labelEmail.Location = new System.Drawing.Point(3, 87);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(49, 16);
             this.labelEmail.TabIndex = 2;
             this.labelEmail.Text = "E-mail:";
+            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelAge
             // 
+            this.labelAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAge.Location = new System.Drawing.Point(3, 90);
+            this.labelAge.Location = new System.Drawing.Point(3, 125);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(36, 16);
             this.labelAge.TabIndex = 3;
             this.labelAge.Text = "Age:";
+            this.labelAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelGender
             // 
+            this.labelGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelGender.AutoSize = true;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGender.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelGender.Location = new System.Drawing.Point(3, 120);
+            this.labelGender.Location = new System.Drawing.Point(3, 165);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(56, 16);
             this.labelGender.TabIndex = 4;
             this.labelGender.Text = "Gender:";
+            this.labelGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanelUserActions
             // 
             this.tableLayoutPanelUserActions.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanelUserActions.ColumnCount = 2;
-            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanelUserActions.Controls.Add(this.pictureBoxExit, 0, 1);
-            this.tableLayoutPanelUserActions.Controls.Add(this.buttonProfileSettings, 1, 0);
-            this.tableLayoutPanelUserActions.Controls.Add(this.buttonLogOffProfile, 1, 1);
-            this.tableLayoutPanelUserActions.Controls.Add(this.pictureBoxSettings, 0, 0);
-            this.tableLayoutPanelUserActions.Location = new System.Drawing.Point(50, 421);
+            this.tableLayoutPanelUserActions.ColumnCount = 1;
+            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelUserActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelUserActions.Controls.Add(this.buttonProfileSettings, 0, 0);
+            this.tableLayoutPanelUserActions.Controls.Add(this.buttonLogOffProfile, 0, 1);
+            this.tableLayoutPanelUserActions.Location = new System.Drawing.Point(50, 452);
             this.tableLayoutPanelUserActions.Name = "tableLayoutPanelUserActions";
             this.tableLayoutPanelUserActions.RowCount = 2;
             this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -372,20 +377,11 @@
             this.tableLayoutPanelUserActions.Size = new System.Drawing.Size(150, 76);
             this.tableLayoutPanelUserActions.TabIndex = 3;
             // 
-            // pictureBoxExit
-            // 
-            this.pictureBoxExit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxExit.Location = new System.Drawing.Point(3, 41);
-            this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(39, 32);
-            this.pictureBoxExit.TabIndex = 3;
-            this.pictureBoxExit.TabStop = false;
-            // 
             // buttonProfileSettings
             // 
             this.buttonProfileSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonProfileSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonProfileSettings.Location = new System.Drawing.Point(57, 4);
+            this.buttonProfileSettings.Location = new System.Drawing.Point(35, 4);
             this.buttonProfileSettings.Name = "buttonProfileSettings";
             this.buttonProfileSettings.Size = new System.Drawing.Size(80, 30);
             this.buttonProfileSettings.TabIndex = 0;
@@ -397,7 +393,7 @@
             // 
             this.buttonLogOffProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLogOffProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogOffProfile.Location = new System.Drawing.Point(57, 42);
+            this.buttonLogOffProfile.Location = new System.Drawing.Point(35, 42);
             this.buttonLogOffProfile.Name = "buttonLogOffProfile";
             this.buttonLogOffProfile.Size = new System.Drawing.Size(80, 30);
             this.buttonLogOffProfile.TabIndex = 1;
@@ -406,15 +402,6 @@
             this.buttonLogOffProfile.Click += new System.EventHandler(this.buttonLogOffProfile_Click);
             this.buttonLogOffProfile.MouseLeave += new System.EventHandler(this.buttonLogOffProfile_MouseLeave);
             this.buttonLogOffProfile.MouseHover += new System.EventHandler(this.buttonLogOffProfile_MouseHover);
-            // 
-            // pictureBoxSettings
-            // 
-            this.pictureBoxSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxSettings.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxSettings.Name = "pictureBoxSettings";
-            this.pictureBoxSettings.Size = new System.Drawing.Size(39, 32);
-            this.pictureBoxSettings.TabIndex = 2;
-            this.pictureBoxSettings.TabStop = false;
             // 
             // tableLayoutPanelWatchlist
             // 
@@ -597,35 +584,6 @@
             this.toolStripMenuItemExit.Text = "Exit";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // panelFName
-            // 
-            this.panelFName.AutoScroll = true;
-            this.panelFName.Controls.Add(this.labelUserFName);
-            this.panelFName.Location = new System.Drawing.Point(79, 0);
-            this.panelFName.Margin = new System.Windows.Forms.Padding(0);
-            this.panelFName.Name = "panelFName";
-            this.panelFName.Size = new System.Drawing.Size(150, 27);
-            this.panelFName.TabIndex = 8;
-            // 
-            // panelEmail
-            // 
-            this.panelEmail.AutoScroll = true;
-            this.panelEmail.Controls.Add(this.labelUserEmail);
-            this.panelEmail.Location = new System.Drawing.Point(79, 60);
-            this.panelEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(153, 27);
-            this.panelEmail.TabIndex = 9;
-            // 
-            // panelLName
-            // 
-            this.panelLName.AutoScroll = true;
-            this.panelLName.Controls.Add(this.labelUserLName);
-            this.panelLName.Location = new System.Drawing.Point(82, 33);
-            this.panelLName.Name = "panelLName";
-            this.panelLName.Size = new System.Drawing.Size(150, 24);
-            this.panelLName.TabIndex = 9;
-            // 
             // mov4eProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -650,8 +608,6 @@
             this.tableLayoutPanelUserInfo.ResumeLayout(false);
             this.tableLayoutPanelUserInfo.PerformLayout();
             this.tableLayoutPanelUserActions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).EndInit();
             this.tableLayoutPanelWatchlist.ResumeLayout(false);
             this.tableLayoutPanelWatchlist.PerformLayout();
             this.tableLayoutPanelButtons.ResumeLayout(false);
@@ -660,9 +616,6 @@
             this.tableLayoutPanelBackBtns.ResumeLayout(false);
             this.tableLayoutPanelBackBtns.PerformLayout();
             this.contextMenuStripEditPicture.ResumeLayout(false);
-            this.panelFName.ResumeLayout(false);
-            this.panelEmail.ResumeLayout(false);
-            this.panelLName.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -694,10 +647,8 @@
         private System.Windows.Forms.Label labelUserLName;
         private System.Windows.Forms.Label labelUserFName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelUserActions;
-        private System.Windows.Forms.PictureBox pictureBoxExit;
         private System.Windows.Forms.Button buttonProfileSettings;
         private System.Windows.Forms.Button buttonLogOffProfile;
-        private System.Windows.Forms.PictureBox pictureBoxSettings;
         private System.Windows.Forms.Button buttonRemoveFW;
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.Label labelBack;
@@ -712,8 +663,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparatorB;
         private System.Windows.Forms.ToolTip toolTipFormats;
         private System.Windows.Forms.ToolTip toolTipView;
-        private System.Windows.Forms.Panel panelEmail;
-        private System.Windows.Forms.Panel panelLName;
-        private System.Windows.Forms.Panel panelFName;
     }
 }

@@ -292,8 +292,7 @@ namespace Mov4e.View.ProfileScreenView
                         _profileScreen.UpdateGender();
                         comboBoxGenderChanged.Text =null;
                         MessageBox.Show("You have successfully changed your gender!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    
+                    }   
                 }
                 else
                  if (comboBoxGenderChanged.Text == "Female")
@@ -345,7 +344,6 @@ namespace Mov4e.View.ProfileScreenView
                     textBoxUsernameChanged.Text = null;
                     MessageBox.Show("You have successfully changed your username", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-              
             }
             catch (Exception ex)
             {
