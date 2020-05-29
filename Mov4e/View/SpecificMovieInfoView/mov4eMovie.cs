@@ -85,10 +85,12 @@ namespace Mov4e.View.SpecificMovieInfoView
             }
         }
 
-
+        // a list of starts for the rating
         List<PictureBox> stars = new List<PictureBox>();
+        // is used to show how many characters in the comments are written
         int charactersCount;
         int maxCharacters;
+        // is used to change guide text in comments
         bool commentFirstClick;
 
         public mov4eMovie(int movieId, int userId, IScreenView screen)
@@ -96,22 +98,26 @@ namespace Mov4e.View.SpecificMovieInfoView
             InitializeComponent();
 
             this.WindowState = FormWindowState.Maximized;
+            // hides the panel that appears when the user rates movie
             tableLayoutPanelRating.RowStyles[1].Height = 66;
             tableLayoutPanelRating.RowStyles[2].Height = 0;
             this.tableLayoutPanelRating.RowStyles[3].Height = 0;
             labelAlreadyRated.Visible = false;
 
+            // hides "remove from watchlist" and shows "add to watchlist"
             tableLayoutPanelWatchlistActions.RowStyles[0].Height = 100;
             buttonAddToWatchlist.Height = buttonAddComment.Height;
             tableLayoutPanelWatchlistActions.RowStyles[1].Height = 0;
             buttonRemoveFWatchlist.Visible = false;
+
             textBoxAddComment.Text = "Type your comment here...";
             commentFirstClick = true;
+            // setting up the comment textbox
             charactersCount = textBoxAddComment.Text.Length;
             maxCharacters = textBoxAddComment.MaxLength;
             labelCharactersLeft.Text = "0/" + maxCharacters;
 
-             stars.Add(pictureBoxStar1);
+            stars.Add(pictureBoxStar1);
             stars.Add(pictureBoxStar2);
             stars.Add(pictureBoxStar3);
             stars.Add(pictureBoxStar4);
@@ -164,6 +170,8 @@ namespace Mov4e.View.SpecificMovieInfoView
             }
         }
 
+
+        // the following code changes labels' colors according to the mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -219,6 +227,7 @@ namespace Mov4e.View.SpecificMovieInfoView
             ChangeStarColorYellow(5, stars);
         }
 
+        // the following code changes stars to default when user's mouse leaves
         private void pictureBoxStar1_MouseLeave(object sender, EventArgs e)
         {
             ClearAllStars(stars);
@@ -406,6 +415,7 @@ namespace Mov4e.View.SpecificMovieInfoView
             }
             textBoxMovieSummary.Text = movieSummary;
 
+            // shows already rated panel 
             if (_specificMoviePresenter.UserAlreadyRated())
             {
                 _specificMoviePresenter.SetUserRate();
@@ -418,6 +428,7 @@ namespace Mov4e.View.SpecificMovieInfoView
                 buttonChangeRating.Height = 35;
                 labelAlreadyRated.Visible = true;
             }
+            // shows "remove from watchlist" and hides "add to watchlist"
             if (_specificMoviePresenter.UserHasMovieInWatchList())
             {
                 tableLayoutPanelWatchlistActions.RowStyles[0].Height = 0;
@@ -477,7 +488,6 @@ namespace Mov4e.View.SpecificMovieInfoView
         {
             this.initalizeMyComments();
             this.initializeAllComments();
-
         }
 
         public void deleteCommentsFromDB(List<int> comms)

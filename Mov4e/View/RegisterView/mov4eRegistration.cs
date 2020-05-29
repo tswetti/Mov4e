@@ -51,6 +51,7 @@ namespace Mov4e.View.RegisterView
             panel.BackColor = Color.FromArgb(8, 233, 232);
         }
 
+        // changes different sections colors to white
         private static void ChangeColorsOnClickWhite(Label l1, Label l2, Label l3,
             Label l4, Panel p1, Panel p2, Panel p3, Panel p4)
         {
@@ -66,6 +67,7 @@ namespace Mov4e.View.RegisterView
             }
         }
 
+        // is used in show password to check if it is hidden or not
         bool hiddenPass;
 
         public mov4eRegistration(ILogIn mainform)
@@ -74,6 +76,7 @@ namespace Mov4e.View.RegisterView
             textBoxPassword.PasswordChar = '*';
             hiddenPass = true;
             this.comboBoxAge.DropDownStyle = ComboBoxStyle.DropDownList;
+            // adds options to birth year combobox
             System.Object[] ageObject = new System.Object[71];
             for (int i = 0; i < 71; i++)
             {
@@ -126,6 +129,8 @@ namespace Mov4e.View.RegisterView
             }
         }
 
+
+        // the following code changes labels' colors according to mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -217,6 +222,7 @@ namespace Mov4e.View.RegisterView
             this.checkIfEverithingIsFilledToActivateButton();
         }
 
+        // the following code changes colors in different panels according to mouse click
         private void textBoxUsername_Click(object sender, EventArgs e)
         {
             ChangeColorsOnClickBlue(labelUsername, panelHr1);
@@ -322,12 +328,14 @@ namespace Mov4e.View.RegisterView
 
         private void pictureBoxShowPass_Click(object sender, EventArgs e)
         {
+            // shows password
             if (hiddenPass)
             {
                 textBoxPassword.PasswordChar = '\0';
                 pictureBoxShowPass.Image = Mov4e.Properties.Resources.show_pass_blue;
                 hiddenPass = false;
             }
+            // hides password
             else
             {
                 textBoxPassword.PasswordChar = '*';

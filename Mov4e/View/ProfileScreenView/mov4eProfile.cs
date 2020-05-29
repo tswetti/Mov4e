@@ -52,7 +52,6 @@ namespace Mov4e.View.ProfileScreenView
             listViewWatchlist.Refresh();
         }
 
-        //nowo
         private void DeleteMovieHandler(object sender, SpecificMovieEventArgs e)
         {
             watchList.Remove(e.movieId);
@@ -120,25 +119,6 @@ namespace Mov4e.View.ProfileScreenView
             {
                contextMenuStripEditPicture.Items[2].Enabled = true;
             }
-
-            /*Size fNameSize = TextRenderer.MeasureText(FirstName, labelUserFName.Font);
-            Size lNameSize = TextRenderer.MeasureText(LastName, labelUserLName.Font);
-            Size emailSize = TextRenderer.MeasureText(Email, labelUserEmail.Font);
-            if (fNameSize.Width > labelUserFName.Width)
-            {
-                tableLayoutPanelProfileInformation.Height += 10;
-                tableLayoutPanelUserInfo.Height += 100;
-            }
-            if (lNameSize.Width > labelUserLName.Width)
-            {
-                tableLayoutPanelProfileInformation.Height += 10;
-                tableLayoutPanelUserInfo.Height += 100;
-            }
-            if (emailSize.Width > labelUserEmail.Width)
-            {
-                tableLayoutPanelProfileInformation.Height += 10;
-                tableLayoutPanelUserInfo.Height += 100;
-            }*/
         }
 
         private void minimizeLabel_Click(object sender, EventArgs e)
@@ -175,6 +155,8 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
+
+        // the following code changes label's colors according to the mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -307,6 +289,7 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
+        // option change profile picture
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog open = new OpenFileDialog())
@@ -321,6 +304,7 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
+        // option reset profile picture
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             pictureBoxProfilePicture.Image = Properties.Resources.Default_profile_pic;
@@ -328,6 +312,7 @@ namespace Mov4e.View.ProfileScreenView
             contextMenuStripEditPicture.Items[2].Enabled = false;
         }
 
+        // option exit menu strip
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             contextMenuStripEditPicture.Close();
@@ -341,7 +326,6 @@ namespace Mov4e.View.ProfileScreenView
         public void UpdateBirthYear()
         {
             this.labelUserAge.Text = (DateTime.Now.Year - Age).ToString();
-
         }
 
         public void UpdateGender()
