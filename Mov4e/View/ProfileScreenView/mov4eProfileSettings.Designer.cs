@@ -368,6 +368,7 @@
             this.textBoxLNameChanged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLNameChanged.ForeColor = System.Drawing.Color.White;
             this.textBoxLNameChanged.Location = new System.Drawing.Point(169, 18);
+            this.textBoxLNameChanged.MaxLength = 25;
             this.textBoxLNameChanged.Name = "textBoxLNameChanged";
             this.textBoxLNameChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxLNameChanged.TabIndex = 26;
@@ -424,6 +425,7 @@
             this.textBoxFNameChanged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFNameChanged.ForeColor = System.Drawing.Color.White;
             this.textBoxFNameChanged.Location = new System.Drawing.Point(169, 18);
+            this.textBoxFNameChanged.MaxLength = 25;
             this.textBoxFNameChanged.Name = "textBoxFNameChanged";
             this.textBoxFNameChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxFNameChanged.TabIndex = 25;
@@ -581,10 +583,11 @@
             this.textBoxEmailChanged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmailChanged.ForeColor = System.Drawing.Color.White;
             this.textBoxEmailChanged.Location = new System.Drawing.Point(169, 18);
+            this.textBoxEmailChanged.MaxLength = 40;
             this.textBoxEmailChanged.Name = "textBoxEmailChanged";
             this.textBoxEmailChanged.Size = new System.Drawing.Size(160, 19);
             this.textBoxEmailChanged.TabIndex = 15;
-            this.toolTipValidInfo.SetToolTip(this.textBoxEmailChanged, "a valid e-mail");
+            this.toolTipValidInfo.SetToolTip(this.textBoxEmailChanged, "a valid e-mail; less than 40 characters");
             this.textBoxEmailChanged.Click += new System.EventHandler(this.textBoxEmailChanged_Click);
             this.textBoxEmailChanged.TextChanged += new System.EventHandler(this.textBoxEmailChanged_TextChanged);
             // 
@@ -736,6 +739,7 @@
             this.textBoxOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxOldPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxOldPassword.Location = new System.Drawing.Point(168, 66);
+            this.textBoxOldPassword.MaxLength = 30;
             this.textBoxOldPassword.Name = "textBoxOldPassword";
             this.textBoxOldPassword.Size = new System.Drawing.Size(160, 19);
             this.textBoxOldPassword.TabIndex = 18;
@@ -750,6 +754,7 @@
             this.textBoxNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxNewPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxNewPassword.Location = new System.Drawing.Point(168, 110);
+            this.textBoxNewPassword.MaxLength = 30;
             this.textBoxNewPassword.Name = "textBoxNewPassword";
             this.textBoxNewPassword.Size = new System.Drawing.Size(160, 19);
             this.textBoxNewPassword.TabIndex = 19;
@@ -766,6 +771,7 @@
             this.textBoxNewPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxNewPasswordRepeat.ForeColor = System.Drawing.Color.White;
             this.textBoxNewPasswordRepeat.Location = new System.Drawing.Point(168, 156);
+            this.textBoxNewPasswordRepeat.MaxLength = 30;
             this.textBoxNewPasswordRepeat.Name = "textBoxNewPasswordRepeat";
             this.textBoxNewPasswordRepeat.Size = new System.Drawing.Size(160, 19);
             this.textBoxNewPasswordRepeat.TabIndex = 20;

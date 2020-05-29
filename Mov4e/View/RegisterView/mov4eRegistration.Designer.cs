@@ -293,7 +293,7 @@
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
             this.textBoxUsername.Location = new System.Drawing.Point(96, 6);
-            this.textBoxUsername.MaxLength = 50;
+            this.textBoxUsername.MaxLength = 20;
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(215, 17);
             this.textBoxUsername.TabIndex = 1;
@@ -337,7 +337,7 @@
             this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.ForeColor = System.Drawing.Color.White;
             this.textBoxFirstName.Location = new System.Drawing.Point(96, 6);
-            this.textBoxFirstName.MaxLength = 50;
+            this.textBoxFirstName.MaxLength = 25;
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(215, 17);
             this.textBoxFirstName.TabIndex = 1;
@@ -380,7 +380,7 @@
             this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.ForeColor = System.Drawing.Color.White;
             this.textBoxLastName.Location = new System.Drawing.Point(96, 6);
-            this.textBoxLastName.MaxLength = 50;
+            this.textBoxLastName.MaxLength = 25;
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(215, 17);
             this.textBoxLastName.TabIndex = 1;
@@ -466,11 +466,11 @@
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.White;
             this.textBoxEmail.Location = new System.Drawing.Point(96, 6);
-            this.textBoxEmail.MaxLength = 50;
+            this.textBoxEmail.MaxLength = 40;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(215, 17);
             this.textBoxEmail.TabIndex = 1;
-            this.toolTipValidReg.SetToolTip(this.textBoxEmail, "a valid e-mail");
+            this.toolTipValidReg.SetToolTip(this.textBoxEmail, "a valid e-mail; less than 25 characters;");
             this.textBoxEmail.Click += new System.EventHandler(this.textBoxEmail_Click);
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
@@ -529,7 +529,7 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(1, 4);
-            this.textBoxPassword.MaxLength = 20;
+            this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(215, 17);
             this.textBoxPassword.TabIndex = 1;

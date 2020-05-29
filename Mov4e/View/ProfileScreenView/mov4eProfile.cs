@@ -364,7 +364,7 @@ namespace Mov4e.View.ProfileScreenView
             this.labelUserFName.Text = FirstName;
         }
 
-        public void UpdateLastNmae()
+        public void UpdateLastName()
         {
             this.labelUserLName.Text = LastName;
         }
