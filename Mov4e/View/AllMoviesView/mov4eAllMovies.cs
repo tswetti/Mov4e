@@ -188,7 +188,6 @@ namespace Mov4e.View.AllMoviesView
         private void pictureBoxProfile_Click(object sender, EventArgs e)
         {
             mov4eProfile _profileScreen = new mov4eProfile(this.user_id, this);
-            //this.close trqbwa da e ppc
             this.Hide();
             _profileScreen.ShowDialog();
         }
