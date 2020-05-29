@@ -913,6 +913,7 @@
             // 
             // buttonEditMovie
             // 
+            this.buttonEditMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonEditMovie.Enabled = false;
             this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEditMovie.Location = new System.Drawing.Point(162, 3);
@@ -926,11 +927,10 @@
             // 
             // buttonDeleteMovie
             // 
-            this.buttonDeleteMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonDeleteMovie.AutoSize = true;
             this.buttonDeleteMovie.Enabled = false;
             this.buttonDeleteMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteMovie.Location = new System.Drawing.Point(422, 3);
+            this.buttonDeleteMovie.Location = new System.Drawing.Point(419, 3);
             this.buttonDeleteMovie.Name = "buttonDeleteMovie";
             this.buttonDeleteMovie.Size = new System.Drawing.Size(124, 35);
             this.buttonDeleteMovie.TabIndex = 1;
