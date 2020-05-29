@@ -857,6 +857,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(440, 24);
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.Click += new System.EventHandler(this.textBoxSearch_Click);
             // 
             // pictureBoxSort
             // 
@@ -922,8 +923,8 @@
             // 
             // buttonEditMovie
             // 
-            this.buttonEditMovie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEditMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonEditMovie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEditMovie.Enabled = false;
             this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEditMovie.Location = new System.Drawing.Point(162, 3);

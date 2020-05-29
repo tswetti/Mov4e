@@ -31,10 +31,10 @@ namespace Mov4e.View.AllMoviesView
         // A private variable that keeps a reference to a list with movies' ids.
         private List<int> id = new List<int>();
 
-        // A private variable used for saving an user's id.  
+        // A private variable used for saving a user's id.  
         private int user_id = 0;
 
-        // A private variable used for saving an user's position.
+        // A private variable used for saving a user's position.
         private string user_position = "";
 
         private Dictionary<int, byte[]> mov;
@@ -57,6 +57,7 @@ namespace Mov4e.View.AllMoviesView
         bool sortOpened;
         //shows whether the filter option is opened
         bool filterOpened;
+        bool searchFirstClick;
 
         /// <summary>
         /// A three arguments constructor for the <c>AllMoviesForm</c> class.
@@ -80,6 +81,11 @@ namespace Mov4e.View.AllMoviesView
             List<string> strs = new List<string>();
             strs = movie_presenter.GetMovieTitles();
             autoComlete.AddRange(strs.ToArray());
+
+            // guide text in search bar
+            textBoxSearch.Text = "Type a movie's title here...";
+            textBoxSearch.ForeColor = Color.Gray;
+            searchFirstClick = true;
 
             listViewMovies.Items.Clear();
             textBoxSearch.AutoCompleteCustomSource = autoComlete;
@@ -1109,6 +1115,17 @@ namespace Mov4e.View.AllMoviesView
             this.listViewMovies.Clear();
             imageListMovies.Images.Clear();
             this.InitializeMoviesList(mov);
+        }
+
+        private void textBoxSearch_Click(object sender, EventArgs e)
+        {
+            // removes the guide text after a user's first click on the search bar
+            if (searchFirstClick==true)
+            {
+                textBoxSearch.Text = "";
+                textBoxSearch.ForeColor = Color.Black;
+                searchFirstClick = false;
+            }
         }
     }
 }
