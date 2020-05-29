@@ -94,6 +94,7 @@ namespace Mov4e.View.NewMovieView
             }
         }
 
+        // the following code changes labels' colors according to mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -172,7 +173,7 @@ namespace Mov4e.View.NewMovieView
             }
         }
 
-        int summaryHeight;
+        // this is used to hide guide text in textboxes after the first click
         bool nameFirstClick;
         bool durationFirstClick;
         bool summaryFirstClick;
@@ -208,7 +209,6 @@ namespace Mov4e.View.NewMovieView
             pgComboBox.DisplayMember = "Value";
             pgComboBox.ValueMember = "Key";
 
-            summaryHeight = textBoxSummary.Height;
             nameFirstClick = true;
             durationFirstClick = true;
             summaryFirstClick = true;
@@ -266,6 +266,7 @@ namespace Mov4e.View.NewMovieView
             textBoxSummary.ForeColor = Color.White;
             summaryFirstClick = false;
 
+            // hides movie name only when a movie is added (because there's no name yet)
             labelMovieName.Visible = true;
         }
 
@@ -354,35 +355,14 @@ namespace Mov4e.View.NewMovieView
 
         private void textBoxSummary_TextChanged(object sender, EventArgs e)
         {
-             Size summarySize = TextRenderer.MeasureText(textBoxSummary.Text, textBoxSummary.Font);
-             /*if (summarySize.Width < 500)
-             {
-                 textBoxSummary.Width = summarySize.Width;
-                 textBoxSummary.Height = summarySize.Height;
-             }
-             else
-             {
-                 textBoxSummary.Text = textBoxSummary.Text + Environment.NewLine;
-                 tableLayoutPanelMovieDetails.RowStyles[5].Height += summarySize.Height;
-                 //textBoxSummary.Text += textBoxSummary.Text + Environment.NewLine;
-             }*/
-            /*int summaryCharacters = textBoxSummary.Text.Length;
-            if (summaryCharacters>=maxRowCharacters)
-            {
-                textBoxSummary.Text += Environment.NewLine+"";
-                maxRowCharacters += 50;
-            }*/
-            /*if (summarySize.Height>summaryHeight)
-            {
-                summaryHeight += 20;
-                textBoxSummary.Text += Environment.NewLine + "";
-            }*/
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
         }
 
+
+        // the next three events hide guide text from textbox when the user click on them
         private void textBoxName_Click(object sender, EventArgs e)
         {
             if (nameFirstClick==true)

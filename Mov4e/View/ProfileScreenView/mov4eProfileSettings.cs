@@ -78,6 +78,7 @@ namespace Mov4e.View.ProfileScreenView
             textBoxNewPasswordRepeat.PasswordChar = '*';
             this.comboBoxBYearChanged.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxGenderChanged.DropDownStyle = ComboBoxStyle.DropDownList;
+            // adds years to birth year combobox
             System.Object[] yearsObject = new System.Object[71];
             for (int i = 0; i < 71; i++)
             {
@@ -90,6 +91,7 @@ namespace Mov4e.View.ProfileScreenView
             neonBlue = Color.FromArgb(8, 233, 232);
             white = Color.White;
 
+            // lists used when changing colors
             labels=new List<Label>() {labelEmail, labelRepNewPassword, labelUsername, labelFirstName, labelLastName,labelBirthYear,labelGender};
             buttons=new List<Button> {buttonChangeEmail, buttonChangePassword, buttonChangeUsername, buttonChangeFName,
             buttonChangeLName,buttonChangeBYear,buttonChangeGender };
@@ -133,6 +135,8 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
+
+        // changes labels' colors according to the mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -190,9 +194,9 @@ namespace Mov4e.View.ProfileScreenView
                 buttonChangeEmail.Enabled = false;
         }
 
+        // the following code changes selected field's colors to blue and clears all other's colors
         private void textBoxEmailChanged_Click(object sender, EventArgs e)
-        {
-           
+        { 
             ClearAllSettingsColors();
             ChangeSettingsColors(labelEmail, buttonChangeEmail, panelHrEmail, neonBlue);
         }
@@ -210,7 +214,6 @@ namespace Mov4e.View.ProfileScreenView
 
         private void textBoxFNameChanged_Click(object sender, EventArgs e)
         {
-           
             ClearAllSettingsColors();
             ChangeSettingsColors(labelFirstName, buttonChangeFName, panelHrFName, neonBlue);
         }
@@ -265,7 +268,6 @@ namespace Mov4e.View.ProfileScreenView
                     _profileScreen.UpdateEmail();
                     textBoxEmailChanged.Text = null;
                     MessageBox.Show("You have successfully changed your E-mail!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 }
             }
             catch (Exception ex)

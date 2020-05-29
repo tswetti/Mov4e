@@ -53,7 +53,9 @@ namespace Mov4e.View.AllMoviesView
             label.ForeColor = Color.White;
         }
 
+        //shows whether the sort option is opened
         bool sortOpened;
+        //shows whether the filter option is opened
         bool filterOpened;
 
         /// <summary>
@@ -87,11 +89,9 @@ namespace Mov4e.View.AllMoviesView
                 if (user_position == "admin")
                 {
                     SetUpAdminProfile(uid, upos, mov);
-
                 }
                 else
                 {
-
                     if (user_position == "normal")
                     {
                         SetUpNormalProfile(uid, upos, mov);
@@ -154,6 +154,7 @@ namespace Mov4e.View.AllMoviesView
             }
         }
 
+        // the following code changes colors according to the mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -201,10 +202,11 @@ namespace Mov4e.View.AllMoviesView
         private void pictureBoxFilter_Click(object sender, EventArgs e)
         {
             pictureBoxFilter.Image = Mov4e.Properties.Resources.filter_blue;
-           //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
             pictureBoxSort.Image = Mov4e.Properties.Resources.sort_white;
+            // closes filter option if it is opened
             if (filterOpened)
             {
+                //leaves sort opened
                 if (sortOpened)
                 {
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 10;
@@ -213,6 +215,7 @@ namespace Mov4e.View.AllMoviesView
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 70;
                     pictureBoxSort.Image = Mov4e.Properties.Resources.sort_blue;
                 }
+                //closes both filter and sort
                 else
                 {
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 0;
@@ -221,8 +224,10 @@ namespace Mov4e.View.AllMoviesView
                 filterOpened = false;
                 pictureBoxFilter.Image = Mov4e.Properties.Resources.filter_white;
             }
+            //opens filter if it is closed
             else
             {
+                // opens both sort and filter
                 if (sortOpened)
                 {
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
@@ -230,8 +235,8 @@ namespace Mov4e.View.AllMoviesView
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 15;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 85;
                     pictureBoxSort.Image = Mov4e.Properties.Resources.sort_blue;
-
                 }
+                // opens only filter
                 else
                 {
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
@@ -246,19 +251,20 @@ namespace Mov4e.View.AllMoviesView
         private void pictureBoxSort_Click(object sender, EventArgs e)
         {
             pictureBoxSort.Image = Mov4e.Properties.Resources.sort_blue;
-            //pictureBoxSearchIcon.Image = Mov4e.Properties.Resources.search_white;
             pictureBoxFilter.Image = Mov4e.Properties.Resources.filter_white;
+            // closes sort option if it is opened
             if (sortOpened)
             {
+                // closes only sort and leaves filter open
                 if (filterOpened)
                 {
-
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 0;
                     this.tableLayoutPanelSortFilter.RowStyles[1].Height = 100;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 55;
                     pictureBoxFilter.Image = Mov4e.Properties.Resources.filter_blue;
                 }
+                // closes both filter and sort
                 else
                 {
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 0;
@@ -267,8 +273,10 @@ namespace Mov4e.View.AllMoviesView
                 sortOpened = false;
                 pictureBoxSort.Image = Mov4e.Properties.Resources.sort_white;
             }
+            // opens sort if it is closed
             else
             {
+                // opens only sort
                 if (filterOpened == false)
                 {
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 10;
@@ -278,6 +286,7 @@ namespace Mov4e.View.AllMoviesView
                 }
                 else
                 {
+                    // opens both sort and filter
                     this.tableLayoutPanelMovies.RowStyles[1].Height = 45;
                     this.tableLayoutPanelMovies.RowStyles[2].Height = 45;
                     this.tableLayoutPanelSortFilter.RowStyles[0].Height = 15;
@@ -311,7 +320,6 @@ namespace Mov4e.View.AllMoviesView
                 if (mov.Count > 0)
                 {
                     InitializeMoviesList(mov);
-
                 }
                 else
                 {
@@ -346,6 +354,7 @@ namespace Mov4e.View.AllMoviesView
                 if (mov.Count > 0)
                 {
                     InitializeMoviesList(mov);
+                    // positions view information in the middle of the screen
                     tableLayoutPanelActionsWMovie.ColumnStyles[0].SizeType = SizeType.Percent;
                     tableLayoutPanelActionsWMovie.ColumnStyles[1].SizeType = SizeType.Percent;
                     tableLayoutPanelActionsWMovie.ColumnStyles[2].SizeType = SizeType.Percent;
@@ -610,7 +619,6 @@ namespace Mov4e.View.AllMoviesView
         /// </summary>
         public void InitializeMoviesList(Dictionary<int, byte[]> movs)
         {
-
             if (movs != null)
             {
                 foreach (var pair in movs)
@@ -885,8 +893,6 @@ namespace Mov4e.View.AllMoviesView
                 listViewMovies.Tag = mov.Last().Key;
                 id.Add(mov.Last().Key);
             }
-            
-
         }
 
         /// <summary>
@@ -927,9 +933,6 @@ namespace Mov4e.View.AllMoviesView
                             + " EDIT MOVIE ERROR:" + "\n" + ex.ToString());
             }
         }
-
-
-
 
         private void buttonEditMovie_Click(object sender, EventArgs e)
         {
@@ -1122,8 +1125,7 @@ namespace Mov4e.View.AllMoviesView
         {
             MessageBox.Show(msg,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-        //This method is not Ok it will be chnanged in future!
+        
         public void UpdateMovie(int movieId, byte[] moviePic)
         {
             mov[movieId] = moviePic;

@@ -43,6 +43,7 @@ namespace Mov4e.View.LogInView
             label.ForeColor = Color.White;
         }
 
+        //shows only login, and hides "forgotten password" panel
         private void ShowLoginOnly()
         {
             tableLayoutPanelLoggedOrChangePass.RowStyles[0].Height = 100;
@@ -71,6 +72,7 @@ namespace Mov4e.View.LogInView
             checkBoxSave.Visible = true;
         }
 
+        // shows the panel with "forgotten password" and hides the one above it
         private void ShowForgottenPasswordField()
         {
             tableLayoutPanelLoginContent.RowStyles[3].Height = 0;
@@ -134,6 +136,7 @@ namespace Mov4e.View.LogInView
             }
         }
 
+        // the following code changes labels'color according to mouse movement
         private void minimizeLabel_MouseHover(object sender, EventArgs e)
         {
             TopLabelsMouseHover(minimizeLabel);
@@ -291,12 +294,14 @@ namespace Mov4e.View.LogInView
 
         private void pictureBoxShowPass_Click(object sender, EventArgs e)
         {
+            // shows password
             if (hiddenPass)
             {
                 textBoxPassword.PasswordChar = '\0';
                 pictureBoxShowPass.Image= Mov4e.Properties.Resources.show_pass_blue;
                 hiddenPass = false;
             }
+            // hides password
             else
             {
                 textBoxPassword.PasswordChar = '*';
