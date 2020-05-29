@@ -75,6 +75,7 @@ namespace Mov4e.View.ProfileScreenView
             label.ForeColor = Color.White;
         }
 
+        // resizes the panel with user info and adds scroll if necessary
         private void ResizeUserInfoPanel()
         {
             Size emailSize = TextRenderer.MeasureText(Email, labelUserEmail.Font);
@@ -83,16 +84,6 @@ namespace Mov4e.View.ProfileScreenView
             labelUserFName.Width = fNameSize.Width;
             Size lNameSize = TextRenderer.MeasureText(LastName, labelUserLName.Font);
             labelUserLName.Width = lNameSize.Width;
-            if (labelUserFName.Width+tableLayoutPanelUserInfo.ColumnStyles[0].Width>tableLayoutPanelUserInfo.Width ||
-                labelUserLName.Width + tableLayoutPanelUserInfo.ColumnStyles[0].Width > tableLayoutPanelUserInfo.Width ||
-                labelEmail.Width + tableLayoutPanelUserInfo.ColumnStyles[0].Width > tableLayoutPanelUserInfo.Width)
-            {
-                tableLayoutPanelUserInfo.AutoScroll = true;
-            }
-            else
-            {
-                tableLayoutPanelUserInfo.AutoScroll = false;
-            }
         }
 
         public mov4eProfile(int id, AllMoviesView.IAllMovies mainMov)
