@@ -389,7 +389,14 @@ namespace Mov4e.View.SpecificMovieInfoView
             pictureBoxMoviePicture.Image = (Bitmap)((new ImageConverter()).ConvertFrom(moviePicture));
             labelMovieGenre.Text = movieGenre;
             labelMovieDuration.Text = duration.ToString()+" mins";
+
+            if (moviePG==null || moviePG==0)
+            {
+                labelMoviePG.Text = "-";
+            }
+            else
             labelMoviePG.Text = moviePG.ToString();
+
             labelMoviePremiereDate.Text = moviePrimeDate;
             labelMovieAverageRating.Text = movieAVGRate.ToString();
 

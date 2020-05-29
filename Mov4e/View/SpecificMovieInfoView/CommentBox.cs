@@ -69,7 +69,6 @@ namespace Mov4e.View.SpecificMovieInfoView
             
             if (allComentsCounter > 5 && commentsCounter != allComentsCounter)
             {
-                //zashto ne bacjka
                 showMoreBtn.Visible = true;
                 showMoreBtn.Top = gComments.Last().Bottom + 10;
                 endOfComments.Visible = false;
@@ -104,6 +103,7 @@ namespace Mov4e.View.SpecificMovieInfoView
             profilePicture.Image = (Bitmap)((new ImageConverter()).ConvertFrom(profilePic));
             profilePicture.Top = 0;
 
+
             commentlbl.Top = profilePicture.Top + profilePicture.Height + 3;
             commentlbl.Text = comment;
             commentlbl.Height = TextRenderer.MeasureText(commentlbl.Text, commentlbl.Font).Height;
@@ -118,6 +118,7 @@ namespace Mov4e.View.SpecificMovieInfoView
 
             gComment.Height = profilePicture.Height + commentlbl.Height + 10;
             gComment.Width = this.Width - 20;
+
 
             gComment.Controls.Add(profilePicture);
             gComment.Controls.Add(userNamelbl);

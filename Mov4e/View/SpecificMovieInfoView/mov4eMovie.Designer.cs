@@ -463,7 +463,7 @@
             this.tabControlComments.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControlComments.Controls.Add(this.tabPageAllComments);
             this.tabControlComments.Controls.Add(this.tabPageYourComments);
-            this.tabControlComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControlComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabControlComments.Location = new System.Drawing.Point(46, 116);
             this.tabControlComments.Name = "tabControlComments";
             this.tabControlComments.SelectedIndex = 0;
@@ -474,13 +474,22 @@
             // 
             this.tabPageAllComments.Controls.Add(this.commentBoxAllComments);
             this.tabPageAllComments.Controls.Add(this.buttonDelSelectFromAllComments);
-            this.tabPageAllComments.Location = new System.Drawing.Point(4, 24);
+            this.tabPageAllComments.Location = new System.Drawing.Point(4, 22);
             this.tabPageAllComments.Name = "tabPageAllComments";
             this.tabPageAllComments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAllComments.Size = new System.Drawing.Size(742, 194);
+            this.tabPageAllComments.Size = new System.Drawing.Size(742, 196);
             this.tabPageAllComments.TabIndex = 0;
             this.tabPageAllComments.Text = "All comments";
             this.tabPageAllComments.UseVisualStyleBackColor = true;
+            // 
+            // commentBoxAllComments
+            // 
+            this.commentBoxAllComments.AutoScroll = true;
+            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxAllComments.Name = "commentBoxAllComments";
+            this.commentBoxAllComments.Size = new System.Drawing.Size(736, 163);
+            this.commentBoxAllComments.TabIndex = 2;
             // 
             // buttonDelSelectFromAllComments
             // 
@@ -499,10 +508,10 @@
             this.tabPageYourComments.Controls.Add(this.commentBoxMyComments);
             this.tabPageYourComments.Controls.Add(this.buttonDelSelectComments);
             this.tabPageYourComments.Controls.Add(this.buttonDelAllMyComments);
-            this.tabPageYourComments.Location = new System.Drawing.Point(4, 24);
+            this.tabPageYourComments.Location = new System.Drawing.Point(4, 22);
             this.tabPageYourComments.Name = "tabPageYourComments";
             this.tabPageYourComments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageYourComments.Size = new System.Drawing.Size(742, 194);
+            this.tabPageYourComments.Size = new System.Drawing.Size(742, 196);
             this.tabPageYourComments.TabIndex = 1;
             this.tabPageYourComments.Text = "My comments";
             this.tabPageYourComments.UseVisualStyleBackColor = true;
