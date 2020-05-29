@@ -55,9 +55,16 @@ namespace Mov4e.View.ProfileScreenView
             {
                 ChangeSettingsColors(labels[i], buttons[i], panels[i], white);
             }
+            labelBirthYear.ForeColor = white;
+            buttonChangeBYear.BackColor = white;
+
+            labelGender.ForeColor = white;
+            buttonChangeGender.BackColor = white;
+
             labelOldPassword.ForeColor = white;
             labelNewPassword.ForeColor = white;
             labelRepNewPassword.ForeColor = white;
+            buttonChangePassword.BackColor = white;
         }
 
         public mov4eProfileSettings(IProfileScreen _profileSc)

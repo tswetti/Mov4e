@@ -39,7 +39,7 @@
             this.tableLayoutPanelSortFilter = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelFilter = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelPG = new System.Windows.Forms.TableLayoutPanel();
             this.radioButtonPG18 = new System.Windows.Forms.RadioButton();
             this.radioButtonPG16 = new System.Windows.Forms.RadioButton();
             this.radioButtonPG14 = new System.Windows.Forms.RadioButton();
@@ -66,7 +66,7 @@
             this.buttonFilter = new System.Windows.Forms.Button();
             this.buttonClearFilters = new System.Windows.Forms.Button();
             this.groupBoxDurationFilter = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelDuration = new System.Windows.Forms.TableLayoutPanel();
             this.radioButtonMoreT3 = new System.Windows.Forms.RadioButton();
             this.radioButtonBetween2A3 = new System.Windows.Forms.RadioButton();
             this.radioButtonBetween1A2 = new System.Windows.Forms.RadioButton();
@@ -86,10 +86,10 @@
             this.pictureBoxSort = new System.Windows.Forms.PictureBox();
             this.buttonStartSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanelActionsWMovie = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonAddMovie = new System.Windows.Forms.Button();
             this.buttonViewInfo = new System.Windows.Forms.Button();
-            this.buttonDeleteMovie = new System.Windows.Forms.Button();
             this.buttonEditMovie = new System.Windows.Forms.Button();
+            this.buttonDeleteMovie = new System.Windows.Forms.Button();
+            this.buttonAddMovie = new System.Windows.Forms.Button();
             this.imageListMovies = new System.Windows.Forms.ImageList(this.components);
             this.toolTipMovies = new System.Windows.Forms.ToolTip(this.components);
             this.topButtonsLayoutPanel.SuspendLayout();
@@ -97,11 +97,11 @@
             this.tableLayoutPanelSortFilter.SuspendLayout();
             this.tableLayoutPanelFilter.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanelPG.SuspendLayout();
             this.groupBoxGenreFilter.SuspendLayout();
             this.tableLayoutPanelFGenre.SuspendLayout();
             this.groupBoxDurationFilter.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelDuration.SuspendLayout();
             this.tableLayoutPanelSort.SuspendLayout();
             this.tableLayoutPanelMoviesMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilter)).BeginInit();
@@ -261,36 +261,36 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox2.Controls.Add(this.tableLayoutPanelPG);
             this.groupBox2.Location = new System.Drawing.Point(936, 28);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(185, 177);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelPG
             // 
-            this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG18, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG16, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG14, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.radioButtonPG12, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.radioButtonNoPG, 0, 0);
-            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.White;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(-1, -5);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(187, 193);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.tableLayoutPanelPG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelPG.ColumnCount = 1;
+            this.tableLayoutPanelPG.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelPG.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelPG.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelPG.Controls.Add(this.radioButtonPG18, 0, 4);
+            this.tableLayoutPanelPG.Controls.Add(this.radioButtonPG16, 0, 3);
+            this.tableLayoutPanelPG.Controls.Add(this.radioButtonPG14, 0, 2);
+            this.tableLayoutPanelPG.Controls.Add(this.radioButtonPG12, 0, 1);
+            this.tableLayoutPanelPG.Controls.Add(this.radioButtonNoPG, 0, 0);
+            this.tableLayoutPanelPG.ForeColor = System.Drawing.Color.White;
+            this.tableLayoutPanelPG.Location = new System.Drawing.Point(-1, -5);
+            this.tableLayoutPanelPG.Name = "tableLayoutPanelPG";
+            this.tableLayoutPanelPG.RowCount = 5;
+            this.tableLayoutPanelPG.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelPG.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelPG.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelPG.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelPG.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelPG.Size = new System.Drawing.Size(187, 193);
+            this.tableLayoutPanelPG.TabIndex = 1;
             // 
             // radioButtonPG18
             // 
@@ -610,34 +610,34 @@
             // 
             // groupBoxDurationFilter
             // 
-            this.groupBoxDurationFilter.Controls.Add(this.tableLayoutPanel1);
+            this.groupBoxDurationFilter.Controls.Add(this.tableLayoutPanelDuration);
             this.groupBoxDurationFilter.Location = new System.Drawing.Point(659, 28);
             this.groupBoxDurationFilter.Name = "groupBoxDurationFilter";
             this.groupBoxDurationFilter.Size = new System.Drawing.Size(197, 177);
             this.groupBoxDurationFilter.TabIndex = 6;
             this.groupBoxDurationFilter.TabStop = false;
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanelDuration
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonMoreT3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonBetween2A3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonBetween1A2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonLessT1Hour, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, -2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(210, 190);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanelDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelDuration.ColumnCount = 1;
+            this.tableLayoutPanelDuration.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelDuration.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelDuration.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelDuration.Controls.Add(this.radioButtonMoreT3, 0, 3);
+            this.tableLayoutPanelDuration.Controls.Add(this.radioButtonBetween2A3, 0, 2);
+            this.tableLayoutPanelDuration.Controls.Add(this.radioButtonBetween1A2, 0, 1);
+            this.tableLayoutPanelDuration.Controls.Add(this.radioButtonLessT1Hour, 0, 0);
+            this.tableLayoutPanelDuration.Location = new System.Drawing.Point(-2, -2);
+            this.tableLayoutPanelDuration.Name = "tableLayoutPanelDuration";
+            this.tableLayoutPanelDuration.RowCount = 5;
+            this.tableLayoutPanelDuration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelDuration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelDuration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelDuration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelDuration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelDuration.Size = new System.Drawing.Size(210, 190);
+            this.tableLayoutPanelDuration.TabIndex = 1;
             // 
             // radioButtonMoreT3
             // 
@@ -895,21 +895,6 @@
             this.tableLayoutPanelActionsWMovie.Size = new System.Drawing.Size(552, 50);
             this.tableLayoutPanelActionsWMovie.TabIndex = 5;
             // 
-            // buttonAddMovie
-            // 
-            this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonAddMovie.AutoSize = true;
-            this.buttonAddMovie.Enabled = false;
-            this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddMovie.Location = new System.Drawing.Point(268, 3);
-            this.buttonAddMovie.Name = "buttonAddMovie";
-            this.buttonAddMovie.Size = new System.Drawing.Size(145, 35);
-            this.buttonAddMovie.TabIndex = 0;
-            this.buttonAddMovie.Text = "Add new movie";
-            this.buttonAddMovie.UseVisualStyleBackColor = true;
-            this.buttonAddMovie.Visible = false;
-            this.buttonAddMovie.Click += new System.EventHandler(this.buttonAddMovie_Click);
-            // 
             // buttonViewInfo
             // 
             this.buttonViewInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -926,6 +911,19 @@
             this.buttonViewInfo.UseVisualStyleBackColor = false;
             this.buttonViewInfo.Click += new System.EventHandler(this.buttonViewInfo_Click);
             // 
+            // buttonEditMovie
+            // 
+            this.buttonEditMovie.Enabled = false;
+            this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditMovie.Location = new System.Drawing.Point(162, 3);
+            this.buttonEditMovie.Name = "buttonEditMovie";
+            this.buttonEditMovie.Size = new System.Drawing.Size(100, 35);
+            this.buttonEditMovie.TabIndex = 8;
+            this.buttonEditMovie.Text = "Edit movie";
+            this.buttonEditMovie.UseVisualStyleBackColor = true;
+            this.buttonEditMovie.Visible = false;
+            this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
+            // 
             // buttonDeleteMovie
             // 
             this.buttonDeleteMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -941,18 +939,20 @@
             this.buttonDeleteMovie.Visible = false;
             this.buttonDeleteMovie.Click += new System.EventHandler(this.buttonDeleteMovie_Click);
             // 
-            // buttonEditMovie
+            // buttonAddMovie
             // 
-            this.buttonEditMovie.Enabled = false;
-            this.buttonEditMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditMovie.Location = new System.Drawing.Point(162, 3);
-            this.buttonEditMovie.Name = "buttonEditMovie";
-            this.buttonEditMovie.Size = new System.Drawing.Size(100, 35);
-            this.buttonEditMovie.TabIndex = 8;
-            this.buttonEditMovie.Text = "Edit movie";
-            this.buttonEditMovie.UseVisualStyleBackColor = true;
-            this.buttonEditMovie.Visible = false;
-            this.buttonEditMovie.Click += new System.EventHandler(this.buttonEditMovie_Click);
+            this.buttonAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonAddMovie.AutoSize = true;
+            this.buttonAddMovie.Enabled = false;
+            this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddMovie.Location = new System.Drawing.Point(268, 3);
+            this.buttonAddMovie.Name = "buttonAddMovie";
+            this.buttonAddMovie.Size = new System.Drawing.Size(145, 35);
+            this.buttonAddMovie.TabIndex = 0;
+            this.buttonAddMovie.Text = "Add new movie";
+            this.buttonAddMovie.UseVisualStyleBackColor = true;
+            this.buttonAddMovie.Visible = false;
+            this.buttonAddMovie.Click += new System.EventHandler(this.buttonAddMovie_Click);
             // 
             // imageListMovies
             // 
@@ -982,14 +982,14 @@
             this.tableLayoutPanelFilter.ResumeLayout(false);
             this.tableLayoutPanelFilter.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanelPG.ResumeLayout(false);
+            this.tableLayoutPanelPG.PerformLayout();
             this.groupBoxGenreFilter.ResumeLayout(false);
             this.tableLayoutPanelFGenre.ResumeLayout(false);
             this.tableLayoutPanelFGenre.PerformLayout();
             this.groupBoxDurationFilter.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelDuration.ResumeLayout(false);
+            this.tableLayoutPanelDuration.PerformLayout();
             this.tableLayoutPanelSort.ResumeLayout(false);
             this.tableLayoutPanelSort.PerformLayout();
             this.tableLayoutPanelMoviesMenu.ResumeLayout(false);
@@ -1056,13 +1056,13 @@
         private System.Windows.Forms.RadioButton radioButtonSoapOpera;
         private System.Windows.Forms.RadioButton radioButtonHorror;
         private System.Windows.Forms.GroupBox groupBoxDurationFilter;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelDuration;
         private System.Windows.Forms.RadioButton radioButtonMoreT3;
         private System.Windows.Forms.RadioButton radioButtonBetween2A3;
         private System.Windows.Forms.RadioButton radioButtonBetween1A2;
         private System.Windows.Forms.RadioButton radioButtonLessT1Hour;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPG;
         private System.Windows.Forms.RadioButton radioButtonPG18;
         private System.Windows.Forms.RadioButton radioButtonPG16;
         private System.Windows.Forms.RadioButton radioButtonPG14;

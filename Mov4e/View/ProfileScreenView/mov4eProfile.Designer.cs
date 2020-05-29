@@ -55,7 +55,7 @@
             this.buttonLogOffProfile = new System.Windows.Forms.Button();
             this.pictureBoxSettings = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelWatchlist = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonViewInformation = new System.Windows.Forms.Button();
             this.buttonRemoveFW = new System.Windows.Forms.Button();
             this.listViewWatchlist = new System.Windows.Forms.ListView();
@@ -63,15 +63,18 @@
             this.imageListWatchlist = new System.Windows.Forms.ImageList(this.components);
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.labelBack = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelBackBtns = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStripEditPicture = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemChange = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorA = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemRemove = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorB = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTipFormats = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipView = new System.Windows.Forms.ToolTip(this.components);
+            this.panelFName = new System.Windows.Forms.Panel();
+            this.panelEmail = new System.Windows.Forms.Panel();
+            this.panelLName = new System.Windows.Forms.Panel();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelProfileContent.SuspendLayout();
             this.tableLayoutPanelProfileInformation.SuspendLayout();
@@ -81,10 +84,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).BeginInit();
             this.tableLayoutPanelWatchlist.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanelBackBtns.SuspendLayout();
             this.contextMenuStripEditPicture.SuspendLayout();
+            this.panelFName.SuspendLayout();
+            this.panelEmail.SuspendLayout();
+            this.panelLName.SuspendLayout();
             this.SuspendLayout();
             // 
             // topButtonsLayoutPanel
@@ -181,11 +187,10 @@
             this.tableLayoutPanelProfileInformation.Location = new System.Drawing.Point(3, 113);
             this.tableLayoutPanelProfileInformation.Name = "tableLayoutPanelProfileInformation";
             this.tableLayoutPanelProfileInformation.RowCount = 4;
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.83496F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.708737F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.12621F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.3301F));
-            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.90676F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.47669F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.43006F));
+            this.tableLayoutPanelProfileInformation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.18649F));
             this.tableLayoutPanelProfileInformation.Size = new System.Drawing.Size(250, 500);
             this.tableLayoutPanelProfileInformation.TabIndex = 0;
             // 
@@ -195,7 +200,7 @@
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.labelUsername.Location = new System.Drawing.Point(77, 206);
+            this.labelUsername.Location = new System.Drawing.Point(77, 223);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(95, 24);
             this.labelUsername.TabIndex = 2;
@@ -204,7 +209,7 @@
             // pictureBoxProfilePicture
             // 
             this.pictureBoxProfilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(40, 12);
+            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(40, 19);
             this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
             this.pictureBoxProfilePicture.Size = new System.Drawing.Size(170, 170);
             this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -218,17 +223,17 @@
             this.tableLayoutPanelUserInfo.ColumnCount = 2;
             this.tableLayoutPanelUserInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelUserInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelUserInfo.Controls.Add(this.panelEmail, 1, 2);
+            this.tableLayoutPanelUserInfo.Controls.Add(this.panelLName, 1, 1);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserGender, 1, 4);
+            this.tableLayoutPanelUserInfo.Controls.Add(this.panelFName, 1, 0);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserAge, 1, 3);
-            this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserEmail, 1, 2);
-            this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserLName, 1, 1);
-            this.tableLayoutPanelUserInfo.Controls.Add(this.labelUserFName, 1, 0);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelFirstName, 0, 0);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelLastName, 0, 1);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelEmail, 0, 2);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelAge, 0, 3);
             this.tableLayoutPanelUserInfo.Controls.Add(this.labelGender, 0, 4);
-            this.tableLayoutPanelUserInfo.Location = new System.Drawing.Point(8, 245);
+            this.tableLayoutPanelUserInfo.Location = new System.Drawing.Point(8, 264);
             this.tableLayoutPanelUserInfo.Name = "tableLayoutPanelUserInfo";
             this.tableLayoutPanelUserInfo.RowCount = 5;
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -236,76 +241,70 @@
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(234, 139);
+            this.tableLayoutPanelUserInfo.Size = new System.Drawing.Size(234, 151);
             this.tableLayoutPanelUserInfo.TabIndex = 1;
             // 
             // labelUserGender
             // 
             this.labelUserGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserGender.AutoSize = true;
             this.labelUserGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserGender.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserGender.Location = new System.Drawing.Point(82, 115);
+            this.labelUserGender.Location = new System.Drawing.Point(82, 123);
             this.labelUserGender.Name = "labelUserGender";
-            this.labelUserGender.Size = new System.Drawing.Size(51, 16);
+            this.labelUserGender.Size = new System.Drawing.Size(150, 24);
             this.labelUserGender.TabIndex = 9;
             this.labelUserGender.Text = "gender";
             // 
             // labelUserAge
             // 
             this.labelUserAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserAge.AutoSize = true;
             this.labelUserAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserAge.Location = new System.Drawing.Point(82, 86);
+            this.labelUserAge.Location = new System.Drawing.Point(82, 90);
             this.labelUserAge.Name = "labelUserAge";
-            this.labelUserAge.Size = new System.Drawing.Size(32, 16);
+            this.labelUserAge.Size = new System.Drawing.Size(150, 29);
             this.labelUserAge.TabIndex = 8;
             this.labelUserAge.Text = "age";
             // 
             // labelUserEmail
             // 
             this.labelUserEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserEmail.AutoSize = true;
             this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserEmail.Location = new System.Drawing.Point(82, 59);
+            this.labelUserEmail.Location = new System.Drawing.Point(3, 2);
             this.labelUserEmail.Name = "labelUserEmail";
-            this.labelUserEmail.Size = new System.Drawing.Size(48, 16);
+            this.labelUserEmail.Size = new System.Drawing.Size(145, 27);
             this.labelUserEmail.TabIndex = 7;
             this.labelUserEmail.Text = " e-mail";
             // 
             // labelUserLName
             // 
             this.labelUserLName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserLName.AutoSize = true;
             this.labelUserLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserLName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserLName.Location = new System.Drawing.Point(82, 32);
+            this.labelUserLName.Location = new System.Drawing.Point(0, -1);
             this.labelUserLName.Name = "labelUserLName";
-            this.labelUserLName.Size = new System.Drawing.Size(65, 16);
+            this.labelUserLName.Size = new System.Drawing.Size(145, 27);
             this.labelUserLName.TabIndex = 6;
-            this.labelUserLName.Text = "first name";
+            this.labelUserLName.Text = "last name";
             // 
             // labelUserFName
             // 
             this.labelUserFName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelUserFName.AutoSize = true;
             this.labelUserFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserFName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUserFName.Location = new System.Drawing.Point(82, 5);
+            this.labelUserFName.Location = new System.Drawing.Point(4, 0);
             this.labelUserFName.Name = "labelUserFName";
-            this.labelUserFName.Size = new System.Drawing.Size(65, 16);
+            this.labelUserFName.Size = new System.Drawing.Size(145, 27);
             this.labelUserFName.TabIndex = 5;
             this.labelUserFName.Text = "first name";
             // 
             // labelFirstName
             // 
-            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFirstName.Location = new System.Drawing.Point(3, 5);
+            this.labelFirstName.Location = new System.Drawing.Point(3, 0);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(73, 16);
             this.labelFirstName.TabIndex = 0;
@@ -313,11 +312,10 @@
             // 
             // labelLastName
             // 
-            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelLastName.Location = new System.Drawing.Point(3, 32);
+            this.labelLastName.Location = new System.Drawing.Point(3, 30);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(73, 16);
             this.labelLastName.TabIndex = 1;
@@ -325,11 +323,10 @@
             // 
             // labelEmail
             // 
-            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelEmail.Location = new System.Drawing.Point(3, 59);
+            this.labelEmail.Location = new System.Drawing.Point(3, 60);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(49, 16);
             this.labelEmail.TabIndex = 2;
@@ -337,11 +334,10 @@
             // 
             // labelAge
             // 
-            this.labelAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAge.Location = new System.Drawing.Point(3, 86);
+            this.labelAge.Location = new System.Drawing.Point(3, 90);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(36, 16);
             this.labelAge.TabIndex = 3;
@@ -349,11 +345,10 @@
             // 
             // labelGender
             // 
-            this.labelGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelGender.AutoSize = true;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGender.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelGender.Location = new System.Drawing.Point(3, 115);
+            this.labelGender.Location = new System.Drawing.Point(3, 120);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(56, 16);
             this.labelGender.TabIndex = 4;
@@ -369,20 +364,20 @@
             this.tableLayoutPanelUserActions.Controls.Add(this.buttonProfileSettings, 1, 0);
             this.tableLayoutPanelUserActions.Controls.Add(this.buttonLogOffProfile, 1, 1);
             this.tableLayoutPanelUserActions.Controls.Add(this.pictureBoxSettings, 0, 0);
-            this.tableLayoutPanelUserActions.Location = new System.Drawing.Point(50, 401);
+            this.tableLayoutPanelUserActions.Location = new System.Drawing.Point(50, 421);
             this.tableLayoutPanelUserActions.Name = "tableLayoutPanelUserActions";
             this.tableLayoutPanelUserActions.RowCount = 2;
             this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelUserActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelUserActions.Size = new System.Drawing.Size(150, 84);
+            this.tableLayoutPanelUserActions.Size = new System.Drawing.Size(150, 76);
             this.tableLayoutPanelUserActions.TabIndex = 3;
             // 
             // pictureBoxExit
             // 
             this.pictureBoxExit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxExit.Location = new System.Drawing.Point(3, 45);
+            this.pictureBoxExit.Location = new System.Drawing.Point(3, 41);
             this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(39, 36);
+            this.pictureBoxExit.Size = new System.Drawing.Size(39, 32);
             this.pictureBoxExit.TabIndex = 3;
             this.pictureBoxExit.TabStop = false;
             // 
@@ -390,7 +385,7 @@
             // 
             this.buttonProfileSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonProfileSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonProfileSettings.Location = new System.Drawing.Point(57, 6);
+            this.buttonProfileSettings.Location = new System.Drawing.Point(57, 4);
             this.buttonProfileSettings.Name = "buttonProfileSettings";
             this.buttonProfileSettings.Size = new System.Drawing.Size(80, 30);
             this.buttonProfileSettings.TabIndex = 0;
@@ -402,7 +397,7 @@
             // 
             this.buttonLogOffProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLogOffProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogOffProfile.Location = new System.Drawing.Point(57, 48);
+            this.buttonLogOffProfile.Location = new System.Drawing.Point(57, 42);
             this.buttonLogOffProfile.Name = "buttonLogOffProfile";
             this.buttonLogOffProfile.Size = new System.Drawing.Size(80, 30);
             this.buttonLogOffProfile.TabIndex = 1;
@@ -417,7 +412,7 @@
             this.pictureBoxSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxSettings.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxSettings.Name = "pictureBoxSettings";
-            this.pictureBoxSettings.Size = new System.Drawing.Size(39, 36);
+            this.pictureBoxSettings.Size = new System.Drawing.Size(39, 32);
             this.pictureBoxSettings.TabIndex = 2;
             this.pictureBoxSettings.TabStop = false;
             // 
@@ -426,7 +421,7 @@
             this.tableLayoutPanelWatchlist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanelWatchlist.ColumnCount = 1;
             this.tableLayoutPanelWatchlist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelWatchlist.Controls.Add(this.tableLayoutPanel1, 0, 2);
+            this.tableLayoutPanelWatchlist.Controls.Add(this.tableLayoutPanelButtons, 0, 2);
             this.tableLayoutPanelWatchlist.Controls.Add(this.listViewWatchlist, 0, 1);
             this.tableLayoutPanelWatchlist.Controls.Add(this.labelWatchlist, 0, 0);
             this.tableLayoutPanelWatchlist.Location = new System.Drawing.Point(259, 3);
@@ -438,21 +433,21 @@
             this.tableLayoutPanelWatchlist.Size = new System.Drawing.Size(1017, 720);
             this.tableLayoutPanelWatchlist.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanelButtons
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.buttonViewInformation, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonRemoveFW, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(298, 651);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(420, 66);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanelButtons.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelButtons.ColumnCount = 2;
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelButtons.Controls.Add(this.buttonViewInformation, 0, 0);
+            this.tableLayoutPanelButtons.Controls.Add(this.buttonRemoveFW, 1, 0);
+            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(298, 651);
+            this.tableLayoutPanelButtons.Name = "tableLayoutPanelButtons";
+            this.tableLayoutPanelButtons.RowCount = 1;
+            this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(420, 66);
+            this.tableLayoutPanelButtons.TabIndex = 7;
             // 
             // buttonViewInformation
             // 
@@ -543,64 +538,93 @@
             this.labelBack.TabIndex = 6;
             this.labelBack.Text = "back";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelBackBtns
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
-            this.tableLayoutPanel2.Controls.Add(this.pictureBoxBack, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.labelBack, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(90, 40);
-            this.tableLayoutPanel2.TabIndex = 7;
+            this.tableLayoutPanelBackBtns.ColumnCount = 2;
+            this.tableLayoutPanelBackBtns.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanelBackBtns.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanelBackBtns.Controls.Add(this.pictureBoxBack, 0, 0);
+            this.tableLayoutPanelBackBtns.Controls.Add(this.labelBack, 1, 0);
+            this.tableLayoutPanelBackBtns.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelBackBtns.Name = "tableLayoutPanelBackBtns";
+            this.tableLayoutPanelBackBtns.RowCount = 1;
+            this.tableLayoutPanelBackBtns.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelBackBtns.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanelBackBtns.Size = new System.Drawing.Size(90, 40);
+            this.tableLayoutPanelBackBtns.TabIndex = 7;
             // 
             // contextMenuStripEditPicture
             // 
             this.contextMenuStripEditPicture.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripSeparator1,
-            this.toolStripMenuItem2,
-            this.toolStripSeparator2,
-            this.toolStripMenuItem3});
+            this.toolStripMenuItemChange,
+            this.toolStripSeparatorA,
+            this.toolStripMenuItemRemove,
+            this.toolStripSeparatorB,
+            this.toolStripMenuItemExit});
             this.contextMenuStripEditPicture.Name = "contextMenuStripEditPicture";
             this.contextMenuStripEditPicture.Size = new System.Drawing.Size(195, 82);
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItemChange
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
-            this.toolStripMenuItem1.Text = "Change profile picture";
-            this.toolStripMenuItem1.ToolTipText = "formats: .jpg, .jpeg, .png, .bmp";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripMenuItemChange.Name = "toolStripMenuItemChange";
+            this.toolStripMenuItemChange.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItemChange.Text = "Change profile picture";
+            this.toolStripMenuItemChange.ToolTipText = "formats: .jpg, .jpeg, .png, .bmp";
+            this.toolStripMenuItemChange.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // toolStripSeparator1
+            // toolStripSeparatorA
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
+            this.toolStripSeparatorA.Name = "toolStripSeparatorA";
+            this.toolStripSeparatorA.Size = new System.Drawing.Size(191, 6);
             // 
-            // toolStripMenuItem2
+            // toolStripMenuItemRemove
             // 
-            this.toolStripMenuItem2.Enabled = false;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 22);
-            this.toolStripMenuItem2.Text = "Remove profile picture";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.toolStripMenuItemRemove.Enabled = false;
+            this.toolStripMenuItemRemove.Name = "toolStripMenuItemRemove";
+            this.toolStripMenuItemRemove.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItemRemove.Text = "Remove profile picture";
+            this.toolStripMenuItemRemove.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // toolStripSeparator2
+            // toolStripSeparatorB
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(191, 6);
+            this.toolStripSeparatorB.Name = "toolStripSeparatorB";
+            this.toolStripSeparatorB.Size = new System.Drawing.Size(191, 6);
             // 
-            // toolStripMenuItem3
+            // toolStripMenuItemExit
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(194, 22);
-            this.toolStripMenuItem3.Text = "Exit";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItemExit.Text = "Exit";
+            this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // panelFName
+            // 
+            this.panelFName.AutoScroll = true;
+            this.panelFName.Controls.Add(this.labelUserFName);
+            this.panelFName.Location = new System.Drawing.Point(79, 0);
+            this.panelFName.Margin = new System.Windows.Forms.Padding(0);
+            this.panelFName.Name = "panelFName";
+            this.panelFName.Size = new System.Drawing.Size(150, 27);
+            this.panelFName.TabIndex = 8;
+            // 
+            // panelEmail
+            // 
+            this.panelEmail.AutoScroll = true;
+            this.panelEmail.Controls.Add(this.labelUserEmail);
+            this.panelEmail.Location = new System.Drawing.Point(79, 60);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.panelEmail.Name = "panelEmail";
+            this.panelEmail.Size = new System.Drawing.Size(153, 27);
+            this.panelEmail.TabIndex = 9;
+            // 
+            // panelLName
+            // 
+            this.panelLName.AutoScroll = true;
+            this.panelLName.Controls.Add(this.labelUserLName);
+            this.panelLName.Location = new System.Drawing.Point(82, 33);
+            this.panelLName.Name = "panelLName";
+            this.panelLName.Size = new System.Drawing.Size(150, 24);
+            this.panelLName.TabIndex = 9;
             // 
             // mov4eProfile
             // 
@@ -608,7 +632,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1280, 788);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanelBackBtns);
             this.Controls.Add(this.topButtonsLayoutPanel);
             this.Controls.Add(this.tableLayoutPanelProfileContent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -630,12 +654,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).EndInit();
             this.tableLayoutPanelWatchlist.ResumeLayout(false);
             this.tableLayoutPanelWatchlist.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelButtons.ResumeLayout(false);
+            this.tableLayoutPanelButtons.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanelBackBtns.ResumeLayout(false);
+            this.tableLayoutPanelBackBtns.PerformLayout();
             this.contextMenuStripEditPicture.ResumeLayout(false);
+            this.panelFName.ResumeLayout(false);
+            this.panelEmail.ResumeLayout(false);
+            this.panelLName.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -674,16 +701,19 @@
         private System.Windows.Forms.Button buttonRemoveFW;
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.Label labelBack;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelButtons;
         private System.Windows.Forms.Button buttonViewInformation;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelBackBtns;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripEditPicture;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemChange;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRemove;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorA;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorB;
         private System.Windows.Forms.ToolTip toolTipFormats;
         private System.Windows.Forms.ToolTip toolTipView;
+        private System.Windows.Forms.Panel panelEmail;
+        private System.Windows.Forms.Panel panelLName;
+        private System.Windows.Forms.Panel panelFName;
     }
 }

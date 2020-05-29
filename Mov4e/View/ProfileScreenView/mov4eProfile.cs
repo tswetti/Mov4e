@@ -120,6 +120,25 @@ namespace Mov4e.View.ProfileScreenView
             {
                contextMenuStripEditPicture.Items[2].Enabled = true;
             }
+
+            /*Size fNameSize = TextRenderer.MeasureText(FirstName, labelUserFName.Font);
+            Size lNameSize = TextRenderer.MeasureText(LastName, labelUserLName.Font);
+            Size emailSize = TextRenderer.MeasureText(Email, labelUserEmail.Font);
+            if (fNameSize.Width > labelUserFName.Width)
+            {
+                tableLayoutPanelProfileInformation.Height += 10;
+                tableLayoutPanelUserInfo.Height += 100;
+            }
+            if (lNameSize.Width > labelUserLName.Width)
+            {
+                tableLayoutPanelProfileInformation.Height += 10;
+                tableLayoutPanelUserInfo.Height += 100;
+            }
+            if (emailSize.Width > labelUserEmail.Width)
+            {
+                tableLayoutPanelProfileInformation.Height += 10;
+                tableLayoutPanelUserInfo.Height += 100;
+            }*/
         }
 
         private void minimizeLabel_Click(object sender, EventArgs e)
