@@ -384,6 +384,9 @@
   <data name="labelMovieSummary.Text" xml:space="preserve">
     <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tincidunt eros. Curabitur viverra dapibus erat vel eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse in fermentum nibh. Suspendisse mauris risus, hendrerit sed ligula egestas, maximus auctor risus. Nulla vel vulputate libero, ultricies commodo sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc laoreet tellus neque. Duis ultricies vestibulum pharetra. Suspendisse quis nulla quis erat scelerisque efficitur nec sed justo.</value>
   </data>
+  <metadata name="toolTipComment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIACFDQAAZgAAAICAAAABACAAKAgBAOsNAABAQAAAAQAgAChCAAATFgEAMDAAAAEA
