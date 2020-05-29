@@ -260,6 +260,7 @@
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxName.ForeColor = System.Drawing.Color.Gray;
             this.textBoxName.Location = new System.Drawing.Point(139, 3);
+            this.textBoxName.MaxLength = 50;
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(661, 34);
@@ -299,6 +300,7 @@
             this.textBoxSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSummary.ForeColor = System.Drawing.Color.Gray;
             this.textBoxSummary.Location = new System.Drawing.Point(139, 203);
+            this.textBoxSummary.MaxLength = 100000;
             this.textBoxSummary.Multiline = true;
             this.textBoxSummary.Name = "textBoxSummary";
             this.textBoxSummary.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;

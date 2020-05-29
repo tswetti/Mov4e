@@ -288,6 +288,7 @@
             this.textBoxForgottenPassEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxForgottenPassEmail.ForeColor = System.Drawing.SystemColors.Info;
             this.textBoxForgottenPassEmail.Location = new System.Drawing.Point(123, 71);
+            this.textBoxForgottenPassEmail.MaxLength = 40;
             this.textBoxForgottenPassEmail.Name = "textBoxForgottenPassEmail";
             this.textBoxForgottenPassEmail.Size = new System.Drawing.Size(170, 20);
             this.textBoxForgottenPassEmail.TabIndex = 9;
@@ -348,6 +349,7 @@
             this.textBoxForgottenPassUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
             this.textBoxForgottenPassUsername.ForeColor = System.Drawing.SystemColors.Info;
             this.textBoxForgottenPassUsername.Location = new System.Drawing.Point(123, 33);
+            this.textBoxForgottenPassUsername.MaxLength = 30;
             this.textBoxForgottenPassUsername.Name = "textBoxForgottenPassUsername";
             this.textBoxForgottenPassUsername.Size = new System.Drawing.Size(170, 20);
             this.textBoxForgottenPassUsername.TabIndex = 8;
@@ -397,6 +399,7 @@
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
             this.textBoxUsername.Location = new System.Drawing.Point(59, 3);
+            this.textBoxUsername.MaxLength = 20;
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(230, 26);
             this.textBoxUsername.TabIndex = 1;
@@ -453,6 +456,7 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(0, -8);
+            this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(230, 26);
             this.textBoxPassword.TabIndex = 2;

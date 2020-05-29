@@ -83,11 +83,11 @@ namespace Mov4e.View.ProfileScreenView
             neonBlue = Color.FromArgb(8, 233, 232);
             white = Color.White;
 
-            labels=new List<Label>() {labelEmail, labelRepNewPassword, labelUsername, labelFirstName, labelLastName,labelBirthYear};
+            labels=new List<Label>() {labelEmail, labelRepNewPassword, labelUsername, labelFirstName, labelLastName,labelBirthYear,labelGender};
             buttons=new List<Button> {buttonChangeEmail, buttonChangePassword, buttonChangeUsername, buttonChangeFName,
-            buttonChangeLName,buttonChangeBYear };
+            buttonChangeLName,buttonChangeBYear,buttonChangeGender };
             panels=new List<Panel> {panelHrEmail, panelHrPassword, panelHrUsername, panelHrFName,
-            panelHrLName};
+            panelHrLName,panelHrGender,panelHrBYear};
 
             this.ActiveControl = null;
         }

@@ -492,9 +492,9 @@
             this.listViewWatchlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewWatchlist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listViewWatchlist.HideSelection = false;
-            this.listViewWatchlist.Location = new System.Drawing.Point(5, 93);
+            this.listViewWatchlist.Location = new System.Drawing.Point(3, 93);
             this.listViewWatchlist.Name = "listViewWatchlist";
-            this.listViewWatchlist.Size = new System.Drawing.Size(1006, 534);
+            this.listViewWatchlist.Size = new System.Drawing.Size(1011, 534);
             this.listViewWatchlist.TabIndex = 5;
             this.listViewWatchlist.UseCompatibleStateImageBehavior = false;
             this.listViewWatchlist.SelectedIndexChanged += new System.EventHandler(this.listViewWatchlist_SelectedIndexChanged);
@@ -515,7 +515,7 @@
             // imageListWatchlist
             // 
             this.imageListWatchlist.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
-            this.imageListWatchlist.ImageSize = new System.Drawing.Size(160, 200);
+            this.imageListWatchlist.ImageSize = new System.Drawing.Size(155, 200);
             this.imageListWatchlist.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // pictureBoxBack
