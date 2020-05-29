@@ -23,7 +23,7 @@ namespace Mov4e.Validation
         // This method validates the title of a movie with a certain id.
         public static bool ValidateTitle(string title)
         {
-            if (title != null && title != "" && title.Length > 0)
+            if (!string.IsNullOrEmpty(title) && !string.IsNullOrWhiteSpace(title))
                 return true;
             else
                 return false;
@@ -41,7 +41,7 @@ namespace Mov4e.Validation
         // This method validates the parental guidness of a movie with a certain id.
         public static bool ValidatePG(Nullable<int> pg)
         {
-            if (pg >= 0)
+            if (pg >= 0 || pg==null)
                 return true;
             else
                 return false;
@@ -59,7 +59,7 @@ namespace Mov4e.Validation
         // This method validates the summary of a movie with a certain id.
         public static bool ValidateSummary(string summary)
         {
-            if (summary != null && summary != "" && summary.Length > 0)
+            if (!string.IsNullOrEmpty(summary) && !string.IsNullOrWhiteSpace(summary))
                 return true;
             else
                 return false;
