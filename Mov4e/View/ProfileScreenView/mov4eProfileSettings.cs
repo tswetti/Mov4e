@@ -76,14 +76,8 @@ namespace Mov4e.View.ProfileScreenView
             textBoxOldPassword.PasswordChar = '*';
             textBoxNewPassword.PasswordChar = '*';
             textBoxNewPasswordRepeat.PasswordChar = '*';
-            this.comboBoxBYearChanged.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.comboBoxGenderChanged.DropDownStyle = ComboBoxStyle.DropDownList;
+
             System.Object[] yearsObject = new System.Object[71];
-            for (int i = 0; i < 71; i++)
-            {
-                yearsObject[i] = i + 1950;
-            }
-            comboBoxBYearChanged.Items.AddRange(yearsObject);
             comboBoxGenderChanged.Items.Add("Male");
             comboBoxGenderChanged.Items.Add("Female");
 
@@ -238,13 +232,6 @@ namespace Mov4e.View.ProfileScreenView
         {
             ClearAllSettingsColors();
             labelRepNewPassword.ForeColor = neonBlue;
-        }
-
-        private void comboBoxBYearChanged_Click(object sender, EventArgs e)
-        {
-            ClearAllSettingsColors();
-            labelBirthYear.ForeColor = neonBlue;
-            buttonChangeBYear.BackColor = neonBlue;
         }
 
         private void comboBoxGenderChanged_Click(object sender, EventArgs e)
@@ -407,17 +394,6 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
-
-        private void comboBoxBYearChanged_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(comboBoxBYearChanged.Text) && !string.IsNullOrWhiteSpace(comboBoxBYearChanged.Text))
-            {
-                buttonChangeBYear.Enabled = true;
-            }
-            else
-                buttonChangeBYear.Enabled = false;
-        }
-
         private void textBoxUsernameChanged_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBoxUsernameChanged.Text) && !string.IsNullOrWhiteSpace(textBoxUsernameChanged.Text))
@@ -488,5 +464,28 @@ namespace Mov4e.View.ProfileScreenView
         {
             this.Show();
         }
+
+        private void mov4eProfileSettings_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxBYearChanged_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(comboBoxBYearChanged.Text) && !string.IsNullOrWhiteSpace(comboBoxBYearChanged.Text))
+            {
+                buttonChangeBYear.Enabled = true;
+            }
+            else
+                buttonChangeBYear.Enabled = false;
+        }
+
+        private void comboBoxBYearChanged_Click(object sender, EventArgs e)
+        {
+            ClearAllSettingsColors();
+            labelBirthYear.ForeColor = neonBlue;
+            buttonChangeBYear.BackColor = neonBlue;
+        }
+
     }
 }
