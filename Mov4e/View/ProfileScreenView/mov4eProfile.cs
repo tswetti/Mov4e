@@ -75,6 +75,7 @@ namespace Mov4e.View.ProfileScreenView
             label.ForeColor = Color.White;
         }
 
+        // resizes the panel with user info and adds scroll if necessary
         private void ResizeUserInfoPanel()
         {
             Size emailSize = TextRenderer.MeasureText(Email, labelUserEmail.Font);
