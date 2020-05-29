@@ -807,7 +807,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mov4eProfileSettings";
             this.Text = "mov4eProfileSettings";
-            this.Load += new System.EventHandler(this.mov4eProfileSettings_Load);
             this.topButtonsLayoutPanel.ResumeLayout(false);
             this.topButtonsLayoutPanel.PerformLayout();
             this.tableLayoutPanelBackButton.ResumeLayout(false);

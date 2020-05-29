@@ -236,7 +236,6 @@ namespace Mov4e.View.ProfileScreenView
 
         private void textBoxNewPasswordRepeat_Click(object sender, EventArgs e)
         {
-            //ChangeSettingsColors(labelRepNewPassword, buttonChangePassword, panelHrPassword, neonBlue);
             ClearAllSettingsColors();
             labelRepNewPassword.ForeColor = neonBlue;
         }
@@ -253,11 +252,6 @@ namespace Mov4e.View.ProfileScreenView
             ClearAllSettingsColors();
             labelGender.ForeColor = neonBlue;
             buttonChangeGender.BackColor = neonBlue;
-        }
-
-        private void mov4eProfileSettings_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonChangeEmail_Click(object sender, EventArgs e)
@@ -323,8 +317,6 @@ namespace Mov4e.View.ProfileScreenView
                         MessageBox.Show("You have successfully changed your gender!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                  }
-
-
             }
             catch (Exception ex)
             {
@@ -332,7 +324,6 @@ namespace Mov4e.View.ProfileScreenView
             }
         }
 
-        //ima izklyuchenie
         private void buttonChangePassword_Click(object sender, EventArgs e)
         {
             try
