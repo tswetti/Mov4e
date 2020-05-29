@@ -219,10 +219,10 @@
             // pictureBoxCog
             // 
             this.pictureBoxCog.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxCog.Image = global::Mov4e.Properties.Resources.settings_cog_blue;
-            this.pictureBoxCog.Location = new System.Drawing.Point(3, 65);
+            this.pictureBoxCog.Image = global::Mov4e.Properties.Resources.settings_cog1;
+            this.pictureBoxCog.Location = new System.Drawing.Point(3, 90);
             this.pictureBoxCog.Name = "pictureBoxCog";
-            this.pictureBoxCog.Size = new System.Drawing.Size(419, 570);
+            this.pictureBoxCog.Size = new System.Drawing.Size(419, 520);
             this.pictureBoxCog.TabIndex = 0;
             this.pictureBoxCog.TabStop = false;
             // 

@@ -345,7 +345,7 @@
             this.buttonChangeRating.Name = "buttonChangeRating";
             this.buttonChangeRating.Size = new System.Drawing.Size(100, 9);
             this.buttonChangeRating.TabIndex = 12;
-            this.buttonChangeRating.Text = "Change rate";
+            this.buttonChangeRating.Text = "Change rating";
             this.buttonChangeRating.UseVisualStyleBackColor = false;
             this.buttonChangeRating.Click += new System.EventHandler(this.buttonChangeRating_Click);
             // 

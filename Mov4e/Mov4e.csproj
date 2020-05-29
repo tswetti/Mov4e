@@ -312,6 +312,9 @@
       <DependentUpon>mov4eDB.edmx</DependentUpon>
       <LastGenOutput>mov4eDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\password.png" />
+    <None Include="Resources\username.png" />
+    <None Include="Resources\settings-cog.png" />
     <None Include="Resources\show-pass-blue.png" />
     <None Include="Resources\show-pass.png" />
     <None Include="Resources\female_symbol_blue.png" />

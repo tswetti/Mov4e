@@ -81,10 +81,10 @@
             this.tableLayoutPanelMoviesMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxFilter = new System.Windows.Forms.PictureBox();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.buttonStartSearch = new System.Windows.Forms.Button();
             this.pictureBoxSearchIcon = new System.Windows.Forms.PictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBoxSort = new System.Windows.Forms.PictureBox();
+            this.buttonStartSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanelActionsWMovie = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDeleteMovie = new System.Windows.Forms.Button();
             this.buttonEditMovie = new System.Windows.Forms.Button();
@@ -186,9 +186,9 @@
             this.listViewMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewMovies.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listViewMovies.HideSelection = false;
-            this.listViewMovies.Location = new System.Drawing.Point(40, 411);
+            this.listViewMovies.Location = new System.Drawing.Point(70, 411);
             this.listViewMovies.Name = "listViewMovies";
-            this.listViewMovies.Size = new System.Drawing.Size(1200, 235);
+            this.listViewMovies.Size = new System.Drawing.Size(1140, 235);
             this.listViewMovies.TabIndex = 3;
             this.listViewMovies.UseCompatibleStateImageBehavior = false;
             this.listViewMovies.SelectedIndexChanged += new System.EventHandler(this.listViewMovies_SelectedIndexChanged);
@@ -820,7 +820,7 @@
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxProfile.Image = global::Mov4e.Properties.Resources.username_icon;
+            this.pictureBoxProfile.Image = global::Mov4e.Properties.Resources.username;
             this.pictureBoxProfile.Location = new System.Drawing.Point(1117, 10);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
             this.pictureBoxProfile.Size = new System.Drawing.Size(30, 30);
@@ -828,18 +828,6 @@
             this.pictureBoxProfile.TabStop = false;
             this.toolTipMovies.SetToolTip(this.pictureBoxProfile, "profile screen & watchlist");
             this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
-            // 
-            // buttonStartSearch
-            // 
-            this.buttonStartSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonStartSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStartSearch.Location = new System.Drawing.Point(507, 10);
-            this.buttonStartSearch.Name = "buttonStartSearch";
-            this.buttonStartSearch.Size = new System.Drawing.Size(80, 30);
-            this.buttonStartSearch.TabIndex = 3;
-            this.buttonStartSearch.Text = "Search";
-            this.buttonStartSearch.UseVisualStyleBackColor = true;
-            this.buttonStartSearch.Click += new System.EventHandler(this.buttonStartSearch_Click);
             // 
             // pictureBoxSearchIcon
             // 
@@ -856,9 +844,11 @@
             this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxSearch.Location = new System.Drawing.Point(60, 15);
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSearch.Location = new System.Drawing.Point(60, 13);
+            this.textBoxSearch.MaxLength = 300;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(440, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(440, 24);
             this.textBoxSearch.TabIndex = 0;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -873,6 +863,18 @@
             this.pictureBoxSort.TabStop = false;
             this.toolTipMovies.SetToolTip(this.pictureBoxSort, "sort");
             this.pictureBoxSort.Click += new System.EventHandler(this.pictureBoxSort_Click);
+            // 
+            // buttonStartSearch
+            // 
+            this.buttonStartSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonStartSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStartSearch.Location = new System.Drawing.Point(507, 10);
+            this.buttonStartSearch.Name = "buttonStartSearch";
+            this.buttonStartSearch.Size = new System.Drawing.Size(80, 30);
+            this.buttonStartSearch.TabIndex = 3;
+            this.buttonStartSearch.Text = "Search";
+            this.buttonStartSearch.UseVisualStyleBackColor = true;
+            this.buttonStartSearch.Click += new System.EventHandler(this.buttonStartSearch_Click);
             // 
             // tableLayoutPanelActionsWMovie
             // 

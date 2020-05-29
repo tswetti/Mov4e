@@ -98,11 +98,7 @@ namespace Mov4e.View.ProfileScreenView
                 listViewWatchlist.LargeImageList = imageListWatchlist;
                 listViewWatchlist.Items.Add(item);
             }
-
-            
         }
-
-
         
         private void SetInformation()
         {
@@ -172,7 +168,6 @@ namespace Mov4e.View.ProfileScreenView
 
         private void closeLabel_MouseHover(object sender, EventArgs e)
         {
-            /*TopLabelsMouseHover(closeLabel);*/
             closeLabel.BackColor = Color.Red;
         }
 
@@ -267,7 +262,6 @@ namespace Mov4e.View.ProfileScreenView
             {
                 this.Hide();
                 ISpecificMovieView _specificMovieInfo = new mov4eMovie(int.Parse(listViewWatchlist.SelectedItems[0].ImageKey), this.id, this);
-                //nowo
                 _specificMovieInfo.MovieDeletedFromWatchList += DeleteMovieHandler;
                 _specificMovieInfo.MovieAddedToWatchList += AddMovieToWatchList;
                 _specificMovieInfo.ShowForm();
@@ -290,6 +284,7 @@ namespace Mov4e.View.ProfileScreenView
             {
                 buttonRemoveFW.Enabled = true;
                 buttonViewInformation.Enabled = true;
+                toolTipView.Active = false;
             }
         }
 

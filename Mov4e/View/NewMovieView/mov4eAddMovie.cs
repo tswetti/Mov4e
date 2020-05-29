@@ -172,6 +172,8 @@ namespace Mov4e.View.NewMovieView
             }
         }
 
+        int summaryHeight;
+
         // This method initializes the form.
         private void InitializeForm()
         {
@@ -202,6 +204,8 @@ namespace Mov4e.View.NewMovieView
             pgComboBox.DataSource = new BindingSource(comboSource1, null);
             pgComboBox.DisplayMember = "Value";
             pgComboBox.ValueMember = "Key";
+
+            summaryHeight = textBoxSummary.Height;
         }
 
         public mov4eAddMovie()
@@ -330,6 +334,33 @@ namespace Mov4e.View.NewMovieView
         {
             MovieValidation.ValidateMovieUpdate(id, title, genre, pg, date, summary, picture, duration);
             all_movies.UpdateMovie(id, (byte[])(new ImageConverter()).ConvertTo(pictureBoxMoviePic.Image, typeof(byte[])));
+        }
+
+        private void textBoxSummary_TextChanged(object sender, EventArgs e)
+        {
+             Size summarySize = TextRenderer.MeasureText(textBoxSummary.Text, textBoxSummary.Font);
+             /*if (summarySize.Width < 500)
+             {
+                 textBoxSummary.Width = summarySize.Width;
+                 textBoxSummary.Height = summarySize.Height;
+             }
+             else
+             {
+                 textBoxSummary.Text = textBoxSummary.Text + Environment.NewLine;
+                 tableLayoutPanelMovieDetails.RowStyles[5].Height += summarySize.Height;
+                 //textBoxSummary.Text += textBoxSummary.Text + Environment.NewLine;
+             }*/
+            /*int summaryCharacters = textBoxSummary.Text.Length;
+            if (summaryCharacters>=maxRowCharacters)
+            {
+                textBoxSummary.Text += Environment.NewLine+"";
+                maxRowCharacters += 50;
+            }*/
+            /*if (summarySize.Height>summaryHeight)
+            {
+                summaryHeight += 20;
+                textBoxSummary.Text += Environment.NewLine + "";
+            }*/
         }
     }
 }

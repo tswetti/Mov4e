@@ -383,7 +383,7 @@
             // pictureBoxUsername
             // 
             this.pictureBoxUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxUsername.Image = global::Mov4e.Properties.Resources.username_icon;
+            this.pictureBoxUsername.Image = global::Mov4e.Properties.Resources.username;
             this.pictureBoxUsername.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxUsername.Name = "pictureBoxUsername";
             this.pictureBoxUsername.Size = new System.Drawing.Size(42, 11);
@@ -419,7 +419,7 @@
             // 
             // pictureBoxPassword
             // 
-            this.pictureBoxPassword.Image = global::Mov4e.Properties.Resources.password_icon;
+            this.pictureBoxPassword.Image = global::Mov4e.Properties.Resources.password;
             this.pictureBoxPassword.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
             this.pictureBoxPassword.Size = new System.Drawing.Size(42, 11);
