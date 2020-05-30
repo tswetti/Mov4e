@@ -180,9 +180,9 @@ namespace Mov4e.View.NewMovieView
         {
             textBoxName.Text = "Type movie's name here...";
             textBoxName.ForeColor = Color.Gray;
-            textBoxDuration.Text = "Type movie's name here...";
+            textBoxDuration.Text = "Type movie's duration here...";
             textBoxDuration.ForeColor = Color.Gray;
-            textBoxSummary.Text = "Type movie's name here...";
+            textBoxSummary.Text = "Type movie's summary here...";
             textBoxSummary.ForeColor = Color.Gray;
             nameFirstClick = true;
             durationFirstClick = true;

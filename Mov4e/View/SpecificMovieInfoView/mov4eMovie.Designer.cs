@@ -63,9 +63,6 @@
             this.buttonDelSelectComments = new System.Windows.Forms.Button();
             this.buttonDelAllMyComments = new System.Windows.Forms.Button();
             this.tableLayoutPanelDescription = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonAddComment = new System.Windows.Forms.Button();
-            this.textBoxMovieSummary = new System.Windows.Forms.TextBox();
             this.labelMovieAverageRating = new System.Windows.Forms.Label();
             this.labelMoviePremiereDate = new System.Windows.Forms.Label();
             this.labelMoviePG = new System.Windows.Forms.Label();
@@ -80,10 +77,13 @@
             this.tableLayoutPanelWatchlistActions = new System.Windows.Forms.TableLayoutPanel();
             this.buttonRemoveFWatchlist = new System.Windows.Forms.Button();
             this.buttonAddToWatchlist = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonAddComment = new System.Windows.Forms.Button();
             this.labelBack = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelGoBack = new System.Windows.Forms.TableLayoutPanel();
             this.toolTipComment = new System.Windows.Forms.ToolTip(this.components);
+            this.textBoxMovieSummary = new System.Windows.Forms.TextBox();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -103,8 +103,8 @@
             this.tabPageAllComments.SuspendLayout();
             this.tabPageYourComments.SuspendLayout();
             this.tableLayoutPanelDescription.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanelWatchlistActions.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.tableLayoutPanelGoBack.SuspendLayout();
             this.SuspendLayout();
@@ -557,7 +557,6 @@
             this.tableLayoutPanelDescription.ColumnCount = 2;
             this.tableLayoutPanelDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelDescription.Controls.Add(this.tableLayoutPanel2, 1, 6);
             this.tableLayoutPanelDescription.Controls.Add(this.textBoxMovieSummary, 1, 5);
             this.tableLayoutPanelDescription.Controls.Add(this.labelMovieAverageRating, 1, 4);
             this.tableLayoutPanelDescription.Controls.Add(this.labelMoviePremiereDate, 1, 3);
@@ -571,6 +570,7 @@
             this.tableLayoutPanelDescription.Controls.Add(this.labelDuration, 0, 2);
             this.tableLayoutPanelDescription.Controls.Add(this.labelMovieDuration, 1, 2);
             this.tableLayoutPanelDescription.Controls.Add(this.tableLayoutPanelWatchlistActions, 0, 6);
+            this.tableLayoutPanelDescription.Controls.Add(this.tableLayoutPanel2, 1, 6);
             this.tableLayoutPanelDescription.Location = new System.Drawing.Point(10, 3);
             this.tableLayoutPanelDescription.Name = "tableLayoutPanelDescription";
             this.tableLayoutPanelDescription.RowCount = 7;
@@ -583,47 +583,6 @@
             this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.36356F));
             this.tableLayoutPanelDescription.Size = new System.Drawing.Size(827, 341);
             this.tableLayoutPanelDescription.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.buttonAddComment, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(170, 301);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(170, 40);
-            this.tableLayoutPanel2.TabIndex = 11;
-            // 
-            // buttonAddComment
-            // 
-            this.buttonAddComment.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonAddComment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddComment.Enabled = false;
-            this.buttonAddComment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddComment.Location = new System.Drawing.Point(3, 6);
-            this.buttonAddComment.Name = "buttonAddComment";
-            this.buttonAddComment.Size = new System.Drawing.Size(113, 27);
-            this.buttonAddComment.TabIndex = 16;
-            this.buttonAddComment.Text = "Add comment";
-            this.buttonAddComment.UseVisualStyleBackColor = true;
-            this.buttonAddComment.Click += new System.EventHandler(this.buttonAddComment_Click);
-            // 
-            // textBoxMovieSummary
-            // 
-            this.textBoxMovieSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
-            this.textBoxMovieSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMovieSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMovieSummary.ForeColor = System.Drawing.Color.White;
-            this.textBoxMovieSummary.Location = new System.Drawing.Point(173, 163);
-            this.textBoxMovieSummary.Multiline = true;
-            this.textBoxMovieSummary.Name = "textBoxMovieSummary";
-            this.textBoxMovieSummary.ReadOnly = true;
-            this.textBoxMovieSummary.Size = new System.Drawing.Size(645, 135);
-            this.textBoxMovieSummary.TabIndex = 11;
-            this.textBoxMovieSummary.Text = resources.GetString("textBoxMovieSummary.Text");
             // 
             // labelMovieAverageRating
             // 
@@ -797,6 +756,33 @@
             this.buttonAddToWatchlist.UseVisualStyleBackColor = true;
             this.buttonAddToWatchlist.Click += new System.EventHandler(this.buttonAddToWatchlist_Click);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.buttonAddComment, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(170, 301);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(170, 40);
+            this.tableLayoutPanel2.TabIndex = 11;
+            // 
+            // buttonAddComment
+            // 
+            this.buttonAddComment.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonAddComment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddComment.Enabled = false;
+            this.buttonAddComment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddComment.Location = new System.Drawing.Point(3, 6);
+            this.buttonAddComment.Name = "buttonAddComment";
+            this.buttonAddComment.Size = new System.Drawing.Size(113, 27);
+            this.buttonAddComment.TabIndex = 16;
+            this.buttonAddComment.Text = "Add comment";
+            this.buttonAddComment.UseVisualStyleBackColor = true;
+            this.buttonAddComment.Click += new System.EventHandler(this.buttonAddComment_Click);
+            // 
             // labelBack
             // 
             this.labelBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -837,6 +823,20 @@
             this.tableLayoutPanelGoBack.Size = new System.Drawing.Size(90, 40);
             this.tableLayoutPanelGoBack.TabIndex = 10;
             // 
+            // textBoxMovieSummary
+            // 
+            this.textBoxMovieSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxMovieSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMovieSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMovieSummary.ForeColor = System.Drawing.Color.White;
+            this.textBoxMovieSummary.Location = new System.Drawing.Point(173, 163);
+            this.textBoxMovieSummary.Multiline = true;
+            this.textBoxMovieSummary.Name = "textBoxMovieSummary";
+            this.textBoxMovieSummary.ReadOnly = true;
+            this.textBoxMovieSummary.Size = new System.Drawing.Size(645, 135);
+            this.textBoxMovieSummary.TabIndex = 11;
+            this.textBoxMovieSummary.Text = resources.GetString("textBoxMovieSummary.Text");
+            // 
             // mov4eMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -875,9 +875,9 @@
             this.tabPageYourComments.ResumeLayout(false);
             this.tableLayoutPanelDescription.ResumeLayout(false);
             this.tableLayoutPanelDescription.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanelWatchlistActions.ResumeLayout(false);
             this.tableLayoutPanelWatchlistActions.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.tableLayoutPanelGoBack.ResumeLayout(false);
             this.tableLayoutPanelGoBack.PerformLayout();
@@ -940,10 +940,7 @@
         private System.Windows.Forms.Label labelCharactersLeft;
         private System.Windows.Forms.Panel panelAddComment;
         private System.Windows.Forms.ToolTip toolTipComment;
-        private System.Windows.Forms.TextBox textBoxMovieSummary;
-        private System.Windows.Forms.Panel panelSummary;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox textBoxMovieSummary;
     }
 }

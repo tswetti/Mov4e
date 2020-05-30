@@ -263,7 +263,7 @@
             this.textBoxName.Location = new System.Drawing.Point(139, 3);
             this.textBoxName.MaxLength = 80;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(661, 19);
+            this.textBoxName.Size = new System.Drawing.Size(389, 19);
             this.textBoxName.TabIndex = 31;
             this.textBoxName.Text = "Type the movie\'s name here...";
             this.textBoxName.Click += new System.EventHandler(this.textBoxName_Click);
@@ -356,7 +356,7 @@
             this.textBoxDuration.Location = new System.Drawing.Point(139, 123);
             this.textBoxDuration.MaxLength = 11;
             this.textBoxDuration.Name = "textBoxDuration";
-            this.textBoxDuration.Size = new System.Drawing.Size(650, 19);
+            this.textBoxDuration.Size = new System.Drawing.Size(497, 19);
             this.textBoxDuration.TabIndex = 28;
             this.textBoxDuration.Text = "Type the movie\'s duration here...";
             this.toolTipFormats.SetToolTip(this.textBoxDuration, "in minutes; example: 90");
