@@ -488,19 +488,26 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         public void deleteCommentsFromDB(List<int> comms)
         {
+            try
+            {
             foreach (int el in comms)
             {
                 (int commentId, string name, byte[] picture, string comment) p = comments.Where(c => c.commentId == el).Single();
                 this.comments.Remove(p);
             }
             _specificMoviePresenter.DeleteComments(comms);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void deleteCommentsFromCommentBoxes(CommentBox one, CommentBox two)
         {
             try
             {
-                DialogResult d = MessageBox.Show("Are you sure want to this/these comment/s?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult d = MessageBox.Show("Are you sure want to delete this/these comment/s?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (d == DialogResult.OK)
                 {
                     two.AddCommentsForDeleteInList();
@@ -558,11 +565,23 @@ namespace Mov4e.View.SpecificMovieInfoView
 
         private void buttonDelAllMyComments_Click(object sender, EventArgs e)
         {
-            commentBoxAllComments.AddAllCommentsForDelete();
-            commentBoxMyComments.AddAllCommentsForDelete();
-            this.deleteCommentsFromDB(commentBoxMyComments.checkedCommentsList);
-            commentBoxAllComments.DeleteCommentsFromControl();
-            commentBoxMyComments.DeleteCommentsFromControl();
+            try
+            {
+                DialogResult d = MessageBox.Show("Are you sure want to delete all comments?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (d == DialogResult.OK)
+                {
+                    commentBoxAllComments.AddAllCommentsForDelete();
+                    commentBoxMyComments.AddAllCommentsForDelete();
+                    this.deleteCommentsFromDB(commentBoxMyComments.checkedCommentsList);
+                    commentBoxAllComments.DeleteCommentsFromControl();
+                    commentBoxMyComments.DeleteCommentsFromControl();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void buttonDelSelectComments_Click(object sender, EventArgs e)

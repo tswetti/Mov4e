@@ -219,8 +219,7 @@ namespace Mov4eTests.PresenterTests.SpecificMoviePresenterTests
             MockedDummySpecificMovieView _mockedDummyView = new MockedDummySpecificMovieView();
             ISpecificMovieInfoPresenter _presenter = new SpecificMovieInfoPresenter(_mockedDummyView, _mockedDummyService._specificMovieService);
             _mockedDummyService.error = true;
-            _presenter.DeleteComments(new List<int>() { 1, 2, 3 });
-            Assert.AreEqual(2, _mockedDummyService.comments.Count);
+            Assert.Throws<Exception>(() => _presenter.DeleteComments(new List<int>() { 1, 2, 3 }));
         }
 
         [Test]

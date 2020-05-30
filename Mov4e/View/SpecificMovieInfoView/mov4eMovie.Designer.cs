@@ -56,13 +56,12 @@
             this.textBoxAddComment = new System.Windows.Forms.TextBox();
             this.tabControlComments = new System.Windows.Forms.TabControl();
             this.tabPageAllComments = new System.Windows.Forms.TabPage();
-            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectFromAllComments = new System.Windows.Forms.Button();
             this.tabPageYourComments = new System.Windows.Forms.TabPage();
-            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.buttonDelSelectComments = new System.Windows.Forms.Button();
             this.buttonDelAllMyComments = new System.Windows.Forms.Button();
             this.tableLayoutPanelDescription = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxMovieSummary = new System.Windows.Forms.TextBox();
             this.labelMovieAverageRating = new System.Windows.Forms.Label();
             this.labelMoviePremiereDate = new System.Windows.Forms.Label();
             this.labelMoviePG = new System.Windows.Forms.Label();
@@ -83,7 +82,8 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelGoBack = new System.Windows.Forms.TableLayoutPanel();
             this.toolTipComment = new System.Windows.Forms.ToolTip(this.components);
-            this.textBoxMovieSummary = new System.Windows.Forms.TextBox();
+            this.commentBoxAllComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
+            this.commentBoxMyComments = new Mov4e.View.SpecificMovieInfoView.CommentBox();
             this.topButtonsLayoutPanel.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelMovieAndRating.SuspendLayout();
@@ -338,11 +338,11 @@
             this.labelAlreadyRated.AutoSize = true;
             this.labelAlreadyRated.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAlreadyRated.ForeColor = System.Drawing.Color.White;
-            this.labelAlreadyRated.Location = new System.Drawing.Point(25, 97);
+            this.labelAlreadyRated.Location = new System.Drawing.Point(27, 97);
             this.labelAlreadyRated.Name = "labelAlreadyRated";
-            this.labelAlreadyRated.Size = new System.Drawing.Size(363, 20);
+            this.labelAlreadyRated.Size = new System.Drawing.Size(359, 20);
             this.labelAlreadyRated.TabIndex = 11;
-            this.labelAlreadyRated.Text = "You have already rated for this movie! Your rating: ";
+            this.labelAlreadyRated.Text = "You have already rated for this movie! Your rating:";
             // 
             // buttonChangeRating
             // 
@@ -489,15 +489,6 @@
             this.tabPageAllComments.Text = "All comments";
             this.tabPageAllComments.UseVisualStyleBackColor = true;
             // 
-            // commentBoxAllComments
-            // 
-            this.commentBoxAllComments.AutoScroll = true;
-            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxAllComments.Name = "commentBoxAllComments";
-            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 163);
-            this.commentBoxAllComments.TabIndex = 2;
-            // 
             // buttonDelSelectFromAllComments
             // 
             this.buttonDelSelectFromAllComments.Enabled = false;
@@ -522,14 +513,6 @@
             this.tabPageYourComments.TabIndex = 1;
             this.tabPageYourComments.Text = "My comments";
             this.tabPageYourComments.UseVisualStyleBackColor = true;
-            // 
-            // commentBoxMyComments
-            // 
-            this.commentBoxMyComments.AutoScroll = true;
-            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
-            this.commentBoxMyComments.Name = "commentBoxMyComments";
-            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
-            this.commentBoxMyComments.TabIndex = 4;
             // 
             // buttonDelSelectComments
             // 
@@ -583,6 +566,20 @@
             this.tableLayoutPanelDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.36356F));
             this.tableLayoutPanelDescription.Size = new System.Drawing.Size(827, 341);
             this.tableLayoutPanelDescription.TabIndex = 0;
+            // 
+            // textBoxMovieSummary
+            // 
+            this.textBoxMovieSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.textBoxMovieSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMovieSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMovieSummary.ForeColor = System.Drawing.Color.White;
+            this.textBoxMovieSummary.Location = new System.Drawing.Point(173, 163);
+            this.textBoxMovieSummary.Multiline = true;
+            this.textBoxMovieSummary.Name = "textBoxMovieSummary";
+            this.textBoxMovieSummary.ReadOnly = true;
+            this.textBoxMovieSummary.Size = new System.Drawing.Size(645, 135);
+            this.textBoxMovieSummary.TabIndex = 11;
+            this.textBoxMovieSummary.Text = resources.GetString("textBoxMovieSummary.Text");
             // 
             // labelMovieAverageRating
             // 
@@ -823,19 +820,22 @@
             this.tableLayoutPanelGoBack.Size = new System.Drawing.Size(90, 40);
             this.tableLayoutPanelGoBack.TabIndex = 10;
             // 
-            // textBoxMovieSummary
+            // commentBoxAllComments
             // 
-            this.textBoxMovieSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
-            this.textBoxMovieSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMovieSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMovieSummary.ForeColor = System.Drawing.Color.White;
-            this.textBoxMovieSummary.Location = new System.Drawing.Point(173, 163);
-            this.textBoxMovieSummary.Multiline = true;
-            this.textBoxMovieSummary.Name = "textBoxMovieSummary";
-            this.textBoxMovieSummary.ReadOnly = true;
-            this.textBoxMovieSummary.Size = new System.Drawing.Size(645, 135);
-            this.textBoxMovieSummary.TabIndex = 11;
-            this.textBoxMovieSummary.Text = resources.GetString("textBoxMovieSummary.Text");
+            this.commentBoxAllComments.AutoScroll = true;
+            this.commentBoxAllComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentBoxAllComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxAllComments.Name = "commentBoxAllComments";
+            this.commentBoxAllComments.Size = new System.Drawing.Size(733, 163);
+            this.commentBoxAllComments.TabIndex = 2;
+            // 
+            // commentBoxMyComments
+            // 
+            this.commentBoxMyComments.AutoScroll = true;
+            this.commentBoxMyComments.Location = new System.Drawing.Point(3, 3);
+            this.commentBoxMyComments.Name = "commentBoxMyComments";
+            this.commentBoxMyComments.Size = new System.Drawing.Size(736, 170);
+            this.commentBoxMyComments.TabIndex = 4;
             // 
             // mov4eMovie
             // 
